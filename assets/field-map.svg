@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 340" role="img" aria-labelledby="title desc">
+  <title id="title">Embodied World Models Atlas — three possible futures</title>
+  <desc id="desc">An observed cup branches into three predicted endpoints. A controller chooses one action, then checks the real cup again.</desc>
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#a4d7c7" opacity=".13"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0l10 5-10 5" fill="#82ebbd"/></marker>
+  </defs>
+  <rect width="1120" height="340" rx="18" fill="#102e32"/><rect width="1120" height="340" fill="url(#grid)"/>
+  <g font-family="system-ui,sans-serif" fill="#f6f3df">
+    <text x="44" y="56" fill="#8ce6ba" font-family="monospace" font-size="16" letter-spacing="3">FIELD GUIDE  /  01—06</text>
+    <text x="42" y="132" font-weight="700" font-size="59">Embodied AI</text>
+    <text x="44" y="194" font-size="49" font-weight="350">× World Models</text>
+    <text x="46" y="254" font-size="19" fill="#b6caba">Observe. Imagine. Choose. Check.</text>
+    <text x="46" y="296" font-size="15" fill="#efba80">具身智能 × 世界模型研究图谱</text>
+  </g>
+  <g stroke="#82ebbd" fill="none" stroke-width="2.5">
+    <path d="M603 166Q665 165 718 84T843 73" stroke-dasharray="6 5"/>
+    <path d="M603 166Q714 180 824 166" marker-end="url(#arrow)"/>
+    <path d="M603 166Q690 170 746 239T923 241" stroke-dasharray="6 5"/>
+    <path d="M845 188V274Q845 295 820 295H613Q581 295 581 262V193" marker-end="url(#arrow)" opacity=".7"/>
+    <circle cx="580" cy="166" r="22" fill="#25494b"/>
+    <path d="M570 157h15v9q0 9-8 9t-7-9zm15 1h5q4 5-3 8" stroke="#f6f3df" stroke-width="2"/>
+    <circle cx="853" cy="73" r="11" stroke-dasharray="3 4"/><circle cx="845" cy="166" r="15" fill="#e6bd81" stroke="#f4e4c3"/><circle cx="939" cy="240" r="11" stroke-dasharray="3 4"/>
+  </g>
+  <g font-family="monospace" font-size="15" fill="#cce4d5">
+    <text x="545" y="120">OBSERVE</text><text x="883" y="78">wait</text><text x="879" y="171" fill="#f4c180">gentle push</text><text x="965" y="245">hard push</text><text x="632" y="317">measure again</text>
+  </g>
+</svg>

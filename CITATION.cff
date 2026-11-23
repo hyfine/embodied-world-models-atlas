@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the atlas for the synthesis and the original papers for their results."
+title: "Embodied AI × World Models Atlas"
+type: software
+authors:
+  - name: "hyfine"
+repository-code: "https://github.com/hyfine/embodied-world-models-atlas"
+url: "https://hyfine.github.io/embodied-world-models-atlas/"
+date-released: "2026-11-23"
+license: MIT
