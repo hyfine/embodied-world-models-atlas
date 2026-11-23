@@ -1,6 +1,6 @@
 # Push the cup into the blue circle: two histories on one table
 
-[简体中文](guide.zh-CN.md) · [Home](../README.en.md) · [Paper & code index](../CATALOG.md)
+[简体中文](guide.zh-CN.md) · [Home](../README.md) · [Paper & code index](../CATALOG.md)
 
 A cup sits to the left of a blue circle. “Push the cup into the circle.” A robot might recognize the cup, and even generate a convincing clip of it sliding into place, yet miss the cup entirely. What is missing?
 

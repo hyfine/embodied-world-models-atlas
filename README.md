@@ -1,38 +1,42 @@
-<p align="center"><strong>简体中文</strong> · <a href="README.en.md">English</a></p>
+<p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
 
-[![具身智能与世界模型：从一次观测分出三条预测轨迹，执行后回到真实观测](assets/field-map.svg)](https://hyfine.github.io/embodied-world-models-atlas/)
+[![One observation branches into three predicted trajectories; an executed action leads back to a measurement](assets/field-map.svg)](https://hyfine.github.io/embodied-world-models-atlas/)
 
-# 具身智能 × 世界模型研究图谱
+# Embodied AI × World Models Atlas
 
-**如果机器人能生成一段杯子被推到目标的逼真视频，为什么它还可能推空？** 因为知道“画面通常怎样变”、知道“我的动作会造成什么变化”和知道“现在该怎么做”，是三个不同的问题。这份图谱沿着三者的交点讲技术史。
+**If a robot can generate a convincing video of a cup reaching its target, why might it still miss the cup?** Predicting what a scene usually looks like, predicting what *my action* will change, and choosing what to do now are different problems. This field guide follows the history of their intersection.
 
-**[打开交互图谱 ↗](https://hyfine.github.io/embodied-world-models-atlas/)** · [双语论文索引](CATALOG.md) · [趋势与反证](docs/outlook.zh-CN.md) · [检索口径](EVIDENCE.md)
+**[Explore the interactive atlas ↗](https://hyfine.github.io/embodied-world-models-atlas/)** · [Bilingual paper index](CATALOG.md) · [Outlook & counterevidence](docs/outlook.en.md) · [Search method](EVIDENCE.md)
 
-| 第一次来？ | 建议路线 | 读完能做什么 |
+| Time | Route | What to take away |
 |---|---|---|
-| **3 分钟** | [试试桌面推杯实验](https://hyfine.github.io/embodied-world-models-atlas/) | 自己选“不动 / 轻推 / 重推”，理解模型为何不是策略 |
-| **15 分钟** | [读两条技术史与家族树](docs/guide.zh-CN.md) | 分清 PlaNet、Diffusion Policy、V-JEPA 2-AC、DreamZero 的输入、输出和失败条件 |
-| **30 分钟** | [打开论文标本架](https://hyfine.github.io/embodied-world-models-atlas/#library) → [读实验收据](docs/outlook.zh-CN.md) | 找论文、代码、权重，对照作者到底测了画质、进度还是真机成功 |
+| **3 minutes** | [Try the tabletop experiment](https://hyfine.github.io/embodied-world-models-atlas/) | Choose wait, gentle push or hard push; see why a predictor is not a policy |
+| **15 minutes** | [Read the two histories and family tree](docs/guide.en.md) | Identify inputs, outputs and failure conditions for PlaNet, Diffusion Policy, V-JEPA 2-AC and DreamZero |
+| **30 minutes** | [Explore the research library](https://hyfine.github.io/embodied-world-models-atlas/#library) → [request an experimental receipt](docs/outlook.en.md) | Trace papers to code and weights; separate visual fidelity, partial progress and physical success |
 
-### 同一个任务，四种做法
+### One table, four approaches
 
-| 面对桌上的杯子 | 读哪一支 | 代表作 |
+[![Top lane: a policy maps an observation to an action. Bottom lane: a planner compares three predicted endpoints and picks the push closest to goal 8. Both observe again after acting.](assets/decision-loop.svg)](https://hyfine.github.io/embodied-world-models-atlas/#decision-loop)
+
+Follow the bright paths from left to right. The top lane emits a push; the bottom lane first compares waiting, a gentle push and a hard push. **7 is a prediction; 4 is what the robot actually observes.** These are teaching values, not benchmark data. [Replay the decision ↗](https://hyfine.github.io/embodied-world-models-atlas/#decision-loop)
+
+| At the cup | Reading family | Start with |
 |---|---|---|
-| **先在心里试几种推法，再做决定** | M · 模型规划和想象学习。区分部署时搜索和训练时想象 | [PlaNet](CATALOG.md#planet) · [DreamerV3](CATALOG.md#dreamerv3) |
-| **预测下一帧，或预测够用的特征** | F · 感知未来。重点是预测是否跟着动作正确变化 | [Visual Foresight](CATALOG.md#foresight) · [V-JEPA 2-AC](CATALOG.md#vjepa2) |
-| **从示范直接学怎样动** | P · 技能、动作符号与连续动作块。策略不一定生成未来 | [Diffusion Policy](CATALOG.md#diffusion-policy) · [OpenVLA](CATALOG.md#openvla) · [π0](CATALOG.md#pi0) |
-| **把未来与可执行动作放在同一模型里** | J · 联合生成或通过逆动力学连接；两种并不相同 | [DreamZero](CATALOG.md#dreamzero) · [GE-Act 2.0](CATALOG.md#geact) |
+| **Try several pushes in imagination before choosing** | M · Model-based decisions. Separate decision-time search from training-time imagination | [PlaNet](CATALOG.md#planet) · [DreamerV3](CATALOG.md#dreamerv3) |
+| **Predict future observations or sufficient features** | F · Ask whether predictions change *correctly* when actions change | [Visual Foresight](CATALOG.md#foresight) · [V-JEPA 2-AC](CATALOG.md#vjepa2) |
+| **Learn actions directly from demonstrations** | P · Skills, action tokens and continuous chunks. A policy need not predict a future scene | [Diffusion Policy](CATALOG.md#diffusion-policy) · [OpenVLA](CATALOG.md#openvla) · [π0](CATALOG.md#pi0) |
+| **Couple a visual future to executable actions** | J · Joint generation and a separately trained inverse-dynamics interface are different designs | [DreamZero](CATALOG.md#dreamzero) · [GE-Act 2.0](CATALOG.md#geact) |
 
-另设 **E**（环境、数据和评测）与 **S**（其他综述）。导航、四足运动、视触觉抓取是对照案例，不把具身智能等同于单臂桌面操作。
+E covers environments, data and evaluation; S covers other surveys. Navigation, quadruped locomotion and visuotactile grasping offer counterexamples to equating embodied AI with tabletop manipulation.
 
-### 当前判断
+### Our current call
 
-**与其先问“视频像不像真的”，不如先问“把动作换掉，预测的后果是否跟着正确变化”。** [DreamTrue](CATALOG.md#dreamtrue) 研究动作遵从，[SIMPLER](CATALOG.md#simpler) 对照仿真与实机排序：前者不能替代后者。[四条可被推翻的判断 →](docs/outlook.zh-CN.md)
+**Before asking “does this video look real?”, swap the proposed action and ask whether the predicted consequence changes correctly.** [DreamTrue](CATALOG.md#dreamtrue) studies action following; [SIMPLER](CATALOG.md#simpler) tests simulation against physical policy rankings. The first check does not replace the second. [Four falsifiable calls →](docs/outlook.en.md)
 
-### 收录与复用
+### Coverage and reuse
 
-**2026-11-23 版**：1991–2026 年，38 个精选条目、25 个不重复的代码入口、6 张 Hugging Face 模型卡。数据卡另列，不混入权重数。跨平台精选，**不是全网穷举或独立复现实验**。
+**2026-11-23 edition**: 38 curated records spanning 1991–2026, 25 distinct code links and 6 Hugging Face model cards. Dataset cards are separate. This is a cross-platform selection, **not an exhaustive index or an independent replication**.
 
-- [可机读 TSV](data/works.tsv) → [双语索引](CATALOG.md) 与中英文静态站使用同一份数据。
-- [收录规则与版本差异](EVIDENCE.md) · [贡献](CONTRIBUTING.md) · [引用](CITATION.cff) · [许可](LICENSE)。
-- 无需下载模型。用浏览器打开 `index.html` 即可离线浏览；更新后运行 `node scripts/build.mjs`，检查用 `node scripts/build.mjs --check`。
+- One [machine-readable TSV](data/works.tsv) drives the [bilingual catalog](CATALOG.md) and both static pages.
+- [Inclusion rules and version distinctions](EVIDENCE.md) · [Contribute](CONTRIBUTING.md) · [Cite](CITATION.cff) · [License](LICENSE).
+- No model download needed. Open `index.html` locally for the offline explorer. Rebuild with `node scripts/build.mjs` and validate with `node scripts/build.mjs --check`.

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 330" role="img" aria-labelledby="loop-title loop-desc">
+  <title id="loop-title">Two ways to choose a push · 两条决策路线</title>
+  <desc id="loop-desc">A policy directly emits a push. A planner compares predicted endpoints 3, 7 and 11 against goal 8, then executes the push predicted to reach 7. The cup actually reaches 4. 策略直接给出推法；规划器先比较三个预测终点。预测为 7，实测为 4。</desc>
+  <style>
+    .wm-trace{stroke-dasharray:1;stroke-dashoffset:0}
+    @media (prefers-reduced-motion:no-preference){
+      .wm-trace{animation:wm-draw .85s ease-out both}
+      .wm-compare{animation-delay:.85s}.wm-pick{animation-delay:1.8s}.wm-check{animation-delay:2.8s}
+      @keyframes wm-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+    }
+  </style>
+  <rect width="650" height="330" rx="14" fill="#133438"/>
+  <g font-family="system-ui,sans-serif" fill="#e7f1df">
+    <text x="24" y="34" font-size="18" font-weight="700">01　Direct policy · 直接策略</text>
+    <text x="24" y="157" font-size="18" font-weight="700">02　Model-based planning · 模型规划</text>
+    <path d="M24 121H626" stroke="#50706a"/>
+    <g fill="none" stroke="#587671" stroke-width="3">
+      <path d="M60 75H578 M60 231H117Q146 231 166 198H254 M117 231H254 M117 231Q146 231 166 264H254 M272 231H578"/>
+    </g>
+    <g fill="none" stroke="#9bf1bb" stroke-width="4">
+      <path class="wm-trace" pathLength="1" d="M60 75H399"/>
+      <path class="wm-trace wm-compare" pathLength="1" d="M399 75H578"/>
+      <path class="wm-trace" pathLength="1" d="M60 231H117"/>
+      <g stroke="#8bc7d1">
+        <path class="wm-trace wm-compare" pathLength="1" d="M117 231Q146 231 166 198H254"/>
+        <path class="wm-trace wm-compare" pathLength="1" d="M117 231H254"/>
+        <path class="wm-trace wm-compare" pathLength="1" d="M117 231Q146 231 166 264H254"/>
+      </g>
+      <path class="wm-trace wm-pick" pathLength="1" stroke="#ffc781" d="M272 231H399"/>
+      <path class="wm-trace wm-check" pathLength="1" d="M399 231H578"/>
+    </g>
+    <g fill="#15383a" stroke="#9bf1bb" stroke-width="3"><circle cx="60" cy="75" r="8"/><circle cx="60" cy="231" r="8"/><circle cx="578" cy="75" r="8"/><circle cx="578" cy="231" r="8"/></g>
+    <g fill="#ffc781"><circle cx="399" cy="75" r="8"/><circle cx="399" cy="231" r="8"/></g>
+    <g fill="#25494b" stroke="#8bc7d1" stroke-width="2"><rect x="239" y="185" width="45" height="25" rx="9"/><rect x="239" y="251" width="45" height="25" rx="9"/></g>
+    <rect x="239" y="218" width="45" height="25" rx="9" fill="#ffc781"/>
+    <g font-family="monospace" font-size="18" text-anchor="middle"><text x="262" y="204">3</text><text x="262" y="237" fill="#123438">7</text><text x="262" y="270">11</text></g>
+    <g font-size="16" text-anchor="middle">
+      <text x="60" y="104">Observe</text><text x="227" y="66">policy π(o, g)</text><text x="399" y="104">Push</text><text x="578" y="104">Observe again</text>
+      <text x="60" y="260">Observe</text><text x="399" y="260">Push</text><text x="578" y="260">Measure: 4</text>
+    </g>
+    <text x="24" y="307" font-size="16" fill="#aac9ba">Goal = 8</text><text x="139" y="307" font-size="16" fill="#aac9ba">3, 7, 11 = predicted</text><text x="400" y="307" font-size="16" fill="#ffc781">4 ≠ 7 → replan</text>
+  </g>
+</svg>

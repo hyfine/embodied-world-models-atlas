@@ -13,6 +13,6 @@ Open an issue or pull request with the work's original paper, the proposed decis
    node scripts/check-links.mjs
    ```
 
-5. Open `index.html` and `en.html`; test the action demo, combined family/text filter and empty state. Commit both input and generated files. CI checks the generated pages and local reading links without network access.
+5. Open `index.html` (English) and `zh.html` (Chinese); `en.html` remains an English compatibility URL. Test the language switch, action demo, decision animation/replay, reduced-motion still diagram, combined family/text filter and empty state. Commit both input and generated files. CI checks the generated pages and local reading links without network access.
 
 `assets/field-map.svg` is an original teaching diagram. Family relationships are editorial, not assertions of descent. See [LICENSE](LICENSE) for the atlas's own material; upstream terms are separate.

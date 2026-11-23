@@ -25,3 +25,22 @@ for (const button of buttons) {
     for (const b of buttons) b.setAttribute('aria-pressed', String(b === button));
   });
 }
+
+const diagram = document.querySelector('.decision-diagram');
+const replay = diagram.querySelector('.replay');
+const arrival = new IntersectionObserver(entries => {
+  if (entries.some(entry => entry.isIntersecting)) {
+    diagram.classList.remove('waiting');
+    arrival.disconnect();
+  }
+});
+diagram.classList.add('waiting');
+arrival.observe(diagram);
+replay.hidden = false;
+replay.addEventListener('click', () => {
+  diagram.classList.remove('waiting');
+  for (const animation of diagram.getAnimations({subtree: true})) {
+    animation.currentTime = 0;
+    animation.play();
+  }
+});
