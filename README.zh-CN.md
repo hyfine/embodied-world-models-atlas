@@ -1,16 +1,18 @@
 <p align="center"><a href="README.md">English</a> · <strong>简体中文</strong></p>
 
-[![具身智能与世界模型：从一次观测分出三条预测轨迹，执行后回到真实观测](assets/field-map.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html)
-
 # 具身智能 × 世界模型研究图谱
 
 **如果机器人能生成一段杯子被推到目标的逼真视频，为什么它还可能推空？** 因为知道“画面通常怎样变”、知道“我的动作会造成什么变化”和知道“现在该怎么做”，是三个不同的问题。这份图谱沿着三者的交点讲技术史。
 
 **[打开交互图谱 ↗](https://hyfine.github.io/embodied-world-models-atlas/zh.html)** · [双语论文索引](CATALOG.md) · [趋势与反证](docs/outlook.zh-CN.md) · [检索口径](EVIDENCE.md)
 
+[![从规划、预测、动作策略，到世界与动作的耦合：六条研究路线的分期代表作](assets/panorama.zh-CN.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#swimlanes)
+
+**先看全貌，再选一篇读：** [回放方法时间轨迹](https://hyfine.github.io/embodied-world-models-atlas/zh.html#trajectory) · [对照家族泳道](https://hyfine.github.io/embodied-world-models-atlas/zh.html#swimlanes) · [展开家族树](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)。再沿一张[模块架构图](https://hyfine.github.io/embodied-world-models-atlas/zh.html#architectures)走到[论文与源码精读](docs/deep-dives.zh-CN.md)。
+
 | 第一次来？ | 建议路线 | 读完能做什么 |
 |---|---|---|
-| **3 分钟** | [试试桌面推杯实验](https://hyfine.github.io/embodied-world-models-atlas/zh.html) | 自己选“不动 / 轻推 / 重推”，理解模型为何不是策略 |
+| **3 分钟** | [试试桌面推杯实验](https://hyfine.github.io/embodied-world-models-atlas/zh.html#cup-lab) | 自己选“不动 / 轻推 / 重推”，理解模型为何不是策略 |
 | **15 分钟** | [读两条技术史与家族树](docs/guide.zh-CN.md) | 分清 PlaNet、Diffusion Policy、V-JEPA 2-AC、DreamZero 的输入、输出和失败条件 |
 | **30 分钟** | [打开论文标本架](https://hyfine.github.io/embodied-world-models-atlas/zh.html#library) → [读实验收据](docs/outlook.zh-CN.md) | 找论文、代码、权重，对照作者到底测了画质、进度还是真机成功 |
 

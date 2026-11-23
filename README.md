@@ -1,16 +1,18 @@
 <p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
 
-[![One observation branches into three predicted trajectories; an executed action leads back to a measurement](assets/field-map.svg)](https://hyfine.github.io/embodied-world-models-atlas/)
-
 # Embodied AI × World Models Atlas
 
 **If a robot can generate a convincing video of a cup reaching its target, why might it still miss the cup?** Predicting what a scene usually looks like, predicting what *my action* will change, and choosing what to do now are different problems. This field guide follows the history of their intersection.
 
 **[Explore the interactive atlas ↗](https://hyfine.github.io/embodied-world-models-atlas/)** · [Bilingual paper index](CATALOG.md) · [Outlook & counterevidence](docs/outlook.en.md) · [Search method](EVIDENCE.md)
 
+[![Selected milestones: planning, prediction and policies develop alongside datasets; world-action models couple predictions to commands](assets/panorama.en.svg)](https://hyfine.github.io/embodied-world-models-atlas/#swimlanes)
+
+**See the field before reading the papers:** [replay the timeline](https://hyfine.github.io/embodied-world-models-atlas/#trajectory) · [compare family swimlanes](https://hyfine.github.io/embodied-world-models-atlas/#swimlanes) · [open the family tree](https://hyfine.github.io/embodied-world-models-atlas/#family-tree). Then follow one [architecture plate](https://hyfine.github.io/embodied-world-models-atlas/#architectures) to a [paper-to-code deep dive](docs/deep-dives.en.md).
+
 | Time | Route | What to take away |
 |---|---|---|
-| **3 minutes** | [Try the tabletop experiment](https://hyfine.github.io/embodied-world-models-atlas/) | Choose wait, gentle push or hard push; see why a predictor is not a policy |
+| **3 minutes** | [Try the tabletop experiment](https://hyfine.github.io/embodied-world-models-atlas/#cup-lab) | Choose wait, gentle push or hard push; see why a predictor is not a policy |
 | **15 minutes** | [Read the two histories and family tree](docs/guide.en.md) | Identify inputs, outputs and failure conditions for PlaNet, Diffusion Policy, V-JEPA 2-AC and DreamZero |
 | **30 minutes** | [Explore the research library](https://hyfine.github.io/embodied-world-models-atlas/#library) → [request an experimental receipt](docs/outlook.en.md) | Trace papers to code and weights; separate visual fidelity, partial progress and physical success |
 

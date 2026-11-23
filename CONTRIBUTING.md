@@ -5,6 +5,7 @@ Open an issue or pull request with the work's original paper, the proposed decis
 1. Read [EVIDENCE.md](EVIDENCE.md). Edit [data/works.tsv](data/works.tsv): stable lowercase `id`, early public `year`, a main `family`, method `name`, source/venue, primary paper URL, optional GitHub and Hub paths, Chinese and English notes. Do not insert literal tabs or newlines inside fields.
 2. Distinguish repositories, model weights and dataset cards; do not assume a model card means all training code is public. Link upstream instead of copying papers, figures or weights.
 3. For substantive changes, update both language guides, commentary and snapshot counts where applicable. Preserve old IDs so existing citations work.
+   Place every new work in exactly one reading branch in [the family layouts](data/method-families.mjs). Generated timeline, swimlanes and tree share the paper IDs; representative architecture plates and [case notes](data/deep-dives.mjs) must distinguish models from evaluation/survey workflows. Pin implementation references to commits.
 4. From the repository root, with Node.js 20+ and no package install:
 
    ```sh

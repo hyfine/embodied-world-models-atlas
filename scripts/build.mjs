@@ -1,6 +1,7 @@
 import {readFileSync, writeFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
+import {deepGuide,mapSections,panorama,validateMap} from './maps.mjs';
 
 process.chdir(fileURLToPath(new URL('../', import.meta.url)));
 const root = 'https://github.com/hyfine/embodied-world-models-atlas';
@@ -31,6 +32,7 @@ const works = lines.map((line, i) => {
   return r;
 }).sort((a, b) => b.year - a.year || a.id.localeCompare(b.id, 'en'));
 const esc = s => s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+validateMap(works,families);
 const links = (r, paperLabel) => [
   [paperLabel, r.paper],
   ...(r.github ? [['GitHub', `https://github.com/${r.github}`]] : []),
@@ -50,17 +52,18 @@ function page(en) {
 <html lang="${lang}"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${t('具身智能 × 世界模型研究图谱','Embodied AI × World Models Atlas')}</title>
 <meta name="description" content="${t('从推杯子读懂预测、规划和动作：双语研究图谱。','A bilingual field guide to prediction, planning and action, starting with a cup on a table.')}">
-<link rel="stylesheet" href="assets/atlas.css"><script defer src="assets/atlas.js"></script>
-<body><a class="skip" href="#main">${t('跳到正文','Skip to content')}</a><header><div class="bar"><a href="#main" class="wordmark">◉ FIELD ATLAS</a><nav><a href="#library">${t('索引','Library')}</a><a href="${root}">GitHub</a><a lang="${t('en','zh-CN')}" href="${t('index','zh')}.html">${t('English','中文')}</a></nav></div></header>
+<link rel="stylesheet" href="assets/atlas.css"><link rel="stylesheet" href="assets/maps.css"><script defer src="assets/atlas.js"></script><script defer src="assets/maps.js"></script>
+<body><a class="skip" href="#main">${t('跳到正文','Skip to content')}</a><header><div class="bar"><a href="#main" class="wordmark">◉ FIELD ATLAS</a><nav><a href="#maps">${t('演进','Evolution')}</a><a href="#architectures">${t('架构','Architecture')}</a><a href="#library">${t('索引','Library')}</a><a href="${root}">GitHub</a><a lang="${t('en','zh-CN')}" href="${t('index','zh')}.html">${t('English','中文')}</a></nav></div></header>
 <main id="main"><div class="hero"><div class="wrap hero-grid"><div><div class="kicker">RESEARCH FIELDNOTES &nbsp; / &nbsp; ${cutoff}</div>
 <h1>${t('具身智能<br><em>× 世界模型</em>','Embodied AI<br><em>× World Models</em>')}</h1>
 <p>${t('会生成杯子滑动的视频，为什么还会推空？从一次接触出发，拆开预测、规划与动作。','A model can generate a cup sliding into place and still miss the cup. Start at the point of contact to separate prediction, planning and action.')}</p>
-<a class="button" href="${guide}">${t('从推杯子开始','Read the cup experiment')} →</a></div>
-<div class="plate"><div class="kicker">PLATE 01 &nbsp; / &nbsp; MPC</div><h2>${t('选一个动作，看预测落在哪里。','Pick an action. Where does the prediction land?')}</h2>
+<a class="button" href="#maps">${t('探索技术演进','Explore the timeline')} →</a> <a class="hero-link" href="#decision-loop">${t('先看推杯实验','Start with the cup')}</a></div>
+<a class="panorama" href="#swimlanes"><img src="assets/panorama.${lang}.svg" alt="${t('四个时期、六个家族的代表作；打开完整泳道图','Milestones across four eras and six families; open the full swimlanes')}"><span>${t('从反应式控制，到想象中的规划，再到未来与动作联合生成。完整泳道 →','From reactive control to imagined plans to joint futures and actions. Full swimlanes →')}</span></a></div></div>
+<div class="wrap">${mapSections({works,families,en,esc,docs})}
+<section id="cup-lab"><div class="plate"><div class="kicker">CUP LAB &nbsp; / &nbsp; MPC</div><h2>${t('选一个动作，看预测落在哪里。','Pick an action. Where does the prediction land?')}</h2>
 <div class="track" aria-hidden="true"><span class="goal"></span><span class="cup">▰</span></div>
 <div class="controls" id="actions">${[t('不动','Wait'),t('轻推','Gentle push'),t('重推','Hard push')].map((a,i) => `<button type="button" data-i="${i}" aria-pressed="${i===1}">${a}</button>`).join('')}</div>
-<p id="prediction" aria-live="polite" data-label="${t('预测终点 / 距目标','Endpoint / distance to goal')}">${t('预测终点 / 距目标','Endpoint / distance to goal')}: 7 / 1</p><small>${t('教学假设：目标 = 8。模型不是实物；行动后必须再观察。','Toy example: goal = 8. The model is not the cup; observe again after acting.')}</small></div></div></div>
-<div class="wrap"><div class="stats">${[[works.length,t('精选条目','records')],[count('github'),t('代码入口¹','code links¹')],[count('hub'),t('模型卡','model cards')],['1991–2026',t('时间跨度','coverage')]].map(([v,k])=>`<div><strong>${v}</strong><span>${k}</span></div>`).join('')}</div>
+<p id="prediction" aria-live="polite" data-label="${t('预测终点 / 距目标','Endpoint / distance to goal')}">${t('预测终点 / 距目标','Endpoint / distance to goal')}: 7 / 1</p><small>${t('教学假设：目标 = 8。模型不是实物；行动后必须再观察。','Toy example: goal = 8. The model is not the cup; observe again after acting.')}</small></div></section>
 <section id="decision-loop"><div class="kicker">PLATE 02 &nbsp; / &nbsp; DECISION PATHS</div><h2>${t('同一只杯子，两条决策路线','One cup, two decision paths')}</h2>
 <figure class="decision-diagram">${decisionDiagram}<figcaption><p><strong>${t('上轨：直接策略。','Top lane: direct policy.')}</strong> ${t('从观测和目标生成动作；不必先模拟三个未来。','Choose a push from the observation and goal. No explicit comparison of future states is required.')}</p>
 <p><strong>${t('下轨：模型预测控制。','Bottom lane: model-predictive control.')}</strong> ${t('目标是 8。在不动、轻推、重推的预测终点（3、7、11）中，7 最近，于是轻推。杯子实际只到 4：下一步须从 4 重算，而不是从 7 接着推。','The goal is 8. Of the predicted endpoints for wait, gentle push and hard push (3, 7, 11), 7 is closest. Execute the gentle push. The cup only reaches 4: replan from 4, not 7.')}</p>
@@ -77,7 +80,7 @@ function page(en) {
   ['2022–25',t('怎样把指令变成动作？','How do words become motor commands?'),'RT-2 · OpenVLA · π0','openvla'],
   ['2025–26',t('怎样让视觉未来约束动作？','Can a visual future constrain action?'),'V-JEPA 2-AC · DreamZero','dreamzero'],
 ].map(([yr,q,n,id])=>`<a href="${root}/blob/main/CATALOG.md#${id}"><b>${yr}</b><strong>${q}</strong><small>${n}</small></a>`).join('')}</div><p>${t('各时期重叠；新路线不意味着旧方法失效。','Periods overlap; a new route does not invalidate an older one.')}</p></section>
-<section id="library"><div class="kicker">03 &nbsp; / &nbsp; RESEARCH LIBRARY</div><h2>${t('论文标本架','Research library')}</h2><p>${t('较新的公开版本排在前面。选择一个家族，或搜索任务、方法与代码名。','Newest release years first. Choose a family or search by task, method or code handle.')}</p>
+<section id="library"><div class="kicker">03 &nbsp; / &nbsp; RESEARCH LIBRARY</div><h2>${t('论文标本架','Research library')}</h2><p>${works.length} ${t('个条目','records')} · ${count('github')} ${t('个代码入口¹','code links¹')} · ${count('hub')} ${t('张模型卡','model cards')}</p>
 <div class="filters"><label>${t('搜索','Search')} <input id="query" type="search" placeholder="Dreamer, VLA, MPC…"></label>
 <label>${t('家族','Family')} <select id="family"><option value="">${t('全部','All')}</option>${Object.entries(families).map(([f,n])=>`<option value="${f}">${f} · ${n[+en]}</option>`).join('')}</select></label>
 <output id="count" aria-live="polite">${works.length} / ${works.length}</output></div>
@@ -89,7 +92,11 @@ function page(en) {
 }
 const check = process.argv.includes('--check');
 const english = page(true);
-for (const [path, contents] of [['CATALOG.md', catalog], ['index.html', english], ['en.html', english], ['zh.html', page(false)]]) {
+for (const [path, contents] of [['CATALOG.md', catalog], ['index.html', english], ['en.html', english], ['zh.html', page(false)],
+  ...[true,false].flatMap(en=>[
+    [`assets/panorama.${en?'en':'zh-CN'}.svg`,panorama(works,en)],
+    [`docs/deep-dives.${en?'en':'zh-CN'}.md`,deepGuide(works,families,en)],
+  ])]) {
   if (check) assert(contents === readFileSync(path, 'utf8'), `Stale ${path}: run node scripts/build.mjs`);
   else writeFileSync(path, contents);
 }
