@@ -6,7 +6,9 @@
 
 **[Explore the interactive atlas ↗](https://hyfine.github.io/embodied-world-models-atlas/)** · [Bilingual paper index](CATALOG.md) · [Outlook & counterevidence](docs/outlook.en.md) · [Search method](EVIDENCE.md)
 
-[![Selected milestones: planning, prediction and policies develop alongside datasets; world-action models couple predictions to commands](assets/panorama.en.svg)](https://hyfine.github.io/embodied-world-models-atlas/#swimlanes)
+[![A growing research tree: six colored families connect the perception–action loop to 38 labeled works](assets/growth-tree.en.svg)](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)
+
+**Read the tree from root to leaf.** Play the years to grow the canopy, zoom in and drag to explore, or select a leaf for its paper and implementation. The branches are reading routes, not claims of technical inheritance.
 
 **See the field before reading the papers:** [replay the timeline](https://hyfine.github.io/embodied-world-models-atlas/#trajectory) · [compare family swimlanes](https://hyfine.github.io/embodied-world-models-atlas/#swimlanes) · [open the family tree](https://hyfine.github.io/embodied-world-models-atlas/#family-tree). Then follow one [architecture plate](https://hyfine.github.io/embodied-world-models-atlas/#architectures) to a [paper-to-code deep dive](docs/deep-dives.en.md).
 

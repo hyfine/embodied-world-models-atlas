@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {layouts} from '../data/method-families.mjs';
 import {cases} from '../data/deep-dives.mjs';
+import {treePlate,timePlate} from './plates.mjs';
 
 const headings = {
   contract: ['输入与输出', 'Interface'],
@@ -10,7 +11,6 @@ const headings = {
   probe: ['精读练习与失败测试', 'Code-reading exercise and failure test'],
 };
 const short = {legged:'Legged Gym',cosmos:'Cosmos',touch:'Feeling of Success',brooks:'Brooks', 'survey-vla':'VLA survey','survey-wm':'World models survey',oxe:'OXE / RT-X',foresight:'Visual Foresight',vjepa2:'V-JEPA 2 / 2-AC',spatialumi:'Spatial-UMI-Dream'};
-const order = (a,b) => a.year-b.year || a.id.localeCompare(b.id,'en');
 
 export function panorama(works,en) {
   const byId=new Map(works.map(r=>[r.id,r]));
@@ -69,55 +69,22 @@ export function mapSections({works,families,en,esc,docs}) {
   const l=+en, t=(zh,eng)=>en?eng:zh;
   const years=[...new Set(works.map(r=>+r.year))].sort((a,b)=>a-b);
   const fs=Object.keys(families), byId=new Map(works.map(r=>[r.id,r]));
-  const cw=153, x=i=>65+cw*i, width=x(years.length)+14;
   const title=id=>esc(short[id]||byId.get(id).name);
-  const attrs=r=>`data-node="${r.id}" data-y="${r.year}" data-f="${r.family}"`;
-  function node(r,left,top) {
-    return `<a class="map-node" href="#${r.id}" ${attrs(r)} transform="translate(${left} ${top})"><title>${r.year} · ${esc(r.name)}</title><rect x="-8" y="-13" width="146" height="21" rx="5"/><circle r="4"/><text x="9" y="4">${title(r.id)}</text></a>`;
-  }
-  function plot(lanes) {
-    const yr=year=>works.filter(r=>+r.year===year).sort(order);
-    let rows='', height=0;
-    if (!lanes) {
-      const max=Math.max(...years.map(y=>yr(y).length));
-      height=75+max*29;
-      rows=`<path class="axis" d="M${x(0)} 36H${x(years.length-1)}"/>`+years.map((y,i)=>{
-        const col=yr(y);
-        return `<g><path class="axis" d="M${x(i)} 36v${15+col.length*29}"/>${col.map((r,j)=>node(r,x(i),65+j*29)).join('')}</g>`;
-      }).join('');
-    } else {
-      let y0=48;
-      for(const f of fs) {
-        const inLane=works.filter(r=>r.family===f);
-        const n=Math.max(...years.map(y=>inLane.filter(r=>+r.year===y).length));
-        const h=35+n*24;
-        const inds=years.map((y,i)=>inLane.some(r=>+r.year===y)?i:-1).filter(i=>i>=0);
-        rows+=`<g data-lane="${f}"><rect class="lane-bed" x="5" y="${y0-12}" width="${width-12}" height="${h-2}"/><text class="lane-id" x="20" y="${y0+10}">${f}</text><line class="rail" data-rail="${f}" x1="${x(inds[0])}" x2="${x(inds.at(-1))}" y1="${y0}" y2="${y0}"/>`;
-        years.forEach((y,i)=>{
-          rows+=inLane.filter(r=>+r.year===y).sort(order).map((r,j)=>node(r,x(i),y0+19+j*24)).join('');
-        });
-        rows+='</g>'; y0+=h;
-      }
-      height=y0;
-    }
-    const id=lanes?'swimlanes':'trajectory';
-    return `<div class="map-panel" id="${id}"><div class="plot-scroll" tabindex="0" aria-label="${t('横向滚动时间轴','Horizontally scrollable time axis')}"><svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="group" aria-label="${lanes?t('类别泳道图','Family swimlanes'):t('方法时间轨迹','Method timeline')}">
-${years.map((y,i)=>`<g class="tick" data-tick="${y}" data-x="${x(i)}"><text x="${x(i)}" y="21">${y}</text><circle cx="${x(i)}" cy="36" r="3"/></g>`).join('')}
-${rows}</svg></div></div>`;
-  }
-  const tree=fs.map(f=>`<details class="tree-family" data-lane="${f}" ${f==='M'?'open':''}><summary>${f} · ${families[f][l]}</summary>${layouts[f].branches.map(branch=>`<div class="twig"><strong>${esc(branch[l])}</strong><div>${branch[2].split(' ').map(id=>byId.get(id)).sort(order).map(r=>`<a class="leaf" href="#${r.id}" ${attrs(r)}>${r.year} · ${title(r.id)}</a>`).join('')}</div></div>`).join('')}</details>`).join('');
-  const tabs=[['trajectory',t('方法时间轨迹','Method timeline')],['swimlanes',t('类别泳道','Family swimlanes')],['family-tree',t('家族树','Family tree')]];
+  const tabs=[['family-tree',t('生长树','Growth tree')],['trajectory',t('方法轨迹','Method trajectories')],['swimlanes',t('家族泳道','Family swimlanes')]];
+  const panel=(id,content,description)=>`<figure class="map-panel" id="${id}"><div class="viewport">${content}</div><figcaption>${description}</figcaption></figure>`;
   const book=`${docs}deep-dives.${en?'en':'zh-CN'}.md`;
-  return `<section id="maps"><div class="kicker">RESEARCH MAP &nbsp; / &nbsp; 1991—2026</div><h2>${t('回放方法的演进','Replay the development of methods')}</h2>
-<p>${t('三个视图使用同一批记录。横轴按有收录成果的年份等距排列，不代表实际时间间隔。分支表示方法归类，不是已证实的技术继承。','Three views of the same records. Release years with entries are evenly spaced, not proportional to elapsed time. Branches indicate reading families, not proven descent.')}</p>
-<div class="map-tabs">${tabs.map(([id,text])=>`<a href="#${id}" data-view="${id}">${text}</a>`).join('')}</div>
+  return `<section id="maps"><div class="plate-head"><div class="kicker">INTERACTIVE FIELD PLATES &nbsp; / &nbsp; 1991—2026</div>
+<div class="map-tabs">${tabs.map(([id,text],i)=>`<a href="#${id}" data-view="${id}"><small>0${i+1}</small> ${text}</a>`).join('')}</div></div>
+${panel('family-tree',treePlate(works,en),t('一叶一篇：从感知与行动的共同树根，经六个家族和方法分支读到单篇研究。点叶片看证据；枝条是阅读分类，不是引用或继承。','One leaf, one work. Follow the roots of perception and action through families and method branches. Select a leaf for evidence. Branches classify works; they do not establish ancestry.'))}
+${panel('trajectory',timePlate(works,en,false),t('每一行是一条方法路线，一站是一篇研究。横轴只显示有条目的年份，间距不代表真实时长；同年并列不代表先后。','One route per methodology, one stop per work. Only years with records are shown; spacing is not elapsed time and same-year stops are peers.'))}
+${panel('swimlanes',timePlate(works,en,true),t('每条河是一类研究。圆点是论文，数字是该年收录数，河宽随收录数变化。两端之间的带状线是视觉插值，不表示未收录年份的活动量，更不是能力评分。','One river per family. Dots are works; numbers and width encode the indexed count in a release year. Ribbons interpolate between observations, not activity in missing years or capability.'))}
 <div class="map-controls" hidden><button type="button" id="play-years" data-play="${t('▶ 回放','▶ Play years')}" data-pause="${t('Ⅱ 暂停','Ⅱ Pause')}">${t('▶ 回放','▶ Play years')}</button>
 <label>${t('截至','Through')} <input id="map-year" type="range" min="0" max="${years.length-1}" value="${years.length-1}" data-years="${years.join(',')}" aria-valuetext="${years.at(-1)}"></label>
 <output id="map-count" aria-live="off">${years.at(-1)} · ${works.length}/${works.length}</output>
-<label>${t('家族','Family')} <select id="map-family"><option value="">${t('全部','All')}</option>${fs.map(f=>`<option value="${f}">${f} · ${families[f][l]}</option>`).join('')}</select></label></div>
+<label>${t('家族','Family')} <select id="map-family"><option value="">${t('全部','All')}</option>${fs.map(f=>`<option value="${f}">${f} · ${families[f][l]}</option>`).join('')}</select></label>
+<div class="lens"><button type="button" data-zoom="out" aria-label="${t('缩小','Zoom out')}">−</button><output id="scale">100%</output><button type="button" data-zoom="in" aria-label="${t('放大','Zoom in')}">+</button><button type="button" data-zoom="reset">${t('复位','Fit')}</button></div></div>
 <div class="family-key">${fs.map(f=>`<span data-f="${f}">${f} · ${families[f][l]}</span>`).join('')}</div>
 <aside class="map-inspector" aria-live="polite"><span>${t('点选一个节点查看其方法、局限和一手来源。','Select a node to inspect its mechanism, limitation and primary sources.')}</span></aside>
-${plot(false)}${plot(true)}<div class="map-panel" id="family-tree"><div class="tree-root">${t('感知 → 选择 → 行动 → 再观测','Sense → choose → act → observe')}</div>${tree}</div>
 </section><section id="architectures"><div class="kicker">ARCHITECTURE PLATES &nbsp; / &nbsp; M F P J E S</div><h2>${t('从家族架构走到实现','From family architecture to implementation')}</h2><p>${t('展开每一类，沿组件读数据流。每张图取一条代表路径；E 与 S 分别是评测和综述流程，不是两种控制器。','Open a family and follow the data through its components. Each plate shows one representative path; E and S are evaluation and survey workflows, not controllers.')}</p>
 ${fs.map(f=>{
     const a=layouts[f],r=byId.get(a.focus);

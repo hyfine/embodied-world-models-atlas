@@ -12,7 +12,8 @@ for (const file of files) {
   const pattern = file.endsWith('.md') ? /\]\(<?([^\s)>]+)/g : /(?:href|src)="([^"]+)"/g;
   for (const [, url] of text.matchAll(pattern)) {
     if (/^[a-z]+:/i.test(url)) continue;
-    const [path, anchor] = url.split('#');
+    const [resource, anchor] = url.split('#');
+    const [path] = resource.split('?');
     const target = path ? resolve(dirname(file), path) : file;
     assert(existsSync(target), `${file}: missing ${url}`);
     if (anchor) assert(readFileSync(target, 'utf8').includes(`id="${anchor}"`), `${file}: missing anchor ${url}`);

@@ -6,7 +6,9 @@
 
 **[打开交互图谱 ↗](https://hyfine.github.io/embodied-world-models-atlas/zh.html)** · [双语论文索引](CATALOG.md) · [趋势与反证](docs/outlook.zh-CN.md) · [检索口径](EVIDENCE.md)
 
-[![从规划、预测、动作策略，到世界与动作的耦合：六条研究路线的分期代表作](assets/panorama.zh-CN.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#swimlanes)
+[![方法生长树：六色家族从感知与行动的树根展开，38 个作品各占一片有名称的叶子](assets/growth-tree.zh-CN.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)
+
+**从根读到叶。** 按年份回放，可以看到各支路线何时长出；放大后拖动图面，点叶片读论文与实现。枝条是阅读分类，不是已证实的技术继承。
 
 **先看全貌，再选一篇读：** [回放方法时间轨迹](https://hyfine.github.io/embodied-world-models-atlas/zh.html#trajectory) · [对照家族泳道](https://hyfine.github.io/embodied-world-models-atlas/zh.html#swimlanes) · [展开家族树](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)。再沿一张[模块架构图](https://hyfine.github.io/embodied-world-models-atlas/zh.html#architectures)走到[论文与源码精读](docs/deep-dives.zh-CN.md)。
 

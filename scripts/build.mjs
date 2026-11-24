@@ -1,12 +1,15 @@
 import {readFileSync, writeFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {deepGuide,mapSections,panorama,validateMap} from './maps.mjs';
+import {treePlate} from './plates.mjs';
 
 process.chdir(fileURLToPath(new URL('../', import.meta.url)));
 const root = 'https://github.com/hyfine/embodied-world-models-atlas';
 const docs = `${root}/blob/main/docs/`;
 const cutoff = '2026-11-23';
+const asset=path=>`${path}?v=${createHash('sha256').update(readFileSync(path)).digest('hex').slice(0,10)}`;
 const decisionDiagram = readFileSync('assets/decision-loop.svg', 'utf8');
 const families = {
   M: ['想象与规划', 'Imagination & planning'],
@@ -52,13 +55,11 @@ function page(en) {
 <html lang="${lang}"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${t('具身智能 × 世界模型研究图谱','Embodied AI × World Models Atlas')}</title>
 <meta name="description" content="${t('从推杯子读懂预测、规划和动作：双语研究图谱。','A bilingual field guide to prediction, planning and action, starting with a cup on a table.')}">
-<link rel="stylesheet" href="assets/atlas.css"><link rel="stylesheet" href="assets/maps.css"><script defer src="assets/atlas.js"></script><script defer src="assets/maps.js"></script>
+<link rel="stylesheet" href="${asset('assets/atlas.css')}"><link rel="stylesheet" href="${asset('assets/maps.css')}"><script defer src="${asset('assets/atlas.js')}"></script><script defer src="${asset('assets/maps.js')}"></script>
 <body><a class="skip" href="#main">${t('跳到正文','Skip to content')}</a><header><div class="bar"><a href="#main" class="wordmark">◉ FIELD ATLAS</a><nav><a href="#maps">${t('演进','Evolution')}</a><a href="#architectures">${t('架构','Architecture')}</a><a href="#library">${t('索引','Library')}</a><a href="${root}">GitHub</a><a lang="${t('en','zh-CN')}" href="${t('index','zh')}.html">${t('English','中文')}</a></nav></div></header>
-<main id="main"><div class="hero"><div class="wrap hero-grid"><div><div class="kicker">RESEARCH FIELDNOTES &nbsp; / &nbsp; ${cutoff}</div>
-<h1>${t('具身智能<br><em>× 世界模型</em>','Embodied AI<br><em>× World Models</em>')}</h1>
-<p>${t('会生成杯子滑动的视频，为什么还会推空？从一次接触出发，拆开预测、规划与动作。','A model can generate a cup sliding into place and still miss the cup. Start at the point of contact to separate prediction, planning and action.')}</p>
-<a class="button" href="#maps">${t('探索技术演进','Explore the timeline')} →</a> <a class="hero-link" href="#decision-loop">${t('先看推杯实验','Start with the cup')}</a></div>
-<a class="panorama" href="#swimlanes"><img src="assets/panorama.${lang}.svg" alt="${t('四个时期、六个家族的代表作；打开完整泳道图','Milestones across four eras and six families; open the full swimlanes')}"><span>${t('从反应式控制，到想象中的规划，再到未来与动作联合生成。完整泳道 →','From reactive control to imagined plans to joint futures and actions. Full swimlanes →')}</span></a></div></div>
+<main id="main"><div class="masthead wrap"><div><div class="kicker">RESEARCH FIELDNOTES　/　${cutoff}</div>
+<h1>${t('具身智能 <em>× 世界模型</em>','Embodied AI <em>× World Models</em>')}</h1></div>
+<p>${t('从预测接下来会发生什么，到决定下一步怎样做。','From predicting what happens next to choosing what to do next.')}<br><small>${works.length} ${t('项研究','works')}　/　6 ${t('个家族','families')}　/　1991–2026</small></p></div>
 <div class="wrap">${mapSections({works,families,en,esc,docs})}
 <section id="cup-lab"><div class="plate"><div class="kicker">CUP LAB &nbsp; / &nbsp; MPC</div><h2>${t('选一个动作，看预测落在哪里。','Pick an action. Where does the prediction land?')}</h2>
 <div class="track" aria-hidden="true"><span class="goal"></span><span class="cup">▰</span></div>
@@ -95,6 +96,7 @@ const english = page(true);
 for (const [path, contents] of [['CATALOG.md', catalog], ['index.html', english], ['en.html', english], ['zh.html', page(false)],
   ...[true,false].flatMap(en=>[
     [`assets/panorama.${en?'en':'zh-CN'}.svg`,panorama(works,en)],
+    [`assets/growth-tree.${en?'en':'zh-CN'}.svg`,treePlate(works,en)+'\n'],
     [`docs/deep-dives.${en?'en':'zh-CN'}.md`,deepGuide(works,families,en)],
   ])]) {
   if (check) assert(contents === readFileSync(path, 'utf8'), `Stale ${path}: run node scripts/build.mjs`);
