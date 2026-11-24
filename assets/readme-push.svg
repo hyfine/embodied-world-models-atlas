@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 200" width="940" height="200" role="img" aria-labelledby="title desc">
+  <title id="title">One push, three questions · 一次推杯，三个问题</title>
+  <desc id="desc">Predict three possible futures. Choose a gentle push. Check the measured endpoint, 4, against the prediction, 7. Illustrative positions, not trial data.</desc>
+  <defs>
+    <pattern id="paper" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#567976"/></pattern>
+    <g id="cup" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-15-20h30l-2 23q-13 5-26 0zM15-17h4c11 0 8 15-5 15"/>
+    </g>
+  </defs>
+  <style>
+    @media (prefers-reduced-motion:no-preference) {
+      .traces path {stroke-dasharray:1;animation:trace 1s ease-out both}
+      .push {animation:push 1s 1s ease-in-out both}
+      .measure {animation:appear .8s 2.1s ease-out both}
+      @keyframes trace {from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+      @keyframes push {from{transform:translateX(-70px)}to{transform:translateX(0)}}
+      @keyframes appear {from{opacity:.12}to{opacity:1}}
+    }
+  </style>
+  <rect width="940" height="200" rx="16" fill="#133537"/>
+  <rect width="940" height="200" rx="16" fill="url(#paper)" opacity=".48"/>
+  <path d="M312 23v152m311-152v152" stroke="#597773"/>
+  <g fill="#edf4df" font-family="system-ui,sans-serif" font-size="23" font-weight="650">
+    <text x="25" y="47">Predict · 预测</text><text x="339" y="47">Act · 行动</text><text x="651" y="47">Check · 复测</text>
+  </g>
+  <g stroke="#88dccd" fill="none" stroke-width="2.6" class="traces">
+    <path pathLength="1" d="M76 114C132 114 150 80 221 80"/><path pathLength="1" d="M76 114H247"/><path pathLength="1" d="M76 114C135 114 151 146 222 146"/>
+  </g>
+  <g fill="#133537" stroke="#88dccd" stroke-width="2.7"><circle cx="225" cy="80" r="5"/><circle cx="251" cy="114" r="5"/><circle cx="226" cy="146" r="5"/></g>
+  <use href="#cup" x="58" y="123" color="#eff4df"/>
+  <path d="M365 143h216m-216-4v8m216-8v8" stroke="#789791" fill="none"/>
+  <use href="#cup" x="418" y="134" color="#718e87" opacity=".7"/>
+  <path d="M432 104q20-15 43-10l-7-6m7 6-9 3" stroke="#ffce86" fill="none" stroke-width="2.5"/>
+  <g class="push"><use href="#cup" x="488" y="134" color="#ffce86"/></g>
+  <path d="M663 143h238" stroke="#789791"/>
+  <use href="#cup" x="855" y="134" color="#88dccd"/>
+  <g class="measure"><use href="#cup" x="721" y="134" color="#ffce86"/>
+    <path d="M721 94v-7h134v7" fill="none" stroke="#afc9be" stroke-dasharray="4 4"/>
+    <text x="721" y="168" text-anchor="middle" font-family="monospace" font-size="16" fill="#ffce86">4</text>
+  </g>
+  <text x="855" y="168" text-anchor="middle" font-family="monospace" font-size="16" fill="#88dccd">7</text>
+</svg>

@@ -1,10 +1,14 @@
+<p align="center"><a href="https://hyfine.github.io/embodied-world-models-atlas/zh.html"><img src="assets/atlas-mark.svg" width="72" height="72" alt="研究图谱指南针标识"></a></p>
+
+<h1 align="center">具身智能 × 世界模型研究图谱</h1>
+<p align="center"><strong>世界模型预测一推会怎样，策略决定这一推怎么做。</strong></p>
 <p align="center"><a href="README.md">English</a> · <strong>简体中文</strong></p>
 
-# 具身智能 × 世界模型研究图谱
+[![先预测三种可能的未来，再选择推法，最后比较实测落点 4 与预测落点 7。](assets/readme-push.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#cup-lab)
 
-**如果机器人能生成一段杯子被推到目标的逼真视频，为什么它还可能推空？** 因为知道“画面通常怎样变”、知道“我的动作会造成什么变化”和知道“现在该怎么做”，是三个不同的问题。这份图谱沿着三者的交点讲技术史。
+模型预测杯子会到 **7**，实际却停在 **4**。下一步就得从 4 重新决定。这个教学例子串起了整份图谱：**预测的是什么，谁来行动，又拿什么验证？**
 
-**[打开交互图谱 ↗](https://hyfine.github.io/embodied-world-models-atlas/zh.html)** · [双语论文索引](CATALOG.md) · [趋势与反证](docs/outlook.zh-CN.md) · [检索口径](EVIDENCE.md)
+**[探索方法家族树 ↗](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)**　·　[追踪系统运行](https://hyfine.github.io/embodied-world-models-atlas/zh.html#system-studio)　·　[查找论文证据](https://hyfine.github.io/embodied-world-models-atlas/evidence.zh.html)
 
 ### 扩展研究版：按问题选标签页
 

@@ -1,10 +1,14 @@
+<p align="center"><a href="https://hyfine.github.io/embodied-world-models-atlas/"><img src="assets/atlas-mark.svg" width="72" height="72" alt="Field Atlas compass"></a></p>
+
+<h1 align="center">Embodied AI × World Models Atlas</h1>
+<p align="center"><strong>World models predict what a push might do. Policies choose the push.</strong></p>
 <p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
 
-# Embodied AI × World Models Atlas
+[![Predict three possible futures, choose a push, then compare the measured endpoint (4) with the predicted one (7).](assets/readme-push.svg)](https://hyfine.github.io/embodied-world-models-atlas/#cup-lab)
 
-**If a robot can generate a convincing video of a cup reaching its target, why might it still miss the cup?** Predicting what a scene usually looks like, predicting what *my action* will change, and choosing what to do now are different problems. This field guide follows the history of their intersection.
+The cup was predicted to reach **7**, but stopped at **4**. The next decision starts at 4. This toy example is the thread through the atlas: **what is predicted, who acts, and what evidence comes back?**
 
-**[Explore the interactive atlas ↗](https://hyfine.github.io/embodied-world-models-atlas/)** · [Bilingual paper index](CATALOG.md) · [Outlook & counterevidence](docs/outlook.en.md) · [Search method](EVIDENCE.md)
+**[Explore the method tree ↗](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)**　·　[Trace a system](https://hyfine.github.io/embodied-world-models-atlas/#system-studio)　·　[Find a paper](https://hyfine.github.io/embodied-world-models-atlas/evidence.html)
 
 ### Research desk · expanded edition
 

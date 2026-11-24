@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-labelledby="title">
+  <title id="title">Field Atlas compass: possible futures branch from one observation</title>
+  <rect x="2" y="2" width="92" height="92" rx="23" fill="#123437" stroke="#87ad9c" stroke-width="2"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 49 48 18l33 31-33 29z" stroke="#4f7771" stroke-width="2"/>
+    <path d="M27 63 48 43 63 27M48 43l23 4" stroke="#91e0d3" stroke-width="5"/>
+    <path d="M48 43v23l-9 8" stroke="#ffce86" stroke-width="5"/>
+  </g>
+  <circle cx="27" cy="63" r="5" fill="#eff3d9"/>
+  <circle cx="63" cy="27" r="4" fill="#123437" stroke="#91e0d3" stroke-width="3"/>
+  <circle cx="71" cy="47" r="4" fill="#123437" stroke="#91e0d3" stroke-width="3"/>
+  <circle cx="39" cy="74" r="5" fill="#ffce86"/>
+</svg>
