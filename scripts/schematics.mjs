@@ -24,7 +24,7 @@ function wire(a,b,route) {
 }
 
 export function schematic(card,en,scope='runtime') {
-  const graph=schematics[card.code], l=+en, id=`${scope}-${card.code.toLowerCase()}`;
+  const graph=schematics[card.graphCode??card.code], l=+en, id=`${scope}-${card.code.toLowerCase()}`;
   assert(graph,`Missing architecture for ${card.code}`);
   const components=new Map(graph.nodes.map(([key,col,row])=>[key,point(col,row)]));
   assert(components.size===graph.nodes.length);

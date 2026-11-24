@@ -33,7 +33,7 @@ flowchart LR
 
 ## F · V-JEPA 2 / 2-AC
 
-感知与未来预测 · [arXiv](<https://arxiv.org/abs/2506.09985>)
+观测、事件与特征预测 · [arXiv](<https://arxiv.org/abs/2506.09985>)
 
 ```mermaid
 flowchart LR

@@ -14,7 +14,7 @@ const asset=path=>`${path}?v=${createHash('sha256').update(readFileSync(path)).d
 const decisionDiagram = readFileSync('assets/decision-loop.svg', 'utf8');
 const families = {
   M: ['想象与规划', 'Imagination & planning'],
-  F: ['感知与未来预测', 'Predicting observations'],
+  F: ['观测、事件与特征预测', 'Predicting observations, events & features'],
   P: ['技能与动作策略', 'Skills & policies'],
   J: ['世界—动作耦合', 'World-action coupling'],
   E: ['环境、数据与评测', 'Environments, data & evaluation'],

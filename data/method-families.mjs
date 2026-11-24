@@ -2,7 +2,7 @@
 export const layouts = {
   M: {
     branches: [
-      ['模型内练习', 'Practice inside a model', 'dyna world-models dreamer dreamerv3'],
+      ['模型生成训练经验', 'Model-generated experience', 'dyna world-models dreamer dreamerv3'],
       ['决策时搜索', 'Search at decision time', 'planet muzero tdmpc2'],
     ],
     flow: [
@@ -16,8 +16,9 @@ export const layouts = {
   },
   F: {
     branches: [
-      ['画面与可交互视频', 'Frames & interactive video', 'foresight genie diamond cosmos dreamtrue'],
-      ['事件与特征', 'Events & features', 'touch vjepa2'],
+      ['视觉未来与干预', 'Future views & interventions', 'foresight genie diamond cosmos dreamtrue'],
+      ['预测任务特征', 'Predict task features', 'vjepa2'],
+      ['局部结果预测', 'Predict a task outcome', 'touch'],
     ],
     flow: [
       ['历史观测 + 候选动作', 'History + candidate action'],
@@ -30,7 +31,8 @@ export const layouts = {
   },
   P: {
     branches: [
-      ['反应控制与技能选择', 'Reactive control & skills', 'brooks legged saycan'],
+      ['反应式与运动控制', 'Reactive & motor control', 'brooks legged'],
+      ['选择高层技能', 'Select an available skill', 'saycan'],
       ['离散动作符号', 'Action tokens', 'rt1 rt2 openvla'],
       ['动作块生成', 'Action chunks', 'act diffusion-policy octo pi0 pi05 smolvla'],
     ],
@@ -59,8 +61,10 @@ export const layouts = {
   },
   E: {
     branches: [
-      ['轨迹与指令数据', 'Trajectories & instructions', 'r2r oxe droid'],
-      ['环境与评测协议', 'Environments & protocols', 'habitat libero simpler'],
+      ['轨迹与数据集', 'Trajectories & datasets', 'oxe droid'],
+      ['仿真平台', 'Simulation platform', 'habitat'],
+      ['任务与基准', 'Tasks & benchmarks', 'r2r libero'],
+      ['仿真与实机校准', 'Sim/real calibration', 'simpler'],
     ],
     flow: [
       ['任务与重置分布', 'Tasks & reset distribution'],

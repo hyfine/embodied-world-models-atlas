@@ -12,6 +12,8 @@ The cup was predicted to reach **7**, but stopped at **4**. The next decision st
 
 ### Research desk · expanded edition
 
+[Taxonomy audit: nine local survey editions](docs/taxonomy-review.md) · [What each direction’s exemplars actually represent](https://hyfine.github.io/embodied-world-models-atlas/runtime.html). The workbook codes mix mechanisms, domains and resources; they are navigation aids, not competing model classes.
+
 | Choose a question | Where to go |
 |---|---|
 | What changes between predicting the next frame, planning and producing an action? | [Cross-family synthesis](https://hyfine.github.io/embodied-world-models-atlas/research.html) |

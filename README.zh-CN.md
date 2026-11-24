@@ -12,6 +12,8 @@
 
 ### 扩展研究版：按问题选标签页
 
+[九篇综述逐篇复核](docs/taxonomy-review.md) · [15 个方向的代表作与反例](https://hyfine.github.io/embodied-world-models-atlas/runtime.zh.html)。工作簿代码同时包含机制、应用域和研究资源，是阅读入口，不是互斥的模型分类。
+
 | 你想弄清楚什么？ | 从这里进入 |
 |---|---|
 | 从预测下一帧，到规划、再到出动作，关键差别在哪里？ | [跨家族研究综合](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html) |
@@ -44,7 +46,7 @@
 | **先在心里试几种推法，再做决定** | M · 模型规划和想象学习。区分部署时搜索和训练时想象 | [PlaNet](CATALOG.md#planet) · [DreamerV3](CATALOG.md#dreamerv3) |
 | **预测下一帧，或预测够用的特征** | F · 感知未来。重点是预测是否跟着动作正确变化 | [Visual Foresight](CATALOG.md#foresight) · [V-JEPA 2-AC](CATALOG.md#vjepa2) |
 | **从示范直接学怎样动** | P · 技能、动作符号与连续动作块。策略不一定生成未来 | [Diffusion Policy](CATALOG.md#diffusion-policy) · [OpenVLA](CATALOG.md#openvla) · [π0](CATALOG.md#pi0) |
-| **把未来与可执行动作放在同一模型里** | J · 联合生成或通过逆动力学连接；两种并不相同 | [DreamZero](CATALOG.md#dreamzero) · [GE-Act 2.0](CATALOG.md#geact) |
+| **让预测的未来参与动作生成** | J · 可以联合生成，也可以把预测交给独立动作模块；不要求全系统只有一张网络 | [DreamZero](CATALOG.md#dreamzero) · [GE-Act 2.0](CATALOG.md#geact) |
 
 另设 **E**（环境、数据和评测）与 **S**（其他综述）。导航、四足运动、视触觉抓取是对照案例，不把具身智能等同于单臂桌面操作。
 

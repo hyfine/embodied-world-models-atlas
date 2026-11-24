@@ -1,0 +1,41 @@
+// Row numbers are source identities, not ranks. The paired descriptions state
+// what each example represents, not every capability of the system.
+export const directions = {
+  'WM-1': ['mechanism', [[2,'PlaNet','决策时搜索','search at decision time'],[4,'Dreamer','训练时想象','imagination during training']],
+    '都学潜动力学。差别在谁消费 rollout：PlaNet 当场比较动作，Dreamer 用想象轨迹训练 actor。','Both learn latent dynamics. PlaNet compares actions at decision time; Dreamer uses imagined rollouts to train an actor.'],
+  'WM-2': ['representation', [[22,'I-JEPA','静态图像的表征目标','image representation objective'],[29,'V-JEPA 2-AC','动作条件预测与规划','action-conditioned prediction for planning']],
+    'I-JEPA 是表征学习的前史，不是可规划的动作转移系统；2-AC 加入机器人交互和独立规划器才有这个接口。','I-JEPA is a representation precursor, not an action-transition model. Robot interaction and a separate planner give 2-AC a control interface.'],
+  'WM-3': ['mechanism', [[42,'Genie','从视频推断潜动作','latent actions inferred from video'],[44,'GameNGen','游戏动作条件的帧预测','frames conditioned on game actions']],
+    '两者都能生成可游玩的未来，但输入动作的来源不同；“可玩”并不证明学到了真机的电机坐标。','Both produce interactive futures. The control signal differs; playable transitions do not establish a calibrated robot interface.'],
+  'WM-4': ['representation', [[70,'WonderWorld','持久分层场景','persistent layered scene'],[72,'GEN3C','相机轨迹与三维缓存','camera trajectory and 3D cache'],[90,'OccWorld','时变占用对照，原索引 WM-5','time-varying occupancy contrast, indexed in WM-5','WM-5']],
+    '缩窄代表性：它们演示几何一致性。换视角仍能看到同一物体，不等于推它时能预测接触动力学。','These exemplify geometry and consistent rendering. Seeing the same object after moving the camera is not predicting its response to a push.'],
+  'WM-5': ['domain', [[87,'MagicDrive','条件街景与离线增强','conditional street views and augmentation'],[89,'Drive-WM','预测分支参与规划','forecast branches used in planning']],
+    '拆开“生成驾驶场景”与“用预测选轨迹”。Drive-WM 图 5、表 3–4 对候选做树搜索和奖励比较；nuScenes 上的规划指标仍非实车闭环安全试验。','Generating driving scenes and selecting a trajectory are distinct. Drive-WM Fig. 5 and Tables 3–4 score branches; nuScenes planning metrics are not closed-loop road-safety trials.'],
+  'WM-6': ['coupling', [[126,'DreamZero','联合生成未来与动作','joint futures and actions'],[105,'SuSIE','子目标图 → 目标条件策略','subgoal image → goal-conditioned policy']],
+    '以这两条不同的动作路径共同代表机器人预测控制。SuSIE 是级联例，不宜独自代表联合 WAM；仅把视频模型用于表征或造数据，也不能据此叫 WAM。','Use both action paths. SuSIE is a cascade, not a stand-in for joint generation; video features or synthetic training data alone do not make a WAM.'],
+  'EAI-1': ['interface', [[143,'ReKep','生成约束并求解','generate constraints then solve'],[132,'SayCan','语言评分 × 技能可行性','language score × skill feasibility']],
+    '保留高层选择这个共同问题，不合并输出：一个给约束，一个选已有技能；两者都不是直接从语言解码电机命令。','Retain the common planning question, not a common output: constraints versus available skills. Neither directly decodes language into motor commands.'],
+  'EAI-2': ['interface', [[157,'OpenVLA','自回归动作符号','autoregressive action tokens'],[160,'π0','连续动作块与流匹配','continuous chunks with flow matching']],
+    'VLA 描述视觉、语言和动作接口，不规定动作必须离散。动作块长度与 token 连续/离散是两个问题。','VLA names an interface, not a token format. Continuous versus discrete actions and the length of an action chunk are independent choices.'],
+  'EAI-3': ['interface', [[205,'Diffusion Policy','策略：生成动作序列','policy: generate action sequences'],[211,'UMI','采集与执行接口','demonstration and deployment interface']],
+    '动作策略先读 Diffusion Policy，示教学 UMI。UMI 有真实的部署策略，但其采集工具、坐标系与时钟对齐不是另一种动作生成算法。','Start with Diffusion Policy for the action distribution, UMI for acquisition and timing. UMI deploys a policy; a gripper, coordinate frame and aligned clock are not a new policy head.'],
+  'EAI-4': ['data', [[226,'Open X-Embodiment / RT-X','跨本体数据与配方','pooled data and training mixture'],[228,'Octo','消费这些轨迹的策略','policy trained on cross-robot trajectories'],[227,'DROID','同机型、多地点对照','many sites with standardized hardware']],
+    '把数据来源、共享训练和目标本体适配分开。数据格式可互读，不代表动作空间已对齐；跨房间的迁移也不是跨机械臂的迁移。','Separate data collection, shared training and target adaptation. A shared format does not align actions, and transfer to a new room is not transfer to a new arm.'],
+  'EAI-5': ['domain', [[239,'RMA','四足快速适应','quadruped adaptation'],[244,'HumanPlus','人形跟踪与模仿','humanoid tracking and imitation']],
+    '保留为本体/控制任务入口，而非单一算法。RMA 用历史推断隐环境变量，不能代表人形遥操作与全身模仿。','Retain this as a body/control domain. History-based context estimation for a quadruped cannot stand in for humanoid teleoperation and whole-body imitation.'],
+  'EAI-6': ['domain', [[255,'VLMaps','地图语义与导航目标','semantic mapping and navigation'],[256,'OK-Robot','导航后抓放','navigation followed by pick-and-place']],
+    '区分到达目标与完成物体操作。移动操作可因抓姿或释放失败，即使导航已成功。','Reaching an object and manipulating it are different success events. A grasp or release can fail after successful navigation.'],
+  'EAI-7': ['infrastructure', [[269,'Habitat','模拟平台','simulation platform'],[271,'CALVIN','任务链与判据','task chains and success oracle'],[275,'SIMPLER','配对仿真/实机校准','paired sim/real calibration']],
+    '平台定义能发生什么，基准定义怎么算成功，校准检验仿真排序能否代表实机。CALVIN 不独占整个基础设施类别。','A platform supplies transitions, a benchmark defines success, and calibration checks whether simulation ranks physical policies correctly. CALVIN alone covers only the benchmark role.'],
+  'EAI-8': ['learning', [[295,'SERL','实机在线 RL 系统','online real-robot RL system'],[307,'RECAP / π*0.6','已有 VLA 的经验后训练','experience-based VLA post-training']],
+    '在线学习与“后训练已有大模型”不互为定义。SERL 适合讲 actor、回放与异步更新；RECAP 算法 1 展示如何用经验和纠正改进已有策略。','Online RL does not require a pretrained foundation policy. SERL teaches replay and asynchronous learning; RECAP Algorithm 1 uses experience and corrections to improve an existing VLA.'],
+  SURVEY: ['lens', [[316,'Li et al.','按设计轴定位','locate design coordinates'],[311,'Ma et al.','辨认 VLA 组件与接口','identify VLA components and interfaces'],[319,'Yao et al.','核对能力主张','audit capability claims']],
+    '综述是观察方法的镜头，不是又一种可执行系统。比较设计时用 Li，比较动作接口时看 VLA，判断实验支持什么时用 Yao。','A survey is a lens, not an executable system. Use Li for design, a VLA lens for action interfaces, and Yao for what the experiment supports.'],
+};
+
+export const axisNames = {
+  mechanism:['预测与决策机制','Prediction / decision mechanism'], representation:['状态表示','State representation'],
+  domain:['任务与本体','Task / embodiment'], coupling:['未来与动作的耦合','Future–action coupling'],
+  interface:['动作接口','Action interface'], data:['数据与迁移','Data / transfer'],
+  infrastructure:['实验基础设施','Experimental infrastructure'], learning:['学习环节','Learning stage'],lens:['证据视角','Evidence lens'],
+};

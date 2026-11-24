@@ -76,7 +76,7 @@ The learner updates from both experienced and model-generated transitions. The p
 
 [ACM SIGART Bulletin](<https://doi.org/10.1145/122344.122377>)
 
-## F · 感知与未来预测 / Predicting observations
+## F · 观测、事件与特征预测 / Predicting observations, events & features
 
 <a id="dreamtrue"></a>
 

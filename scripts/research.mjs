@@ -1,19 +1,22 @@
 import {readFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
 import {schematic} from './schematics.mjs';
+import {directions,axisNames} from '../data/taxonomy-audit.mjs';
+import {layouts} from '../data/method-families.mjs';
+import {cases} from '../data/deep-dives.mjs';
 
 const partitions=['wm-a','wm-b','eai-a','eai-b','eai-c','supplement'];
 const titles={
   'WM-1':['潜动力学与基于模型的强化学习','Latent dynamics & model-based RL'],
   'WM-2':['特征预测与对象表示','Predictive representations'],
   'WM-3':['视频生成与交互模拟','Interactive video worlds'],
-  'WM-4':['三维场景与四维演化','3D and 4D scene models'],
-  'WM-5':['驾驶世界模型','Driving world models'],
-  'WM-6':['机器人世界模型与 WAM','Robot worlds & world-action models'],
+  'WM-4':['空间场景表示与演化','Spatial scene representations & change'],
+  'WM-5':['驾驶场景生成与预测规划','Driving scene generation & predictive planning'],
+  'WM-6':['机器人的未来—动作耦合','Coupling robot futures to actions'],
   'EAI-1':['语言、可行性与规划','Language and grounded planning'],
   'EAI-2':['视觉语言动作基础模型','Vision-language-action policies'],
-  'EAI-3':['示范采集与动作策略','Demonstrations & visuomotor policies'],
-  'EAI-4':['跨本体数据与预训练','Cross-embodiment data & pretraining'],
+  'EAI-3':['视觉运动策略与示范接口','Visuomotor policies & demonstration interfaces'],
+  'EAI-4':['轨迹数据、跨本体预训练与适配','Trajectory data, cross-robot pretraining & adaptation'],
   'EAI-5':['足式与人形控制','Legged & humanoid control'],
   'EAI-6':['导航与移动操作','Navigation & mobile manipulation'],
   'EAI-7':['模拟器与评测协议','Simulators & evaluation'],
@@ -30,7 +33,23 @@ const key=r=>`${r.sheet}-${r.no}`;
 const http=s=>typeof s==='string'&&/^https?:\/\/[^\s<>]+$/.test(s);
 const link=(text,url)=>{assert(http(url),`Invalid URL: ${url}`);return `<a href="${esc(url)}">${esc(text)}</a>`;};
 const doc=(text,file,anchor='')=>link(text,`${root}/blob/main/docs/${file}${anchor}`);
-const absBrief=(r,en)=>doc(en?'Full reading note':'展开完整精读',`readings-${r.partition}.md`,`#${r.code.toLowerCase()}`);
+const absBrief=(r,en)=>r.caseId
+  ?doc(en?'Full reading note':'展开完整精读',`deep-dives.${en?'en':'zh-CN'}.md`,`#case-${r.caseId}`)
+  :doc(en?'Full reading note':'展开完整精读',`readings-${r.partition}.md`,`#${r.code.toLowerCase()}`);
+const promoted={
+  'WM-6':['J','DreamZero','https://arxiv.org/abs/2602.15922','World Action Models are Zero-shot Policies · Method / real-robot evaluations'],
+  'EAI-3':['P','Diffusion Policy','https://arxiv.org/abs/2303.04137','§§III–IV, Fig. 1; §V, Fig. 3'],
+};
+function selectTrace(c) {
+  if(!promoted[c.code])return c;
+  const [graphCode,representative,source,locator]=promoted[c.code];
+  const layout=layouts[graphCode],caseId=layout.focus,k=cases[caseId];
+  return {...c,previous:c,graphCode,representative,source,locator,caseId,stages:layout.flow,feedback:k.run,test:k.evidence};
+}
+function comparison(code,en){
+  const l=+en,[axis,examples,zh,eng]=directions[code];
+  return `<div class="taxonomy-decision"><small>${axisNames[axis][l]}</small><p>${esc(en?eng:zh)}</p><ul>${examples.map(([row,name,roleZh,roleEn])=>`<li><a href="${local('evidence',en)}#row-main-${row}">${esc(name)}</a> — ${esc(en?roleEn:roleZh)}</li>`).join('')}</ul></div>`;
+}
 export function tabNav(en,active) {
   return `<nav class="desk-tabs" aria-label="${en?'Atlas sections':'图谱栏目'}">${Object.entries(labels).map(([id,pair])=>`<a href="${local(id,en)}"${id===active?' aria-current="page"':''}>${pair[+en]}</a>`).join('')}</nav>`;
 }
@@ -58,11 +77,11 @@ function ledger(rows,en,pointers) {
 function runtime(cards,en) {
   const l=+en,t=(zh,eng)=>en?eng:zh;
   return `<nav class="system-links" aria-label="${t('按方向选图','Choose a system')}">${cards.map(c=>`<a href="#${c.code.toLowerCase()}"><b>${c.code}</b>${titles[c.code][l]}</a>`).join('')}</nav>`+
-  cards.map(c=>`<article class="runtime-plate" id="${c.code.toLowerCase()}"><small>${c.code} / ${titles[c.code][l]}</small><h2>${esc(c.representative)}</h2>${schematic(c,en)}<details><summary>${t('文字版运行步骤','Read the steps as text')}</summary><ol>${c.stages.map(pair=>`<li>${esc(pair[l])}</li>`).join('')}</ol></details><p><strong>${t('反馈与边界','Feedback & boundary')}.</strong> ${esc(c.feedback[l])}</p><p><strong>${t('怎样验证','Evidence test')}.</strong> ${esc(c.test[l])}</p><p class="locator">${link(t('原始来源','Primary source'),c.source)} · ${esc(c.locator)} · ${absBrief(c,en)}</p></article>`).join('\n');
+  cards.map(c=>`<article class="runtime-plate" id="${c.code.toLowerCase()}"><small>${c.code} / ${titles[c.code][l]}</small><h2>${esc(c.representative)}</h2>${comparison(c.code,en)}${schematic(c,en)}<details><summary>${t('文字版运行步骤','Read the steps as text')}</summary><ol>${c.stages.map(pair=>`<li>${esc(pair[l])}</li>`).join('')}</ol></details><p><strong>${t('反馈与边界','Feedback & boundary')}.</strong> ${esc(c.feedback[l])}</p><p><strong>${t('怎样验证','Evidence test')}.</strong> ${esc(c.test[l])}</p><p class="locator">${link(t('原始来源','Primary source'),c.source)} · ${esc(c.locator)} · ${absBrief(c,en)}</p>${c.previous?`<details><summary>${t('对照系统图','Contrast diagram')}: ${esc(c.previous.representative)}</summary>${schematic(c.previous,en,'contrast')}<p>${esc(c.previous.feedback[l])}</p>${absBrief(c.previous,en)}</details>`:''}</article>`).join('\n');
 }
 
 export function homeSystems(en){
-  const cards=partitions.filter(p=>p!=='supplement').flatMap(p=>read(`data/runtime-${p}.json`));
+  const cards=partitions.filter(p=>p!=='supplement').flatMap(p=>read(`data/runtime-${p}.json`)).map(selectTrace);
   const l=+en,t=(zh,eng)=>en?eng:zh, url=local('runtime',en);
   return `<section id="system-studio"><div class="kicker">SYSTEM STUDIO　/　15 DIRECTIONS</div><h2>${t('打开黑盒，看信号怎样流动。','Open a system. Follow a signal.')}</h2><p>${t('选一类，不用离开主页。实线传数据，虚线标出反馈或内部更新；没有控制器的系统不画动作回路。','Pick a direction without leaving this page. Solid arrows carry data; dashed paths distinguish feedback and internal updates. Not every system has a controller.')}</p>
 <label class="studio-pick" hidden>${t('选择系统','Choose system')} <select>${cards.map(c=>`<option value="${c.code}">${c.code} · ${titles[c.code][l]} — ${esc(c.representative)}</option>`).join('')}</select></label>
@@ -91,7 +110,7 @@ const contrasts=[
 ];
 function synthesis(cards,en){
   const l=+en,t=(zh,eng)=>en?eng:zh;
-  return `<div class="research-callout"><b>${t('怎么读这批材料','How to read this collection')}</b><p>${t('先沿一个任务区分「预测什么、谁用预测、谁验证」，再去找论文。原工作簿的 30 条家族线和 12 个趋势是发现线索，不是已验证的因果谱系；年度计数是收录偏好，不是份额或增长率。','Start with the prediction target, its consumer and its judge. The workbook’s 30 lineage sketches and 12 trend theses are discovery aids, not verified causal ancestry. Annual counts describe a curated sample, not adoption or growth rates.')}</p></div>`+
+  return `<div class="research-callout" id="taxonomy-review"><b>${t('九篇综述复核：15 个入口不是 15 种互斥算法','Nine-survey audit: 15 reading directions, not 15 disjoint algorithms')}</b><p>${t('先看分类轴，再选代表作：驾驶是应用域，JEPA 是表示学习路线，CALVIN 是测量协议。SuSIE 与 DreamZero 分别代表级联和联合，不能互相替代。','First identify the axis: driving is a domain, JEPA a representation approach, CALVIN an evaluation protocol. SuSIE and DreamZero exemplify cascaded and joint coupling; neither substitutes for the other.')}</p>${doc(t('逐篇依据、版本与反例','Survey-by-survey evidence, revisions and counterexamples'),'taxonomy-review.md')} · <a href="${local('runtime',en)}">${t('15 类代表作与选择理由','Exemplars and rationale for all 15 directions')} →</a></div>`+
   contrasts.map(([zh,enTitle,cz,ce,cat],i)=>`<article class="contrast"><small>0${i+1} / ${cat.toUpperCase()}</small><h2>${t(zh,enTitle)}</h2><p>${t(cz,ce)}</p><a href="${local('runtime',en)}#${cat}">${t('沿运行图核查','Trace the runtime path')} →</a></article>`).join('')+
   `<h2>${t('三张实验收据：数据、评测、部署','Three experimental receipts: data, evaluation, deployment')}</h2>
 <p><b>${link('Data Scaling Laws in IL · Fig. 5','https://arxiv.org/abs/2410.18647')}.</b> ${t('横轴换成物体数、环境数或两者组合数时，作者在所测操作任务中观察到近似幂律；固定多样性后，添加同类示范并没有同样清晰的关系。这不等于跨所有控制任务的普适规模律。','The authors report approximate power-law trends with numbers of objects, environments or environment–object pairs. Adding demonstrations while keeping diversity fixed does not show the same clear relation. The fitted curves are not universal laws for all control tasks.')}</p>
@@ -118,10 +137,14 @@ export function researchOutputs(asset) {
       assert(!keyed.has(key(r))&&Object.hasOwn(levels,r.level)&&r.note&&r.locator,`Invalid/duplicate note: ${key(r)}`);
       keyed.set(key(r),r);
     }
-    if(partition!=='supplement') cards.push(...read(`data/runtime-${partition}.json`).map(c=>({...c,partition})));
+    if(partition!=='supplement') cards.push(...read(`data/runtime-${partition}.json`).map(c=>selectTrace({...c,partition})));
   }
   assert.deepEqual(cards.map(c=>c.code).sort(),Object.keys(titles).sort());
+  assert.deepEqual(Object.keys(directions).sort(),Object.keys(titles).sort());
   for(const c of cards) {
+    const [axis,examples]=directions[c.code];
+    assert(Object.hasOwn(axisNames,axis)&&examples.length>1);
+    for(const [no,name,zh,en,sourceCategory=c.code] of examples)assert(name&&zh&&en&&idx.some(r=>r.sheet==='main'&&r.no===no&&r.category===sourceCategory),`Invalid comparison row: ${c.code}/${no}`);
     assert(http(c.source)&&c.locator&&c.stages.length>=3,c.code);
     for(const pair of [c.feedback,c.test,...c.stages])assert(Array.isArray(pair)&&pair.length===2&&pair.every(s=>typeof s==='string'&&s.length>0),c.code);
     assert(readFileSync(`docs/readings-${c.partition}.md`,'utf8').includes(`id="${c.code.toLowerCase()}"`),`Missing chapter anchor ${c.code}`);
@@ -138,7 +161,7 @@ export function researchOutputs(asset) {
     const t=(zh,eng)=>en?eng:zh;
     for(const [page,lead,body] of [
       ['research',t('从问题、运行机制到可证伪的结论。','Start with the question; follow the mechanism to a falsifiable claim.'),synthesis(cards,en)],
-      ['runtime',t(`${cards.length} 个工作簿方向，各追踪一项代表作。`,`${cards.length} workbook directions, each traced through one representative work.`),runtime(cards,en)],
+      ['runtime',t(`${cards.length} 个方向：对照不同代表作，再沿具体系统追踪一次。例子为解释机制而选，并非排名。`,`${cards.length} directions: compare representative roles, then trace a concrete system. Examples illustrate mechanisms, not rankings.`),runtime(cards,en)],
       ['evidence',t(`${rows.length} 条来源记录，包括主表与补表；保留原行号，不把重复行冒充独立成果。`,`${rows.length} main and supplementary source records. Row identities are preserved; overlapping records are not independent findings.`),ledger(rows,en,pointers)],
       ['shelf',t(`${pdfs.length} 个本地版本的书目、来源和校验信息。`,`${pdfs.length} versioned local PDFs with bibliographic and checksum records.`),shelf(pdfs,en)],
     ])out.push([local(page,en),wrap(page,en,lead,body,asset)]);

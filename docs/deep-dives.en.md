@@ -33,7 +33,7 @@ Pinned source: [RSSM](https://github.com/google-research/planet/blob/c04226b6db1
 
 ## F · V-JEPA 2 / 2-AC
 
-Predicting observations · [arXiv](<https://arxiv.org/abs/2506.09985>)
+Predicting observations, events & features · [arXiv](<https://arxiv.org/abs/2506.09985>)
 
 ```mermaid
 flowchart LR
