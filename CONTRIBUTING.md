@@ -17,3 +17,15 @@ Open an issue or pull request with the work's original paper, the proposed decis
 5. Open `index.html` (English) and `zh.html` (Chinese); `en.html` remains an English compatibility URL. Test the language switch, action demo, decision animation/replay, reduced-motion still diagram, combined family/text filter and empty state. Commit both input and generated files. CI checks the generated pages and local reading links without network access.
 
 `assets/field-map.svg` is an original teaching diagram. Family relationships are editorial, not assertions of descent. See [LICENSE](LICENSE) for the atlas's own material; upstream terms are separate.
+
+## Maintaining the workbook edition
+
+The site rebuild still needs only Node. The optional import/download tools need Python 3.11+, `openpyxl`, `pypdf`, and `curl`; release-pointer inspections also use an authenticated `gh` CLI. They are not run in CI.
+
+```sh
+# From the repository root; PDFs stay in the external shelf.
+python3 scripts/import-workbook.py ../Embodied_AI_World_Models_Survey_2026.xlsx data/workbook-index.json
+python3 scripts/fetch-papers.py ../Embodied_AI_World_Models_Survey_2026.xlsx ../papers
+```
+
+Inspect the local manifest and download-error file before updating the public shelf manifest. A changed revision must not silently replace an existing edition. Preserve the original workbook IDs when updating readings. Each row-level note needs a scope, inspectable source location and an original finding or an explicit gap. Each runtime plate needs a representative, a primary reference, bilingual ordered stages, a feedback boundary and an evidence test.

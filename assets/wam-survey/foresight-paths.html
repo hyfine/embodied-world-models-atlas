@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>未来何时进入动作？ · Foresight paths</title>
+<style>
+  *{box-sizing:border-box} body{margin:0;color:#142e3c;background:#eff4f5;font:17px/1.5 system-ui,"PingFang SC",sans-serif}
+  main{max-width:1010px;margin:auto;padding:20px clamp(10px,3vw,32px) 32px}
+  h1{font-size:clamp(24px,3vw,32px);margin:0} p{margin:.3em 0 .75em}
+  svg{width:100%;height:auto;display:block} button{font:inherit;background:white;border:1px solid #536d78;border-radius:6px;padding:.35em .8em;color:#142e3c;cursor:pointer}
+  button:focus-visible{outline:3px solid #ad5200;outline-offset:2px}
+  .tools{display:flex;flex-wrap:wrap;gap:.5em;margin:.7em 0}
+  .tools[hidden]{display:none} .annotation{border-left:4px solid #21766c;background:#fff;padding:10px 15px}
+  svg .chosen rect{stroke:#a34900;stroke-width:3;stroke-dasharray:8 3}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+<main>
+  <h1>未来何时进入动作？</h1>
+  <p>沿一行读一种方法，沿一列比较同一问题。Read across for one method; compare down a column.</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 936 544" role="img" aria-labelledby="ftitle fdesc" lang="zh-CN">
+    <title id="ftitle">未来何时进入动作？ / When does foresight enter control?</title>
+    <desc id="fdesc">三种方法各自从左到右：UniPi 学习视频预测与逆动力学，在执行前从合成帧解码动作；DreamZero 联合去噪，执行动作块后以实测观测更新历史；Fast-WAM 联合训练，但动作不读取未来视频，部署只用当前视觉上下文去噪动作。末栏说明可检查的接口，不是统一实验结果。</desc>
+    <defs>
+      <style>
+        text{font-family:system-ui,"PingFang SC","Microsoft YaHei",sans-serif;fill:#173542}
+        .heading{font-size:23px;font-weight:700}.h{font-size:19px;font-weight:650}
+        .en{font-size:15px;fill:#385461}.tag{font-size:14px;font-weight:650;letter-spacing:.8px;fill:#276b65}
+        .cell{fill:#fff;stroke:#95acb4;stroke-width:1.3}.arr{fill:none;stroke:#44636f;stroke-width:2}
+      </style>
+      <marker id="tip" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#44636f"/></marker>
+    </defs>
+    <rect x="1" y="1" width="934" height="542" rx="14" fill="#fafcfb" stroke="#c5d4d5"/>
+    <text x="20" y="37" class="heading">同一个控制问题，三条预测路径</text>
+    <text x="20" y="61" class="en">One control problem, three predictive interfaces</text>
+    <g class="tag"><text x="20" y="97">01　训练 / TRAIN</text><text x="337" y="97">02　推理 / INFER</text><text x="654" y="97">03　执行与检查 / CHECK</text></g>
+    <text x="20" y="130" class="h">UniPi · 级联 / Cascaded</text>
+    <g data-phase="1"><rect class="cell" x="20" y="142" width="262" height="68" rx="7"/><text class="h" x="32" y="169">视频生成器；逆动力学</text><text class="en" x="32" y="193">Video model; inverse dynamics</text></g>
+    <g data-phase="2"><rect class="cell" x="337" y="142" width="262" height="68" rx="7"/><text class="h" x="349" y="169">合成相邻帧 → 动作</text><text class="en" x="349" y="193">Decode from generated frames</text></g>
+    <g data-phase="3"><rect class="cell" x="654" y="142" width="262" height="68" rx="7"/><text class="h" x="666" y="169">动作能实现帧间变化吗？</text><text class="en" x="666" y="193">Is the transition executable?</text></g>
+    <text x="20" y="254" class="h">DreamZero · 联合显式预测 / Joint, explicit future</text>
+    <g data-phase="1"><rect class="cell" x="20" y="266" width="262" height="68" rx="7"/><text class="h" x="32" y="293">联合去噪视频和动作</text><text class="en" x="32" y="317">Denoise video and action together</text></g>
+    <g data-phase="2"><rect class="cell" x="337" y="266" width="262" height="68" rx="7"/><text class="h" x="349" y="293">采样未来与动作块</text><text class="en" x="349" y="317">Sample future and action chunk</text></g>
+    <g data-phase="3"><rect class="cell" x="654" y="266" width="262" height="68" rx="7"/><text class="h" x="666" y="293">执行后用实测替换想象</text><text class="en" x="666" y="317">Refresh history with observations</text></g>
+    <text x="20" y="378" class="h">Fast-WAM · 联合训练，部署走短路径 / Joint training, shorter inference</text>
+    <g data-phase="1"><rect class="cell" x="20" y="390" width="262" height="68" rx="7"/><text class="h" x="32" y="417">预测未来；屏蔽未来输入¹</text><text class="en" x="32" y="441">Forecast; mask future from action</text></g>
+    <g data-phase="2"><rect class="cell" x="337" y="390" width="262" height="68" rx="7"/><text class="h" x="349" y="417">当前视觉特征 → 动作去噪</text><text class="en" x="349" y="441">Current features → action denoising</text></g>
+    <g data-phase="3"><rect class="cell" x="654" y="390" width="262" height="68" rx="7"/><text class="h" x="666" y="417">执行无需生成未来视频</text><text class="en" x="666" y="441">No future video on the action path</text></g>
+    <g class="arr" marker-end="url(#tip)"><path d="M286 176h44"/><path d="M603 176h44"/><path d="M286 300h44"/><path d="M603 300h44"/><path d="M286 424h44"/><path d="M603 424h44"/></g>
+    <text x="20" y="493" class="en">¹ 动作 token 不能读取未来视频 latent；未来视频仍是训练目标。The mask restricts attention, not supervision.</text>
+    <text x="20" y="520" class="tag">原创阅读图 · READING GUIDE　/　§4, pp. 14, 21–25　/　箭头为阅读次序，不表示训练耗时。</text>
+  </svg>
+  <div class="tools" role="group" aria-label="按列阅读 / Column guide" hidden>
+    <button id="play" type="button">播放 / Play</button><button id="step" type="button">单步 / Step</button><button id="reset" type="button">重置 / Reset</button>
+  </div>
+  <p class="annotation" role="status" aria-live="polite" aria-atomic="true" id="note">总览 / Overview：三个阶段全部可读。讲解高亮不是实际运行时间。</p>
+  <noscript><p>脚本关闭时可直接阅读全图。All paths remain visible without JavaScript.</p></noscript>
+</main>
+<script>
+  (() => {
+    const q=s=>document.querySelector(s), play=q('#play'), step=q('#step'), reset=q('#reset'), note=q('#note');
+    const labels=[note.textContent,'1 / 3 · 训练：区分分开拟合的两个模块和共同约束同一策略的两个目标。Separate modules or joint targets?',
+      '2 / 3 · 推理：动作依赖合成帧、与未来共同采样，还是只读当前视觉特征？Which information is actually available to the action path?',
+      '3 / 3 · 执行：能否产生下一次真实观测所见的变化？不要把训练监督当作在线传感器。Compare the imagined transition with what happens.'];
+    let pos=0, timer=null;
+    function show(n){pos=n;document.querySelectorAll('[data-phase]').forEach(g=>g.classList.toggle('chosen',Number(g.dataset.phase)===n));note.textContent=labels[n]}
+    function pause(){clearInterval(timer);timer=null;play.textContent='播放 / Play'}
+    function advance(){show(pos===3?1:pos+1);if(pos===3)pause()}
+    step.onclick=()=>{pause();advance()};reset.onclick=()=>{pause();show(0)};
+    play.onclick=()=>{if(timer!==null){pause();return}if(pos===3)show(0);advance();if(pos<3){play.textContent='暂停 / Pause';timer=setInterval(advance,3500)}};
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});
+    q('.tools').hidden=false;
+  })();
+</script>
+</html>

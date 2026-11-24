@@ -1,0 +1,46 @@
+[
+  {
+    "code": "WM-4",
+    "representative": "WonderWorld",
+    "source": "https://arxiv.org/html/2406.09394v4",
+    "locator": "§§3.1–3.2, 4–5; Figs. 2, 4; Table 1; App. B Algorithm 1 and App. E Table 6",
+    "stages": [
+      ["从单图初始化三层场景", "Initialize three scene layers from one image"],
+      ["用户给出新相机位姿和文字", "User supplies new camera pose and prompt"],
+      ["渲染已知区域并补全新图像", "Render known regions and outpaint a new image"],
+      ["用旧深度约束新深度，拟合分层面元", "Guide depth by overlap and fit layered surfels"],
+      ["把几何加入场景并向用户渲染", "Append geometry and render it to the user"]
+    ],
+    "feedback": ["用户看结果后再选位姿；保留的是几何，不是机器人策略。", "The user chooses the next pose after seeing the result. Geometry persists; no robot policy acts."],
+    "test": ["单块 A6000 每扩展场景 9.5 秒，并非每帧；背面未生成。", "9.5 s per scene extension on one A6000, not per frame; back surfaces are not generated."]
+  },
+  {
+    "code": "WM-5",
+    "representative": "MagicDrive",
+    "source": "https://arxiv.org/html/2310.02601v7",
+    "locator": "§§3–4.3, 5.1–5.2; Figs. 3–4; Table 2; App. F Table 6",
+    "stages": [
+      ["给定路图、三维框、相机参数和文字", "Supply a road map, 3D boxes, cameras and text"],
+      ["分别编码路图与场景、物体标记", "Encode map features separately from scene and object tokens"],
+      ["迭代去噪并交换相邻相机特征", "Denoise iteratively, exchanging adjacent-view features"],
+      ["解码六路街景供离线评测或增强", "Decode six street views for offline testing or augmentation"]
+    ],
+    "feedback": ["条件由数据或用户指定；没有驾驶策略出动作，检测器不反馈下一次观测。", "Data or a user specifies the conditions. No driver emits actions; detector outputs do not update the next observation."],
+    "test": ["nuScenes 纯相机 BEVFusion mAP 在 1× 训练时由 32.88 升至 35.40，2× 时只升 0.25；非驾驶安全评测。", "nuScenes camera-only BEVFusion mAP rises 32.88→35.40 at 1× training but gains only 0.25 at 2×; not a driving safety test."]
+  },
+  {
+    "code": "WM-6",
+    "representative": "SuSIE",
+    "source": "https://arxiv.org/html/2310.10639v1",
+    "locator": "§§4.1–4.3, 5.2–5.3, 6; Figs. 1, 3; Algorithm 1; Tables 1–3; App. A.1, Table 5 and App. B",
+    "stages": [
+      ["接收指令和真实相机观测", "Receive instruction and observed camera frame"],
+      ["图像编辑器采样未来子目标图", "Image editor samples a future subgoal image"],
+      ["低层策略据当前图与子目标预测四步动作", "Low-level policy predicts four actions from observation and subgoal"],
+      ["平均重叠预测，实机执行当前动作", "Average overlapping predictions and execute the current action"],
+      ["回读新图，到刷新时重画子目标", "Read the new frame and refresh the subgoal when due"]
+    ],
+    "feedback": ["低层每步使用新观测；高层每 20 步刷新，不以虚拟成功信号取代实测。", "The controller uses new observations each step; the editor refreshes every 20 steps, not on imagined success."],
+    "test": ["CALVIN ABC→D 的 100 条链中五指令全成 26%；实物每任务仅 10 次，编辑器不保证可达。", "26% complete all five instructions in 100 CALVIN ABC→D chains; real tests use ten trials per task and subgoals are not guaranteed reachable."]
+  }
+]

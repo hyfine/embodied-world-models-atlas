@@ -1,5 +1,17 @@
 # 检索与证据口径 · Search & evidence
 
+## Expanded workbook edition · 2026-11-24
+
+The workbook input (SHA-256 `5bb5ae15d0236441097563ebb0ff0ff5b1f0abcc54d04febe8026074fc45e2c8`) has seven sheets. `Paper_Repo_List` contributes 320 rows and `Supplementary_List` another 70. `README` defines its fields, `Taxonomy` its 15 directions, `Family_Tree` its 30 proposed lines, `Trends_2026` its 12 hypotheses, and `Timeline_Stats` aggregates the main sheet by year. Only the first two lists are counted as source records. The accompanying technical review was used as a set of hypotheses to check, not as independent validation.
+
+**行 ≠ 论文。** 同一工作可出现两次；一行也可能代表多个版本、一个代码库、一张数据卡或一次企业发布。`main-N` 与 `supplement-N` 保留原行号以便查错，不把 390 行称为 390 篇独立论文。提供的两个 Awesome 合集是线索，不把其中的每个外链自动计入工作簿。入门树的六个决策家族和工作簿的 15 个技术方向是不同的分类轴，不强行一一对应。
+
+**Reading depth.** The [ledger](https://hyfine.github.io/embodied-world-models-atlas/evidence.html) gives actual scope and location per row: version-level full reading (only if supported), selected body sections, abstract, repository/project evidence, or unresolved identity/access. A section read is not a claim to have checked every appendix. A fetched PDF is not counted as reading evidence. A repository inspection does not imply successful installation, reproduced scores or that the associated weights are open for commercial use.
+
+**PDF shelf.** The [public manifest](data/pdf-shelf.json) contains source URL, revision, title, first arXiv submission date, relative filename, size, page count and SHA-256. First arXiv date is a reproducible naming convention, not necessarily the earliest announcement anywhere. Third-party PDFs, extracted text and the original workbook are not bundled. Original bilingual commentary and redrawings are distinct from authors’ claims and diagrams.
+
+## Introductory atlas edition
+
 **2026-11-23** · Curated narrative survey / 叙述性综述，非系统性综述或元分析。
 
 **研究问题 / Question.** 预测的对象是什么，谁用预测选动作，有什么证据证明在测试的身体上有用？ What is predicted, who uses the prediction to select actions, and what evidence connects it to the tested body?

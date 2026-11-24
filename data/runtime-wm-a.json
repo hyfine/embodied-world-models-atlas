@@ -1,0 +1,49 @@
+[
+  {
+    "code": "WM-1",
+    "representative": "PlaNet",
+    "source": "https://arxiv.org/html/1811.04551",
+    "locator": "§§2–3, Algorithms 1–2, Fig. 4, Table 1; Appendix D Fig. 7",
+    "stages": [
+      ["相机帧与上一动作", "Camera frame and previous action"],
+      ["RSSM 更新当前状态后验", "RSSM filters the current state"],
+      ["CEM 采样候选动作序列", "CEM samples action sequences"],
+      ["逐序列想象潜状态并累计预测奖励", "Roll out latents and sum predicted rewards"],
+      ["用高分序列迭代更新分布", "Refit the distribution to high-return sequences"],
+      ["规划器输出首步动作给环境", "Planner sends only the first action to the environment"]
+    ],
+    "feedback": ["执行后以真实新图像修正状态，再规划；不将想象帧当作实际观测。", "After execution, filter with the new environment image and replan; imagined frames are not measurements."],
+    "test": ["六个像素控制仿真任务；图 4 分开检验搜索与数据采集。真实动力学规划是对照，不是部署输入。", "Six simulated pixel-control tasks; Fig. 4 separates search from data collection. Planning with true dynamics is a comparator, not a deployment input."]
+  },
+  {
+    "code": "WM-2",
+    "representative": "V-JEPA 2-AC",
+    "source": "https://arxiv.org/html/2506.09985",
+    "locator": "§§3–4, Figs. 6–7, 10, 16; Tables 2–3",
+    "stages": [
+      ["读取真实相机图、目标图和末端状态", "Read camera image, goal image and end-effector state"],
+      ["冻结编码器分别编码当前图与目标图", "Frozen encoder embeds current and goal images"],
+      ["CEM 提出末端动作候选", "CEM proposes end-effector commands"],
+      ["动作条件预测器展开未来 patch 表征", "Action-conditioned predictor rolls out patch features"],
+      ["按终态与目标的 L1 距离筛选并重采样", "Rank and refine candidates by terminal L1 goal distance"],
+      ["规划器给机械臂首步命令", "Planner sends the first command to the arm"]
+    ],
+    "feedback": ["真机完成指令后重新读取画面与末端状态；抓放实验按预设时刻更换目标图。", "Read the physical camera and arm state after execution; pick-and-place switches supplied goal images on a fixed schedule."],
+    "test": ["表 2 两间实验室，单项每处十次；平均抓杯 65%、抓盒 25%。图 16 显示相机位置影响坐标轴推断。", "Table 2: ten trials per task per lab; mean cup/box grasp rates are 65%/25%. Figure 16 shows sensitivity to camera position."]
+  },
+  {
+    "code": "WM-3",
+    "representative": "Genie",
+    "source": "https://arxiv.org/html/2402.15391",
+    "locator": "§§2.1–2.2 Figs. 4–7; §3.4 Table 2; §5",
+    "stages": [
+      ["将起始图像编码为离散视觉 token", "Encode the prompt image as discrete visual tokens"],
+      ["玩家选择一个隐动作码", "Player selects a latent action code"],
+      ["时空动力网络按历史与动作逐轮填充下一帧 token", "Spatiotemporal dynamics fills next-frame tokens given history and action"],
+      ["视觉解码器渲染画面供玩家观察", "Visual decoder renders the frame for the player"],
+      ["将新 token 加入历史，等待下一动作", "Append generated tokens to history and await the next input"]
+    ],
+    "feedback": ["回传的是生成世界的历史和玩家输入，不是外部传感器；训练时推断动作的网络不在游玩回路里。", "Feedback is generated history plus player input, not an external sensor. The training-time action inference network is absent during play."],
+    "test": ["平台游戏消融中，像素动作输入使 ΔPSNR 从 1.33 到 1.91，而 FVD 从 38.8 变为 40.1；记忆仅 16 帧，约每秒一帧。", "On platformers pixel-input action inference raises ΔPSNR from 1.33 to 1.91 while FVD worsens from 38.8 to 40.1; memory is 16 frames and runtime about 1 FPS."]
+  }
+]

@@ -1,0 +1,426 @@
+[
+  {
+    "sheet": "main",
+    "no": 268,
+    "level": "sections",
+    "note": "AI2-THOR 提供动作接口；ProcTHOR 改变房屋的采样分布。换测试场景是在测泛化，不是在测引擎帧率。 The Python client sends actions to Unity and receives rendered observations and scene metadata. ProcTHOR changes the distribution of interactive houses, not the action API; its ObjectNav transfer tests explicitly change the scene dataset.",
+    "locator": "§2.1–2.2, Figs. 2–3; ProcTHOR §§3–5",
+    "source": "https://arxiv.org/html/1712.05474"
+  },
+  {
+    "sheet": "main",
+    "no": 269,
+    "level": "sections",
+    "note": "从找点、搬物到与人协作，观测与任务都已改变；不能把三个版本拼成一条导航成绩曲线。 PointGoal reports both success and path-length-weighted success across sensor configurations on Gibson/MP3D. Later releases test rearrangement and human–robot social tasks respectively: those scores do not extend the original navigation curve.",
+    "locator": "§§3–5, Table 2; H2.0 §§4,6; H3.0 §§3–4",
+    "source": "https://arxiv.org/html/1904.01201"
+  },
+  {
+    "sheet": "main",
+    "no": 270,
+    "level": "sections",
+    "note": "Gym 把状态留在 GPU；Orbit 抽象机器人与环境；Lab 把 USD 场景映射到批量物理状态。无头吞吐不等于真机学习效率。 PhysX state buffers in Gym, Orbit’s agent/world interfaces, and Lab’s USD scene graph plus batched physics views solve different integration problems. Lab measures headless throughput with specified GPUs and sensors, not task success per real hour.",
+    "locator": "§2, Figs. 2–3; §4.1; Gym §3; Orbit §III",
+    "source": "https://arxiv.org/html/2511.04831"
+  },
+  {
+    "sheet": "main",
+    "no": 271,
+    "level": "sections",
+    "note": "五步指令链中途不重置场景；第一步失败会截断所有后缀。单项成功率、链长、五项全成都不能互换。 Given a valid chain, the evaluator issues the next instruction only after a state-based oracle accepts the current subtask. Prefix length, first-task success and five-task success measure different events or use different units; sensor suite and training scenes matter.",
+    "locator": "§III-B/C, Figs. 5,7–8; §V",
+    "source": "https://arxiv.org/html/2112.03227"
+  },
+  {
+    "sheet": "main",
+    "no": 272,
+    "level": "sections",
+    "note": "活动描述、物理与启发式状态、视觉逼真度问卷、策略实验各有对象；覆盖千项定义不等于千项都已解决。 BDDL initial and goal conditions turn activities into executable tasks. Some non-kinematic states (e.g. temperature) evolve by heuristics. The realism rating comes from human rankings of images; the agent experiments select three activities, not 1,000 policy rollouts per method.",
+    "locator": "§§4–6.1, Figs. 2–3",
+    "source": "https://arxiv.org/html/2403.09227"
+  },
+  {
+    "sheet": "main",
+    "no": 273,
+    "level": "sections",
+    "note": "固定策略骨干后，顺序学习在前向迁移上反而领先；只看最后一个任务的成功率会漏掉遗忘。 Task suites vary spatial relations, objects and goals; Table 2 fixes ResNet-T to compare lifelong algorithms. Plain sequential learning leads on forward transfer in the reported suites, which is not the same as retaining old skills.",
+    "locator": "§§4–5.2, Figs. 2–3, Tables 1–2",
+    "source": "https://arxiv.org/html/2306.03310"
+  },
+  {
+    "sheet": "main",
+    "no": 274,
+    "level": "sections",
+    "note": "同一人形本体既要稳住身体又要操纵物体；四种 RL 基线的比较发生在仿真中。 A dexterous humanoid must coordinate hands and whole body across locomotion and manipulation. DreamerV3, TD-MPC2, SAC and PPO are evaluated in the simulator: comparing algorithms here is not evidence of a deployable hand controller.",
+    "locator": "§§III–V, especially V-A",
+    "source": "https://arxiv.org/html/2403.10506"
+  },
+  {
+    "sheet": "main",
+    "no": 275,
+    "level": "sections",
+    "note": "先校准控制与画面，再用成对真机实验验证策略排序；拟合相对强弱不等于还原绝对成功率。 SysID aligns open-loop arm motion; visual matching overlays simulated foregrounds on real backgrounds and matches textures. Paired real/sim tests report Pearson r and maximum rank violations averaged over policies (MMRV), so high correlation need not mean calibrated absolute success.",
+    "locator": "§§III-B,IV,VI-A, Figs. 2–4",
+    "source": "https://arxiv.org/html/2405.05941"
+  },
+  {
+    "sheet": "main",
+    "no": 276,
+    "level": "sections",
+    "note": "炉灶旋钮不仅改变角度，也改变燃烧器状态；原版用此类交互构造百项任务，并区分人工与合成示范。 Articulated kitchen fixtures also have semantic state changes (turning the knob activates the burner). The original 100-task study compares human demonstrations with MimicGen trajectories; it is not the later 365-task benchmark.",
+    "locator": "§§III–V, Fig. 3",
+    "source": "https://arxiv.org/html/2406.02523"
+  },
+  {
+    "sheet": "main",
+    "no": 277,
+    "level": "sections",
+    "note": "居民的知识来自场景标注和仿真后端；语言规划器可查询它，但回答正确还不等于导航或操作成功。 GRResidents separates a manager of simulator/annotation knowledge from an LLM dialogue planner. Object navigation, social navigation and loco-manipulation require different uses of that knowledge; dialogue success alone is not embodied success.",
+    "locator": "§§3–4, Figs. 3,5",
+    "source": "https://arxiv.org/html/2407.10943"
+  },
+  {
+    "sheet": "main",
+    "no": 278,
+    "level": "sections",
+    "note": "须注明相机、几何与显存；用 GPU 加速一个软体场景，和并行数百个刚体环境不是同一指标。 Cartpole throughput includes RGB rendering and varies with cameras and GPU memory. The limitations explicitly distinguish batched rigid environments from soft-body scenes that can use the GPU to accelerate a single environment.",
+    "locator": "§III, Figs. 2–3; §V",
+    "source": "https://arxiv.org/html/2410.00425"
+  },
+  {
+    "sheet": "main",
+    "no": 279,
+    "level": "repo",
+    "note": "可追踪的是求解器与耦合器的步进；代码存在不足以证明所有物理分支可微，更不能证明生成场景有效。 The simulator orchestrates solver and coupling work across substeps. Read as a multiphysics implementation, not as evidence that a generative model produces valid scenes or that all solvers share the same gradient support. No matched policy evaluation reproduced. The supplied blog URL did not expose its article body in the retrieved HTML.",
+    "locator": "genesis/engine/simulator.py, Simulator build and step; engine solvers",
+    "source": "https://github.com/Genesis-Embodied-AI/genesis-world/blob/2eaa40c6efe8dceb9e44289d4a364075546c9edd/genesis/engine/simulator.py"
+  },
+  {
+    "sheet": "main",
+    "no": 280,
+    "level": "sections",
+    "note": "拿铁任务隐含加奶，且需串联多种技能；单次抓取无法测出语义推断和长程执行两种失败。 The 60 primitive and 40 composite tasks probe different demands. In the latte example the agent must infer milk as an implicit goal and sequence skills; scoring an isolated pick misses both problems.",
+    "locator": "§§3.1,4; Figs. 2–3",
+    "source": "https://arxiv.org/html/2412.18194"
+  },
+  {
+    "sheet": "main",
+    "no": 281,
+    "level": "sections",
+    "note": "批量渲染与物理步进可一起编译；潜在接触对会带来静态开销。论文实现用仓库中的 RSS 2025 快照定位。 The paper connects MJX to Madrona through JAX primitives for batched vision and visual randomization. Static shapes can make contact cost scale with possible rather than active contacts. The RSS 2025 source is distinct from current tasks.",
+    "locator": "§III, §IV, Fig. 4; §VI",
+    "source": "https://arxiv.org/html/2502.08844"
+  },
+  {
+    "sheet": "main",
+    "no": 282,
+    "level": "repo",
+    "note": "建模器装配几何和关节，求解器推进状态；框架没有替具体任务定义奖励。 A model builder assembles bodies, joints and shapes into a simulation model; a solver advances state. Warp and solver extensibility describe an engine interface, not a task definition, reward or comparable policy score.",
+    "locator": "newton/_src/sim/builder.py, ModelBuilder; announcement: Introducing Newton",
+    "source": "https://github.com/newton-physics/newton/blob/959a3d51612c9a670c32adb59113163e3928c4cf/newton/_src/sim/builder.py"
+  },
+  {
+    "sheet": "main",
+    "no": 283,
+    "level": "sections",
+    "note": "统一配置和 step 接口便于换引擎，不保证接触动力学一致。旧仓 README 已注明迁移。 Nested configuration describes the scene; a handler implements backend-specific operations behind a Gym interface. A common call signature does not ensure identical contacts. The workbook repository now points development to packages/metasim in the RoboVerse monorepo.",
+    "locator": "§III, Figs. 3–4, Code 1; §VII",
+    "source": "https://arxiv.org/html/2504.18904"
+  },
+  {
+    "sheet": "main",
+    "no": 284,
+    "level": "sections",
+    "note": "同场景成对比较可减少场景难度的干扰；真机偏好名次不是固定任务表的成功率。论文的本体范围是 DROID。 Distributed evaluators run pairwise comparisons across real scenes; rankings aggregate comparisons rather than a fixed suite’s binary pass rate. Experiments are on DROID, not a demonstration of cross-embodiment ranking.",
+    "locator": "§§3.1,4–5,7; Algorithm 1",
+    "source": "https://arxiv.org/html/2506.18123"
+  },
+  {
+    "sheet": "main",
+    "no": 285,
+    "level": "sections",
+    "note": "仿真反馈先用于修专家程序，程序再造示范；程序能跑通与后续策略能泛化是两个实验。 A multimodal model writes expert programs against a skill API and revises them using simulation feedback; successful programs produce randomized demonstrations. Code-generation success over repeated executions and learned-policy generalization are separate tests.",
+    "locator": "§§2–4.1, Figs. 2–4",
+    "source": "https://arxiv.org/html/2506.18088"
+  },
+  {
+    "sheet": "main",
+    "no": 286,
+    "level": "sections",
+    "note": "测试者若反复选“甜点”摆位就能抬高成功率；先对齐复位方式以及一模多任务或逐任务协议。 A tester can move props to a policy’s sweet spot and inflate success. Table30 separates task-specific and generalist submissions; matching reset procedures and which policy covers which tasks is essential for comparison.",
+    "locator": "§§2–4, Figs. 3–4,9",
+    "source": "https://arxiv.org/html/2510.17950"
+  },
+  {
+    "sheet": "main",
+    "no": 287,
+    "level": "sections",
+    "note": "2025 年规则单列机载观测与特权信息赛道；满足的目标谓词可获部分分。不能用现行 2026 首页替代。 The 2025 rules separate onboard-observation and privileged tracks; ranking averages over 50 tasks and awards partial credit by the fraction of satisfied BDDL goal predicates. The workbook’s unversioned landing page now describes 2026.",
+    "locator": "2025 archive: Evaluation & Rules → Challenge Tracks / Evaluation Metrics",
+    "source": "https://behavior.stanford.edu/challenge/archive/2025/index.html#evaluation-metrics"
+  },
+  {
+    "sheet": "main",
+    "no": 288,
+    "level": "repo",
+    "note": "组装环境后并行评估；报道的提速条件是同构环境、参数变化、八张 GPU，而不是策略更强。 The environment builder combines task, embodiment and scene components. The vendor timing uses GR00T N1.5 on ten RoboCasa tasks with 4,096 homogeneous environment variations per task on eight GPUs: a throughput comparison, not evidence of better policy quality.",
+    "locator": "isaaclab_arena/environments/arena_env_builder.py; announcement: Rapid policy evaluation results",
+    "source": "https://github.com/isaac-sim/IsaacLab-Arena/blob/49aacb0dd13603bc90fd1c3dace26c7ae5790904/isaaclab_arena/environments/arena_env_builder.py"
+  },
+  {
+    "sheet": "main",
+    "no": 289,
+    "level": "sections",
+    "note": "先筛可动资产和可解试次，再测导航、抓放、开关等任务。可解性筛查不是策略成绩。 MolmoSpaces-Bench selects solvable trials for eight base tasks; its asset pipeline validates colliders and articulation rather than treating proximity as a grasp. Trial solvability is a prerequisite, not a guarantee for the tested policy.",
+    "locator": "§§3–4.1, Fig. 8; Ai2 release: High-fidelity physics",
+    "source": "https://arxiv.org/html/2602.11337"
+  },
+  {
+    "sheet": "main",
+    "no": 290,
+    "level": "sections",
+    "note": "同属 365 套件也须区分预训练迁移、终身学习及评估时限；版本更新曾将时限放宽 1.5 倍。 The 365-task release separates multitask training, pretraining transfer and lifelong settings. The project subsequently increased evaluation horizons by 1.5×; compare results under the same horizon rather than treating the suite name as a protocol.",
+    "locator": "§§3–4; RoboCasa release notes for v1.0.1",
+    "source": "https://arxiv.org/html/2603.04356"
+  },
+  {
+    "sheet": "main",
+    "no": 291,
+    "level": "sections",
+    "note": "视频质量、策略排序、闭环规划不能互作替代指标；2.0 再引入视触觉与真机试验，但少量试次不是部署认证。 v1 separates 16 perceptual metrics from utility as data generator, policy evaluator or planner on RoboTwin-based tests. v2 adds visuotactile tests and physical evaluations; its small physical trial counts and fixed-seed RL protocol limit extrapolation.",
+    "locator": "v1 §§3–4.1; v2 §3.1, Fig. 2, §5",
+    "source": "https://arxiv.org/html/2602.08971"
+  },
+  {
+    "sheet": "main",
+    "no": 292,
+    "level": "sections",
+    "note": "动了手臂不代表作用到了物体；论文限定 DROID 策略和刚体桌面任务，不能外推到布料或力控。 The bowl-in-bin example distinguishes actual grasp-and-deposit from arm motion with no object interaction. The comparison uses DROID-finetuned policies; rigid tabletop scenes underrepresent deformable and fine force-controlled tasks.",
+    "locator": "§III, Fig. 5; §§IV-A,V",
+    "source": "https://arxiv.org/html/2604.09860"
+  },
+  {
+    "sheet": "main",
+    "no": 293,
+    "level": "repo",
+    "note": "3.0 增加 Newton 后端；报道比较同时更换版本和后端，不能把最高吞吐差异全归于求解器。 Lab 3.0 exposes a Newton backend alongside PhysX. NVIDIA’s up-to-2.5× comparison changes both the Lab version and backend for a vision-based dexterity workload; it does not isolate a universal solver speedup.",
+    "locator": "source/isaaclab_newton/isaaclab_newton/physics/newton_manager.py; CoRL announcement: Where the Training and Scaling Happens",
+    "source": "https://github.com/isaac-sim/IsaacLab/blob/99a3acd776f47fbcece4413f3c1d63f02b6979e2/source/isaaclab_newton/isaaclab_newton/physics/newton_manager.py"
+  },
+  {
+    "sheet": "main",
+    "no": 294,
+    "level": "sections",
+    "note": "VABAR 用可控变化诊断失效，两个后端的资产和外观也有差别；DexBench 的 15 项、四场景来自发布说明，不是二者横评。 VABAR varies task instances over six industrial tasks and studies success, cycle time and failure modes. Its Newton and Arena implementations differ in assets and appearance. DexBench is a separate 15-task/four-scene release; its scope here comes from the announcement, not a matched head-to-head evaluation. The Arena gear-mesh predicate checks released, seated rotation rather than mere proximity.",
+    "locator": "VABAR §§IV,VII-A; CoRL announcement: New Industrial Benchmarks",
+    "source": "https://arxiv.org/html/2611.06881"
+  },
+  {
+    "sheet": "main",
+    "no": 295,
+    "level": "sections",
+    "note": "真机与学习器异步，先验示范和在线回放混采。SERL 的初始示范不等于 HIL-SERL 中途接管。 The actor acts while an off-policy learner mixes equal-sized prior and online replay samples. SERL compares 20 demonstrations plus robot interaction against BC on 100 demos; HIL-SERL separately incorporates operator corrections during exploration.",
+    "locator": "SERL §§4.1–4.4, Fig. 2, §5 Figs. 6–7; HIL-SERL §3.4, Fig. 3",
+    "source": "https://arxiv.org/html/2401.16013"
+  },
+  {
+    "sheet": "main",
+    "no": 296,
+    "level": "sections",
+    "note": "梯度先改候选动作，再把优化结果教给策略；离线初值与额外交互千幕后表现必须分开。 The critic ranks candidate actions and refines them by gradient ascent in action space; supervised fitting distils the target back into the actor. The table separates offline results from results after 1,000 online episodes.",
+    "locator": "Fig. 2, Algorithm 1; §5 Table 1",
+    "source": "https://arxiv.org/html/2412.06685"
+  },
+  {
+    "sheet": "main",
+    "no": 297,
+    "level": "sections",
+    "note": "探索时冻主干，监督阶段再更新；已探索任务的进步不能算作未见任务迁移。 The VLM is frozen during exploration while the action head learns; supervised updates then unfreeze it. Experiments separate demonstration, online-training and held-out tasks, so improvement on an explored task is not zero-shot transfer.",
+    "locator": "§IV, Fig. 2, Algorithm 1; §V Fig. 4",
+    "source": "https://arxiv.org/html/2501.16664"
+  },
+  {
+    "sheet": "main",
+    "no": 298,
+    "level": "sections",
+    "note": "两阶段共享一致性策略目标；比较在线结果时，还要看各自从哪一个离线检查点开始。 Cal-ConRFT starts from demonstrations; HIL-ConRFT adds real interaction and teleoperated interventions with a consistency-policy objective balancing Q and imitation. Table I's online methods do not all start from the same offline checkpoint.",
+    "locator": "§IV, Figs. 1–2; Table I; §VI-A",
+    "source": "https://arxiv.org/html/2502.05450"
+  },
+  {
+    "sheet": "main",
+    "no": 299,
+    "level": "sections",
+    "note": "区分画面、语义、执行三类扰动；纠正失手不等于读懂新的指代。 DPO, GRPO and PPO supply different update signals. The pick-and-place generalization study separates visual changes, semantic changes and execution shifts; a policy recovering from an imperfect grasp is not necessarily better at unseen instruction semantics.",
+    "locator": "§§4–5.1, Figs. 3,9",
+    "source": "https://arxiv.org/html/2505.19789"
+  },
+  {
+    "sheet": "main",
+    "no": 300,
+    "level": "sections",
+    "note": "策略负责采样，价值模型与冻结的过程奖励模型提供学习信号；四个 LIBERO 子集是限定域内实验。 The transformer policy samples actions in vectorized environments while a separate value model and frozen process reward model guide updates. LIBERO’s four suites test manipulation, not arbitrary physical deployment.",
+    "locator": "§3, Fig. 2; §4 Fig. 3",
+    "source": "https://arxiv.org/html/2505.18719"
+  },
+  {
+    "sheet": "main",
+    "no": 301,
+    "level": "sections",
+    "note": "固定模仿策略，只学受限的修正动作；约两百倍的步数比较针对仿真 BoxCleanup，并非普适加速。 ResFiT freezes the cloned base and fits a bounded residual with off-policy RL on demonstrations and interaction. The roughly 200× step comparison with PPO is for simulated BoxCleanup, not a universal speed ratio.",
+    "locator": "§III Fig. 1, Algorithm 1; §V-A Fig. 3",
+    "source": "https://arxiv.org/html/2509.19301"
+  },
+  {
+    "sheet": "main",
+    "no": 302,
+    "level": "sections",
+    "note": "πRL 改的是流策略探索与优化；RLinf 解决的是学习器、采样器等的执行调度，不应当成同一算法。 πRL makes flow denoising stochastic for online optimization (learned noise or an SDE); the learned-noise route drops that network at inference. RLinf’s macro-to-micro execution system is infrastructure, not the policy update rule. RLinf-VLA Table I compares agent/algorithm variants by benchmark.",
+    "locator": "πRL §§4.1–4.2, Figs. 2–3, §5.1; RLinf §3 Fig. 4",
+    "source": "https://arxiv.org/html/2510.25889"
+  },
+  {
+    "sheet": "main",
+    "no": 303,
+    "level": "sections",
+    "note": "采样器需要与环境轮流推进而非一次生成整段文本；温度、裁剪和各基准的动作块数都会改变结果。 A veRL rollout now alternates policy sampling with parallel environment steps rather than generating a complete text response. Dynamic sampling, temperature and asymmetric clipping affect the outcome-reward update; action chunk counts vary by benchmark.",
+    "locator": "§§3–4, rollout pseudocode, Fig. 4",
+    "source": "https://arxiv.org/html/2509.09674"
+  },
+  {
+    "sheet": "main",
+    "no": 304,
+    "level": "sections",
+    "note": "动作、奖励 token 与价值头作用不同；评价评论器的 F1 不是真机任务成功率。 The forward pass emits structured action and reward tokens; a separate value head estimates state value for PPO. Critic F1 is measured as its own prediction problem and should not be read as the robot’s success rate.",
+    "locator": "§3 Fig. 3; §4.4 Fig. 4",
+    "source": "https://arxiv.org/html/2509.15937"
+  },
+  {
+    "sheet": "main",
+    "no": 305,
+    "level": "sections",
+    "note": "动作来自 VLA，想象观测来自世界模型，反馈来自反思器；应以独立的 LIBERO 执行检验，而非直接采信想象回报。 World-Env trains a transition model on demos plus self-exploration. During imagined interaction the VLA proposes actions, the simulator predicts observations, and an Instant Reflector supplies feedback; comparisons use five demonstrations per task on LIBERO.",
+    "locator": "§4 Figs. 3–4; §5.1 Table 1",
+    "source": "https://arxiv.org/html/2509.24948"
+  },
+  {
+    "sheet": "main",
+    "no": 306,
+    "level": "sections",
+    "note": "“可验证”主要指与示范的相似度可算，并非有外部物理判据；像素分数不证明超越专家。 A VLA’s action chunks drive an action-conditioned video simulator. Its verified reward is largely similarity to expert trajectories, not an independent physical goal predicate; frame reconstruction metrics cannot certify improvement beyond the expert.",
+    "locator": "§3 Fig. 2, Algorithm 1; §4 Table 1; §5",
+    "source": "https://arxiv.org/html/2510.00406"
+  },
+  {
+    "sheet": "main",
+    "no": 307,
+    "level": "sections",
+    "note": "价值函数给经验打优势标签，再据标签学习动作；在分钟级多阶段任务里，还要区分完成与完成速度。 RECAP estimates value with a separate VLM-based network and conditions action learning on a binarized advantage label. Evaluation includes multistage espresso, laundry and box tasks where throughput as well as completion matters.",
+    "locator": "§IV Figs. 3–4; §VI",
+    "source": "https://arxiv.org/html/2511.14759"
+  },
+  {
+    "sheet": "main",
+    "no": 308,
+    "level": "sections",
+    "note": "同一视频换指令即可构造部分成功样本；测的是终局进度预测误差，而不是策略回报。 Counterfactual instructions turn a successful video into partial or failed task-video pairs. RoboRewardBench asks for discrete end-of-episode progress (1–5) and reports MAE, not a policy’s return or success.",
+    "locator": "§3 Fig. 2; §4 Fig. 4; §5.1 Table 1",
+    "source": "https://arxiv.org/html/2601.00675"
+  },
+  {
+    "sheet": "main",
+    "no": 309,
+    "level": "sections",
+    "note": "只读压缩出的 RL 状态，再用小型 actor–critic 修动作块；本就会做的任务也可能只在吞吐上改善。 A reconstruction objective compresses frozen VLA features into an RL token. A lightweight online actor/critic refines action chunks using the token and proprioception. The Ethernet example improves throughput without needing a success-rate jump.",
+    "locator": "§IV-A/B Fig. 2, Algorithm 1; §VI Figs. 4–5",
+    "source": "https://arxiv.org/html/2604.23073"
+  },
+  {
+    "sheet": "main",
+    "no": 310,
+    "level": "repo",
+    "note": "候选、提交 PR、合并入表是三件事；目录按主题找线索，不据收录推断实验复现。 This robotics index separates datasets/evaluations from methods and has a candidate-to-PR workflow. A discovered or proposed paper is not independent replication, nor is it necessarily a merged entry.",
+    "locator": "README sections: Datasets & Benchmarks, World Models for VLA; docs/arxiv-pipeline.md",
+    "source": "https://github.com/leofan90/Awesome-World-Models/blob/85302a4d286fb7e98b3f7db2e116a95aa5c9fe3d/docs/arxiv-pipeline.md"
+  },
+  {
+    "sheet": "main",
+    "no": 311,
+    "level": "sections",
+    "note": "任务规划器写子指令，低层策略才执行；读完结构图还要查数据与评测里谁真正动了。 The survey treats task decomposition separately from low-level action prediction: a planner emits sub-instructions that condition a control policy. Its dataset/benchmark section is needed to identify what actually executed.",
+    "locator": "Fig. 1, §III, §IV and §V",
+    "source": "https://arxiv.org/html/2405.14093"
+  },
+  {
+    "sheet": "main",
+    "no": 312,
+    "level": "sections",
+    "note": "脑、身体、跨模态传感器共同构成闭环；有仿真器不等于已证明策略迁移成功。 The AI brain/body/cross-modal sensor framing places the world model in a larger embodied loop. Its sim-to-real discussion concerns validating transferred behavior; having a simulator is not itself a transfer result.",
+    "locator": "Fig. 1, §§III,VII",
+    "source": "https://arxiv.org/html/2407.06886"
+  },
+  {
+    "sheet": "main",
+    "no": 313,
+    "level": "sections",
+    "note": "隐式知识与显式未来画面是两条线；能据表示决策的系统不一定出视频，出视频的也未必出动作。 The survey distinguishes learning implicit world knowledge from producing explicit future scenarios. A representation supporting a decision need not render a forecast video; a forecast alone says little about who selects actions.",
+    "locator": "§2 Fig. 2; §§3–4.1",
+    "source": "https://arxiv.org/html/2411.14499"
+  },
+  {
+    "sheet": "main",
+    "no": 314,
+    "level": "repo",
+    "note": "指南适合按背景选学习路径；RoboTwin 演练指向原项目，不能代作基准的实验依据。 The Chinese guide routes newcomers by background into a RoboTwin practice sequence and separate algorithm, control, infrastructure and hardware notes. It is a learning path, not the source of RoboTwin benchmark results.",
+    "locator": "README: Start From Here / hands-on RoboTwin sequence; topics/control.md",
+    "source": "https://github.com/TianxingChen/Embodied-AI-Guide/blob/236f5fb35ca7058a0ff842046a6b11cfd521b7b5/topics/control.md"
+  },
+  {
+    "sheet": "main",
+    "no": 315,
+    "level": "sections",
+    "note": "文中 token 是模块间传递的行动信息，未必是离散电机指令；解读时要补出它到可执行控制之间的转换。 Action tokens here include subtask descriptions, code, affordances, goal states and latent representations, not only quantized motor commands. Ask what post-processing must intervene before the robot moves.",
+    "locator": "§3, Figs. 1–2; §§4–11",
+    "source": "https://arxiv.org/html/2507.01925"
+  },
+  {
+    "sheet": "main",
+    "no": 316,
+    "level": "sections",
+    "note": "决策耦合、时间推理、空间表示是三轴；占用预测、回报和操作成功率各有分母，不能跨表排总榜。 Decision coupling, temporal prediction and spatial representation are separate axes. Occ3D mIoU, DMC return and RLBench success answer different questions; Table VI even flags scores read from curves. Taxonomy labels do not establish a control result.",
+    "locator": "Fig. 1, §§III–V, Tables I, IV–VII; companion README",
+    "source": "https://arxiv.org/html/2510.16732"
+  },
+  {
+    "sheet": "main",
+    "no": 317,
+    "level": "repo",
+    "note": "自动摘要流与人工精选分开；去重记录只能防重，不能验证论文结论。 The repository separates generated topical digests from curated highlights, with a seen-record store and scheduled workflow. Feed membership is discovery evidence, not a verified taxonomy placement or result.",
+    "locator": "README: Auto-Updated Paper Feeds vs Highlighted Papers; arxiv_digest.py",
+    "source": "https://github.com/jonstephens85/awesome-embodied-ai/blob/37427e0233f2a3c3ec1b8adfa22f49f69dce8000/arxiv_digest.py"
+  },
+  {
+    "sheet": "main",
+    "no": 318,
+    "level": "sections",
+    "note": "架构、方法族、推理、应用可交叉分类；视频分布更接近，并不能代替动作条件或下游检验。 The survey organizes architecture, methodological family, reasoning strategy and application separately. Section 7 asks for action-conditioned and downstream tests as well as perceptual quality; a lower distributional video distance is not sufficient.",
+    "locator": "Fig. 1, §§3–6; §7.1",
+    "source": "https://arxiv.org/html/2606.00133"
+  },
+  {
+    "sheet": "main",
+    "no": 319,
+    "level": "sections",
+    "note": "能力阶梯说“证明了什么”，四种更新循环说“什么被改变”；进入矩阵某一格不构成能力证明。 The plausible–controllable–actionable ladder states capability requirements; the data, reward, policy and model-self loops say what changes under repeated use. Table 2 describes possible interactions rather than measured achievements.",
+    "locator": "§§2–3 Fig. 2, Table 2; §7",
+    "source": "https://arxiv.org/html/2609.16697"
+  },
+  {
+    "sheet": "main",
+    "no": 320,
+    "level": "repo",
+    "note": "VLA 与 WAM 同栏、VLN 与 VA 分栏有利检索；栏目相同并不意味着共享动作接口或评估协议。 The README places WAMs with VLA models but keeps navigation and vision-action tracks separately, with year-grouped pointers. These headings are retrieval aids, not a common action space, controller or evaluation protocol.",
+    "locator": "README: VLA & WAM / VLN / VA sections",
+    "source": "https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln/blob/b5786e73fd0ffeb57783cdc1e4776b636bc24f86/README.md"
+  }
+]

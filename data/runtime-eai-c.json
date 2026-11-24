@@ -1,0 +1,46 @@
+[
+  {
+    "code": "EAI-7",
+    "representative": "CALVIN (long-horizon language control)",
+    "source": "https://arxiv.org/html/2112.03227",
+    "locator": "§III-C2, Figs. 5, 7–8; §IV-A; §V",
+    "stages": [
+      ["从初始场景取可行的五项任务链", "Start a feasible five-subtask chain"],
+      ["当前指令和传感器观测送入策略", "Condition the policy on the current instruction and sensor observation"],
+      ["被测策略输出机械臂与夹爪动作", "Tested policy emits arm and gripper actions"],
+      ["仿真器执行并返回新观测与状态", "Simulator executes and returns new observation and state"],
+      ["任务判据决定继续、换指令或结束计分", "Task oracle gates retries and instruction changes; timeout ends the chain"]
+    ],
+    "feedback": ["下一步读新观测；成功才推进指令，超时截断。评测不更新策略。", "The next action uses fresh observations. Only success advances the instruction; timeout truncates the chain. No policy updates in evaluation."],
+    "test": ["1,000 条可行五项链；前缀成功率与平均链长不同，须注明训练/测试场景和传感器。这不是真机验证。", "1,000 feasible five-task chains. Prefix success and mean length differ; specify scene split and sensors. This is not a real-robot test."]
+  },
+  {
+    "code": "EAI-8",
+    "representative": "SERL (real-world online training)",
+    "source": "https://arxiv.org/html/2401.16013",
+    "locator": "§§4.1–4.5, Figs. 2, 4; §5, Figs. 6–7",
+    "stages": [
+      ["腕部图像与机器人状态", "Wrist images and robot state"],
+      ["actor 策略输出末端目标", "Actor policy outputs a set-point"],
+      ["底层控制器跟踪目标，真机返回新观测", "Low-level controller tracks the target; the physical robot returns a new observation"],
+      ["任务奖励与转移写入在线回放", "Task reward and transition enter online replay"],
+      ["学习器将回放与示范混采，更新策略及价值网络", "Learner mixes replay with demonstrations and updates policy and critic"]
+    ],
+    "feedback": ["机器人持续向 actor 提供观测，异步学习器周期性回传权重。非想象 rollout；原 SERL 不要求每步人工纠正。", "Physical observations close the control loop; the asynchronous learner sends updated weights. No imagined transition or mandatory per-step human correction."],
+    "test": ["三项 Franka 任务各测 100 次；20 条示范加在线交互对比 100 条示范的 BC，不能据此断言两者真实成本相同。", "100 trials per Franka task on three tasks. RL uses 20 demonstrations plus interaction versus BC on 100 demonstrations; these are not matched real-world costs."]
+  },
+  {
+    "code": "SURVEY",
+    "representative": "Li et al., A Comprehensive Survey on World Models for Embodied AI",
+    "source": "https://arxiv.org/html/2510.16732",
+    "locator": "Fig. 1, §III; §V, Tables IV–VII",
+    "stages": [
+      ["从预测目标与输入条件定位原方法", "Identify the primary method, prediction target and conditioning"],
+      ["按决策耦合、时间推理、空间表示分类", "Classify decision coupling, temporal reasoning and spatial representation"],
+      ["追问谁选择动作：控制器、策略或无人执行", "Identify who selects actions: controller, policy, or no executor"],
+      ["按任务找对照表，回查原实验条件与指标", "Select the task-specific table and trace metrics and protocol to the experiment"]
+    ],
+    "feedback": ["这是读者核证流程，不是模型推理。若原论文无闭环实验，就记录缺口，不画出控制反馈。", "This is an evidence-reading workflow, not model inference. If the primary study has no closed-loop test, record that gap instead of inventing feedback."],
+    "test": ["表 V 的占用 mIoU、表 VI 的 DMC 回报和表 VII 的 RLBench 成功率不可混排；部分回报是从曲线估读。", "Table V occupancy mIoU, Table VI DMC returns and Table VII RLBench success cannot form a common ranking; some returns are approximated from curves."]
+  }
+]

@@ -1,0 +1,3541 @@
+[
+ {
+  "sheet": "main",
+  "no": 1,
+  "name": "World Models (Ha & Schmidhuber)",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/1803.10122",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 2,
+  "name": "PlaNet",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/1811.04551",
+  "code": "https://github.com/google-research/planet",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 3,
+  "name": "MuZero",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/1911.08265",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 4,
+  "name": "Dreamer (V1)",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/1912.01603",
+  "code": "https://github.com/danijar/dreamer",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 5,
+  "name": "DreamerV2",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2010.02193",
+  "code": "https://github.com/danijar/dreamerv2",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 6,
+  "name": "EfficientZero",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2111.00210",
+  "code": "https://github.com/YeWR/EfficientZero",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 7,
+  "name": "TD-MPC",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2203.04955",
+  "code": "https://github.com/nicklashansen/tdmpc",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 8,
+  "name": "DayDreamer",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2206.14176",
+  "code": "https://github.com/danijar/daydreamer",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 9,
+  "name": "IRIS",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2209.00588",
+  "code": "https://github.com/eloialonso/iris",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 10,
+  "name": "DreamerV3",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2301.04104",
+  "code": "https://github.com/danijar/dreamerv3",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 11,
+  "name": "STORM",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2310.09615",
+  "code": "https://github.com/weipu-zhang/STORM",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 12,
+  "name": "TD-MPC2",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2310.16828",
+  "code": "https://github.com/nicklashansen/tdmpc2",
+  "hub": "https://huggingface.co/nicklashansen/tdmpc2"
+ },
+ {
+  "sheet": "main",
+  "no": 13,
+  "name": "EfficientZero V2",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2403.00564",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 14,
+  "name": "DIAMOND",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2405.12399",
+  "code": "https://github.com/eloialonso/diamond",
+  "hub": "https://huggingface.co/eloialonso/diamond"
+ },
+ {
+  "sheet": "main",
+  "no": 15,
+  "name": "Δ-IRIS",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2406.19320",
+  "code": "https://github.com/vmicheli/delta-iris",
+  "hub": "https://huggingface.co/vmicheli/delta-iris"
+ },
+ {
+  "sheet": "main",
+  "no": 16,
+  "name": "Dreamer 4",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2509.24527",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 17,
+  "name": "Newt",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2511.19584",
+  "code": "https://github.com/nicklashansen/newt",
+  "hub": "https://huggingface.co/nicklashansen/newt"
+ },
+ {
+  "sheet": "main",
+  "no": 18,
+  "name": "AirDreamer",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2606.03252",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 19,
+  "name": "MMBench2 / WM Hallucination",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2606.27326",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 20,
+  "name": "ScanDreamer",
+  "category": "WM-1",
+  "paper": "https://arxiv.org/abs/2611.11605",
+  "code": "https://github.com/WANGSHUAIzzzz/ScanDreamer",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 21,
+  "name": "A Path Towards AMI (JEPA / H-JEPA blueprint)",
+  "category": "WM-2",
+  "paper": "https://openreview.net/pdf?id=BZ5a1r-kVsf",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 22,
+  "name": "I-JEPA",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2301.08243",
+  "code": "https://github.com/facebookresearch/ijepa",
+  "hub": "https://huggingface.co/facebook/ijepa_vith14_1k"
+ },
+ {
+  "sheet": "main",
+  "no": 23,
+  "name": "V-JEPA",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2404.08471",
+  "code": "https://github.com/facebookresearch/jepa",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 24,
+  "name": "DINO-WM",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2411.04983",
+  "code": "https://github.com/gaoyuezhou/dino_wm",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 25,
+  "name": "NWM (Navigation World Models)",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2412.03572",
+  "code": "https://github.com/facebookresearch/nwm",
+  "hub": "https://huggingface.co/facebook/nwm"
+ },
+ {
+  "sheet": "main",
+  "no": 26,
+  "name": "PLDM",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2502.14819",
+  "code": "https://github.com/vladisai/PLDM",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 27,
+  "name": "V-JEPA Intuitive Physics",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2502.11831",
+  "code": "https://github.com/facebookresearch/jepa-intuitive-physics",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 28,
+  "name": "General Agents Need World Models",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2506.01622",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 29,
+  "name": "V-JEPA 2 / V-JEPA 2-AC",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2506.09985",
+  "code": "https://github.com/facebookresearch/vjepa2",
+  "hub": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256"
+ },
+ {
+  "sheet": "main",
+  "no": 30,
+  "name": "LLM-JEPA",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2509.14252",
+  "code": "https://github.com/rbalestr-lab/llm-jepa",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 31,
+  "name": "LeJEPA",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2511.08544",
+  "code": "https://github.com/rbalestr-lab/lejepa",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 32,
+  "name": "JEPA-WMs",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2512.24497",
+  "code": "https://github.com/facebookresearch/jepa-wms",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 33,
+  "name": "VL-JEPA",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2512.10942",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 34,
+  "name": "C-JEPA (Causal-JEPA)",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2602.11389",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 35,
+  "name": "LeWM (LeWorldModel)",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2603.19312",
+  "code": "https://github.com/lucas-maes/le-wm",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 36,
+  "name": "V-JEPA 2.1",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2603.14482",
+  "code": "https://github.com/facebookresearch/vjepa2",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 37,
+  "name": "HWM",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2604.03208",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 38,
+  "name": "Generalization Theory for JEPA-WMs",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2606.27014",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 39,
+  "name": "H-JEPA",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2610.06805",
+  "code": "https://github.com/kevinghst/H-JEPA",
+  "hub": "https://huggingface.co/jepa-world-models/h-jepa"
+ },
+ {
+  "sheet": "main",
+  "no": 40,
+  "name": "WARP-JEPA",
+  "category": "WM-2",
+  "paper": "https://arxiv.org/abs/2611.10806",
+  "code": "https://github.com/hideinsewer/WARP-JEPA",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 41,
+  "name": "UniSim",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2310.06114",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 42,
+  "name": "Genie",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2402.15391",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 43,
+  "name": "Sora",
+  "category": "WM-3",
+  "paper": "https://openai.com/index/video-generation-models-as-world-simulators/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 44,
+  "name": "GameNGen",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2408.14837",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 45,
+  "name": "Oasis",
+  "category": "WM-3",
+  "paper": "https://oasis-model.github.io/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 46,
+  "name": "Genie 2",
+  "category": "WM-3",
+  "paper": "https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 47,
+  "name": "Cosmos WFM (Predict1)",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2501.03575",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 48,
+  "name": "Physics-IQ",
+  "category": "WM-3",
+  "paper": "https://physics-iq.github.io/",
+  "code": "https://github.com/google-deepmind/physics-IQ-benchmark",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 49,
+  "name": "VBench-2.0",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2503.21755",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 50,
+  "name": "MineWorld",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2504.08388",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 51,
+  "name": "WorldMem",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2504.12369",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 52,
+  "name": "Hunyuan-GameCraft",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2506.17201",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 53,
+  "name": "Genie 3",
+  "category": "WM-3",
+  "paper": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 54,
+  "name": "Matrix-Game 2.0",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2508.13009",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 55,
+  "name": "Yan",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2508.08601",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 56,
+  "name": "Sora 2",
+  "category": "WM-3",
+  "paper": "https://openai.com/index/sora-2/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 57,
+  "name": "Veo 3 zero-shot",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2509.20328",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 58,
+  "name": "Cosmos-Predict2.5",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2511.00062",
+  "code": "https://github.com/nvidia-cosmos/cosmos-predict2.5",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 59,
+  "name": "PAN",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2511.09057",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 60,
+  "name": "HY-World 1.5 (WorldPlay)",
+  "category": "WM-3",
+  "paper": "https://github.com/Tencent-Hunyuan/HY-WorldPlay",
+  "code": "https://github.com/Tencent-Hunyuan/HY-WorldPlay",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 61,
+  "name": "Runway GWM-1",
+  "category": "WM-3",
+  "paper": "https://runway.com/research/introducing-runway-gwm-1",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 62,
+  "name": "LingBot-World",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2601.20540",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 63,
+  "name": "Matrix-Game 3.0",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2604.08995",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 64,
+  "name": "Cosmos 3",
+  "category": "WM-3",
+  "paper": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
+  "code": "https://github.com/nvidia/cosmos",
+  "hub": "https://huggingface.co/collections/nvidia/cosmos3"
+ },
+ {
+  "sheet": "main",
+  "no": 65,
+  "name": "GWM Worlds 2",
+  "category": "WM-3",
+  "paper": "https://runway.com/research/introducing-gwm-worlds-2",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 66,
+  "name": "Odyssey-3",
+  "category": "WM-3",
+  "paper": "https://odyssey.systems/introducing-odyssey-3",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 67,
+  "name": "Genie 4",
+  "category": "WM-3",
+  "paper": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 68,
+  "name": "PAN 2",
+  "category": "WM-3",
+  "paper": "https://ifm.ai/blog/pan2/",
+  "code": "https://github.com/ifm-ai/PAN2",
+  "hub": "https://huggingface.co/IFM/PAN2"
+ },
+ {
+  "sheet": "main",
+  "no": 69,
+  "name": "WorldFoundry",
+  "category": "WM-3",
+  "paper": "https://arxiv.org/abs/2611.10771",
+  "code": "https://github.com/OpenEnvision/WorldFoundry",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 70,
+  "name": "WonderWorld",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2406.09394",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 71,
+  "name": "Aether",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2503.18945",
+  "code": "https://github.com/InternRobotics/Aether",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 72,
+  "name": "GEN3C",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2503.03751",
+  "code": "https://github.com/nv-tlabs/GEN3C",
+  "hub": "https://huggingface.co/collections/nvidia/gen3c-683f3f9540a8f9c98cf46a8d"
+ },
+ {
+  "sheet": "main",
+  "no": 73,
+  "name": "WorldScore",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2504.00983",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 74,
+  "name": "HunyuanWorld-Voyager",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2506.04225",
+  "code": "https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 75,
+  "name": "SpatialLM",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2506.07491",
+  "code": "https://github.com/manycore-research/SpatialLM",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 76,
+  "name": "HunyuanWorld 1.0",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2507.21809",
+  "code": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 77,
+  "name": "Lyra",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2509.19296",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 78,
+  "name": "FlashWorld",
+  "category": "WM-4",
+  "paper": "https://arxiv.org/abs/2510.13678",
+  "code": "https://github.com/imlixinyang/FlashWorld",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 79,
+  "name": "HunyuanWorld-Mirror",
+  "category": "WM-4",
+  "paper": "https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror",
+  "code": "https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror",
+  "hub": "https://huggingface.co/tencent/HunyuanWorld-Mirror"
+ },
+ {
+  "sheet": "main",
+  "no": 80,
+  "name": "RTFM",
+  "category": "WM-4",
+  "paper": "https://www.worldlabs.ai/blog/rtfm",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 81,
+  "name": "Marble",
+  "category": "WM-4",
+  "paper": "https://worldlabs.ai/blog/marble-world-model",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 82,
+  "name": "HY-World 2.0",
+  "category": "WM-4",
+  "paper": "https://github.com/Tencent-Hunyuan/HY-World-2.0",
+  "code": "https://github.com/Tencent-Hunyuan/HY-World-2.0",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 83,
+  "name": "Atlas",
+  "category": "WM-4",
+  "paper": "https://www.worldlabs.ai/blog/atlas",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 84,
+  "name": "GAIA-1",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2309.17080",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 85,
+  "name": "Tesla World Simulator",
+  "category": "WM-5",
+  "paper": "https://cvpr2023.wad.vision/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 86,
+  "name": "DriveDreamer",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2309.09777",
+  "code": "https://github.com/JeffWang987/DriveDreamer",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 87,
+  "name": "MagicDrive",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2310.02601",
+  "code": "https://github.com/cure-lab/MagicDrive",
+  "hub": "https://huggingface.co/flymin/MagicDriveDiT-stage3-40k-ft"
+ },
+ {
+  "sheet": "main",
+  "no": 88,
+  "name": "Copilot4D",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2311.01017",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 89,
+  "name": "Drive-WM",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2311.17918",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 90,
+  "name": "OccWorld",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2311.16038",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 91,
+  "name": "GenAD",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2403.09630",
+  "code": "https://github.com/OpenDriveLab/DriveAGI",
+  "hub": "https://huggingface.co/datasets/OpenDriveLab/OpenDV-YouTube-Language"
+ },
+ {
+  "sheet": "main",
+  "no": 92,
+  "name": "Vista",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2405.17398",
+  "code": "https://github.com/OpenDriveLab/Vista",
+  "hub": "https://huggingface.co/OpenDriveLab/Vista"
+ },
+ {
+  "sheet": "main",
+  "no": 93,
+  "name": "DriveDreamer4D",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2410.13571",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 94,
+  "name": "UniScene",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2412.05435",
+  "code": null,
+  "hub": "https://huggingface.co/Arlolo0/UniScene"
+ },
+ {
+  "sheet": "main",
+  "no": 95,
+  "name": "GAIA-2",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2503.20523",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 96,
+  "name": "Cosmos-Drive-Dreams",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2506.09042",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 97,
+  "name": "Epona",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2506.24113",
+  "code": "https://github.com/Kevin-thu/Epona",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 98,
+  "name": "DriveVLA-W0",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2510.12796",
+  "code": "https://github.com/BraveGroup/DriveVLA-W0",
+  "hub": "https://huggingface.co/liyingyan/DriveVLA-W0"
+ },
+ {
+  "sheet": "main",
+  "no": 99,
+  "name": "GAIA-3",
+  "category": "WM-5",
+  "paper": "https://wayve.ai/thinking/gaia-3/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 100,
+  "name": "Waymo World Model",
+  "category": "WM-5",
+  "paper": "https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 101,
+  "name": "OmniDreams",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2606.03159",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 102,
+  "name": "GAIA-4",
+  "category": "WM-5",
+  "paper": "https://wayve.ai/thinking/gaia-4/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 103,
+  "name": "BirdDreams",
+  "category": "WM-5",
+  "paper": "https://arxiv.org/abs/2611.14815",
+  "code": null,
+  "hub": "https://huggingface.co/papers/2611.14815"
+ },
+ {
+  "sheet": "main",
+  "no": 104,
+  "name": "UniPi",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2302.00111",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 105,
+  "name": "SuSIE",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2310.10639",
+  "code": "https://github.com/kvablack/susie",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 106,
+  "name": "GR-1",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2312.13139",
+  "code": "https://github.com/bytedance/GR-1",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 107,
+  "name": "IRASim",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2406.14540",
+  "code": "https://github.com/bytedance/IRASim",
+  "hub": "https://huggingface.co/datasets/fangqi/IRASim"
+ },
+ {
+  "sheet": "main",
+  "no": 108,
+  "name": "1X World Model",
+  "category": "WM-6",
+  "paper": "https://www.1x.tech/discover/1x-world-model",
+  "code": "https://github.com/1x-technologies/1xgpt",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 109,
+  "name": "GR-2",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2410.06158",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 110,
+  "name": "Seer",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2412.15109",
+  "code": "https://github.com/OpenRobotLab/Seer",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 111,
+  "name": "VPP",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2412.14803",
+  "code": "https://github.com/roboterax/video-prediction-policy",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 112,
+  "name": "UVA",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2503.00200",
+  "code": "https://github.com/ShuangLI59/unified_video_action",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 113,
+  "name": "UWM",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2504.02792",
+  "code": "https://github.com/WEIRDLabUW/unified-world-model",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 114,
+  "name": "DreamGen",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2505.12705",
+  "code": "https://github.com/NVIDIA/GR00T-Dreams",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 115,
+  "name": "WorldGym",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2506.00613",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 116,
+  "name": "WorldVLA",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2506.21539",
+  "code": "https://github.com/alibaba-damo-academy/WorldVLA",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 117,
+  "name": "Vidar",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2507.12898",
+  "code": "https://github.com/thu-ml/vidar",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 118,
+  "name": "Genie Envisioner (GE-1)",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2508.05635",
+  "code": "https://github.com/AgibotTech/Genie-Envisioner-V1",
+  "hub": "https://huggingface.co/agibot-world/Genie-Envisioner"
+ },
+ {
+  "sheet": "main",
+  "no": 119,
+  "name": "Ctrl-World",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2510.10125",
+  "code": "https://github.com/Robert-gyj/Ctrl-World",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 120,
+  "name": "GigaWorld-0",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2511.19861",
+  "code": "https://github.com/open-gigaai/giga-world-0",
+  "hub": "https://huggingface.co/open-gigaai/GigaWorld-0-Video-Pretrain-2b"
+ },
+ {
+  "sheet": "main",
+  "no": 121,
+  "name": "Veo World Simulator (Gemini Robotics)",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2512.10675",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 122,
+  "name": "SANA-Robot",
+  "category": "WM-6",
+  "paper": "https://nvlabs.github.io/Sana/Robot/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 123,
+  "name": "Cosmos Policy",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2601.16163",
+  "code": "https://github.com/NVlabs/cosmos-policy",
+  "hub": "https://huggingface.co/nvidia/Cosmos-Policy-LIBERO-Predict2-2B"
+ },
+ {
+  "sheet": "main",
+  "no": 124,
+  "name": "LingBot-VA",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2601.21998",
+  "code": "https://github.com/robbyant/lingbot-va",
+  "hub": "https://huggingface.co/robbyant/lingbot-va"
+ },
+ {
+  "sheet": "main",
+  "no": 125,
+  "name": "DreamDojo",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2602.06949",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 126,
+  "name": "DreamZero",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2602.15922",
+  "code": "https://github.com/dreamzero0/dreamzero",
+  "hub": "https://huggingface.co/GEAR-Dreams/DreamZero-AgiBot"
+ },
+ {
+  "sheet": "main",
+  "no": 127,
+  "name": "Genie Envisioner 2.0 (GE-Sim 2.0)",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2605.27491",
+  "code": "https://github.com/AgibotTech/GE-Sim-V2",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 128,
+  "name": "WALL-WM",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2606.01955",
+  "code": "https://github.com/X-Square-Robot/wall-wm",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 129,
+  "name": "GRAIL",
+  "category": "WM-6",
+  "paper": "https://arxiv.org/abs/2606.05160",
+  "code": null,
+  "hub": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Locomanipulation-GRAIL"
+ },
+ {
+  "sheet": "main",
+  "no": 130,
+  "name": "CloudRobo-WM1.2",
+  "category": "WM-6",
+  "paper": "https://www.huaweicloud.com/news/2026/20261116171910882.html",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 131,
+  "name": "GR00T 2",
+  "category": "WM-6",
+  "paper": "https://research.nvidia.com/labs/gear/gr00t-2/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 132,
+  "name": "SayCan",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2204.01691",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 133,
+  "name": "Inner Monologue",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2207.05608",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 134,
+  "name": "Code as Policies",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2209.07753",
+  "code": "https://github.com/google-research/google-research/tree/master/code_as_policies",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 135,
+  "name": "ProgPrompt",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2209.11302",
+  "code": "https://github.com/NVlabs/progprompt-vh",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 136,
+  "name": "PaLM-E",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2303.03378",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 137,
+  "name": "EmbodiedGPT",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2305.15021",
+  "code": "https://github.com/EmbodiedGPT/EmbodiedGPT_Pytorch",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 138,
+  "name": "VoxPoser",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2307.05973",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 139,
+  "name": "SpatialVLM",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2401.12168",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 140,
+  "name": "MOKA",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2403.03174",
+  "code": "https://github.com/moka-manipulation/moka",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 141,
+  "name": "RoboPoint",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2406.10721",
+  "code": "https://github.com/wentaoyuan/RoboPoint",
+  "hub": "https://huggingface.co/wentao-yuan/robopoint-v1-vicuna-v1.5-13b"
+ },
+ {
+  "sheet": "main",
+  "no": 142,
+  "name": "ECoT",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2407.08693",
+  "code": "https://github.com/MichalZawalski/embodied-CoT",
+  "hub": "https://huggingface.co/Embodied-CoT/ecot-openvla-7b-bridge"
+ },
+ {
+  "sheet": "main",
+  "no": 143,
+  "name": "ReKep",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2409.01652",
+  "code": "https://github.com/huangwl18/ReKep",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 144,
+  "name": "Magma",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2502.13130",
+  "code": null,
+  "hub": "https://huggingface.co/microsoft/Magma-8B"
+ },
+ {
+  "sheet": "main",
+  "no": 145,
+  "name": "Cosmos-Reason1",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2503.15558",
+  "code": null,
+  "hub": "https://huggingface.co/nvidia/Cosmos-Reason1-7B"
+ },
+ {
+  "sheet": "main",
+  "no": 146,
+  "name": "RoboRefer",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2506.04308",
+  "code": "https://github.com/Zhoues/RoboRefer",
+  "hub": "https://huggingface.co/Zhoues/RoboRefer-2B-SFT"
+ },
+ {
+  "sheet": "main",
+  "no": 147,
+  "name": "RoboBrain 2.0",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2507.02029",
+  "code": "https://github.com/FlagOpen/RoboBrain2.0",
+  "hub": "https://huggingface.co/BAAI/RoboBrain2.0-7B"
+ },
+ {
+  "sheet": "main",
+  "no": 148,
+  "name": "Embodied-R1",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2508.13998",
+  "code": "https://github.com/pickxiguapi/Embodied-R1",
+  "hub": "https://huggingface.co/IffYuan/Embodied-R1-3B-v1"
+ },
+ {
+  "sheet": "main",
+  "no": 149,
+  "name": "Gemini Robotics-ER 1.5",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2510.03342",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 150,
+  "name": "Pelican-VL 1.0",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2511.00108",
+  "code": "https://github.com/Open-X-Humanoid/pelican-vl",
+  "hub": "https://huggingface.co/X-Humanoid/Pelican1.0-VL-7B"
+ },
+ {
+  "sheet": "main",
+  "no": 151,
+  "name": "Vlaser",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2510.11027",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 152,
+  "name": "RoboBrain 2.5",
+  "category": "EAI-1",
+  "paper": "https://arxiv.org/abs/2601.14352",
+  "code": "https://github.com/FlagOpen/RoboBrain2.5",
+  "hub": "https://huggingface.co/BAAI/RoboBrain2.5-8B-NV"
+ },
+ {
+  "sheet": "main",
+  "no": 153,
+  "name": "Gemini Robotics ER 2",
+  "category": "EAI-1",
+  "paper": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 154,
+  "name": "RT-1",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2212.06817",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 155,
+  "name": "RT-2",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2307.15818",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 156,
+  "name": "RT-H",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2403.01823",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 157,
+  "name": "OpenVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2406.09246",
+  "code": "https://github.com/openvla/openvla",
+  "hub": "https://huggingface.co/openvla/openvla-7b"
+ },
+ {
+  "sheet": "main",
+  "no": 158,
+  "name": "TinyVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2409.12514",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 159,
+  "name": "RDT-1B",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2410.07864",
+  "code": "https://github.com/thu-ml/RoboticsDiffusionTransformer",
+  "hub": "https://huggingface.co/robotics-diffusion-transformer/rdt-1b"
+ },
+ {
+  "sheet": "main",
+  "no": 160,
+  "name": "π0",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2410.24164",
+  "code": "https://github.com/Physical-Intelligence/openpi",
+  "hub": "https://huggingface.co/lerobot/pi0_old"
+ },
+ {
+  "sheet": "main",
+  "no": 161,
+  "name": "CogACT",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2411.19650",
+  "code": "https://github.com/microsoft/CogACT",
+  "hub": "https://huggingface.co/CogACT/CogACT-Base"
+ },
+ {
+  "sheet": "main",
+  "no": 162,
+  "name": "SpatialVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2501.15830",
+  "code": "https://github.com/SpatialVLA/SpatialVLA",
+  "hub": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt"
+ },
+ {
+  "sheet": "main",
+  "no": 163,
+  "name": "π0-FAST",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2501.09747",
+  "code": "https://github.com/Physical-Intelligence/openpi",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 164,
+  "name": "ChatVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2502.14420",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 165,
+  "name": "DexVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2502.05855",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 166,
+  "name": "Helix",
+  "category": "EAI-2",
+  "paper": "https://www.figure.ai/news/helix",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 167,
+  "name": "Hi Robot",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2502.19417",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 168,
+  "name": "OpenVLA-OFT",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2502.19645",
+  "code": "https://github.com/openvla-oft/openvla-oft",
+  "hub": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-spatial"
+ },
+ {
+  "sheet": "main",
+  "no": 169,
+  "name": "Gemini Robotics",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2503.20020",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 170,
+  "name": "GO-1",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2503.06669",
+  "code": null,
+  "hub": "https://huggingface.co/agibot-world/GO-1"
+ },
+ {
+  "sheet": "main",
+  "no": 171,
+  "name": "GR00T N1",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2503.14734",
+  "code": "https://github.com/NVIDIA/Isaac-GR00T",
+  "hub": "https://huggingface.co/nvidia/GR00T-N1-2B"
+ },
+ {
+  "sheet": "main",
+  "no": 172,
+  "name": "π0.5",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2504.16054",
+  "code": "https://github.com/Physical-Intelligence/openpi",
+  "hub": "https://huggingface.co/lerobot/pi05_base"
+ },
+ {
+  "sheet": "main",
+  "no": 173,
+  "name": "GraspVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2505.03233",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 174,
+  "name": "UniVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2505.06111",
+  "code": "https://github.com/OpenDriveLab/UniVLA",
+  "hub": "https://huggingface.co/qwbu/univla-7b"
+ },
+ {
+  "sheet": "main",
+  "no": 175,
+  "name": "SmolVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2506.01844",
+  "code": "https://github.com/huggingface/lerobot",
+  "hub": "https://huggingface.co/lerobot/smolvla_base"
+ },
+ {
+  "sheet": "main",
+  "no": 176,
+  "name": "Being-H0",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2507.15597",
+  "code": "https://github.com/BeingBeyond/Being-H0",
+  "hub": "https://huggingface.co/BeingBeyond/Being-H0-8B-2508"
+ },
+ {
+  "sheet": "main",
+  "no": 177,
+  "name": "GR-3",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2507.15493",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 178,
+  "name": "Galaxea G0",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2509.00576",
+  "code": "https://github.com/OpenGalaxea/GalaxeaVLA",
+  "hub": "https://huggingface.co/OpenGalaxea/G0-VLA"
+ },
+ {
+  "sheet": "main",
+  "no": 179,
+  "name": "FLOWER",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2509.04996",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 180,
+  "name": "VLA-Adapter",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2509.09372",
+  "code": "https://github.com/OpenHelix-Team/VLA-Adapter",
+  "hub": "https://huggingface.co/VLA-Adapter"
+ },
+ {
+  "sheet": "main",
+  "no": 181,
+  "name": "WALL-OSS",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2509.11766",
+  "code": null,
+  "hub": "https://huggingface.co/x-square-robot/wall-oss-flow"
+ },
+ {
+  "sheet": "main",
+  "no": 182,
+  "name": "Gemini Robotics 1.5",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2510.03342",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 183,
+  "name": "InternVLA-M1",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2510.13778",
+  "code": "https://github.com/InternRobotics/InternVLA-M1",
+  "hub": "https://huggingface.co/InternRobotics/InternVLA-M1"
+ },
+ {
+  "sheet": "main",
+  "no": 184,
+  "name": "X-VLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2510.10274",
+  "code": null,
+  "hub": "https://huggingface.co/2toINF/X-VLA-Pt"
+ },
+ {
+  "sheet": "main",
+  "no": 185,
+  "name": "GEN-0",
+  "category": "EAI-2",
+  "paper": "https://generalistai.com/blog/gen-0",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 186,
+  "name": "DynamicVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2601.22153",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 187,
+  "name": "Helix 02",
+  "category": "EAI-2",
+  "paper": "https://www.figure.ai/news/helix-02",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 188,
+  "name": "InternVLA-A1",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2601.02456",
+  "code": "https://github.com/InternRobotics/InternVLA-A-series",
+  "hub": "https://huggingface.co/InternRobotics/InternVLA-A1-3B"
+ },
+ {
+  "sheet": "main",
+  "no": 189,
+  "name": "LingBot-VLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2601.18692",
+  "code": "https://github.com/Robbyant/lingbot-vla",
+  "hub": "https://huggingface.co/robbyant/lingbot-vla-4b"
+ },
+ {
+  "sheet": "main",
+  "no": 190,
+  "name": "GEN-1",
+  "category": "EAI-2",
+  "paper": "https://generalistai.com/blog/gen-1",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 191,
+  "name": "GO-2",
+  "category": "EAI-2",
+  "paper": "https://agibot.com/news/newsroom/the-unity-of-reasoning-and-action-agibot-56",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 192,
+  "name": "GR00T N1.7",
+  "category": "EAI-2",
+  "paper": "https://huggingface.co/blog/nvidia/gr00t-n1-7",
+  "code": "https://github.com/NVIDIA/Isaac-GR00T",
+  "hub": "https://huggingface.co/nvidia/GR00T-N1.7-3B"
+ },
+ {
+  "sheet": "main",
+  "no": 193,
+  "name": "π0.7",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2604.15483",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 194,
+  "name": "Qwen-VLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2605.30280",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 195,
+  "name": "Gemini Robotics 2",
+  "category": "EAI-2",
+  "paper": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 196,
+  "name": "RoboTTT",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2607.15275",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 197,
+  "name": "Xiaomi-Robotics-1",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2607.15330",
+  "code": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+  "hub": "https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-1-5B"
+ },
+ {
+  "sheet": "main",
+  "no": 198,
+  "name": "Helix 2.5",
+  "category": "EAI-2",
+  "paper": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 199,
+  "name": "Gemini Robotics 2.5",
+  "category": "EAI-2",
+  "paper": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 200,
+  "name": "ScaleVLA",
+  "category": "EAI-2",
+  "paper": "https://arxiv.org/abs/2611.21607",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 201,
+  "name": "Implicit BC (IBC)",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2109.00137",
+  "code": "https://github.com/google-research/ibc",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 202,
+  "name": "BC-Z",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2202.02005",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 203,
+  "name": "BeT / VQ-BeT",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2206.11251",
+  "code": "https://github.com/notmahi/bet",
+  "also": [
+   "https://github.com/jayLEE0301/vq_bet_official"
+  ],
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 204,
+  "name": "PerAct",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2209.05451",
+  "code": "https://github.com/peract/peract",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 205,
+  "name": "Diffusion Policy",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2303.04137",
+  "code": "https://github.com/real-stanford/diffusion_policy",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 206,
+  "name": "ACT + ALOHA",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2304.13705",
+  "code": "https://github.com/tonyzhaozh/act",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 207,
+  "name": "RVT / RVT-2",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2306.14896",
+  "code": "https://github.com/NVlabs/RVT",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 208,
+  "name": "Mobile ALOHA",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2401.02117",
+  "code": "https://github.com/MarkFzp/mobile-aloha",
+  "hub": "https://huggingface.co/papers/2401.02117"
+ },
+ {
+  "sheet": "main",
+  "no": 209,
+  "name": "3D Diffuser Actor",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2402.10885",
+  "code": "https://github.com/nickgkan/3d_diffuser_actor",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 210,
+  "name": "ALOHA 2",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2405.02292",
+  "code": "https://github.com/tonyzhaozh/aloha",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 211,
+  "name": "UMI",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2402.10329",
+  "code": "https://github.com/real-stanford/universal_manipulation_interface",
+  "hub": "https://huggingface.co/papers/2402.10329"
+ },
+ {
+  "sheet": "main",
+  "no": 212,
+  "name": "DexCap",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2403.07788",
+  "code": "https://github.com/j96w/DexCap",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 213,
+  "name": "DP3 (3D Diffusion Policy)",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2403.03954",
+  "code": "https://github.com/YanjieZe/3D-Diffusion-Policy",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 214,
+  "name": "Consistency Policy",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2405.07503",
+  "code": "https://github.com/Aaditya-Prasad/consistency-policy",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 215,
+  "name": "UMI on Legs",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2407.10353",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 216,
+  "name": "EgoMimic",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2410.24221",
+  "code": null,
+  "hub": "https://huggingface.co/papers/2410.24221"
+ },
+ {
+  "sheet": "main",
+  "no": 217,
+  "name": "Phantom",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2503.00779",
+  "code": "https://github.com/MarionLepert/phantom",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 218,
+  "name": "Reactive Diffusion Policy (RDP)",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2503.02881",
+  "code": "https://github.com/xiaoxiaoxh/reactive_diffusion_policy",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 219,
+  "name": "DexUMI",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2505.21864",
+  "code": "https://github.com/real-stanford/DexUMI",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 220,
+  "name": "Streaming Flow Policy",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2505.21851",
+  "code": "https://github.com/siddancha/streaming-flow-policy",
+  "hub": "https://huggingface.co/papers/2505.21851"
+ },
+ {
+  "sheet": "main",
+  "no": 221,
+  "name": "EgoVLA",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2507.12440",
+  "code": null,
+  "hub": "https://huggingface.co/papers/2507.12440"
+ },
+ {
+  "sheet": "main",
+  "no": 222,
+  "name": "Emergence of H2R Transfer (π0.5+ego)",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2512.22414",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 223,
+  "name": "LingBot-Touch",
+  "category": "EAI-3",
+  "paper": "https://arxiv.org/abs/2611.12806",
+  "code": "https://github.com/robbyant/lingbot-touch",
+  "hub": "https://huggingface.co/collections/robbyant/lingbot-touch"
+ },
+ {
+  "sheet": "main",
+  "no": 224,
+  "name": "RH20T",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2307.00595",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 225,
+  "name": "BridgeData V2",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2308.12952",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 226,
+  "name": "Open X-Embodiment / RT-X",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2310.08864",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 227,
+  "name": "DROID",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2403.12945",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 228,
+  "name": "Octo",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2405.12213",
+  "code": "https://github.com/octo-models/octo",
+  "hub": "https://huggingface.co/rail-berkeley/octo-base"
+ },
+ {
+  "sheet": "main",
+  "no": 229,
+  "name": "CrossFormer",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2408.11812",
+  "code": "https://github.com/rail-berkeley/crossformer",
+  "hub": "https://huggingface.co/rail-berkeley/crossformer"
+ },
+ {
+  "sheet": "main",
+  "no": 230,
+  "name": "HPT",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2409.20537",
+  "code": "https://github.com/liruiw/HPT",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 231,
+  "name": "Data Scaling Laws in IL",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/html/2410.18647",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 232,
+  "name": "RoboMIND",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2412.13877",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 233,
+  "name": "AgiBot World Colosseo (dataset)",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2503.06669",
+  "code": "https://github.com/OpenDriveLab/AgiBot-World",
+  "hub": "https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta"
+ },
+ {
+  "sheet": "main",
+  "no": 234,
+  "name": "EgoDex",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/pdf/2505.11709",
+  "code": "https://github.com/apple/ml-egodex",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 235,
+  "name": "Galaxea Open-World Dataset",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2509.00576",
+  "code": "https://github.com/OpenGalaxea/G0",
+  "hub": "https://huggingface.co/datasets/OpenGalaxea/Galaxea-Open-World-Dataset"
+ },
+ {
+  "sheet": "main",
+  "no": 236,
+  "name": "LeRobot",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2602.22818",
+  "code": "https://github.com/huggingface/lerobot",
+  "hub": "https://huggingface.co/docs/lerobot/lerobot-dataset-v3"
+ },
+ {
+  "sheet": "main",
+  "no": 237,
+  "name": "AIRoA-0",
+  "category": "EAI-4",
+  "paper": "https://arxiv.org/abs/2611.03815",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 238,
+  "name": "Lee et al. 2020 (ANYmal teacher-student)",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2010.11251",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 239,
+  "name": "RMA",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2107.04034",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 240,
+  "name": "Real-world humanoid locomotion (Radosavovic)",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2303.03381",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 241,
+  "name": "Robot Parkour Learning (legged parkour)",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2309.05665",
+  "code": "https://github.com/ZiwenZhuang/parkour",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 242,
+  "name": "ExBody / ExBody2",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2402.16796",
+  "code": "https://github.com/chengxuxin/expressive-humanoid",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 243,
+  "name": "H2O / OmniH2O",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2403.04436",
+  "code": "https://github.com/LeCAR-Lab/human2humanoid",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 244,
+  "name": "HumanPlus",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2406.10454",
+  "code": "https://github.com/MarkFzp/humanplus",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 245,
+  "name": "HOVER",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2410.21229",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 246,
+  "name": "ASAP",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2502.01143",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 247,
+  "name": "AMO",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2505.03738",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 248,
+  "name": "TWIST (→ TWIST2)",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2505.02833",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 249,
+  "name": "GMT",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2506.14770",
+  "code": "https://github.com/zixuan417/humanoid-general-motion-tracking",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 250,
+  "name": "BeyondMimic",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2508.08241",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 251,
+  "name": "GR00T-WholeBodyControl",
+  "category": "EAI-5",
+  "paper": "https://nvlabs.github.io/GR00T-WholeBodyControl/",
+  "code": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+  "hub": "https://huggingface.co/nvidia/GR00T-N1.6-3B"
+ },
+ {
+  "sheet": "main",
+  "no": 252,
+  "name": "SONIC (GEAR-SONIC)",
+  "category": "EAI-5",
+  "paper": "https://arxiv.org/abs/2511.07820",
+  "code": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+  "hub": "https://huggingface.co/nvidia/GEAR-SONIC"
+ },
+ {
+  "sheet": "main",
+  "no": 253,
+  "name": "VLN-CE",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2004.02857",
+  "code": "https://github.com/jacobkrantz/VLN-CE",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 254,
+  "name": "ObjectNav Revisited",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2006.13171",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 255,
+  "name": "VLMaps",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2210.05714",
+  "code": "https://github.com/vlmaps/vlmaps",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 256,
+  "name": "OK-Robot",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2401.12202",
+  "code": "https://github.com/ok-robot/ok-robot",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 257,
+  "name": "NaVid",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2402.15852",
+  "code": "https://github.com/jzhzhang/NaVid-VLN-CE",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 258,
+  "name": "OpenEQA",
+  "category": "EAI-6",
+  "paper": "https://open-eqa.github.io/",
+  "code": "https://github.com/facebookresearch/open-eqa",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 259,
+  "name": "Mobility VLA",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2407.07775",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 260,
+  "name": "BUMBLE",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2410.06237",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 261,
+  "name": "NaVILA",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2412.04453",
+  "code": null,
+  "hub": "https://huggingface.co/a8cheng/navila-llama3-8b-8f"
+ },
+ {
+  "sheet": "main",
+  "no": 262,
+  "name": "Uni-NaVid",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2412.06224",
+  "code": "https://github.com/jzhzhang/Uni-NaVid",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 263,
+  "name": "NavDP",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2505.08712",
+  "code": "https://github.com/InternRobotics/NavDP",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 264,
+  "name": "InternVLA-N1",
+  "category": "EAI-6",
+  "paper": "https://internrobotics.github.io/internvla-n1.github.io/",
+  "code": null,
+  "hub": "https://huggingface.co/InternRobotics/InternVLA-N1"
+ },
+ {
+  "sheet": "main",
+  "no": 265,
+  "name": "StreamVLN",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2507.05240",
+  "code": "https://github.com/OpenRobotLab/StreamVLN",
+  "hub": "https://huggingface.co/mengwei0427/StreamVLN_Video_qwen_1_5_r2r_rxr_envdrop_scalevln"
+ },
+ {
+  "sheet": "main",
+  "no": 266,
+  "name": "NavFoM",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2509.12129",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 267,
+  "name": "LoGoPlanner",
+  "category": "EAI-6",
+  "paper": "https://arxiv.org/abs/2512.19629",
+  "code": "https://github.com/InternRobotics/NavDP",
+  "hub": "https://huggingface.co/InternRobotics/LoGoPlanner"
+ },
+ {
+  "sheet": "main",
+  "no": 268,
+  "name": "AI2-THOR / ProcTHOR",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/1712.05474",
+  "code": "https://github.com/allenai/ai2thor",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 269,
+  "name": "Habitat (1.0/2.0/3.0)",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/1904.01201",
+  "code": "https://github.com/facebookresearch/habitat-sim",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 270,
+  "name": "Isaac Gym → Orbit → Isaac Lab",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2511.04831",
+  "code": "https://github.com/isaac-sim/IsaacLab",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 271,
+  "name": "CALVIN",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2112.03227",
+  "code": "https://github.com/mees/calvin",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 272,
+  "name": "OmniGibson / BEHAVIOR-1K",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2403.09227",
+  "code": "https://github.com/StanfordVL/BEHAVIOR-1K",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 273,
+  "name": "LIBERO",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2306.03310",
+  "code": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+  "hub": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets"
+ },
+ {
+  "sheet": "main",
+  "no": 274,
+  "name": "HumanoidBench",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2403.10506",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 275,
+  "name": "SimplerEnv",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2405.05941",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 276,
+  "name": "RoboCasa",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2406.02523",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 277,
+  "name": "GRUtopia / InternUtopia",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2407.10943",
+  "code": null,
+  "hub": "https://huggingface.co/datasets/InternRobotics/GRScenes"
+ },
+ {
+  "sheet": "main",
+  "no": 278,
+  "name": "ManiSkill3",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2410.00425",
+  "code": null,
+  "hub": "https://huggingface.co/haosulab"
+ },
+ {
+  "sheet": "main",
+  "no": 279,
+  "name": "Genesis (Genesis World)",
+  "category": "EAI-7",
+  "paper": "https://www.genesis.ai/blog/the-role-of-simulation-in-scalable-robotics-genesis-world-10-and-the-path-forward",
+  "code": "https://github.com/Genesis-Embodied-AI/genesis-world",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 280,
+  "name": "VLABench",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2412.18194",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 281,
+  "name": "MuJoCo / MJX / MuJoCo Playground",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2502.08844",
+  "code": "https://github.com/google-deepmind/mujoco_playground",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 282,
+  "name": "Newton",
+  "category": "EAI-7",
+  "paper": "https://developer.nvidia.com/blog/announcing-newton-an-open-source-physics-engine-for-robotics-simulation/",
+  "code": "https://github.com/newton-physics/newton",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 283,
+  "name": "RoboVerse (MetaSim)",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2504.18904",
+  "code": "https://github.com/RoboVerseOrg/MetaSim",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 284,
+  "name": "RoboArena",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2506.18123",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 285,
+  "name": "RoboTwin 2.0",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2506.18088",
+  "code": null,
+  "hub": "https://huggingface.co/datasets/TianxingChen/RoboTwin2.0"
+ },
+ {
+  "sheet": "main",
+  "no": 286,
+  "name": "RoboChallenge",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2510.17950",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 287,
+  "name": "BEHAVIOR Challenge 2025",
+  "category": "EAI-7",
+  "paper": "https://behavior.stanford.edu/challenge/",
+  "code": "https://github.com/StanfordVL/BEHAVIOR-1K",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 288,
+  "name": "Isaac Lab-Arena",
+  "category": "EAI-7",
+  "paper": "https://developer.nvidia.com/blog/simplify-generalist-robot-policy-evaluation-in-simulation-with-nvidia-isaac-lab-arena/",
+  "code": "https://github.com/isaac-sim/IsaacLab-Arena",
+  "hub": "https://huggingface.co/datasets/nvidia/Arena-GR1-Manipulation-Task"
+ },
+ {
+  "sheet": "main",
+  "no": 289,
+  "name": "MolmoSpaces",
+  "category": "EAI-7",
+  "paper": "https://allenai.org/blog/molmospaces",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 290,
+  "name": "RoboCasa365",
+  "category": "EAI-7",
+  "paper": "https://robocasa.ai/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 291,
+  "name": "WorldArena (1.0 / 2.0)",
+  "category": "EAI-7",
+  "paper": "https://world-arena.ai/v1/",
+  "code": null,
+  "hub": "https://huggingface.co/spaces/WorldArena/WorldArena"
+ },
+ {
+  "sheet": "main",
+  "no": 292,
+  "name": "RoboLab",
+  "category": "EAI-7",
+  "paper": "https://arxiv.org/abs/2604.09860",
+  "code": "https://github.com/NVlabs/RoboLab",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 293,
+  "name": "Isaac Lab 3.0 (Newton backend)",
+  "category": "EAI-7",
+  "paper": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+  "code": "https://github.com/isaac-sim/IsaacLab",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 294,
+  "name": "DexBench & VABAR",
+  "category": "EAI-7",
+  "paper": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 295,
+  "name": "SERL / HIL-SERL",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2401.16013",
+  "code": null,
+  "hub": "https://huggingface.co/papers/2401.16013"
+ },
+ {
+  "sheet": "main",
+  "no": 296,
+  "name": "PA-RL",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2412.06685",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 297,
+  "name": "iRe-VLA",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2501.16664",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 298,
+  "name": "ConRFT",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2502.05450",
+  "code": "https://github.com/cccedric/conrft",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 299,
+  "name": "RL4VLA",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2505.19789",
+  "code": null,
+  "hub": "https://huggingface.co/papers/2505.19789"
+ },
+ {
+  "sheet": "main",
+  "no": 300,
+  "name": "VLA-RL",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2505.18719",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 301,
+  "name": "ResFiT",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2509.19301",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 302,
+  "name": "RLinf-VLA / πRL",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2510.25889",
+  "code": "https://github.com/RLinf/RLinf",
+  "hub": "https://huggingface.co/papers/2510.25889"
+ },
+ {
+  "sheet": "main",
+  "no": 303,
+  "name": "SimpleVLA-RL",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2509.09674",
+  "code": "https://github.com/PRIME-RL/SimpleVLA-RL",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 304,
+  "name": "VLAC",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2509.15937",
+  "code": null,
+  "hub": "https://huggingface.co/InternRobotics/VLAC"
+ },
+ {
+  "sheet": "main",
+  "no": 305,
+  "name": "World-Env",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2509.24948",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 306,
+  "name": "VLA-RFT",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2510.00406",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 307,
+  "name": "π*0.6 (RECAP)",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2511.14759",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 308,
+  "name": "RoboReward",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2601.00675",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 309,
+  "name": "RLT (RL Token)",
+  "category": "EAI-8",
+  "paper": "https://arxiv.org/abs/2604.23073",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 310,
+  "name": "Awesome-World-Models (leofan90)",
+  "category": "SURVEY",
+  "paper": "https://github.com/leofan90/Awesome-World-Models",
+  "code": "https://github.com/leofan90/Awesome-World-Models",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 311,
+  "name": "VLA Survey (Ma et al.)",
+  "category": "SURVEY",
+  "paper": "https://arxiv.org/abs/2405.14093",
+  "code": "https://github.com/yueen-ma/Awesome-VLA",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 312,
+  "name": "Aligning Cyber Space with Physical World",
+  "category": "SURVEY",
+  "paper": "https://arxiv.org/abs/2407.06886",
+  "code": "https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 313,
+  "name": "Understanding World or Predicting Future?",
+  "category": "SURVEY",
+  "paper": "https://arxiv.org/abs/2411.14499",
+  "code": "https://github.com/tsinghua-fib-lab/World-Model",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 314,
+  "name": "Embodied-AI-Guide (具身智能技术指南)",
+  "category": "SURVEY",
+  "paper": "https://github.com/TianxingChen/Embodied-AI-Guide",
+  "code": "https://github.com/TianxingChen/Embodied-AI-Guide",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 315,
+  "name": "VLA Survey: Action Tokenization Perspective",
+  "category": "SURVEY",
+  "paper": "https://arxiv.org/abs/2507.01925",
+  "code": "https://github.com/Psi-Robot/Awesome-VLA-Papers",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 316,
+  "name": "World Models for Embodied AI Survey (Li et al.)",
+  "category": "SURVEY",
+  "paper": "https://arxiv.org/abs/2510.16732",
+  "code": "https://github.com/Li-Zn-H/AwesomeWorldModels",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 317,
+  "name": "awesome-embodied-ai (jonstephens85)",
+  "category": "SURVEY",
+  "paper": "https://github.com/jonstephens85/awesome-embodied-ai",
+  "code": "https://github.com/jonstephens85/awesome-embodied-ai",
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 318,
+  "name": "World Models Comprehensive Survey (Zidan et al.)",
+  "category": "SURVEY",
+  "paper": "https://arxiv.org/abs/2606.00133",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 319,
+  "name": "Plausible→Controllable→Actionable WM Survey",
+  "category": "SURVEY",
+  "paper": "https://arxiv.org/abs/2609.16697",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "main",
+  "no": 320,
+  "name": "awesome-embodied-vla-va-vln",
+  "category": "SURVEY",
+  "paper": "https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln",
+  "code": "https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln",
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 1,
+  "name": "TWM",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2303.07109",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 2,
+  "name": "MC-JEPA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2307.12698",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 3,
+  "name": "C-SWM",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/1911.12247",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 4,
+  "name": "R2I",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2403.04253",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 5,
+  "name": "UniZero",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2406.10667",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 6,
+  "name": "Puppeteer",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2405.18418",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 7,
+  "name": "SOLD",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2410.08822",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 8,
+  "name": "Dream to Fly",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2501.14377",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 9,
+  "name": "Improving Transformer WMs",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2502.01591",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 10,
+  "name": "BMPC",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2503.18871",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 11,
+  "name": "DINO-world",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2507.19468",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 12,
+  "name": "ScaleZero",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2509.07945",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 13,
+  "name": "Value-guided JEPA planning",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2601.00844",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 14,
+  "name": "JEPA-VLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2602.11832",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 15,
+  "name": "H-WM (Huawei)",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2602.11291",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 16,
+  "name": "LPWM",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2603.04553",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 17,
+  "name": "VJEPA（Variational JEPA）",
+  "category": "SUP",
+  "paper": "https://proceedings.mlr.press/v306/huang26ba.html",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 18,
+  "name": "Temporal-Distance JEPA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2607.25337",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 19,
+  "name": "V-JEPA-LM",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2611.17831",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 20,
+  "name": "MAD",
+  "category": "SUP",
+  "paper": null,
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 21,
+  "name": "DriveDreamer-2",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2403.06845",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 22,
+  "name": "ADriver-I",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2311.13549",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 23,
+  "name": "OccSora",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2405.20337",
+  "also": [
+   "https://github.com/wzzheng/OccSora"
+  ],
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 24,
+  "name": "DrivingWorld",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2412.19505",
+  "also": [
+   "https://github.com/YvanYin/DrivingWorld"
+  ],
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 25,
+  "name": "GEM",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2412.11198",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 26,
+  "name": "World Engine",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2606.19836",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 27,
+  "name": "SimVTA",
+  "category": "SUP",
+  "paper": "https://opendrivelab.com/SimVTA/",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 28,
+  "name": "RoboDreamer",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2404.12377",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 29,
+  "name": "FLARE",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2505.15659",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 30,
+  "name": "DreamVLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2507.04447",
+  "also": [
+   "https://github.com/Zhangwenyao1/DreamVLA",
+   "https://huggingface.co/WenyaoZhang/DreamVLA"
+  ],
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 31,
+  "name": "Motus",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2512.13030",
+  "also": [
+   "https://github.com/thu-ml/Motus"
+  ],
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 32,
+  "name": "mimic-video",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2512.15692",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 33,
+  "name": "SANA-WM",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2605.15178",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 34,
+  "name": "WristWorld",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2510.07313",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 35,
+  "name": "World4RL",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2509.19080",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 36,
+  "name": "SRPO",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2511.15605",
+  "also": [
+   "https://github.com/sii-research/siiRL"
+  ],
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 37,
+  "name": "NORA-1.5",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2511.14659",
+  "also": [
+   "https://github.com/declare-lab/nora-1.5"
+  ],
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 38,
+  "name": "VLA-Reasoner",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2509.22643",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 39,
+  "name": "MoWM",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2509.21797",
+  "also": [
+   "https://github.com/tsinghua-fib-lab/MoWM"
+  ],
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 40,
+  "name": "FlowVLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2508.18269",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 41,
+  "name": "UD-VLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2511.01718",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 42,
+  "name": "dVLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2509.25681",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 43,
+  "name": "WorldEval",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2505.19017",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 44,
+  "name": "MMaDA-VLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2603.25406",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 45,
+  "name": "RDT2",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2602.03310",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 46,
+  "name": "MolmoAct2",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2605.02881",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 47,
+  "name": "Galaxea G0.5",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2608.11739",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 48,
+  "name": "Hy-Embodied-0.5-VLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2606.14409",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 49,
+  "name": "Being-H0.7",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2605.00078",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 50,
+  "name": "AffordanceVLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2606.06155",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 51,
+  "name": "GPT-6 Astra 具身评测",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2610.22471",
+  "also": [
+   "https://arxiv.org/abs/2609.38537",
+   "https://arxiv.org/abs/2610.28259"
+  ],
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 52,
+  "name": "AgiBot GO-3 Preview",
+  "category": "SUP",
+  "paper": null,
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 53,
+  "name": "LingBot-VLA 2.0",
+  "category": "SUP",
+  "paper": null,
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 54,
+  "name": "TwinRL-VLA",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2602.09023",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 55,
+  "name": "FIND",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2609.32069",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 56,
+  "name": "Wuji 灵巧手 VLA 后训练",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2609.19666",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 57,
+  "name": "TacClaw-Infinity",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2610.20320",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 58,
+  "name": "Open-AoE",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2607.14183",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 59,
+  "name": "EgoVerse",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2604.07607",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 60,
+  "name": "UMI-FT",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2601.09988",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 61,
+  "name": "UMI-on-Air",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2510.02614",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 62,
+  "name": "GR-RL",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2512.01801",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 63,
+  "name": "WMPO",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2511.09515",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 64,
+  "name": "PLD",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2511.00091",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 65,
+  "name": "DSRL",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2506.15799",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 66,
+  "name": "DemoGen",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2502.16932",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 67,
+  "name": "Policy Decorator",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2412.13630",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 68,
+  "name": "FlowPolicy",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2412.04987",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 69,
+  "name": "Human-activity-video VLA pretraining (MSRA)",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2510.21571",
+  "code": null,
+  "hub": null
+ },
+ {
+  "sheet": "supplement",
+  "no": 70,
+  "name": "DLR",
+  "category": "SUP",
+  "paper": "https://arxiv.org/abs/2511.19528",
+  "code": null,
+  "hub": null
+ }
+]

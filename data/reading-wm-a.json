@@ -1,0 +1,554 @@
+[
+  {
+    "sheet": "main",
+    "no": 1,
+    "level": "sections",
+    "note": "The controller sees both the current VAE code and the recurrent memory; the mixture model can sample several plausible next codes. The experiments answer different questions: CarRacing evolves the controller against game returns, whereas Take Cover evolves it in the learned environment and tests transfer back to the game. Temperature changes survival and transfer, not just visual diversity. / 控制器同时读取当前图像的潜码和循环记忆。赛车实验用游戏回报进化策略；真正检验“梦中训练、回到原环境”的是 Take Cover。表 2 改变采样温度后生存和迁移都会变，不能把两项实验统称为纯梦境训练。",
+    "locator": "§§2–4, Fig. 8, Tables 1–2",
+    "source": "https://arxiv.org/html/1803.10122"
+  },
+  {
+    "sheet": "main",
+    "no": 2,
+    "level": "sections",
+    "note": "PlaNet scores candidate action sequences with summed latent reward predictions, executes one action, and corrects the state using the next image. Removing iterative elite refitting or collecting data randomly tests different parts of the loop. Multi-step overshooting helped the DRNN comparison but slightly hurt the proposed RSSM. / PlaNet 在隐空间累计候选动作的预测奖励，只执行首步，再用真实图像修正状态。随机射击对照检验的是搜索，随机采集检验的是数据分布。多步 overshooting 对 DRNN 有利，却不是最终 RSSM 获胜的必要条件。",
+    "locator": "§§2–5, Algorithms 1–2, Fig. 4, Appendix D Fig. 7",
+    "source": "https://arxiv.org/html/1811.04551"
+  },
+  {
+    "sheet": "main",
+    "no": 3,
+    "level": "sections",
+    "note": "The dynamics network returns a reward and successor hidden state; a separate head supplies policy priors and values for tree search. The training targets constrain what matters for choosing moves, not a decoded game state. Fig. 3 varies search effort; performance against a rules-based searcher need not extrapolate to arbitrarily deep search. / 动力网络预测奖励和后继隐状态，预测头给树搜索提供策略先验与价值。监督信号只约束决策所需信息，并不要求恢复棋盘或画面。图 3 改变搜索预算；特定预算下与规则引擎相当，不意味着无限加深仍然准确。",
+    "locator": "§3 Fig. 1; §4 Fig. 3, Table 1",
+    "source": "https://arxiv.org/html/1911.08265"
+  },
+  {
+    "sheet": "main",
+    "no": 4,
+    "level": "sections",
+    "note": "Instead of repeating PlaNet's search at deployment, Dreamer starts simulated trajectories from replay posteriors and differentiates a bootstrapped value estimate through dynamics to train an actor. The horizon experiment separates near-term imagined reward from value beyond the rollout; the advantage is measured on visual control, not arbitrary dynamics. / 从回放后验出发想象轨迹，用带自举的价值梯度训练 actor，执行时不再逐步做 PlaNet 式搜索。图 4 将只看视界内奖励与估计视界外价值区分开；证据是视觉控制任务，而非任意动力系统。",
+    "locator": "§3 Algorithm 1, Figs. 3–4; §6 Figs. 6–7",
+    "source": "https://arxiv.org/html/1912.01603"
+  },
+  {
+    "sheet": "main",
+    "no": 5,
+    "level": "sections",
+    "note": "Categorical stochastic latents and a deterministic recurrent path allow compact imagination without decoding images. Straight-through estimation and separately weighted KL gradients address different training problems. The component ablation used a slightly earlier agent; 55-game aggregate results at 200M frames should not be read as Atari 100k results. / 离散随机潜码与确定性循环状态一起展开，想象无需逐帧解码。直通估计解决采样梯度，KL 平衡则调整先验与后验两侧的学习压力。消融使用稍早版本；55 款游戏、2 亿帧下的汇总分不是 100k 样本效率。",
+    "locator": "§2 Figs. 2–3, Algorithms 1–2; §3 Tables 1–2",
+    "source": "https://arxiv.org/html/2010.02193"
+  },
+  {
+    "sheet": "main",
+    "no": 6,
+    "level": "sections",
+    "note": "EfficientZero anchors imagined states to encodings of later real observations, predicts a value prefix instead of summing fragile reward estimates, and revises stale replay targets. Removing each term across 26 games particularly implicates consistency. A superhuman mean after 100k steps is an aggregate, not victory on every game or two hours of training compute. / 把想象状态对准随后真实帧的编码，以累计价值前缀代替逐项奖励，并重估过时的回放目标。26 个游戏的逐项消融尤其支持一致性项。100k 步约合两小时游戏经历，不等于两小时训练算力，更非逐游戏胜人。",
+    "locator": "§4 Fig. 2; §5 Tables 1, 3",
+    "source": "https://arxiv.org/html/2111.00210"
+  },
+  {
+    "sheet": "main",
+    "no": 7,
+    "level": "sections",
+    "note": "TOLD learns the next latent, reward and terminal Q jointly. Short model rollouts rank action sequences; a learned policy supplies proposals and a value tail. This trades long-horizon model bias for critic bias. State-input locomotion and the separate pixel-input 100k table test different observation conditions. / TOLD 联合学习后继表征、奖励与 Q；策略提供动作候选，短轨迹后接价值尾项。这是在长程模型误差与 critic 偏差间取舍。状态输入的运动任务与像素输入的 100k 表应分开看。",
+    "locator": "§§3–5, Algorithms 1–2, Figs. 1–4, Table 1",
+    "source": "https://arxiv.org/html/2203.04955"
+  },
+  {
+    "sheet": "main",
+    "no": 8,
+    "level": "sections",
+    "note": "On hardware the current policy collects transitions; replay trains the world model, which supplies imagined actor–critic data. The one-hour result refers to one quadruped learning to roll up and walk. Bin transfer and Sphero navigation use different sensors and reward definitions, not one zero-shot policy transferred among robots. / 机器人用当前策略采集，模型学回放，actor–critic 学想象。约一小时对应四足机翻身、站立、行走；不同机械臂的抓放与小车导航使用不同观测和奖励，并非同一策略零样本跨机型。",
+    "locator": "§§2–3, Figs. 2, 4–8",
+    "source": "https://arxiv.org/html/2206.14176"
+  },
+  {
+    "sheet": "main",
+    "no": 9,
+    "level": "sections",
+    "note": "IRIS tokenizes each image separately; the causal transformer predicts future tokens, rewards and episode ends, allowing policy learning on decoded imagined observations. The clean Pong example is not the whole result: later Frostbite levels are hard to simulate when the data rarely contain the long successful sequence needed to reach them. / 离散化单帧后，因果 Transformer 预测新 token、奖励和终止，策略在解码出的想象观测上学习。Pong 的细节保真并不普遍：Frostbite 的后续关卡需要罕见的长成功序列，数据覆盖不足会限制想象。",
+    "locator": "§2 Figs. 1–3; §3 Table 1, Fig. 7",
+    "source": "https://arxiv.org/html/2209.00588"
+  },
+  {
+    "sheet": "main",
+    "no": 10,
+    "level": "sections",
+    "note": "The RSSM supplies imagined actor–critic trajectories. Robust loss scales and return normalization let the same recipe handle differently scaled rewards. Fig. 5 measures the fraction of training runs discovering late Minecraft items: discovery of a diamond is a stronger test than a reconstruction, but not a guarantee for each seed. / RSSM 生成 actor–critic 的训练轨迹；损失尺度处理与回报归一化使统一配置能适应不同奖励。图 5 统计各次训练发现后期物品的比例，“找到钻石”不同于每个随机种子都可靠完成任务。",
+    "locator": "Figs. 1, 3, 5–6; Methods: actor critic learning",
+    "source": "https://arxiv.org/html/2301.04104"
+  },
+  {
+    "sheet": "main",
+    "no": 11,
+    "level": "sections",
+    "note": "STORM predicts stochastic latents with a causal transformer instead of generating an image-token grid serially; the actor can use both current stochastic information and temporal features. State-choice and architecture ablations are separate. Table 2 is Atari 100k, and Fig. 1 partly extrapolates training FPS rather than timing every baseline on one GPU. / 因果 Transformer 在时间上预测随机状态，而非逐图像 token 生成。策略的输入组合与动力网络结构分别消融。表 2 是 Atari 100k；图 1 的部分速度是折算值，不宜当作全体同卡实测。",
+    "locator": "§§3.1–3.2, Fig. 2, Table 1; Figs. 3–4",
+    "source": "https://arxiv.org/html/2310.09615"
+  },
+  {
+    "sheet": "main",
+    "no": 12,
+    "level": "sections",
+    "note": "No observation decoder is needed to rank trajectories: normalized latents predict rewards and an ensemble estimates terminal value. Fig. 4 pools 104 single-task experiments; Fig. 7 trains one multitask agent on 80 or 30 tasks. Finetuning on held-out tasks in Fig. 8 consumes new interaction; it is not zero-shot. / 以归一化潜码、奖励和终端价值评估轨迹，不解码观测。图 4 的 104 项是单任务实验；图 7 才是一个模型学 80 或 30 项。图 8 在留出任务上继续交互，不是零样本迁移。",
+    "locator": "Figs. 3–4, 7–8; Table 1",
+    "source": "https://arxiv.org/html/2310.16828"
+  },
+  {
+    "sheet": "main",
+    "no": 13,
+    "level": "sections",
+    "note": "Sample-based Gumbel search makes a finite set of proposals usable even for continuous actions. The mixed value target addresses a separate problem: which return to learn from replay. Search-count and value-target ablations isolate both choices; state and pixel control use different interaction budgets. / 通过采样将连续动作变成有限候选交给 Gumbel 搜索；混合价值目标解决的是回放中“学哪种回报”。图 3 和图 4 分开验证这两个设计；状态与像素控制的交互预算不同。",
+    "locator": "Fig. 2; Tables 1–2; Figs. 3–4",
+    "source": "https://arxiv.org/html/2403.00564"
+  },
+  {
+    "sheet": "main",
+    "no": 14,
+    "level": "sections",
+    "note": "DIAMOND denoises the next observation conditioned on recent frames and actions. In Boxing, single-step denoising blends possible opponent moves; extra steps can select a sharp outcome. Small object identity matters for the policy in Asterix. Mean human-normalized score 1.46 versus IQM 0.64 shows why the Atari 100k aggregate needs a named statistic. / 依据近期帧与动作去噪生成下一帧。Boxing 中一步生成易把对手的多种走向平均成模糊影像；Asterix 中敌人与奖励的身份混淆会直接影响决策。Atari 100k 的均值 1.46 与四分位截尾均值 0.64 不能互换。",
+    "locator": "Fig. 1, Table 1, Figs. 2–5",
+    "source": "https://arxiv.org/html/2405.12399"
+  },
+  {
+    "sheet": "main",
+    "no": 15,
+    "level": "sections",
+    "note": "Conditioning the tokenizer on history means discrete delta tokens need only explain new information. Continuous I-tokens convey a current observation summary, rather than forcing the sequence model to integrate all previous deltas. Removing them hurts Crafter; reported FPS counts collected environment frames per training time, not interactive rendering speed. / 历史条件使离散 Δ-token 主要承载变化；连续 I-token 重置当前画面的参照，免去对一长串差分求和。去掉 I-token 后 Crafter 退步；这里的 FPS 是训练时长内采集的环境帧，不是渲染帧率。",
+    "locator": "Figs. 1–2, 4–6; Table 1",
+    "source": "https://arxiv.org/html/2406.19320"
+  },
+  {
+    "sheet": "main",
+    "no": 16,
+    "level": "sections",
+    "note": "A video tokenizer and shortcut-forcing dynamics make low-step imagined rollouts cheap enough for policy improvement. Minecraft behavior is learned from offline experience and imagination; playing the resulting policy in the actual game evaluates transfer. A human steering one initial frame tests action response, not the probability that an agent succeeds. / 视频分词器与 shortcut forcing 让低步数想象可用于策略提升。离线经历和想象用于训练，回到实际游戏才检验迁移。同一初始画面可被玩家导向不同结局，证明可响应动作，不等于策略成功率。",
+    "locator": "Fig. 2; §4.1 Offline Diamond Challenge, Figs. 3–5",
+    "source": "https://arxiv.org/html/2509.24527"
+  },
+  {
+    "sheet": "main",
+    "no": 17,
+    "level": "sections",
+    "note": "Newt conditions shared dynamics on the task and ranks plans using the model; instructions describe both embodiment and objective. Its 200-task state-agent average is distinct from RGB-input and new-embodiment experiments. Fig. 9 adapts on target tasks, so the result is not unrestricted instruction-following in novel environments. / 指令描述本体和目标，共享模型据此预测并为计划打分。200 项平均分对应状态输入的 agent，不应混作 RGB 模型或新本体成绩。图 9 迁移需要少量目标任务适配。",
+    "locator": "Figs. 2, 4, 6–9",
+    "source": "https://arxiv.org/html/2511.19584"
+  },
+  {
+    "sheet": "main",
+    "no": 18,
+    "level": "sections",
+    "note": "AirDreamer learns a depth-conditioned recurrent representation in simulation; deployment uses the policy, not a decoder drawing imaginary camera frames on the vehicle. Yaw randomization/learning changes success, and the C-shaped real obstacle tests escape rather than straight-line goal tracking. The hardware evidence is six maps, not a universal field success rate. / 训练在仿真中，通过深度观测学习循环表征；部署靠策略，不是机上逐帧解码想象。偏航设置影响成功率，C 形障碍检验能否脱困而非仅仅朝终点前进。实机证据限于所测六张地图。",
+    "locator": "Figs. 1, 4–8; Tables II–III",
+    "source": "https://arxiv.org/html/2606.03252"
+  },
+  {
+    "sheet": "main",
+    "no": 19,
+    "level": "sections",
+    "note": "The authors separate tokenizer reconstruction failures, insensitivity to actions, and trajectory divergence. Their internal signals correlate with later rollout error; targeted collection tests whether filling a coverage hole helps. Held-out sequences from training tasks and finetuning on ten unseen tasks answer different questions. No detector guarantees error-free interaction. / 区分分词器感知失真、忽略动作、整段场景漂移；用模型内部信号预测后续误差，再定向补采数据。训练任务的留出片段与十个新任务微调是两种检验。相关性不意味着可完全消除幻觉。",
+    "locator": "Figs. 1, 3–5; Tables 1–2",
+    "source": "https://arxiv.org/html/2606.27326"
+  },
+  {
+    "sheet": "main",
+    "no": 20,
+    "level": "sections",
+    "note": "A persistent scan map supplies cost-to-go and local features; imagined motion is evaluated against the map available now, not future sensor returns. At the same simulation budget the reported success is 96.3% versus AirDreamer's 59.6%; removing the forward-cone penalty raises collisions. The repository explicitly withholds implementation pending acceptance. / 记忆地图给出局部几何与剩余代价，想象只能用当前已有的地图，不能偷看未来的扫描。等预算仿真成功率 96.3% 对 59.6%；去掉前向视锥惩罚后碰撞增多。仓库明确写着录用后再放代码，不能记为已开源实现。",
+    "locator": "Fig. 1, Tables II–III, Fig. 6",
+    "source": "https://arxiv.org/html/2611.11605"
+  },
+  {
+    "sheet": "main",
+    "no": 21,
+    "level": "sections",
+    "note": "This is a design proposal. In Mode 2 an actor proposes actions whose predicted consequences are scored by a cost module; Mode 1 can learn to approximate that expensive solution. Planning in increasingly abstract representations is a hypothesis about computation and supervision, not a robot result or a closed-source checkpoint. / 这是设计提案。Mode 2 中行动者提出动作，世界模型预测结果，代价模块打分；Mode 1 可学着近似昂贵的规划结果。分层抽象讨论计算与监督方式，没有机器人实测，也没有所谓“闭源权重”可供比较。",
+    "locator": "v0.9.2, §3.1.2–3.1.3, Figs. 2, 4–5",
+    "source": "https://cdn.prod.website-files.com/65ca2b5d0ef26db55441f990/65cb79b6f007ce46ebe78f84_1Uv3a7gntOX-0rjrqMo8z3DdpTgUWGlMjNhgNHRPOpM.pdf"
+  },
+  {
+    "sheet": "main",
+    "no": 22,
+    "level": "sections",
+    "note": "A context block predicts the teacher's representations of several disjoint target regions from the same image. Block size prevents trivial local completion. Frozen linear probes measure retained information, including counting and depth; neither the target nor the probe has a temporal transition or action input. / 从同一图像的可见上下文预测数块被遮区域的教师表征；较大的遮块减少靠局部纹理取巧。线性探针还考察计数和深度，但整个任务没有动作或时序转移，不是控制器。",
+    "locator": "Figs. 3–4; Tables 1–4",
+    "source": "https://arxiv.org/html/2301.08243"
+  },
+  {
+    "sheet": "main",
+    "no": 23,
+    "level": "sections",
+    "note": "A visible spatiotemporal context predicts masked video features from a moving teacher. Pixel versus feature targets are compared with a matched masking task. Frozen performance depends on the pooling probe (Table 3); action recognition here means labeling what happened, not selecting the next intervention. / 可见时空上下文预测动量教师的遮挡视频表征。表 1 在相同遮挡任务下比较像素与特征目标；表 3 表明冻结评估也受池化器影响。识别动作标签不同于决定下一步采取什么动作。",
+    "locator": "Fig. 3; Tables 1, 3–4",
+    "source": "https://arxiv.org/html/2404.08471"
+  },
+  {
+    "sheet": "main",
+    "no": 24,
+    "level": "sections",
+    "note": "Frozen DINOv2 patch features retain local spatial information; an action-conditioned predictor learns transitions from offline trajectories. Planning compares a predicted terminal patch map to a goal image embedding. The visualization decoder is not in the optimizer; generalization in Table 3 is over particular layout/object changes. / 冻结的 DINOv2 局部 patch 保留空间布局，另学动作条件动力学；规划比较预测终态与目标图表征。可视化解码器不参加搜索，表 3 的泛化局限于指定布局或物体变化。",
+    "locator": "Figs. 1–4; Tables 1–3",
+    "source": "https://arxiv.org/html/2411.04983"
+  },
+  {
+    "sheet": "main",
+    "no": 25,
+    "level": "sections",
+    "note": "NWM is a generative conditional diffusion transformer, not a JEPA loss despite the sheet placement. It can roll out candidate navigation trajectories and score proposals from NoMaD. RECON trajectory error for a two-second prediction is an offline proxy; the longer video comparison is not a closed-loop navigation success rate. / 尽管列在 WM-2，NWM 用条件扩散 Transformer 生成未来视图，而非 JEPA 的表征回归。可对 NoMaD 给出的路线做模拟与排序。RECON 两秒轨迹误差是离线代理指标，长视频画质也不是闭环到达率。",
+    "locator": "§3.2 Fig. 2; Figs. 4, 7; Tables 1–2",
+    "source": "https://arxiv.org/html/2412.03572"
+  },
+  {
+    "sheet": "main",
+    "no": 26,
+    "level": "sections",
+    "note": "PLDM fits action-conditioned latent transitions to reward-free trajectories, then searches at test time for actions serving the current goal. Two-room data with poor door coverage distinguishes learning local transitions from learning long-range goal reachability. Small controlled mazes expose failure modes; they do not establish dominance for all offline RL. / 从无奖励轨迹学局部动作转移，测试时才针对目标搜索。双房间中减少穿门轨迹，可区分“学局部动力”与“直接学远目标可达性”。受控迷宫揭示机制，不足以证明所有离线 RL 都该用规划。",
+    "locator": "Figs. 2–5; Tables 1–2",
+    "source": "https://arxiv.org/html/2502.14819"
+  },
+  {
+    "sheet": "main",
+    "no": 27,
+    "level": "sections",
+    "note": "The surprise score compares predicted features to observed future features on physically possible/impossible clips. The random-network baseline matters because some datasets have visual biases; mean and peak surprise can suit different comparisons. A correct ranking on a violation pair does not give a force law or a policy. / 以预测表征与真实未来的偏差衡量惊讶，对比物理可能与不可能的视频。随机网络也能吃到数据偏差，且不同检验适合平均或峰值惊讶。成对排序正确不等于学得力学方程或控制策略。",
+    "locator": "Figs. 1–3, S1; Table S2",
+    "source": "https://arxiv.org/html/2502.11831"
+  },
+  {
+    "sheet": "main",
+    "no": 28,
+    "level": "sections",
+    "note": "The current title says “contain”: by querying a sufficiently general goal-conditioned policy on specially constructed goals, the transition probabilities can be recovered. Fig. 3 varies attainable goal depth and recovery error. This is a statement about information identifiable from behavior under assumptions, not proof of an explicit JEPA inside every trained policy. / 现题为 contain：在假设满足且可用特制目标查询策略时，能从行为恢复转移概率。图 3 联系目标深度与恢复误差。结论是信息可辨识，并非每个策略内部都有显式 JEPA 或都执行模型规划。",
+    "locator": "Theorem 1, Algorithms 1–2, Figs. 2–4",
+    "source": "https://arxiv.org/html/2506.01622"
+  },
+  {
+    "sheet": "main",
+    "no": 29,
+    "level": "sections",
+    "note": "Mask prediction supplies the visual encoder, not the robot action. A separate block-causal predictor learns the consequences of end-effector commands on DROID. At deployment an external planner optimizes goal-feature distance and replans from the measured robot state. Cup and box grasp rates differ substantially, and multi-stage placement uses supplied subgoals. / 遮挡预测学的是编码器，不会直接给机器人动作。另用 DROID 训练块因果动作预测器，部署时由规划器最小化目标表征距离，并以真实观测重规划。杯与盒抓取率差别明显，多阶段放置有外给子目标。",
+    "locator": "§§2–4, Figs. 2, 6–7, 10; Tables 2–3",
+    "source": "https://arxiv.org/html/2506.09985"
+  },
+  {
+    "sheet": "main",
+    "no": 30,
+    "level": "sections",
+    "note": "Paired descriptions and code serve as different views; an embedding-alignment term augments language modeling rather than replacing language generation with robot dynamics. On synthetic regex tasks the generated expression can be tested against the requested language. Performance depends on the pairing, loss and task, not embodied rollout accuracy. / 把描述与代码作为两种视图，向语言建模加入表征对齐损失；并未把语言生成换成机器人动力学。在合成正则表达式任务上可直接核对生成表达式，结果取决于视图配对、损失与任务，而非物理滚动精度。",
+    "locator": "Fig. 2; Tables 1–4; Fig. 3",
+    "source": "https://arxiv.org/html/2509.14252"
+  },
+  {
+    "sheet": "main",
+    "no": 31,
+    "level": "sections",
+    "note": "SIGReg tests one-dimensional projections of minibatch embeddings against a Gaussian. Matching only mean and covariance can miss non-Gaussian dependence (the X-shaped example). Resampling directions matters. The ImageNet linear probe is evidence about representation quality, not calibrated state uncertainty in a control loop. / SIGReg 对批内表征做随机一维投影并检验高斯性；X 形例子说明只对齐均值和协方差会漏掉依赖，投影方向也需更新。ImageNet 线性探针检验表征质量，并不校准控制系统的不确定度。",
+    "locator": "Fig. 2, Figs. 5–8, Table 1",
+    "source": "https://arxiv.org/html/2511.08544"
+  },
+  {
+    "sheet": "main",
+    "no": 32,
+    "level": "sections",
+    "note": "The paper varies planner, proprioception, encoder and predictor instead of attributing all gains to one new network. Its open-versus-closed-gripper counterfactual asks whether the imagined cup actually follows the hand. Recipes differ by domain, and the V-JEPA 2-AC baseline in Table 2 is retrained, not simply the original reported number. / 分别考察优化器、本体感觉、编码器与预测器；开爪或合爪再抬升的反事实检验杯子是否随手移动。不同任务最优配置不同；表 2 的 V-JEPA 2-AC 是重训基线，不能与原文数值直接混用。",
+    "locator": "Table 1, Figs. 2–7, Table 2",
+    "source": "https://arxiv.org/html/2512.24497"
+  },
+  {
+    "sheet": "main",
+    "no": 33,
+    "level": "sections",
+    "note": "The predictor estimates a target text embedding from vision and a query. Retrieval can use the embedding directly; generation invokes a decoder, optionally only after a sufficiently large change. Reduced decoding frequency is a streaming caption trade-off; classification, VQA and anticipation scores are not environment-control evidence. / 根据视觉与问题预测目标文本表征；检索可直接算相似度，需要文本时才解码，且可只在表征显著改变后触发。少解码是流式字幕效率取舍；分类、问答、动作预判都不是控制证据。",
+    "locator": "Fig. 2, Tables 1–4, Figs. 3–4",
+    "source": "https://arxiv.org/html/2512.10942"
+  },
+  {
+    "sheet": "main",
+    "no": 34,
+    "level": "sections",
+    "note": "The frozen encoder supplies object slots. Masking one slot through time, except for an identity anchor, prevents the predictor from copying that object's motion and forces it to use other objects. The intervention is on visibility in the model, not a physical intervention on the scene; downstream gains depend on slot quality. / 冻结编码器给出物体槽；跨时间遮住某物体，仅留身份锚点，阻止沿原轨迹抄答案，迫使利用其他物体。干预的是模型可见信息，不是物理世界；增益仍取决于物体分解质量。",
+    "locator": "§§4–6, Figs. 1–3, A3–A4",
+    "source": "https://arxiv.org/html/2602.11389"
+  },
+  {
+    "sheet": "main",
+    "no": 35,
+    "level": "sections",
+    "note": "Jointly fitting next-embedding prediction and a Gaussian regularizer avoids a frozen visual teacher. Few latent tokens make each candidate plan inexpensive. Fig. 3 compares planning at fixed compute and Fig. 8 probes surprise to appearance versus physical changes: these two tests measure efficiency and sensitivity, respectively. / 下一表征预测加高斯正则使编码器与动力模型能端到端学习，无需冻结教师。低 token 数降低每条候选轨迹的代价。图 3 是等算力规划，图 8 是外观或物理扰动的惊讶度；二者不能合为一个物理理解分。",
+    "locator": "Figs. 1, 3–6, 8; Table 1",
+    "source": "https://arxiv.org/html/2603.19312"
+  },
+  {
+    "sheet": "main",
+    "no": 36,
+    "level": "sections",
+    "note": "A context loss supplies local supervision even for visible tokens, with additional design changes for mixed image/video input and dense features. Table 2 isolates weighting; segmentation gains need not improve global video classification equally. Robot MPC is separately tested on cup manipulation, not a full re-evaluation of all embodied settings. / 给可见 token 也加上下文损失，并改进图像/视频联合处理，使稠密特征保留局部细节。表 2 单独检验权重；分割增益不必同幅转化为视频分类提升。机械臂杯子 MPC 是另一个较窄的实验。",
+    "locator": "Figs. 3–5, Tables 1–3, 6",
+    "source": "https://arxiv.org/html/2603.14482"
+  },
+  {
+    "sheet": "main",
+    "no": 37,
+    "level": "sections",
+    "note": "The upper model compresses action chunks into macro-actions. Its first predicted coarse state becomes a subgoal for a finer planner in the shared latent space. Fig. 6 shows why one scale is not always best: the fine model predicts short horizons better. Franka pick-and-place tests one visual goal and a particular apparatus. / 上层编码动作块并规划宏动作，把首个粗尺度预测当作下层的子目标。图 6 显示短视界反而是细模型更准确，分层并非无条件胜出。Franka 抓放证明特定装置能用单张目标图，并不证明通用长程操作。",
+    "locator": "§2 Figs. 1–3; §3 Tables 1–4, Fig. 6",
+    "source": "https://arxiv.org/html/2604.03208"
+  },
+  {
+    "sheet": "main",
+    "no": 38,
+    "level": "sections",
+    "note": "A conditional co-occurrence graph turns the pretraining risk into a factorization problem and relates it to planning regret. Increasing dimension can reduce approximation error while increasing estimation error. Noise and horizon experiments illustrate the trade-off; a bound under this formulation is not a certificate for any deployed JEPA. / 以条件共现图分解刻画预训练风险，并将其联系到规划遗憾。提高维数可减小逼近误差，却增大估计误差。噪声与视界实验说明取舍，不能把特定假设下的界当作任意部署模型的保证。",
+    "locator": "§§3.4, 4.1–4.5, §5 Fig. 2, Table 1",
+    "source": "https://arxiv.org/html/2606.27014"
+  },
+  {
+    "sheet": "main",
+    "no": 39,
+    "level": "sections",
+    "note": "Different temporal strides learn different latent costs. Coarse plans guide finer ones; changing only the cost on AntMaze probes whether representation or search is responsible. Probe evidence links temporal separation to selective abstraction; a more diverse DROID setting requires additional inverse-dynamics supervision in their comparison. / 不同时间步幅学出不同层级的代价；粗计划引导细计划。AntMaze 只换代价函数的对照把表征与搜索拆开。探针显示时间尺度分离与选择性抽象有关，在更多样的 DROID 设置中还需逆动力损失。",
+    "locator": "§§2–4, Figs. 2–6, 9; Table 1",
+    "source": "https://arxiv.org/html/2610.06805"
+  },
+  {
+    "sheet": "main",
+    "no": 40,
+    "level": "sections",
+    "note": "WARP keeps H-JEPA frozen. An upper proposer generates macro-actions with the model in the loop; candidate ranking and a cheap lower bridge replace repeated online gradient steps. Table 3 separates offline terminal cost from closed-loop Push-T success. Episode timings are a small, single-seed hardware sample, not an environment-independent speedup. / 冻结 H-JEPA，以模型在环的上层候选和廉价下层桥接取代反复在线求梯度。表 3 区分离线终端代价与闭环 Push-T 成功率。用时来自单种子、少量回合和指定硬件，不能当作普遍加速倍数。",
+    "locator": "§4 Fig. 2; §5 Tables 1–4",
+    "source": "https://arxiv.org/html/2611.10806"
+  },
+  {
+    "sheet": "main",
+    "no": 41,
+    "level": "sections",
+    "note": "UniSim predicts a clip given observation history and an action that may be language rather than a motor vector. A separate policy supplies the next instruction. Recent multi-frame history improves video metrics over a lone context image; the Language Table experiments test a narrower kind of policy transfer than the cross-domain video gallery. / 给定历史和动作生成一段后续视频，动作可以是语言而非关节量；下条指令来自独立策略。多帧近期历史优于单帧。Language Table 上的策略迁移范围比跨域视频展示窄得多。",
+    "locator": "Fig. 2, Table 1, Figs. 4, 7",
+    "source": "https://arxiv.org/html/2310.06114"
+  },
+  {
+    "sheet": "main",
+    "no": 42,
+    "level": "sections",
+    "note": "A latent-action encoder sees consecutive video frames in training; a player selects a learned code instead at test time. A dynamics transformer fills in the next frame's tokens, then the decoder renders them. Pixel-input action inference raises controllability even where FVD worsens; neither metric verifies the intended semantics of every key. / 训练时从相邻视频推断隐动作，测试时玩家选码取代动作编码器；动力模型填下一帧 token，再解码显示。直接看像素推断动作使可控指标提高，即使 FVD 变差；两者都不能保证每个键始终代表人所想的动作。",
+    "locator": "§§2.1–2.2 Figs. 4–7; §§3.3–3.4 Fig. 14, Table 2; §5 Conclusion and Future Work",
+    "source": "https://arxiv.org/html/2402.15391"
+  },
+  {
+    "sheet": "main",
+    "no": 43,
+    "level": "sections",
+    "note": "First-party web report. Sora denoises a space–time grid of patches of compressed video. Variable grid shapes let the training mix images, aspect ratios and durations. The glass and eating examples illustrate the missing constraint: a plausible next appearance need not implement an irreversible material-state change. This report describes prompt-conditioned generation, not an action-feedback API. / 把压缩视频切成时空 patch 后去噪；网格形状可变，因而能混合图片、画幅与时长。玻璃破碎、吃东西的反例说明“看起来像下一幕”不等于执行不可逆的物态变化。报告没有给出动作闭环接口。",
+    "locator": "Technical report: Turning visual data into patches; Emerging simulation capabilities; limitations paragraph",
+    "source": "https://openai.com/index/video-generation-models-as-world-simulators/"
+  },
+  {
+    "sheet": "main",
+    "no": 44,
+    "level": "sections",
+    "note": "GameNGen trains on recorded trajectories from an agent and generates the next DOOM frame given actions and history. Corrupting the conditioning context during training makes the model tolerate its own imperfect outputs; Fig. 4 holds the player still to expose drift. A real-time DOOM demonstration is not a general-purpose game-state engine. / 先用 agent 采集游戏轨迹，再按历史帧和动作生成下一帧。训练时污染历史，使模型容忍自身生成误差；图 4 让玩家不动，漂移仍会显现。实时 DOOM 不等于能维护任意游戏的精确状态。",
+    "locator": "§3, Figs. 3–6; Tables 1–2",
+    "source": "https://arxiv.org/html/2408.14837"
+  },
+  {
+    "sheet": "main",
+    "no": 45,
+    "level": "sections",
+    "note": "First-party web report. Oasis generates the next video frame under keyboard and mouse controls rather than advancing Minecraft's native state. The report describes inference-time dynamic noising to reduce compounding errors and explicitly lists limited memory and poor precise inventory control. The linked code endpoint returned 404; this reading does not verify that implementation. / 以键鼠为条件生成视频，而非推进 Minecraft 原生状态。报告称在推理中调节噪声以抑制累积误差，并列出长程记忆与精细库存操作困难。报告的代码链接本次返回 404，不能据此声称源码已核验。",
+    "locator": "Project report: Architecture, temporal stability / dynamic noising, limitations list",
+    "source": "https://oasis-model.github.io/"
+  },
+  {
+    "sheet": "main",
+    "no": 46,
+    "level": "sections",
+    "note": "First-party web report. Genie 2 rolls latent frames forward given individual actions and decodes them to a playable view. Looking away and back probes persistence; an external agent acting in generated scenes tests interface compatibility. The author describes consistency up to a minute, not a measured lower bound across prompts or proof of collision geometry. / 以单步动作和历史潜帧自回归生成可操作视图。移开视线再看回来能检验持久性；外部 agent 在生成场景中操作，只说明接口可用。“最长约一分钟”不是所有提示下的下界，也不是碰撞几何的验证。",
+    "locator": "DeepMind report: examples of long-term memory; AI agents acting inside the world model; Diffusion world model",
+    "source": "https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/"
+  },
+  {
+    "sheet": "main",
+    "no": 47,
+    "level": "sections",
+    "note": "Cosmos Predict1 is a platform with both continuous-latent diffusion and discrete-token autoregressive models. Filtering and deduplicating clips, tokenizing them, then specializing a pretrained generator are different stages. A specialized video conditioned on a robot trajectory illustrates conditional prediction, not autonomous action choice by the base model. / 平台同时包含连续潜码扩散与离散 token 自回归两条路线；清洗去重、分词、预训练后专门化是不同阶段。用机器人轨迹控制生成视频证明条件预测，不代表基础模型自己会选动作。",
+    "locator": "Figs. 1–5; pre-trained WFM and post-training examples",
+    "source": "https://arxiv.org/html/2501.03575"
+  },
+  {
+    "sheet": "main",
+    "no": 48,
+    "level": "sections",
+    "note": "A model completes a recorded physical event from a frame or short prefix. The four-part score is normalized against variation between real repeats; it asks whether motion develops correctly, not whether a viewer can spot a fake. Results differ by physical category. Do not pool this original protocol with the later Physics-IQ Verified leaderboard. / 根据一帧或短前缀续写真实物理事件，四项得分以实拍重复实验的自然差异为参考。测的是运动是否正确演化，而非人能否辨假。各物理门类难度不同；原版与后来 Verified 榜的分数不可混排。",
+    "locator": "Original paper Figs. 1–2, 4–7; Table 1",
+    "source": "https://arxiv.org/html/2501.09038"
+  },
+  {
+    "sheet": "main",
+    "no": 49,
+    "level": "sections",
+    "note": "VBench-2.0 decomposes a generator's output into 18 dimensions rather than assigning one “physics” score. The anatomy detector operates on detected image regions; mechanics and instance preservation ask different questions. Fig. 2 normalizes each dimension for display, so polygon areas are not absolute differences in physical accuracy. / 把生成结果分为 18 个维度；解剖异常检测在图像区域上进行，力学与实例保持又是不同检验。图 2 为展示按维度归一化，雷达图面积不是物理准确度绝对差，更不是交互控制成功率。",
+    "locator": "Figs. 1–4, 7–8; intrinsic faithfulness evaluation",
+    "source": "https://arxiv.org/html/2503.21755"
+  },
+  {
+    "sheet": "main",
+    "no": 50,
+    "level": "sections",
+    "note": "MineWorld interleaves discrete visual and action tokens. Grouped parallel decoding trades within-frame dependence for speed; Table 2 compares masks and finetuning rather than attributing speed to more parameters. Predicting actions as well as frames can imitate gameplay; the action-recovery metrics and human correlation are not long-horizon task completion. / 离散视觉与动作 token 交错输入。分组并行解码牺牲帧内依赖换速度；表 2 比较掩码和微调的影响。同时生成动作与画面可模仿玩法，但动作可辨度及其与人评的相关性不等于长任务成功率。",
+    "locator": "§2 Figs. 1–2, Tables 1–3, Figs. 4–5",
+    "source": "https://arxiv.org/html/2504.08388"
+  },
+  {
+    "sheet": "main",
+    "no": 51,
+    "level": "sections",
+    "note": "WorldMem stores past frames with state information such as pose and time. Retrieval supplies relevant earlier views outside the local diffusion window. A turn-and-return sequence distinguishes consistency from smooth forward motion. Success on Minecraft and RealEstate10K does not imply a persistent, editable 3D state independent of camera history. / 外部库保存历史帧及位姿、时间，检索超出局部窗口的相关视角。转身再返回比一直向前更能检验一致性。在 Minecraft 与 RealEstate10K 表现好，仍不能推出模型维护了可编辑且独立于摄影路径的三维状态。",
+    "locator": "§§3.3–3.4, Fig. 2, Figs. 4–5, Tables 3–4",
+    "source": "https://arxiv.org/html/2504.12369"
+  },
+  {
+    "sheet": "main",
+    "no": 52,
+    "level": "sections",
+    "note": "GameCraft maps keyboard and mouse inputs to continuous camera conditions. A single carried image loses quality, while conditioning on a history clip can weaken response to new commands; hybrid history balances these failures. Repeatedly extendible generation is an interface property, not measured infinite consistency. / 将键鼠映射为连续相机条件。只接上一张图会画质崩坏，接整段历史又可能削弱新指令；混合历史针对这两种不同失效。能循环延长接口，不等于实验验证无限长一致。",
+    "locator": "Figs. 3–7, especially history ablation Fig. 6",
+    "source": "https://arxiv.org/html/2506.17201"
+  },
+  {
+    "sheet": "main",
+    "no": 53,
+    "level": "sections",
+    "note": "First-party web report. Genie 3 accepts ongoing navigation and promptable events as it synthesizes frames. Revisiting a place is a stronger demonstration than producing a similar still; it remains a selected example. The report limits continuous interaction to minutes and the action space is restricted, so real-time output is not an unlimited simulator. / 可边生成边导航，并以提示词改变事件。回访旧地点比再画一张相似照片更有说服力，但仍是展示案例。作者明确持续时间仅数分钟且动作空间有限；实时不等于无限可交互。",
+    "locator": "DeepMind report: Environmental consistency over a long horizon; Promptable world events; Limitations",
+    "source": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/"
+  },
+  {
+    "sheet": "main",
+    "no": 54,
+    "level": "sections",
+    "note": "Matrix-Game 2.0 removes a text branch from a video backbone and injects action modules; paired game/engine captures supervise control. A bidirectional teacher initializes a few-step causal student for streaming. Real-time response is measured for the distilled path, not a free property of the offline teacher, nor proof of indefinite scene memory. / 移除视频底模的文本分支，加入动作模块，用游戏与引擎配对记录监督。双向教师指导少步因果学生以便流式运行。实时对应蒸馏路径，不能归给离线教师，也不证明场景永不遗忘。",
+    "locator": "Figs. 2–3, 6–8; causal distillation",
+    "source": "https://arxiv.org/html/2508.13009"
+  },
+  {
+    "sheet": "main",
+    "no": 55,
+    "level": "sections",
+    "note": "Yan separates simulation, generation and editing. Yan-Sim's compressed VAE and shift-window denoising with cached context target low latency; caption-driven generation and editing are other paths. The reported 1080p/60 FPS belongs to the simulator, not a measured throughput for every editing operation or arbitrary physical domain. / 分别构造模拟、生成、编辑模块。Yan-Sim 用高压缩 VAE 和带缓存的移窗去噪压低延迟；字幕条件生成与编辑是另外的路径。1080p/60 FPS 对应模拟器，并非全部编辑操作或任意物理域的实测。",
+    "locator": "§5.1 Fig. 4; §§5.2–5.3; §6 limitations",
+    "source": "https://arxiv.org/html/2508.08601"
+  },
+  {
+    "sheet": "main",
+    "no": 56,
+    "level": "sections",
+    "note": "First-party web report. The Sora 2 release illustrates a change in failure behavior: after a missed shot, the ball can rebound rather than being moved to satisfy the prompt. Synchronized audio and shot continuity extend what is rendered. The article supplies examples, not a paired trajectory benchmark, physical error distribution or per-frame action interface. / 以投篮不中为例，球可以弹回，而非为满足提示强行入筐；同步声音和跨镜头连贯扩展了生成内容。发布文给的是案例，不是配对轨迹基准、物理误差分布或逐帧控制接口。",
+    "locator": "OpenAI release: missed basketball example; synchronized sound and multi-shot examples",
+    "source": "https://openai.com/index/sora-2/"
+  },
+  {
+    "sheet": "main",
+    "no": 57,
+    "level": "sections",
+    "note": "The experiment treats an image plus instruction as a problem and a generated frame as a candidate answer. Edge maps, mazes and visual analogies therefore test different capabilities of the same frozen generator. Best-of-k can hide a low single-attempt rate; the segmentation subset and prompt sensitivity constrain the broader “reasoning” interpretation. / 把图像和指令作为问题，生成帧作为候选答案；边缘图、迷宫、类比实际检验不同能力。多抽几次取最佳会掩盖单次失败。分割样本受限且结果对提示敏感，不能把汇总图解读成可靠通用推理。",
+    "locator": "§3 Fig. 1; Figs. 3–4, 7–9; Table 2",
+    "source": "https://arxiv.org/html/2509.20328"
+  },
+  {
+    "sheet": "main",
+    "no": 58,
+    "level": "sections",
+    "note": "Predict2.5 uses a latent diffusion transformer with visual/text conditioning. Domain SFT, merging and reward-based post-training are compared separately. Human preference for rendered video does not measure task success; the real-robot augmentation result in Table 13 specifically uses Transfer2.5, not an unmodified Predict2.5 policy. / 潜扩散 Transformer 接受视觉和文本条件。分开比较分域微调、权重合并与奖励后训练。视频人评不是机器人成功率；表 13 的真实机器人实验用 Transfer2.5 扩充策略训练数据，并非 Predict2.5 基模直接执行动作。",
+    "locator": "§3.2 Fig. 2; Figs. 3–5; §5 Tables 10–12; §6 Table 13",
+    "source": "https://arxiv.org/html/2511.00062"
+  },
+  {
+    "sheet": "main",
+    "no": 59,
+    "level": "sections",
+    "note": "The current paper title uses “Actionable.” An autoregressive backbone advances the latent state; a sliding-window diffusion decoder renders it. In the planning experiment a separate VLM proposes and selects actions after simulated comparisons. Forecast consistency declines across rounds; WR-Arena comparisons also use different sample counts for open and commercial models. / 现题用 Actionable，不是表里的 Interactable。自回归骨干推进潜在状态，滑窗扩散负责渲染；规划实验的动作由另一个 VLM 提案和选择。继续滚动会累积误差，开放与商业模型在 WR-Arena 的样本数也不同。",
+    "locator": "§2 Fig. 1; §3 Figs. 2–3; Supplement Figs. S2–S3",
+    "source": "https://arxiv.org/html/2511.09057"
+  },
+  {
+    "sheet": "main",
+    "no": 60,
+    "level": "sections",
+    "note": "The workbook's “paper” link is the code repo. Its original report and linked WorldPlay paper distinguish discrete keys from continuous camera poses and retrieve history for each 16-frame chunk. Revisit/geometry tests are more informative than single images. The reported 720p/24 FPS streaming configuration uses eight H800 GPUs. / 表中论文链接其实是仓库。原技术报告与 WorldPlay 论文区分离散按键及连续相机姿态，每个 16 帧片段重新组织历史。回访几何检验比单帧展示更有意义；720p/24 FPS 的流式配置使用八张 H800。",
+    "locator": "WorldPlay research paper Figs. 2–5, Tables 2–5; HY-World 1.5 technical report p. 4 Fig. 1",
+    "source": "https://arxiv.org/html/2512.14614"
+  },
+  {
+    "sheet": "main",
+    "no": 61,
+    "level": "sections",
+    "note": "First-party web report. GWM-1 is a family: the frame-by-frame model can condition on camera pose, interaction or robot commands depending on the post-trained variant. In robotics, conditioning a simulated outcome on a proposed command can help compare policies; it is not the video model issuing a low-level action. The announcement says these are separate models. / GWM-1 是家族，按专门化版本接受相机姿态、交互或机器人指令。机器人分支模拟给定命令的后果，可用于比较策略，不代表视频模型本身发出底层命令。发布文明确三支当时仍是分别后训练的模型。",
+    "locator": "Runway release: GWM Worlds, GWM Avatars, GWM Robotics; Policy evaluation in simulation",
+    "source": "https://runway.com/research/introducing-runway-gwm-1"
+  },
+  {
+    "sheet": "main",
+    "no": 62,
+    "level": "sections",
+    "note": "LingBot-World first learns a video prior, adds action control, then uses block-causal adaptation for streaming. Global causality between chunks need not forbid bidirectional attention within one chunk. Base gallery quality and Fast throughput concern different paths; neither guarantees accurate revisitation of every scene. / 先学视频先验，再加动作控制，最后用块因果适配做流式推理；块间因果与块内双向并不矛盾。Base 画质与 Fast 速度不能拼成同一配置；也不能由此保证任意场景回访一致。",
+    "locator": "Figs. 2–6, 10; Base and Fast comparisons",
+    "source": "https://arxiv.org/html/2601.20540"
+  },
+  {
+    "sheet": "main",
+    "no": 63,
+    "level": "sections",
+    "note": "Matrix-Game 3.0 conditions denoising on retrieved memory frames and trains with imperfect context, then distills with rollout segments. Fig. 9 reverses the initial navigation actions to probe revisitation. Up to 40 FPS at 720p refers to the 5B path; the larger 28B quality examples do not establish the same latency. / 用检索记忆帧辅助去噪，让训练上下文含误差，再用分段自滚动蒸馏。图 9 反向重走前半程以检验回访。720p 最高 40 FPS 对应 5B 路径，28B 的画质样例不自动享有相同延迟。",
+    "locator": "Figs. 2–6, 9–11",
+    "source": "https://arxiv.org/html/2604.08995"
+  },
+  {
+    "sheet": "main",
+    "no": 64,
+    "level": "sections",
+    "note": "Reasoner and generator exchange context while retaining distinct autoregressive and diffusion objectives. The action study controls downstream data and compute, comparing checkpoints with and without action mid-training. Table 18 measures pose errors for inverse driving versus PSNR for robot forward prediction; Table 19 tests policies. These columns cannot be ranked as one skill score. / 推理塔与生成塔交换上下文，仍分别优化自回归和扩散目标。动作实验固定下游数据与算力，比较是否经过动作中训。表 18 的驾驶逆动力学看位姿误差、机器人正动力学看 PSNR；表 19 才测策略。不能把这些列当同一能力排名。",
+    "locator": "Technical report §2; §6.2.5 pp. 65–66, Tables 18–19",
+    "source": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf"
+  },
+  {
+    "sheet": "main",
+    "no": 65,
+    "level": "sections",
+    "note": "First-party web report. WorldPrompt separates persistent scene/subject rules from timed text events and continuous camera input. The real-time model predicts audiovisual continuations; a user or external agent drives it. Fast rotations degrade textures and geometry, and memory is imperfect. An unbounded session interface does not establish unbounded world persistence. / WorldPrompt 把持续场景/主体规则与带时间的文本事件、连续相机输入分开。用户或外部 agent 施加控制，模型续写视听内容。快速旋转会损坏纹理和几何；会话不限时并非记忆永不漂移。",
+    "locator": "Runway report: WorldPrompt, Real-Time Generation / Model Overview, Agentic Control, Limitations",
+    "source": "https://runway.com/research/introducing-gwm-worlds-2"
+  },
+  {
+    "sheet": "main",
+    "no": 66,
+    "level": "sections",
+    "note": "First-party web report. An autoregressive diffusion backbone is adapted to different control interfaces; the humanoid policy includes additional partner engineering and teleoperation data. The most interpretable comparison is distance between interventions: the simulation-trained driving policy reaches about 77% of the real-footage-trained policy's distance. That is a relative distance, not a safety rate or one policy transferred without adaptation. / 同一扩散骨干适配不同控制接口；人形策略还包括合作方工程与遥操作数据。道路对照中，纯仿真训练策略两次人工接管间的距离约为实拍训练策略的 77%。这是相对距离，既不是安全成功率，也非同一策略无需适配通用。",
+    "locator": "Odyssey release: robot and Flexion humanoid demonstrations; real-road safety-driver comparison",
+    "source": "https://odyssey.systems/introducing-odyssey-3"
+  },
+  {
+    "sheet": "main",
+    "no": 67,
+    "level": "sections",
+    "note": "First-party web report. Keyboard/camera controls and scene edits steer a real-time audiovisual stream. Gemini helps interpret and guide events; the generated image and audio are outputs, not observations fed back from a physical world. The authors report drift after edits, long sessions or navigation, so uninterrupted recording length is not a consistency guarantee. / 键鼠和场景编辑引导实时视听流，Gemini 辅助解释指令与引导事件。画面、音频是生成结果，不是真实世界回传。作者说明多次编辑、长会话或移动会带来漂移，不能用录制时长替代一致性保证。",
+    "locator": "DeepMind release: Modeling how the world sounds; Simulating complex events with Gemini models; Understanding current limitations",
+    "source": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+  },
+  {
+    "sheet": "main",
+    "no": 68,
+    "level": "sections",
+    "note": "First-party web report. A language model writes a structured intermediate state describing events, actors and camera motion; a separately trained latent diffusion model renders it. This exposes where an error enters: a wrong symbolic event versus a faithful state rendered incorrectly. Physics-IQ Verified tests generated continuations, not success of an agent executing the simulated plan. / 语言模型先写事件、主体和相机运动等结构化中间状态，再由另训的潜扩散模型渲染。可以区分是事件写错，还是状态正确但渲染失真。Physics-IQ Verified 测视频续写，不测 agent 在现实里执行该计划的成败。",
+    "locator": "IFM technical blog: conceptual/perceptual reasoning, structured state examples, Physics-IQ Verified evaluation",
+    "source": "https://ifm.ai/blog/pan2/"
+  },
+  {
+    "sheet": "main",
+    "no": 69,
+    "level": "sections",
+    "note": "WorldFoundry standardizes the path from a request to a persisted artifact and benchmark score. Its contribution is a contract across heterogeneous models, not another trained dynamics predictor. A documented workflow in Table 1 or a catalog entry is weaker evidence than a model actually executed and scored under a common protocol. / 统一请求、运行、持久化产物与评分接口；贡献是让异构模型遵循同一套运行契约，而非训练新的动力模型。表 1 的流程支持或目录收录，都弱于在相同协议下真正运行并测得分数。",
+    "locator": "Fig. 1, Table 1; unified runner and artifact contracts",
+    "source": "https://arxiv.org/html/2611.10771"
+  }
+]

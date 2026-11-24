@@ -6,6 +6,17 @@
 
 **[Explore the interactive atlas ↗](https://hyfine.github.io/embodied-world-models-atlas/)** · [Bilingual paper index](CATALOG.md) · [Outlook & counterevidence](docs/outlook.en.md) · [Search method](EVIDENCE.md)
 
+### Research desk · expanded edition
+
+| Choose a question | Where to go |
+|---|---|
+| What changes between predicting the next frame, planning and producing an action? | [Cross-family synthesis](https://hyfine.github.io/embodied-world-models-atlas/research.html) |
+| What actually runs in a representative system from each of the 15 workbook categories? | [Runtime diagrams, evidence tests and paper sections](https://hyfine.github.io/embodied-world-models-atlas/runtime.html) |
+| What was examined for a particular paper, model or repository? | [Search the 320 main + 70 supplementary rows by source and reading depth](https://hyfine.github.io/embodied-world-models-atlas/evidence.html) |
+| Which PDF edition was used or collected? | [Versioned local-library catalog](https://hyfine.github.io/embodied-world-models-atlas/shelf.html) · [close reading of the supplied WAM survey](docs/wam-survey-deep-dive.md) |
+
+The 38 leaves below form the **introductory map**, not the denominator of the larger bibliography. A row, a verified artifact, a PDF on disk and a cover-to-cover reading are four different things.
+
 [![A growing research tree: six colored families connect the perception–action loop to 38 labeled works](assets/growth-tree.en.svg)](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)
 
 **Read the tree from root to leaf.** Play the years to grow the canopy, zoom in and drag to explore, or select a leaf for its paper and implementation. The branches are reading routes, not claims of technical inheritance.

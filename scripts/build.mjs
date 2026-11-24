@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {deepGuide,mapSections,panorama,validateMap} from './maps.mjs';
 import {treePlate} from './plates.mjs';
+import {researchOutputs,tabNav} from './research.mjs';
 
 process.chdir(fileURLToPath(new URL('../', import.meta.url)));
 const root = 'https://github.com/hyfine/embodied-world-models-atlas';
@@ -55,12 +56,12 @@ function page(en) {
 <html lang="${lang}"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${t('具身智能 × 世界模型研究图谱','Embodied AI × World Models Atlas')}</title>
 <meta name="description" content="${t('从推杯子读懂预测、规划和动作：双语研究图谱。','A bilingual field guide to prediction, planning and action, starting with a cup on a table.')}">
-<link rel="stylesheet" href="${asset('assets/atlas.css')}"><link rel="stylesheet" href="${asset('assets/maps.css')}"><script defer src="${asset('assets/atlas.js')}"></script><script defer src="${asset('assets/maps.js')}"></script>
+<link rel="stylesheet" href="${asset('assets/atlas.css')}"><link rel="stylesheet" href="${asset('assets/maps.css')}"><link rel="stylesheet" href="${asset('assets/research.css')}"><script defer src="${asset('assets/atlas.js')}"></script><script defer src="${asset('assets/maps.js')}"></script>
 <body><a class="skip" href="#main">${t('跳到正文','Skip to content')}</a><header><div class="bar"><a href="#main" class="wordmark">◉ FIELD ATLAS</a><nav><a href="#maps">${t('演进','Evolution')}</a><a href="#architectures">${t('架构','Architecture')}</a><a href="#library">${t('索引','Library')}</a><a href="${root}">GitHub</a><a lang="${t('en','zh-CN')}" href="${t('index','zh')}.html">${t('English','中文')}</a></nav></div></header>
 <main id="main"><div class="masthead wrap"><div><div class="kicker">RESEARCH FIELDNOTES　/　${cutoff}</div>
 <h1>${t('具身智能 <em>× 世界模型</em>','Embodied AI <em>× World Models</em>')}</h1></div>
 <p>${t('从预测接下来会发生什么，到决定下一步怎样做。','From predicting what happens next to choosing what to do next.')}<br><small>${works.length} ${t('项研究','works')}　/　6 ${t('个家族','families')}　/　1991–2026</small></p></div>
-<div class="wrap">${mapSections({works,families,en,esc,docs})}
+<div class="wrap">${tabNav(en,'index')}${mapSections({works,families,en,esc,docs})}
 <section id="cup-lab"><div class="plate"><div class="kicker">CUP LAB &nbsp; / &nbsp; MPC</div><h2>${t('选一个动作，看预测落在哪里。','Pick an action. Where does the prediction land?')}</h2>
 <div class="track" aria-hidden="true"><span class="goal"></span><span class="cup">▰</span></div>
 <div class="controls" id="actions">${[t('不动','Wait'),t('轻推','Gentle push'),t('重推','Hard push')].map((a,i) => `<button type="button" data-i="${i}" aria-pressed="${i===1}">${a}</button>`).join('')}</div>
@@ -94,6 +95,7 @@ function page(en) {
 const check = process.argv.includes('--check');
 const english = page(true);
 for (const [path, contents] of [['CATALOG.md', catalog], ['index.html', english], ['en.html', english], ['zh.html', page(false)],
+  ...researchOutputs(asset),
   ...[true,false].flatMap(en=>[
     [`assets/panorama.${en?'en':'zh-CN'}.svg`,panorama(works,en)],
     [`assets/growth-tree.${en?'en':'zh-CN'}.svg`,treePlate(works,en)+'\n'],

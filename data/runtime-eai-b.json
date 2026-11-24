@@ -1,0 +1,60 @@
+[
+  {
+    "code": "EAI-3",
+    "representative": "Universal Manipulation Interface (UMI)",
+    "source": "https://arxiv.org/abs/2402.10329",
+    "locator": "§III, Figs. 5–6; §§V–VI, Figs. 8–9",
+    "stages": [
+      ["读取腕部鱼眼图像、末端位姿和夹爪开度", "Read wrist fisheye images, end-effector poses and jaw widths"],
+      ["以图像采集时刻对齐观测历史", "Align the observation history to image capture times"],
+      ["扩散策略生成相对当前末端的目标轨迹及开度", "Diffusion policy predicts a trajectory relative to the current hand and a width sequence"],
+      ["按执行器延迟丢弃过期目标，调度余下指令", "Discard stale targets per actuator and schedule the remaining commands"],
+      ["机械臂与夹爪跟踪目标，采集新一轮观测", "Arm and gripper track targets; acquire the next observations"]
+    ],
+    "feedback": ["新观测用于下次推理；手持示范的 SLAM 与训练不在实机控制环内。", "New measurements condition the next prediction; demonstration SLAM and policy fitting are offline."],
+    "test": ["投掷按物体计：延迟匹配 105/120，不匹配 69/120；并非 120 个完整任务回合。", "Latency matching: 105/120 correctly tossed objects versus 69/120 without it, not 120 complete episodes."]
+  },
+  {
+    "code": "EAI-4",
+    "representative": "Octo",
+    "source": "https://arxiv.org/abs/2405.12213",
+    "locator": "§III-A–C, Fig. 1; §IV, Fig. 4, Tables I–II; App. F",
+    "stages": [
+      ["编码语言指令或目标图像及近期机器人观测", "Tokenize the language or image goal and recent robot observations"],
+      ["屏蔽缺失输入，用共享 Transformer 提取读出 token", "Mask unavailable inputs and compute readout tokens in the shared transformer"],
+      ["小型扩散头以读出为条件去噪动作块", "A small diffusion head denoises an action chunk conditioned on the readout"],
+      ["将动作转换到本体接口，执行一段再观测", "Map actions to the robot interface, execute a portion, then observe again"]
+    ],
+    "feedback": ["按滚动窗口重新查询策略；块内去噪迭代不读取新的实机观测。新增传感器或动作头的微调在线下进行。", "Re-query on a rolling observation window; denoising iterations are not sensor feedback. New sensor/action heads are adapted offline."],
+    "test": ["Fig. 4 测预训练已覆盖接口；Table I 约用每域 100 条目标示范微调，每域实测 20 次。", "Fig. 4 tests represented interfaces; Table I fine-tunes with about 100 target demonstrations per domain and evaluates 20 trials per domain."]
+  },
+  {
+    "code": "EAI-5",
+    "representative": "Rapid Motor Adaptation (RMA)",
+    "source": "https://arxiv.org/abs/2107.04034",
+    "locator": "§III-A–C, Fig. 1; §§IV–V, Fig. 2, Tables I–II",
+    "stages": [
+      ["读取关节、机身倾角、足底接触并保存状态—动作历史", "Read joints, body tilt and foot contacts; retain state/action history"],
+      ["慢适应器从 50 步历史估计环境潜变量（约 10 Hz）", "Slow adaptor estimates a context latent from 50 history steps (about 10 Hz)"],
+      ["基础策略读取当前状态、上次动作及最近潜变量（100 Hz）", "Base policy reads current state, previous action and latest latent (100 Hz)"],
+      ["输出 12 个关节角目标，由 PD 控制器转换为力矩", "Output 12 joint-angle targets; PD control converts them into torques"]
+    ],
+    "feedback": ["每个快周期直接读新状态，不等待慢线程；没有实机摩擦真值，也不在线更新权重。", "The fast loop reads new state without waiting for the slow thread. No true friction input or online weight updates."],
+    "test": ["15 cm 下台阶为 4/5 次成功；Table II 的三种子、多回合统计是仿真。盲感知无法提前看到落差。", "The 15 cm step-down succeeded in 4/5 physical trials. Table II averages simulated runs over three seeds; proprioception cannot preview a drop."]
+  },
+  {
+    "code": "EAI-6",
+    "representative": "OK-Robot",
+    "source": "https://arxiv.org/abs/2401.12202",
+    "locator": "§II-A–D, Figs. 2–3; §III-A–D, Figs. 4–6; §V",
+    "stages": [
+      ["准备：人工扫描带位姿的 RGB-D，建语义与障碍地图", "Setup: manually scan posed RGB-D and build semantic and obstacle maps"],
+      ["文本检索目标物，A* 将底盘导航至接近位姿", "Retrieve the object by text and navigate the base to an approach pose with A*"],
+      ["现场 RGB-D 上用目标掩模筛选 AnyGrasp 候选，控制手臂抓取", "Filter AnyGrasp proposals with a target mask in live RGB-D; execute the grasp"],
+      ["检索放置地点，导航后按当前分割点云计算释放位置", "Retrieve the destination, navigate, then compute a drop point from its current segmented cloud"],
+      ["移动手臂并松爪", "Move the arm and release"]
+    ],
+    "feedback": ["抓取与放置重新观测局部场景，但预扫语义地图非持续更新；不是每次失败都自动重试的全局闭环。", "Grasp and drop use fresh local perception, not a continuously updated semantic map or a general failure-retry loop."],
+    "test": ["10 个家庭、171 次实验；原始条件 58.5%，清理/消歧后 82.4%，后者改变了测试条件。", "171 trials across ten homes; 58.5% in original conditions versus 82.4% after cleanup/disambiguation, a changed test distribution."]
+  }
+]

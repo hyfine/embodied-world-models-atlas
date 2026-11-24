@@ -1,0 +1,554 @@
+[
+  {
+    "sheet": "main",
+    "no": 132,
+    "level": "sections",
+    "note": "SayCan ranks available skills by combining instruction fit with a state-dependent estimate of whether the skill can finish. On 101 mock-kitchen requests the chosen plans scored 84%, but execution scored 74%. A good language prior cannot supply a missing or unreliable skill.",
+    "locator": "§§3–5.1, Table 2; App. E.6, Fig. 25. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2204.01691"
+  },
+  {
+    "sheet": "main",
+    "no": 133,
+    "level": "sections",
+    "note": "Inner Monologue changes the next planning prompt after an action: a success flag can prompt a retry, while a scene description can change the choice of skill. The kitchen study uses a learned success classifier but human object feedback; it is not evidence of fully automatic scene monitoring.",
+    "locator": "§§3.2–3.3, 4.1–4.3; discussion of oracle scene descriptors. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2207.05608"
+  },
+  {
+    "sheet": "main",
+    "no": 134,
+    "level": "sections",
+    "note": "Code as Policies generates executable glue between perception and motor APIs, including helper functions. The tabletop notebook exposes geometric queries and motion primitives. On unseen attributes AND instructions, simulation success was 80% on long-horizon tasks versus 62% on geometric ones; the API already supplies the grasping skill.",
+    "locator": "§§III-A/D, IV-A/D; Table III. Code: google-research/google-research@ee4298226f, README and code_as_policies/Interactive_Demo.ipynb.",
+    "source": "https://arxiv.org/html/2209.07753"
+  },
+  {
+    "sheet": "main",
+    "no": 135,
+    "level": "sections",
+    "note": "ProgPrompt puts available actions and objects in a program prompt; an interpreter checks assertions while acting. The VirtualHome ablation generally favors including checks and recovery. The evaluator compares changes in state-graph relations to one annotated goal, which can penalize a different valid solution. Listed code concerns VirtualHome, not the physical-arm stack.",
+    "locator": "§§III-A/C, IV-C, V-A/C; Tables I, IV. Code: NVlabs/progprompt-vh@56e6551074, README and scripts/run_eval.py.",
+    "source": "https://arxiv.org/html/2209.11302"
+  },
+  {
+    "sheet": "main",
+    "no": 136,
+    "level": "sections",
+    "note": "PaLM-E projects continuous sensor representations into the language embedding sequence; the decoder returns text, not motor deltas. In the low-data task-and-motion-planning study the mixed training recipe helps, and results depend on whether the encoder represents individual entities. This is planning transfer, not a measure of actuator accuracy.",
+    "locator": "§§3–5, 6.2; Fig. 4, App. Table 7. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2303.03378"
+  },
+  {
+    "sheet": "main",
+    "no": 137,
+    "level": "sections",
+    "note": "EmbodiedGPT's learned queries select visual information for a frozen language decoder. A 30-person study rates captions/plans; the separate control experiment fits an imitation policy with demonstrations. The repository chat demo uses image/video embeddings for generation: its text output does not itself drive the arm.",
+    "locator": "§§3.2–3.4, 4; App. A.2. Code: EmbodiedGPT/EmbodiedGPT_Pytorch@cda80524bf, README and demo/inference.py.",
+    "source": "https://arxiv.org/html/2305.15021"
+  },
+  {
+    "sheet": "main",
+    "no": 138,
+    "level": "sections",
+    "note": "VoxPoser reuses generated code to build spatial value maps from new observations, then samples and scores motions in a replanning loop. Online dynamics learning is an extension, not a prerequisite for every rollout. The simulation error analysis can substitute ground-truth perception/dynamics; that diagnostic is unavailable on the physical arm.",
+    "locator": "§§3.2–3.4, 4.1–4.4, 5. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2307.05973"
+  },
+  {
+    "sheet": "main",
+    "no": 139,
+    "level": "sections",
+    "note": "SpatialVLM lifts monocular scenes into approximate metric coordinates and fits a horizontal reference before constructing spatial QA labels. Adding noise to better depth-based robot labels tests the sensitivity of numeric answers. Predicting a distance for use as a dense reward is neither calibrated metrology nor a policy rollout.",
+    "locator": "§§3.1–3.3, 4.1, 4.4–4.5; Tables 2, 5. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2401.12168"
+  },
+  {
+    "sheet": "main",
+    "no": 140,
+    "level": "sections",
+    "note": "MOKA asks the VLM to choose amongst image marks. Depth fixes object-surface coordinates; a free-space waypoint needs an extra height decision. FrankaMarkPolicy converts context and gripper pose into successive motion/gripper commands. Four tasks × ten trials distinguish subtasks; confusing a tool's grasp and functional ends can invalidate both.",
+    "locator": "§§IV-C/E, V-B; Table I and Fig. 4. Code: moka-manipulation/moka@f6b642514e, README and moka/policies/franka_policy.py.",
+    "source": "https://arxiv.org/html/2403.03174"
+  },
+  {
+    "sheet": "main",
+    "no": 141,
+    "level": "sections",
+    "note": "RoboPoint creates empty-space labels by removing a rendered object and sampling its former support footprint. The Where2Place ablation tests this data mix; predicting a valid pixel is not proof of a reachable collision-free motion. The VQA script generates and logs answers from RGB plus text; the linked model is the Vicuna-13B variant.",
+    "locator": "§4 (Generating Affordance in Free Space), §§5.1–5.2; Table 4. Code: wentaoyuan/RoboPoint@206cb1e086, README and robopoint/eval/model_vqa.py. Hub card: wentao-yuan/robopoint-v1-vicuna-v1.5-13b.",
+    "source": "https://arxiv.org/html/2406.10721"
+  },
+  {
+    "sheet": "main",
+    "no": 142,
+    "level": "sections",
+    "note": "ECoT trains a VLA to emit grounded intermediate descriptions before actions. Reusing slow-changing plan tokens avoids regenerating the whole trace; the acceleration comparison covers only 25 trials across three tasks. The Bridge script obtains an action per observation. The checkpoint README is metadata-only; implementation evidence comes from GitHub, not that card.",
+    "locator": "§§4.1–4.3, 5.2–5.6; Tables 1–3. Code: MichalZawalski/embodied-CoT@1813ad7600, README and experiments/bridge/eval_model_in_bridge_env.py. Hub card: Embodied-CoT/ecot-openvla-7b-bridge.",
+    "source": "https://arxiv.org/html/2407.08693"
+  },
+  {
+    "sheet": "main",
+    "no": 143,
+    "level": "sections",
+    "note": "ReKep generates stage endpoint/path constraints, not a stored trajectory. The solver uses live keypoints and can backtrack when a path condition breaks. Automatic constraints solved 31/70 standard trials versus 48/70 with human annotations. The public Fetch simulation reads tracking and collision geometry from its environment; it omits the real perception stack.",
+    "locator": "§§3.1–3.4, 4.1–4.3, 5; Fig. 2, Tables 1–2, App. A.7–A.9. Code: huangwl18/ReKep@63c43fdba6, README and main.py, path_solver.py, subgoal_solver.py.",
+    "source": "https://arxiv.org/pdf/2409.01652v2"
+  },
+  {
+    "sheet": "main",
+    "no": 144,
+    "level": "sections",
+    "note": "Magma uses marks to localize targets and future point traces to supervise motion on videos lacking motor labels. Removing mark/trace supervision hurts the SimplerEnv Bridge and Google tests. The Hub model merges image features into token embeddings; the separate LIBERO evaluator sends actions to the environment. UI grounding is not robot success.",
+    "locator": "§§3.2, 4.2, 5.1.1; Fig. 4 and Table 2; HF modeling_magma.py; microsoft/Magma@e373780359 agents/libero/eval_magma_libero.py. Hub card: microsoft/Magma-8B.",
+    "source": "https://arxiv.org/html/2502.13130"
+  },
+  {
+    "sheet": "main",
+    "no": 145,
+    "level": "sections",
+    "note": "Cosmos-Reason1 post-trains video reasoning with within-prompt relative rewards. Gains do not extend uniformly to RoboFail's affordance and failure-verification questions. This tests judgments about observed events, not real-time control. The listed 7B config is Qwen2.5-VL; do not assign every architecture variant discussed in the report to this checkpoint.",
+    "locator": "§§3.1–3.2, 4.1, 7.2.2; Table 9; HF config.json; nvidia-cosmos/cosmos-reason1 README, Benchmark. Hub card: nvidia/Cosmos-Reason1-7B.",
+    "source": "https://arxiv.org/html/2503.15558"
+  },
+  {
+    "sheet": "main",
+    "no": 146,
+    "level": "sections",
+    "note": "RoboRefer aligns a depth stream separately from RGB and predicts a referent point. In the Open6DOR position pipeline, replacing localization/placement components raises average success from 72.4% to 79.2%; the surrounding mask, grasp and execution stack still matters. The listed 2B checkpoint is SFT, not automatically the best RFT model in the paper.",
+    "locator": "§§3.2, 4.2, 4.4; Table 6. Code: Zhoues/RoboRefer@d97a995ad2, README and Evaluation/test_benchmark.py. Hub card: Zhoues/RoboRefer-2B-SFT.",
+    "source": "https://arxiv.org/html/2506.04308"
+  },
+  {
+    "sheet": "main",
+    "no": 147,
+    "level": "sections",
+    "note": "RoboBrain 2.0 decodes coordinates, boxes or text according to the prompt. Ego-Plan2 and multi-robot planning scores concern reasoning outputs, not execution by multiple physical robots. The listed GitHub link shares today's 2.5 tree; the legacy loader explicitly selects the 2.0-7B ID. Hub landing page visible, files gated.",
+    "locator": "§§2.1–2.3, 4, 6.2; Table 4. Code: FlagOpen/RoboBrain2.0@af98c932aa, README and rb_v2.0/inference_rb2.py. Hub gated landing page: BAAI/RoboBrain2.0-7B.",
+    "source": "https://arxiv.org/html/2507.02029"
+  },
+  {
+    "sheet": "main",
+    "no": 148,
+    "level": "sections",
+    "note": "Embodied-R1 supplies points or traces to a separate executor. WidowX SimplerEnv uses CuRobo (56.2% average); the affordance evaluation script instead counts predicted points inside masks. These denominators answer different questions. The trajectory-reward analysis also finds endpoint agreement can conceal a poor path.",
+    "locator": "§§3.3–3.4, 4.2–4.4; Tables 4–5; App. F. Code: pickxiguapi/Embodied-R1@41c4f683db, README and eval/hf_inference_affordance.py. Hub card: IffYuan/Embodied-R1-3B-v1.",
+    "source": "https://arxiv.org/html/2508.13998"
+  },
+  {
+    "sheet": "main",
+    "no": 149,
+    "level": "sections",
+    "note": "Gemini Robotics-ER 1.5 monitors progress, calls tools and assigns subtasks; the separate VLA executes them. Complex pointing tests localization under constraints without testing contact control. This is the orchestrator in the same report as #182, not a second independent robot-policy experiment.",
+    "locator": "Joint 1.5 report §§2.1, 4.1–4.3, 5; Figs. 9–10. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2510.03342"
+  },
+  {
+    "sheet": "main",
+    "no": 150,
+    "level": "sections",
+    "note": "Pelican alternates reward-based exploration with a supervised round targeted at unresolved mistakes. The curves track embodied QA and retention on general video tests; the ERQA converter serializes pictures, prompt and answer. Training-time feedback about wrong answers is not a robot receiving feedback while it moves.",
+    "locator": "§§2.2.1–2.2.2, 4.2–4.3; Figs. 4–5. Code: Open-X-Humanoid/pelican-vl@717a1fcd90, README and evaluation/datasets/process_erqa.py. Hub card: X-Humanoid/Pelican1.0-VL-7B.",
+    "source": "https://arxiv.org/html/2511.00108"
+  },
+  {
+    "sheet": "main",
+    "no": 151,
+    "level": "sections",
+    "note": "Vlaser adds a low-level action expert to InternVL3 and trains with robot-view reasoning data. Its closed-loop Google Robot comparison is on SimplerEnv, including visual matching and variant aggregation. The authors explicitly report no real-robot experiments; its VLA output does not change that evidence boundary.",
+    "locator": "§§2.1–2.3, 3.1–3.3, 5; Table 3. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2510.11027"
+  },
+  {
+    "sheet": "main",
+    "no": 152,
+    "level": "sections",
+    "note": "RoboBrain 2.5 infers signed progress between observations, conditioned on the instruction, start and target views. Reversing videos tests whether the value estimate orders a regression correctly; it does not test a new policy's success rate. Current loader selects the 8B-NV variant (NV/MT distinguish training hardware); Hub files are gated.",
+    "locator": "§§2.2.1–2.2.3, 6.3; Table 4 and Fig. 13. Code: FlagOpen/RoboBrain2.5@af98c932aa, README and inference.py. Hub gated landing page: BAAI/RoboBrain2.5-8B-NV.",
+    "source": "https://arxiv.org/html/2601.14352"
+  },
+  {
+    "sheet": "main",
+    "no": 153,
+    "level": "sections",
+    "note": "Gemini Robotics ER 2 selects tools/subtasks or requests clarification. The launch separates five-bin progress labels from locating a critical frame. The technical safety report separates offline one-step/multiturn tool emulation from physical stopping tests, and does not certify the hardware. Not the whole-body action model in #195.",
+    "locator": "Launch: temporal intelligence and tool orchestration; linked Gemini Robotics 2: Safety Evaluations §§1–2, Fig. 1. No code or weight URL in this row.",
+    "source": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-2-Safety.pdf"
+  },
+  {
+    "sheet": "main",
+    "no": 154,
+    "level": "sections",
+    "note": "RT-1 conditions image-history features on the instruction before compressing them into transformer tokens and predicting discrete controls. In the diversity ablation, keeping 97% of examples but only 75% of tasks lowers seen-task performance from 97% to 86%. Episode count alone does not describe the training distribution.",
+    "locator": "§§5.1–5.2, 6.2, 6.5; Fig. 3 and Table 7. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2212.06817"
+  },
+  {
+    "sheet": "main",
+    "no": 155,
+    "level": "sections",
+    "note": "RT-2 reuses the VLM token interface for quantized robot actions, with different vocabulary mappings in PaLI-X and PaLM-E. Matched A/B tests probe whether new semantic instructions select useful actions. Semantic transfer is not evidence that web pretraining taught a new physical motor primitive; large-model serving also changes the timing budget.",
+    "locator": "§§3.2–3.3, 4.1–4.3, 5. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2307.15818"
+  },
+  {
+    "sheet": "main",
+    "no": 156,
+    "level": "sections",
+    "note": "RT-H extracts direction-like language motions from proprioceptive changes, predicts one, then conditions the action query on it. The intermediate command is editable during execution. In the bowl-uprighting breakdown picking improves over RT-2 but rotation remains difficult; the paired queries also cost more time.",
+    "locator": "§§III-B/C, IV-A, V-A/C; App. D, Fig. 9. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2403.01823"
+  },
+  {
+    "sheet": "main",
+    "no": 157,
+    "level": "sections",
+    "note": "OpenVLA decodes one token per control coordinate, then inverts dataset-specific scaling. Bridge evaluation refreshes the image before each action; there is no generated next image. On 170 WidowX rollouts per policy its mean score exceeds RT-2-X, but not on the semantic subset. The quantization/LoRA tests use a different checkpoint variant.",
+    "locator": "§§3.1–3.5, 5.1–5.4, 6; Figs. 2–5, Tables 1–2, 4, 6; p. 10 n. 4. Code: openvla/openvla@c8f03f48af, README and prismatic/extern/hf/modeling_prismatic.py, experiments/robot/bridge/run_bridgev2_eval.py, prismatic/vla/action_tokenizer.py. Hub card: openvla/openvla-7b.",
+    "source": "https://arxiv.org/pdf/2406.09246v3"
+  },
+  {
+    "sheet": "main",
+    "no": 158,
+    "level": "sections",
+    "note": "TinyVLA keeps most language weights fixed and fits a continuous diffusion decoder instead of generating action dimensions serially. The paper swaps backbones to isolate the latency benefit of the action path; Table IV times a prediction on one A6000. This does not measure full camera-to-actuator latency.",
+    "locator": "§§III-A/B, IV-B/F, V-A/C; Table IV. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2409.12514"
+  },
+  {
+    "sheet": "main",
+    "no": 159,
+    "level": "sections",
+    "note": "RDT-1B denoises continuous action chunks with language, images, robot state and control-frequency conditioning; the model card specifies 64 actions. The AgileX runner buffers a chunk and publishes per-arm commands. Pouring and folding probe different capabilities; the folding result includes few-shot adaptation, not just zero-shot transfer.",
+    "locator": "§§4.1–4.2, 5.1–5.2; Fig. 4, Table 3. Code: thu-ml/RoboticsDiffusionTransformer@cd79363a13, README and scripts/agilex_inference.py. Hub card: robotics-diffusion-transformer/rdt-1b.",
+    "source": "https://arxiv.org/html/2410.07864"
+  },
+  {
+    "sheet": "main",
+    "no": 160,
+    "level": "sections",
+    "note": "π0 conditions a flow over 50-step action chunks on cameras, text and proprioception. The code caches prefix features and integrates an action field, not a video model. The new-skill study varies fine-tuning data and similarity to pretraining. Workbook weights are a LeRobot integration (pi0_old card examples use lerobot/pi0), distinct from the openpi implementation.",
+    "locator": "§§IV, V-A, VI-A/C; Figs. 3, 10. Code: Physical-Intelligence/openpi@215abfb217, README and src/openpi/models/pi0.py. Hub card: lerobot/pi0_old.",
+    "source": "https://arxiv.org/html/2410.24164"
+  },
+  {
+    "sheet": "main",
+    "no": 161,
+    "level": "sections",
+    "note": "CogACT conditions a diffusion action module on a VLM representation. Adaptive ensembling weights overlapping predictions rather than averaging incompatible motions indiscriminately. The card describes 16 normalized actions; the Franka test fine-tunes on 100 demonstrations for each of four tasks. Those results are not zero-shot.",
+    "locator": "§§3.2–3.4, 4.2–4.4; Fig. 3. Code: microsoft/CogACT@b174a1b86d, README and action_model/action_model.py. Hub card: CogACT/CogACT-Base.",
+    "source": "https://arxiv.org/html/2411.19650"
+  },
+  {
+    "sheet": "main",
+    "no": 162,
+    "level": "sections",
+    "note": "SpatialVLA adds egocentric 3-D features to image tokens and learns action codes with spatial grids adapted to the action distribution. Its image-feature path takes camera intrinsics; the pretraining ablation uses selected Google and WidowX simulator tasks. The linked “pt” model is a pretrained model, not every post-trained result.",
+    "locator": "§§III-A/B, IV-A/D; Table IV, Fig. 8. Code: SpatialVLA/SpatialVLA@18fd74b2a6, README and model/modeling_spatialvla.py. Hub card: IPEC-COMMUNITY/spatialvla-4b-224-pt.",
+    "source": "https://arxiv.org/html/2501.15830"
+  },
+  {
+    "sheet": "main",
+    "no": 163,
+    "level": "sections",
+    "note": "FAST transforms a normalized action chunk across time with a DCT, rounds sparse coefficients and uses byte-pair encoding. π0-FAST predicts the compressed sequence autoregressively; it is not the continuous π0 sampler. Table bussing reaches strong performance in fewer training steps, not a demonstrated threefold reduction of robot execution time.",
+    "locator": "§§V-A/C, VI-B/F; Figs. 4, 9. Code: Physical-Intelligence/openpi@215abfb217, README and src/openpi/models/pi0_fast.py.",
+    "source": "https://arxiv.org/html/2501.09747"
+  },
+  {
+    "sheet": "main",
+    "no": 164,
+    "level": "sections",
+    "note": "ChatVLA first learns control, then reintroduces vision/text examples and separates expert paths to mitigate interference. Long-horizon direct prompts are scored by stages completed; they should not be pooled with runs given explicit intermediate commands. Retaining chat ability likewise does not guarantee retaining every specialist knowledge domain.",
+    "locator": "§§3.2–3.3, 4.1–4.3; Table 2. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2502.14420"
+  },
+  {
+    "sheet": "main",
+    "no": 165,
+    "level": "sections",
+    "note": "DexVLA combines a plug-in diffusion expert with stages for cross-embodiment pretraining, embodiment adaptation and task refinement. Direct long-task prompting is tested after post-training. The laundry-folding result is a mean rubric score (0.4 across trials), not proof of 40% complete folds or an unseen skill learned from a prompt alone.",
+    "locator": "§§3.1–3.2, 4.2–4.4; Figs. 3, 13; App. A.4. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2502.05855"
+  },
+  {
+    "sheet": "main",
+    "no": 166,
+    "level": "repo",
+    "note": "Helix's S1 consumes the newest observation and latest S2 latent instead of waiting for another language inference. Figure describes 200 Hz upper-body targets and offsets the training streams to mimic inference lag. That rate is not the VLM's frequency; object-handling demos are vendor evidence, not a shared benchmark or public controller release.",
+    "locator": "Figure release: System 1 / System 2; Optimized Streaming Inference. No code or weight URL in this row.",
+    "source": "https://www.figure.ai/news/helix"
+  },
+  {
+    "sheet": "main",
+    "no": 167,
+    "level": "sections",
+    "note": "Hi Robot trains a high-level policy with synthetic requests grounded in labeled demonstrations. A mid-task correction can change the short instruction given to the low-level VLA. Grocery, sandwich and table tests distinguish instruction accuracy from physical progress; scoring either alone hides a failure mode.",
+    "locator": "§§4.1–4.4, 5.2–5.4; Figs. 5, 8. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2502.19417"
+  },
+  {
+    "sheet": "main",
+    "no": 168,
+    "level": "sections",
+    "note": "OpenVLA-OFT changes fine-tuning and decoding, not the upstream pretraining: empty action slots allow parallel continuous chunk prediction. On the A100 timing test, increasing chunk length boosts actions/second without proportionally reducing latency per query. Listed repo returns 404; author project page links moojink/openvla-oft. Hub checkpoint is LIBERO-Spatial-specific.",
+    "locator": "§§IV-B/C, V-B/E, VI; Tables I–III. Code: moojink/openvla-oft@e4287e9454, README and prismatic/models/action_heads.py. Hub card: moojink/openvla-7b-oft-finetuned-libero-spatial.",
+    "source": "https://arxiv.org/html/2502.19645"
+  },
+  {
+    "sheet": "main",
+    "no": 169,
+    "level": "sections",
+    "note": "Gemini Robotics distinguishes the ER reasoning interface from a VLA with a low-latency action path. Language following is probed by varying the requested target in clutter (25 instructions, five scenes); this is more specific than demonstrating an arbitrary successful pick. No VLA training code is listed for this report.",
+    "locator": "§§2.1–2.3, 3.1–3.4, 4.4; Figs. 16–17. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2503.20020"
+  },
+  {
+    "sheet": "main",
+    "no": 170,
+    "level": "sections",
+    "note": "GO-1 is the policy inside the platform paper: a multiview latent planner proposes codes and a diffusion expert turns conditions into actions. The scaling experiment varies 9.2k to 1M trajectories; the verified-versus-unverified wipe experiment uses RDT, not GO-1. The card points to the external source implementing conditional sampling.",
+    "locator": "AgiBot World Colosseo §§IV-A/C, V-C/E; HF config.json; OpenDriveLab/AgiBot-World@98f136ea6b go1/internvl/model/go1/modeling_go1.py. Hub card: agibot-world/GO-1.",
+    "source": "https://arxiv.org/html/2503.06669"
+  },
+  {
+    "sheet": "main",
+    "no": 171,
+    "level": "sections",
+    "note": "GR00T N1's action head conditions flow integration on VLM features and embodiment-specific state. With 100 demos per simulation task, the table reports 50% on GR-1 versus 32.7% for Diffusion Policy. This is post-training; the original 2B paper and N1 code tag must not be identified with today's N1.7 default checkout.",
+    "locator": "§§2.1–2.3, 4.2–4.4; Fig. 3, Tables 2–3; legacy n1-release. Code: NVIDIA/Isaac-GR00T@755876a9af, README and gr00t/model/action_head/flow_matching_action_head.py. Hub card: nvidia/GR00T-N1-2B.",
+    "source": "https://arxiv.org/html/2503.14734"
+  },
+  {
+    "sheet": "main",
+    "no": 172,
+    "level": "sections",
+    "note": "π0.5 mixes high-level subtask prediction, discrete action training and continuous action generation. The home study separates removing high-level inference from removing training data about subtasks. The openpi branch distinguishes pi05 conditioning in the shared Pi0 class; the LeRobot card explicitly covers only the flow head, not the entire study.",
+    "locator": "§§IV-A/D, V-A/E; Fig. 4. Code: Physical-Intelligence/openpi@215abfb217, README and src/openpi/models/pi0.py. Hub card: lerobot/pi05_base.",
+    "source": "https://arxiv.org/html/2504.16054"
+  },
+  {
+    "sheet": "main",
+    "no": 173,
+    "level": "sections",
+    "note": "GraspVLA predicts a target box before continuous grasp actions so Internet grounding labels and synthetic trajectories can supervise different parts. It does much better than AnyGrasp on the transparent-object subset but runs at 5 versus 37 Hz in Table 3. This is evidence about grasping, not general multi-stage manipulation.",
+    "locator": "§§3–4, 5.1–5.3, 7; Fig. 3, Table 3. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2505.03233"
+  },
+  {
+    "sheet": "main",
+    "no": 174,
+    "level": "sections",
+    "note": "UniVLA learns quantized latent actions from frame pairs with language to separate task-related change from background motion. The code returns latent tokens plus visual features; embodiment-specific decoding still needs adaptation. The paper includes RGB-only Room2Room navigation in addition to manipulation, not a single universal success metric.",
+    "locator": "§§III-A/C, IV-A.1–2; latent decoupling and decoding. Code: OpenDriveLab/UniVLA@0ab9e9dd30, README and prismatic/extern/hf/modeling_prismatic.py. Hub card: qwbu/univla-7b.",
+    "source": "https://arxiv.org/html/2505.06111"
+  },
+  {
+    "sheet": "main",
+    "no": 175,
+    "level": "sections",
+    "note": "SmolVLA decouples predicting a chunk from consuming its actions. Refreshing predictions more frequently improves success in the reported ablation; executing a complete chunk economizes compute at the price of stale observations. The LeRobot tree contains many policies: the relevant module implements VLAFlowMatching.",
+    "locator": "§§3.1–3.3, 4; Tables 2, 6, 13. Code: huggingface/lerobot@c2a086e24f, README and src/lerobot/policies/smolvla/modeling_smolvla.py. Hub card: lerobot/smolvla_base.",
+    "source": "https://arxiv.org/html/2506.01844"
+  },
+  {
+    "sheet": "main",
+    "no": 176,
+    "level": "sections",
+    "note": "Being-H0 aligns hand trajectories from different camera setups and learns wrist/finger motion codes. Its inference script asks for a motion sequence and uses separate codebooks. The one-second hand-motion evaluation distinguishes valid sequence format from retrieval alignment; neither alone measures success of a physical dexterous-hand grasp.",
+    "locator": "§§4.1–4.3, 6.2; Table 2. Code: BeingBeyond/Being-H0@ae92e46f67, README and beingvla/inference/vla_internvl_inference.py. Hub card: BeingBeyond/Being-H0-8B-2508.",
+    "source": "https://arxiv.org/html/2507.15597"
+  },
+  {
+    "sheet": "main",
+    "no": 177,
+    "level": "sections",
+    "note": "GR-3 uses robot demonstrations and vision-language supervision, then tests adaptation from VR-recorded human hand trajectories. The 1/5/10-shot experiment separates identifying the requested object from completing the pick. The ByteMini table-bussing comparison also distinguishes a single long command from a sequence of prompted subtasks.",
+    "locator": "§§2, 3.3, 4–5.1; Figs. 7–8. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2507.15493"
+  },
+  {
+    "sheet": "main",
+    "no": 178,
+    "level": "sections",
+    "note": "G0's second pretraining stage learns a continuous action expert on the Galaxea embodiment. With 20 fine-tuning trajectories per task, table bussing and microwave operation benefit from that stage, whereas the first stage alone shows no clear gain. Current main is G0.5; the historical G0 implementation and G0 card are the relevant artifacts.",
+    "locator": "§§4.1–4.5, 5.1–5.3; Figs. 9–10; pre-G0Plus revision. Code: OpenGalaxea/GalaxeaVLA@2cec5c9dc5, README and vla/model/g0/galaxeazero.py. Hub card: OpenGalaxea/G0-VLA.",
+    "source": "https://arxiv.org/html/2509.00576"
+  },
+  {
+    "sheet": "main",
+    "no": 179,
+    "level": "sections",
+    "note": "FLOWER shares modulation weights across layers while conditioning the flow network on action type and time. In one Franka kitchen, 20 tasks × five randomized starts yielded 61% mean success versus 31% for OpenVLA. These numbers describe the same local evaluation, not a 30-point gain across robots.",
+    "locator": "§§3.2–3.4, 4.1–4.3, 6; Fig. 6. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2509.04996"
+  },
+  {
+    "sheet": "main",
+    "no": 180,
+    "level": "sections",
+    "note": "VLA-Adapter combines raw backbone features, action queries and proprioception through gated attention. On LIBERO-Long the bridge helps the smallest backbone much more than an already robot-pretrained OpenVLA backbone. The linked HF URL is the organization, not a checkpoint identifier; the GitHub tree also contains a later Pro head.",
+    "locator": "§§3.2–3.4, 4.1; Table 2. Code: OpenHelix-Team/VLA-Adapter@23fa0c9c15, README and prismatic/models/action_heads.py. Hub organization page: VLA-Adapter.",
+    "source": "https://arxiv.org/html/2509.09372"
+  },
+  {
+    "sheet": "main",
+    "no": 181,
+    "level": "sections",
+    "note": "WALL-OSS tests whether generating a subtask from the present scene helps choose subsequent actions in long tasks, even with sparse subtask annotations. The external mixin exposes distinct discrete and flow generation routes. The linked checkpoint is specifically the flow release, not evidence for all output variants.",
+    "locator": "§§3–4, 5.2.3–5.2.6; HF wall-oss-flow config; X-Square-Robot/wall-x@ce2a1ae31d wall_x/model/qact/qwen2_5/inference_mixin.py. Hub card: x-square-robot/wall-oss-flow.",
+    "source": "https://arxiv.org/html/2509.11766"
+  },
+  {
+    "sheet": "main",
+    "no": 182,
+    "level": "sections",
+    "note": "Gemini Robotics 1.5 is the actor in the shared report (#149 is the ER orchestrator). The thinking-on/off comparison measures progress on multi-step tasks; a trace shown on an Apollo rollout illustrates sequencing but is not an independent test of the ER tool caller or proof of causal faithfulness.",
+    "locator": "Joint 1.5 report §§2.1, 3.1–3.3; Figs. 6–7. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2510.03342"
+  },
+  {
+    "sheet": "main",
+    "no": 183,
+    "level": "sections",
+    "note": "InternVLA-M1 trains spatial grounding before jointly optimizing the VLM and action expert. The clutter test separates novel objects, positions and backgrounds from familiar ones. The deployment server needs a concrete checkpoint; the Hub card says its weights were pretrained on System 2 data, not that every task-specific policy is included.",
+    "locator": "§§2.1–2.2, 3.1–3.3, 4.2.1–4.2.3; Figs. 7–9. Code: InternRobotics/InternVLA-M1@7f42cf279a, README and deployment/model_server/server_policy_M1.py. Hub card: InternRobotics/InternVLA-M1.",
+    "source": "https://arxiv.org/html/2510.13778"
+  },
+  {
+    "sheet": "main",
+    "no": 184,
+    "level": "sections",
+    "note": "X-VLA conditions shared action computation on learned domain prompts rather than requiring one output head per embodiment. The released generation interface takes a domain_id alongside observations; choosing the right domain remains part of deployment. The adaptation suite spans simulated and physical tasks, not zero-shot control without an embodiment identifier.",
+    "locator": "§§3–4, 5.1–5.3; Fig. 4; HF modeling_xvla.py, generate_actions. Hub card: 2toINF/X-VLA-Pt.",
+    "source": "https://arxiv.org/html/2510.10274"
+  },
+  {
+    "sheet": "main",
+    "no": 185,
+    "level": "repo",
+    "note": "GEN-0's scaling plots answer two different questions: next-action prediction error for withheld trajectories and closed-loop success after task-specific updates (including a 5.6-hour regime). Evidence for a model-size threshold is conditional on the vendor's data mix. Harmonic Reasoning is described, not supplied as an inspectable implementation.",
+    "locator": "Generalist GEN-0 release: Surpassing the Intelligence Threshold; Scaling Laws for Robotics, Figs. 1–3. No code or weight URL in this row.",
+    "source": "https://generalistai.com/blog/gen-0"
+  },
+  {
+    "sheet": "main",
+    "no": 186,
+    "level": "sections",
+    "note": "DynamicVLA starts the next inference while acting; when a chunk arrives it discards actions whose intended execution time has already passed. DOM tests moving targets; injecting extra latency tests this scheduling choice directly. It cannot recover observations newer than the one that conditioned the chunk.",
+    "locator": "§§3.2–3.4, 5.2–5.5; Table 1 and latency ablation Table 7. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2601.22153"
+  },
+  {
+    "sheet": "main",
+    "no": 187,
+    "level": "repo",
+    "note": "Helix 02 adds a learned whole-body layer beneath the visuomotor policy: S1 issues targets at 200 Hz and S0 tracks them at 1 kHz using body state. The four-minute dishwasher sequence demonstrates uninterrupted execution on one run; it gives no denominator for repeated attempts.",
+    "locator": "Figure Helix 02 release: System 0 architecture; Video 1, kitchen sequence. No code or weight URL in this row.",
+    "source": "https://www.figure.ai/news/helix-02"
+  },
+  {
+    "sheet": "main",
+    "no": 188,
+    "level": "sections",
+    "note": "InternVLA-A1 trains a future-frame latent objective alongside action prediction. On moving-target express sorting the 2B model scored 70.0% versus 53.3% for π0.5. The A1 code can return action chunks without decoding a display image. Main now documents A1.5; its claim about discarding its video branch is not evidence about A1.",
+    "locator": "§§3.1–3.4, 5.2–5.5; Fig. 6; InternVLA-A1 branch. Code: InternRobotics/InternVLA-A-series@6c22d0d102, README and src/lerobot/policies/InternVLA_A1_3B/modeling_internvla_a1.py. Hub card: InternRobotics/InternVLA-A1-3B.",
+    "source": "https://arxiv.org/html/2601.02456"
+  },
+  {
+    "sheet": "main",
+    "no": 189,
+    "level": "sections",
+    "note": "LingBot-VLA attends jointly to image/text features, proprioception and an action chunk. GM-100 reports both terminal success and stage progress. Depth helping on average hides a counterexample: AgiBot G1 success falls from 12.82% to 11.98% while progress rises. The deployment wrapper slices actions according to execution length.",
+    "locator": "§§4.1–4.2, 5.1–5.2; Table 1. Code: Robbyant/lingbot-vla@4eb34b7693, README and deploy/lingbot_vla_policy.py. Hub card: robbyant/lingbot-vla-4b.",
+    "source": "https://arxiv.org/html/2601.18692"
+  },
+  {
+    "sheet": "main",
+    "no": 190,
+    "level": "repo",
+    "note": "GEN-1's selected repetitive packaging/folding evaluations average 99% versus 64% for the earlier fine-tuned model. The article distinguishes streaks without intervention from per-trial rates and acknowledges tasks below those levels. Its updated Harmonic Reasoning inference and private training mix are not reconstructible from this comparison alone.",
+    "locator": "Generalist GEN-1 release: Reliability, Speed, Limitations; Figs. 2–3. No code or weight URL in this row.",
+    "source": "https://generalistai.com/blog/gen-1"
+  },
+  {
+    "sheet": "main",
+    "no": 191,
+    "level": "repo",
+    "note": "GO-2's slow module emits structured action intents; its fast module uses fresh observations to refine commands. The vendor quotes 98.5% on LIBERO versus 86.6% on LIBERO-Plus under disturbances. Neither is the separate sim-to-real number. The post is a product description, not the GO-1 paper or an implementation of the claimed ACL component.",
+    "locator": "AGIBOT release: Action Chain-of-Thought; Asynchronous Dual-System; Performance. No code or weight URL in this row.",
+    "source": "https://agibot.com/news/newsroom/the-unity-of-reasoning-and-action-agibot-56"
+  },
+  {
+    "sheet": "main",
+    "no": 192,
+    "level": "repo",
+    "note": "The N1.7 release pairs Cosmos-Reason2-2B with a state-conditioned action DiT. The cited EgoScale human-video scaling experiment is supporting research, not a benchmark against every VLA. The post describes early access; today's repo/card describe the GA release. The GA get_action path confirms the backbone/head split, not binary equivalence with early access.",
+    "locator": "NVIDIA release: What is GR00T N1.7?; Training on Human EgoCentric Video Data; HF N1.7-3B card. Code: NVIDIA/Isaac-GR00T@708617f571, README and gr00t/model/gr00t_n1d7/gr00t_n1d7.py. Hub card: nvidia/GR00T-N1.7-3B.",
+    "source": "https://huggingface.co/blog/nvidia/gr00t-n1-7"
+  },
+  {
+    "sheet": "main",
+    "no": 193,
+    "level": "sections",
+    "note": "π0.7 can be steered with control mode, episode metadata, text subtasks and optionally updated subgoal images. Human coaching and learned high-level commands are different conditions. The cross-embodiment test withholds a task on the target robot; it does not require that the target embodiment itself was unseen in all training.",
+    "locator": "§§V–VII, IX-A/C; Fig. 12. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2604.15483"
+  },
+  {
+    "sheet": "main",
+    "no": 194,
+    "level": "sections",
+    "note": "Qwen-VLA pads/masks a common action tensor while retaining dataset-specific units and control conventions via prompting and normalization. PPO rollouts for the reported refinement came only from SimplerEnv: Simpler success rises from 70.8 to 73.7 after SFT, but RoboTwin-E is essentially flat/slightly lower. Joint training is not universal positive transfer.",
+    "locator": "§§2.3–2.5, 4.2, 5.1–5.2.3; Table 11. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2605.30280"
+  },
+  {
+    "sheet": "main",
+    "no": 195,
+    "level": "repo",
+    "note": "Gemini Robotics 2 shows the same checkpoint on two Apollo 2 hand variants and Franka Duo, with bars aggregated by skill. ER 2 orchestrates; Robotics 2 controls motion; On-Device 2 is a separate local VLA. The linked safety study concerns orchestration/stopping, not publication of the action model or independent replication of the dexterity suite.",
+    "locator": "DeepMind release: Humanoids in motion; Bringing advanced dexterity to hands and grippers; On-device models. No code or weight URL in this row.",
+    "source": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+  },
+  {
+    "sheet": "main",
+    "no": 196,
+    "level": "sections",
+    "note": "RoboTTT learns how to update fast weights from trajectory context; it does not retrain the whole policy from externally supplied task rewards at each test step. On three two-arm assembly tasks, mean completion score was 79% versus 42% with single-frame N1.7 and 56% with recurrent GDN. Completion score is not the fraction of perfect assemblies.",
+    "locator": "§§3.1–3.4, 4; Table 1, Fig. 7. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2607.15275"
+  },
+  {
+    "sheet": "main",
+    "no": 197,
+    "level": "sections",
+    "note": "Xiaomi-Robotics-1 adapts from UMI state-transition descriptions to imperative instructions and robot-specific controls. The 100k-hour headline is not all robot teleoperation; the model-size ablation initializes from 20k hours. Four novel downstream tasks use fine-tuning. The 5B Hub artifact is a post-trained state dict requiring separate backbone/config code.",
+    "locator": "§§2.2.1–2.2.2, 3.1–3.4; Figs. 5, 8–9. Code: XiaomiRobotics/Xiaomi-Robotics-1@0dd7aef8dc, README and xr1/mibot/models/VLA/XR1.py. Hub card: XiaomiRobotics/Xiaomi-Robotics-1-5B.",
+    "source": "https://arxiv.org/html/2607.15330"
+  },
+  {
+    "sheet": "main",
+    "no": 198,
+    "level": "repo",
+    "note": "Helix 2.5's three household behaviors were trained before visiting 30 held-out homes. In the blinded comparison the Index-pretrained policy achieved 56% full-task success versus 9% without Index; partial completion receives no credit and safety interventions fail the trial. Zero-shot here concerns the homes, not the task specifications.",
+    "locator": "Figure release: Fig. 1; blind evaluation and appendix grading criteria. No code or weight URL in this row.",
+    "source": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+  },
+  {
+    "sheet": "main",
+    "no": 199,
+    "level": "repo",
+    "note": "Gemini Robotics 2.5 controls the hands and arms in the reported automotive kitting pilot, with ER tracking workflow. Its 96% pilot success is not the mean across the 200 distinct evaluation tasks. Argon-generated practice scenes are training/evaluation aids, not a demonstrated mandatory simulation step at each real action.",
+    "locator": "DeepMind release: Expanding task breadth; Apollo kitting pilot; Advancing steerability; Accelerating robotics with Gemini 4 Argon. No code or weight URL in this row.",
+    "source": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+  },
+  {
+    "sheet": "main",
+    "no": 200,
+    "level": "sections",
+    "note": "ScaleVLA freezes a 552B MoE backbone but stops at encoder features; a flow-trained head produces actions, not a textual reasoning chain. RoboCasa timing uses four H200s for the large model versus one per smaller model. Charger insertion scored 9/10 in-domain and 8/15 OOD; those small counts qualify the scaling result.",
+    "locator": "§§3.1–3.2, 4.2, 4.4–4.5; Fig. 4, App. B. No code or weight URL in this row.",
+    "source": "https://arxiv.org/html/2611.21607"
+  }
+]

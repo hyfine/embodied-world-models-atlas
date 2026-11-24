@@ -1,0 +1,32 @@
+[
+  {
+    "code": "EAI-1",
+    "representative": "ReKep",
+    "source": "https://arxiv.org/pdf/2409.01652v2",
+    "locator": "§§3.1–3.4, Fig. 2; §4.1, Tables 1–2; Appendix A.1",
+    "stages": [
+      ["从 RGB-D 场景提出三维关键点，在图像上编号", "Propose 3-D keypoints from the RGB-D scene and mark their IDs on the image"],
+      ["指令与标点图输入 VLM，生成各阶段的终点约束和路径约束", "Condition the VLM on the instruction and marked image to write stage-end and path constraints"],
+      ["读取当前点位和机械臂状态，检查是否需回退阶段", "Read current keypoints and arm state; backtrack a stage if a path constraint is violated"],
+      ["子目标求解器给出末端目标位姿，路径求解器给出到达它的运动", "The subgoal solver chooses an end-effector pose; the path solver finds motions to reach it"],
+      ["执行路径的一小段，由底层控制器驱动机械臂", "Execute a prefix of the path through the low-level arm controller"]
+    ],
+    "feedback": ["动作后更新点位并重新求解，不是每次控制都重新询问 VLM。公开模拟器直接提供跟踪与碰撞几何，真机需另行感知。", "After motion, update keypoints and solve again; no fresh VLM query is required at each control step. The public simulator supplies tracking and collision geometry that physical robots must estimate."],
+    "test": ["表 1：七项任务各十次，自动约束成功 31/70，人工约束 48/70。表 2 的受扰三项任务不是同一个分母；自动方案成功 8/30。", "Table 1: automatic constraints succeeded in 31/70 trials across seven tasks; human annotations in 48/70. Table 2 tests a different, disturbed three-task subset: 8/30 for automatic constraints."]
+  },
+  {
+    "code": "EAI-2",
+    "representative": "OpenVLA",
+    "source": "https://arxiv.org/pdf/2406.09246v3",
+    "locator": "§§3.1–3.3, Fig. 2; §5.1, Figs. 3–4; Appendix B.1–B.2, Tables 4 and 6",
+    "stages": [
+      ["读取当前相机图像与自然语言任务", "Read the current camera image and natural-language instruction"],
+      ["融合 DINOv2 与 SigLIP 的图块特征，映射至文本嵌入空间", "Concatenate DINOv2 and SigLIP patch features and project them into the language embedding space"],
+      ["Llama 2 以视觉与指令为条件，逐维自回归生成动作词元", "Condition Llama 2 on vision and the instruction; autoregressively generate action-coordinate tokens"],
+      ["解码至区间中心，按目标数据集的分位数还原动作尺度", "Decode to bin centers and restore action scale with target-dataset quantiles"],
+      ["机器人执行一次末端运动与夹爪指令，再读取新图像", "Execute one end-effector and gripper command, then acquire the next image"]
+    ],
+    "feedback": ["示范用于离线训练；Bridge 运行脚本在动作之间刷新观测。基础策略每次只看一张图，不预测未来图像，也不在线更新权重。", "Demonstrations train the policy offline. The Bridge loop refreshes observations between actions; the base model takes a single image per query, does not predict future images and does not update weights online."],
+    "test": ["BridgeData V2 每策略 170 次，平均得分 70.6%，部分任务可获半分；RT-2-X 为 50.6%，但在语义泛化子集上更好。不能外推到任意新本体。", "BridgeData V2: mean score 70.6% in 170 trials per policy, with partial credit on some tasks, versus 50.6% for RT-2-X. RT-2-X did better on the semantic subset; the result does not establish transfer to arbitrary new embodiments."]
+  }
+]

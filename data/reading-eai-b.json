@@ -1,0 +1,538 @@
+[
+  {
+    "sheet": "main",
+    "no": 201,
+    "level": "sections",
+    "note": "不直接回归动作：给观测和候选动作打能量分，推理时找低谷。Fig. 5 分开列出状态、像素与实机任务，不能只凭 D4RL 得分推断实机能力。 An energy model can keep two plausible actions apart instead of averaging them. Test-time action search is part of the policy; Fig. 5 compares it with explicit regression across six domains.",
+    "locator": "§§2, 4; Fig. 5; App. B",
+    "source": "https://arxiv.org/html/2109.00137"
+  },
+  {
+    "sheet": "main",
+    "no": 202,
+    "level": "sections",
+    "note": "语言或人类示范视频提供任务向量；FiLM 调制单目 ResNet，再回归位姿增量和夹爪角。新任务测试与训练任务上的人工接管消融不是同一组实验。 BC-Z separates task specification from motor decoding. Compare held-out commands in Table 2 with the manual versus HG-DAgger supervision ablation, which uses training tasks.",
+    "locator": "§§5.1–5.3, 6.2–6.3; Fig. 3; Table 2",
+    "source": "https://arxiv.org/html/2202.02005"
+  },
+  {
+    "sheet": "main",
+    "no": 203,
+    "level": "sections",
+    "note": "BeT 用 k-means 中心加连续残差；VQ-BeT 改为先学习动作的多级残差码，再预测码并解码。两篇论文分别测模式覆盖、目标条件行为，不能把后者成绩归给前者。 BeT classifies an action bin and corrects its offset. VQ-BeT learns a residual quantizer before fitting the policy; its goal-conditioned comparison is a different experiment.",
+    "locator": "BeT §§2–3, Fig. 3; VQ-BeT §§3–4, Fig. 2, Table 1",
+    "source": "https://arxiv.org/html/2206.11251"
+  },
+  {
+    "sheet": "main",
+    "no": 204,
+    "level": "sections",
+    "note": "多视 RGB-D 拼成体素，Perceiver 把语言与体素块压入 latent，再读出下一关键帧平移体素、离散旋转和夹爪状态；关键帧之间由运动规划器执行。 The action is detected in 3-D, not emitted as motor torques. Table 1 scores binary completion over 25 episodes per RLBench task for 10- and 100-demo training regimes.",
+    "locator": "§§3, 4.2; Fig. 2; Table 1",
+    "source": "https://arxiv.org/html/2209.05451"
+  },
+  {
+    "sheet": "main",
+    "no": 205,
+    "level": "sections",
+    "note": "以观测历史为条件，对整段动作而非未来图像去噪；只执行一段前缀后重新观察。Push-T 中绕左或绕右都可行，关键是单次 rollout 内不要换边。 Fig. 3 tests commitment to a mode, not just per-step prediction error. The §5.2 footnote reports only 22 environment initializations for Robomimic, not the nominal 50, due to an evaluation-code bug.",
+    "locator": "§§2–4, 5.2, 5.4; Figs. 2–3",
+    "source": "https://arxiv.org/html/2303.04137"
+  },
+  {
+    "sheet": "main",
+    "no": 206,
+    "level": "sections",
+    "note": "训练时 CVAE 编码示范动作风格，测试时用先验中心；Transformer 输出双臂关节目标块。重叠预测按时间加权，不是执行完整旧块。 Fig. 7 separates the value of chunking from temporal ensembling. Table I compares two simulated and two real tasks, not all six physical tasks on identical footing.",
+    "locator": "§§IV-A–C, V-C, VI-A; Figs. 3, 7",
+    "source": "https://arxiv.org/html/2304.13705"
+  },
+  {
+    "sheet": "main",
+    "no": 207,
+    "level": "sections",
+    "note": "把点云从多个虚拟视角重投影，由各平面的热图确定三维关键点。RVT-2 在粗定位后放大局部再次渲染；18 项 RLBench 平均成功率与毫米级实机插入测试须分开读。 RVT avoids a dense 3-D network; RVT-2 spends its second pass on local spatial resolution. The shared repository has distinct training paths for the two versions.",
+    "locator": "RVT §3, Table 1; RVT-2 §III, Fig. 2, Table I",
+    "source": "https://arxiv.org/html/2306.14896"
+  },
+  {
+    "sheet": "main",
+    "no": 208,
+    "level": "sections",
+    "note": "遥操作同步记录双臂与移动底盘；将静态 ALOHA 片段混入移动任务的行为克隆，而非从静态片段学习底盘驾驶。七项实机任务按阶段记分。 The static/mobile data mixture changes the supervision for shared arm skills. Compare the same mobile ACT task with and without co-training; success on an early subtask need not finish the run.",
+    "locator": "§§4, 6.1; Fig. 2; Table 1",
+    "source": "https://arxiv.org/html/2401.02117"
+  },
+  {
+    "sheet": "main",
+    "no": 209,
+    "level": "sections",
+    "note": "把带位置的 RGB-D 特征与带噪末端轨迹在三维空间交互，再预测去噪方向。RLBench 比的是下一个关键位姿，BiRRT 补路径，不是整条轨迹的无规划控制。 A 3-D scene conditions trajectory diffusion. On RLBench the planner is held in common; separate multi-view and single-view results rather than attributing all gains to diffusion.",
+    "locator": "§3, Fig. 2; §§4.1–4.2; Tables 1–2",
+    "source": "https://arxiv.org/html/2402.10885"
+  },
+  {
+    "sheet": "main",
+    "no": 210,
+    "level": "sections",
+    "note": "换低摩擦导轨、改重力补偿与相机布置。Fig. 4 测的是操作者打开主夹爪所需的力（14.68→0.84 N），不是自主策略成功率。 ALOHA 2 changes the demonstrator's mechanical interface and supplies a simulation model. The workbook points to the ALOHA root; the project directs builders to the aloha2 subfolder.",
+    "locator": "§§2–4; Figs. 2–4",
+    "source": "https://arxiv.org/html/2405.02292"
+  },
+  {
+    "sheet": "main",
+    "no": 211,
+    "level": "sections",
+    "note": "手持宽角腕相机采动作；执行时把位姿、夹爪开度对齐到图像时间戳，并跳过过期指令。投掷按物体计，杯子摆放按回合计。 UMI predicts a trajectory in one current end-effector frame. Latency compensation raised correctly sorted throws from 69/120 to 105/120 objects; it cannot make an unreachable demonstration feasible.",
+    "locator": "§III, Figs. 5–6; §§V–VI, Figs. 8–9; §VIII",
+    "source": "https://arxiv.org/html/2402.10329"
+  },
+  {
+    "sheet": "main",
+    "no": 212,
+    "level": "sections",
+    "note": "胸前深度与追踪相机记录双手；把指尖经 IK 对齐 LEAP 手并将点云转入机器人坐标。Table I 单看不用机器人数据的设置，高难度双手任务另有纠正示范。 Retargeting changes both the observed scene and the fingertip action label. The single-hand comparison does not imply that human-only recordings solve all the bimanual tasks.",
+    "locator": "§§III–IV, V-B; Figs. 2–4; Table I",
+    "source": "https://arxiv.org/html/2403.07788"
+  },
+  {
+    "sheet": "main",
+    "no": 213,
+    "level": "sections",
+    "note": "稀疏点云经小型 MLP 与本体状态一起条件化动作扩散。Reach 的五示范空间可视化只是诊断；仿真总表按每种子的最高五次评估取均值。 DP3 tests the 3-D input inductive bias with few demonstrations. Its checkpoint selection and mixture of scripted, RL and human experts matter when comparing success rates.",
+    "locator": "§III; §§IV-A, V; Figs. 2–3",
+    "source": "https://arxiv.org/html/2403.03954"
+  },
+  {
+    "sheet": "main",
+    "no": 214,
+    "level": "sections",
+    "note": "从已训练的扩散教师蒸馏一致性学生，用少数网络调用预测整段动作。Push-T 得分是目标覆盖率，Robomimic 才是任务成功率，不应把两者都写成成功率。 Table I pairs task metrics with number of function evaluations. Faster denoising does not eliminate sensing or actuator latency; distillation still needs a trained teacher.",
+    "locator": "§III; §IV-B, Table I; §V",
+    "source": "https://arxiv.org/html/2405.07503"
+  },
+  {
+    "sheet": "main",
+    "no": 215,
+    "level": "sections",
+    "note": "将腕相机坐标下的扩散轨迹转入任务空间，由仿真训练的全身控制器同步驱动腿与臂。投掷测试开始时球已交给机器人，测的是抛掷而非寻球抓球。 UMI supplies a desired end-effector trajectory, not base velocities. The study measures controller tracking/survival in simulation separately from real-world task success.",
+    "locator": "§§3.1–3.3, 4.1–4.4; Fig. 3; App. 10.1",
+    "source": "https://arxiv.org/html/2407.10353"
+  },
+  {
+    "sheet": "main",
+    "no": 216,
+    "level": "sections",
+    "note": "用 Aria 眼镜追踪头手，对齐人手和机械臂的动作坐标与视觉外观，再联合训练。比较叠衣、收纳等任务的同域表现与新场景表现。 The benefit tested is co-training given robot demonstrations, not a robot-free policy. Table I is useful for seeing which measurements are actually shared across the two bodies.",
+    "locator": "§III-B–C; §IV; Fig. 2; Table I",
+    "source": "https://arxiv.org/html/2410.24221"
+  },
+  {
+    "sheet": "main",
+    "no": 217,
+    "level": "sections",
+    "note": "手部网格经深度点云 ICP 校正，以拇指和食指定位夹爪；擦除人手并渲染机器人，得到成对的观测和动作。Franka、Kinova 实验仍依赖手姿估计质量。 Phantom synthesizes robot-looking training views, not robot rollouts. Occluded fingertips can corrupt both the action label and the image used to learn it.",
+    "locator": "§§3.2–3.3, 4, 6; Figs. 2–3",
+    "source": "https://arxiv.org/html/2503.00779"
+  },
+  {
+    "sheet": "main",
+    "no": 218,
+    "level": "sections",
+    "note": "慢扩散网络输出压缩动作块，快 GRU 解码器在块内读取即时触觉/力反馈。把触觉仅拼在慢网络输入端不是等价消融。 The fast decoder can change the next command before a new visual chunk is ready. Contact-task comparisons distinguish feedback rate from simply including another sensor.",
+    "locator": "§IV, Fig. 6; §V-B, Tables II–IV",
+    "source": "https://arxiv.org/html/2503.02881"
+  },
+  {
+    "sheet": "main",
+    "no": 219,
+    "level": "sections",
+    "note": "外骨骼机构使编码器关节到指尖的映射接近目标手；图像修补降低外观差异。两类手各自的机构不同，20 回合的分阶段累计成绩不是通用手部零样本转移。 Finger encoders measure compatible commands rather than inferring every joint from video. The matched-start ablations vary finger representation, tactile feedback and rendering.",
+    "locator": "§3.1, Figs. 2–3; §5, Table 1",
+    "source": "https://arxiv.org/html/2505.21864"
+  },
+  {
+    "sheet": "main",
+    "no": 220,
+    "level": "sections",
+    "note": "把示范动作路径本身视为流路径，学习沿路径的速度场。从上一动作（或实测状态）续积分，不是每轮从噪声重生成一整块。 The action/state variants differ in where integration restarts. Push-T and RoboMimic compare latency and imitation scores; a measured state can only anchor the state-tracking variant.",
+    "locator": "§§3–6; Tables 2–3; App. D",
+    "source": "https://arxiv.org/html/2505.21851"
+  },
+  {
+    "sheet": "main",
+    "no": 221,
+    "level": "sections",
+    "note": "用第一视角历史和语言预测腕姿与 MANO 手参数，再用机器人示范后训练。原文零样本直接控制在所测任务上为 0%，预训练收益不能写成免适配。 The benchmark reports both completed subtask fraction and full success. Human-hand prediction is pretraining supervision, not by itself a calibrated humanoid policy.",
+    "locator": "Figs. 2–3; §5.2, Tables 1–2",
+    "source": "https://arxiv.org/html/2507.12440"
+  },
+  {
+    "sheet": "main",
+    "no": 222,
+    "level": "sections",
+    "note": "π0.5 同时学习子任务和相对末端动作；实验将新概念的人类数据与邻近任务的机器人数据各占一半，改变机器人预训练多样性再测转移。 A robot-only control helps distinguish prior competence from human-to-robot transfer. This is not action-free internet video or learning manipulation from human data alone.",
+    "locator": "Figs. 3–4; §V-A, V-D–F; App. B (Results Analysis)",
+    "source": "https://arxiv.org/html/2512.22414"
+  },
+  {
+    "sheet": "main",
+    "no": 223,
+    "level": "sections",
+    "note": "把异构触元投到共同球面，以可见时空片段预测遮挡位置的潜表示。下游策略读冻结触觉 token；Table 2 在两类手上每任务 20 次，另有仿真 RL，勿把探针准确率当实机成功率。 LingBot-Touch is a tactile encoder, not the motor policy. Separate frozen force/contact probes from real-hand control and simulated RL. The manuscript and the repository use different titles for the same arXiv ID.",
+    "locator": "Figs. 3–5; Tables 1–3 (manuscript text rendering)",
+    "source": "https://arxiv.org/abs/2611.12806"
+  },
+  {
+    "sheet": "main",
+    "no": 224,
+    "level": "sections",
+    "note": "把人类演示、语言与多视角、力觉机器人序列按任务配对并校准。实验证据是 ACT 在新布置下少样本微调抓方块放秤上，不是标题所指的通用单次学习已经实现。 RH20T enables several possible one-shot pairings, but §IV tests transfer with subsets of 75 target demonstrations. Sensor synchronization and the fine-tuning protocol are separate contributions.",
+    "locator": "§III, Figs. 4, 6; §§IV–V (manuscript text rendering)",
+    "source": "https://arxiv.org/abs/2307.00595"
+  },
+  {
+    "sheet": "main",
+    "no": 225,
+    "level": "sections",
+    "note": "同一 WidowX 接口下改变环境、物体与外部相机位姿；语言标签和未来目标图像支持不同的离线学习目标。新实验室复用测试不等于换本体测试。 BridgeData V2 tests whether offline data can train language- and goal-conditioned policies and transfer between installations. Different views do not mean different robot dynamics.",
+    "locator": "§§3.1–3.3, 4, 5.1–5.2; Fig. 2",
+    "source": "https://arxiv.org/html/2308.12952"
+  },
+  {
+    "sheet": "main",
+    "no": 226,
+    "level": "sections",
+    "note": "统一 RLDS 轨迹容器后还需选相机、归一化动作并适配控制接口；RT-X 子集粗略对齐末端七维。比较同本体和跨本体技能时须分清 RT-1-X 与有网页预训练的 RT-2-X。 A common storage schema does not guarantee a common physical meaning for a rotation or gripper command. The dataset collection, the training mixtures and the two model families are distinct releases.",
+    "locator": "§III-A, §§IV-A–C, V-A–C; Fig. 2",
+    "source": "https://arxiv.org/html/2310.08864"
+  },
+  {
+    "sheet": "main",
+    "no": 227,
+    "level": "sections",
+    "note": "13 家机构采用相同 Franka 平台在不同实景采集，避免把地点变化与新机械臂混为一谈。Fig. 6 比较任务内训练、混入 DROID、混入 OXE 的扩散策略。 DROID varies scenes, objects and operators while largely holding hardware fixed. Its six-task co-training study is evidence about data coverage, not universal cross-robot transfer.",
+    "locator": "§III-A, §§IV–V-B; Fig. 6",
+    "source": "https://arxiv.org/html/2403.12945"
+  },
+  {
+    "sheet": "main",
+    "no": 228,
+    "level": "sections",
+    "note": "共享 Transformer 的读出 token 条件化小扩散动作头；新传感器可加输入模块，新动作空间可换头。零样本、少量任务示范微调和消融来自不同设置。 Octo's backbone runs once per prediction; the head denoises action chunks. Table I tests adaptation, whereas Fig. 4 tests robots/interfaces represented during pretraining.",
+    "locator": "§III-A–C, Figs. 1–2; §IV, Fig. 4, Tables I–II; App. F",
+    "source": "https://arxiv.org/html/2405.12213"
+  },
+  {
+    "sheet": "main",
+    "no": 229,
+    "level": "sections",
+    "note": "不把飞机和机械臂强行对齐为七维末端动作：不同观测转为 token，按动作空间选读出。与在单本体数据上训练的同结构比较，检验多域训练是否损伤各域。 CrossFormer shares computation while routing different control spaces to different outputs. Matching a specialist is a different claim from controlling an unseen robot without training.",
+    "locator": "§§3.1–3.3, 4.1–4.2; Figs. 2–5",
+    "source": "https://arxiv.org/html/2408.11812"
+  },
+  {
+    "sheet": "main",
+    "no": 230,
+    "level": "sections",
+    "note": "本体专属视觉/本体感觉前端把可变传感器压成固定数量 token，经共享主干和专属动作头解码。预训练图展示验证损失，转移章节才是真正闭环成功率。 HPT's separation of stems, trunk and heads lets a new robot reuse the trunk. A scaling trend in action prediction loss is not by itself a downstream control result.",
+    "locator": "§§3–5; Figs. 2–3, 10",
+    "source": "https://arxiv.org/html/2409.20537"
+  },
+  {
+    "sheet": "main",
+    "no": 231,
+    "level": "sections",
+    "note": "分别改变物体数、场景数、每种组合示范数；固定总量后仍可检验把数据用于扩大覆盖与重复同一设置有何不同。拟合的是这些任务和采集范围内的经验规律。 The controlled variable is the allocation of demonstrations, not just their count. Held-out object/environment curves support diversity in the measured regime, not a universal exponent.",
+    "locator": "§§4.1–4.3; Figs. 2–4; App. G.2",
+    "source": "https://arxiv.org/html/2410.18647"
+  },
+  {
+    "sheet": "main",
+    "no": 232,
+    "level": "sections",
+    "note": "按四种本体规范化采集和标注；测试还记录失败原因。45 项单任务 ACT 的常见失败是定位偏差，不应把 479 个数据任务说成全部实机验证过。 RoboMIND distinguishes corpus coverage from benchmark coverage. The failure taxonomy diagnoses where a task broke rather than treating every incomplete trajectory as the same error.",
+    "locator": "§III; §§V-A, V-F; Figs. 10–11, 15",
+    "source": "https://arxiv.org/html/2412.13877"
+  },
+  {
+    "sheet": "main",
+    "no": 233,
+    "level": "sections",
+    "note": "人参与采集纠错并标注分段；GO-1 用潜动作模型、规划器和动作专家。实机另设物体/位置变化场景，数据平台的规模不是这项评测的分母。 Colosseo is the collection platform and GO-1 a policy tested on it. §V varies pretraining source, scale and quality; the HF Beta release is a named dataset version, not a score.",
+    "locator": "§III-B, Fig. 2; §§IV-A–C, V-A–E",
+    "source": "https://arxiv.org/html/2503.06669"
+  },
+  {
+    "sheet": "main",
+    "no": 234,
+    "level": "sections",
+    "note": "第一视角视频带手部姿态和语言，评估未来手部轨迹时取 K 个样本中离真值最近者。K 越大越可能碰上真值；评测不是单次执行能否抓住物体。 EgoDex benchmarks human motion prediction using best-of-K distance. A lower minimum error need not imply feasible contact or a higher robot rollout success rate.",
+    "locator": "§§3, 4.3, 5; Fig. 2; Table 2",
+    "source": "https://arxiv.org/html/2505.11709"
+  },
+  {
+    "sheet": "main",
+    "no": 235,
+    "level": "sections",
+    "note": "长任务分成子任务。慢 G0-VLM 给指令，快 G0-VLA 把视觉与子任务转成双臂/移动底盘动作块。收桌等任务按阶段打分，不能把部分进度当整项成功。 The dataset, subtask reasoner and motor policy are three artifacts. §§5 and 6 evaluate different systems, while Appendix A.1 spells out the progress rubric.",
+    "locator": "§§3–6; §4.1; App. A.1",
+    "source": "https://arxiv.org/html/2509.00576"
+  },
+  {
+    "sheet": "main",
+    "no": 236,
+    "level": "sections",
+    "note": "把真实机器人收发动作接口、数据集、训练与推理管线分开。论文列硬件及仿真环境，格式文档解释 v3 的视频和表格如何跨回合分片；格式本身不产生动作。 LeRobot is a library. Hardware costs and simulator integration are evidence of access and compatibility, not a controlled comparison in which a “LeRobot policy” beats a baseline.",
+    "locator": "§§3–4; Apps. B–E; Table 1(a)",
+    "source": "https://arxiv.org/html/2602.22818"
+  },
+  {
+    "sheet": "main",
+    "no": 237,
+    "level": "sections",
+    "note": "手持 YUBI 和部署机器人共用夹爪/相机；加入相对锚定动作、阶段预测与本体记忆，推理端平滑阶段并流式解码。十任务各 15 次，不是任意硬件免标定。 AIRoA-0 starts from π0.5 weights; handheld-only describes the authors' collected data, not the history of the backbone. Its public repository is specifically for post-training.",
+    "locator": "§§2.1–2.3, 4.2, 5–6; Figs. 6–7; Table 1",
+    "source": "https://arxiv.org/html/2611.03815"
+  },
+  {
+    "sheet": "main",
+    "no": 238,
+    "level": "sections",
+    "note": "教师在仿真可见地形与接触，学生从本体感觉历史推断迈步所需状态。松动木板和额外 10 kg 负载是不同失配；无相机并不意味着能提前看到台阶。 A temporal student learns a contact-dependent response, not an explicit terrain map. Fig. 3 contrasts controlled step and payload trials with the outdoor demonstrations. The linked release is supplementary material.",
+    "locator": "§4 Materials and Methods; §2 Results, Figs. 2–3",
+    "source": "https://arxiv.org/html/2010.11251"
+  },
+  {
+    "sheet": "main",
+    "no": 239,
+    "level": "sections",
+    "note": "特权物理量训练基础策略；部署时历史适应器约 10 Hz 更新 latent，基础策略以 100 Hz 输出 12 个关节目标，PD 将它们变为力矩。盲控对突然跌落仍有局限。 Removing the adaptation module tests whether recent state/action history matters beyond domain randomization. Table II averages simulated episodes; indoor hardware tests were planned for five trials, with early stopping for severe failures.",
+    "locator": "§III-A–C, Fig. 1; §§IV–V, Fig. 2, Tables I–II",
+    "source": "https://arxiv.org/html/2107.04034"
+  },
+  {
+    "sheet": "main",
+    "no": 240,
+    "level": "sections",
+    "note": "Digit 学生用因果 Transformer 接收本体感觉与过去动作，结合特权教师模仿和强化学习。下坡换小步、卡脚后抬高说明历史可用于反应，不等于显式辨识坡度。 Fig. 8 ablates the architecture under otherwise matched tuning. The field and perturbation trials concern locomotion and command tracking, not full-body object manipulation.",
+    "locator": "Materials and Methods, Fig. 7; Results, Figs. 2, 5–6, 8",
+    "source": "https://arxiv.org/html/2303.03381"
+  },
+  {
+    "sheet": "main",
+    "no": 241,
+    "level": "sections",
+    "note": "先允许穿透等软约束以探索，再恢复硬接触训练各项技能，最后把专用教师蒸馏到深度视觉策略。盲学生在多类障碍上失败，把感知收益与探索收益分开。 Depth is useful before a contact occurs: compare the blind student with the no-soft-dynamics oracle, which removes a training aid instead. Reported obstacle sizes are task-specific.",
+    "locator": "§§3.1–3.3, 4.1–4.2; Fig. 3; Table 2",
+    "source": "https://arxiv.org/html/2309.05665"
+  },
+  {
+    "sheet": "main",
+    "no": 242,
+    "level": "sections",
+    "note": "前者要求上身表达、下身跟速度而非逐关节强追人腿。后者重定向并筛选可跟踪片段，再从特权教师蒸馏全身跟踪。两代目标与评测轨迹不同。 Relaxing lower-body imitation permits balance in ExBody; ExBody2 changes the job to full-body imitation with a filtered reference set. Its repeated-motion evaluation is not the original H1 result.",
+    "locator": "ExBody §III–IV, Fig. 2; ExBody2 §III–IV, Figs. 2–3, Table II",
+    "source": "https://arxiv.org/html/2402.16796"
+  },
+  {
+    "sheet": "main",
+    "no": 243,
+    "level": "sections",
+    "note": "H2O 先拟合 SMPL 到 H1，再用仿真筛掉不可行轨迹；OmniH2O 将全状态教师蒸馏给只读稀疏人体目标的学生。20 条实机站立轨迹的误差不是移动操作成功率。 Fitting body shape and filtering infeasible motions fix different problems. OmniH2O's head/hand interface reduces tracking inputs; keep its tracking benchmark separate from downstream autonomy.",
+    "locator": "H2O §III-B, §VI, Table III; OmniH2O §§3–4, Fig. 3, Table 2",
+    "source": "https://arxiv.org/html/2403.04436"
+  },
+  {
+    "sheet": "main",
+    "no": 244,
+    "level": "sections",
+    "note": "先由单目人体姿态驱动低层 shadowing 策略来采集机器人示范，再训练读双目画面、预测动作的 HIT。人控制时的表现不能算作自主执行。 Table 5 isolates the imitation stage with monocular, ACT and open-loop replay baselines. Its whole-task and stage columns answer different questions.",
+    "locator": "§§4, 8–9; Figs. 2–3; Table 5",
+    "source": "https://arxiv.org/html/2406.10454"
+  },
+  {
+    "sheet": "main",
+    "no": 245,
+    "level": "sections",
+    "note": "对教师的命令/观测加遮罩，使学生能接受全身、局部关节或稀疏目标。不同命令必须比较对应部位的关节、速度或位置误差。 A mask says which variables are commanded; the rest of the pose is underdetermined. Real H1 standing-motion comparisons are narrower than the full simulator command suite.",
+    "locator": "Fig. 2, §III; Fig. 3, Table V",
+    "source": "https://arxiv.org/html/2410.21229"
+  },
+  {
+    "sheet": "main",
+    "no": 246,
+    "level": "sections",
+    "note": "先把旧策略部署获得实机状态—动作对，再拟合模拟器的动作残差；在校正后的动力学内微调跟踪策略。不是在机器人上任意继续 RL，也不是部署时一直加同一残差。 ASAP makes simulated replay better approximate measured motion, then optimizes the policy in the aligned simulation. Sim-to-sim replay and real G1 tracking are separate evaluations.",
+    "locator": "§§II–IV, Fig. 5; §VIII",
+    "source": "https://arxiv.org/html/2502.01143"
+  },
+  {
+    "sheet": "main",
+    "no": 247,
+    "level": "sections",
+    "note": "多目标 IK 将头和双腕目标分出上身关节、躯干姿态和高度；AMO 用轨迹优化生成的数据补出下身参考。自主任务另以每项 50 次遥操作示范训练 ACT。 The operator, motion optimizer and learned autonomous task policy are not interchangeable. Table IV breaks down stage success for real manipulation; tracking a torso command alone would not pick up the bag.",
+    "locator": "§III, Figs. 2–3; §IV-C, Fig. 6, Table IV",
+    "source": "https://arxiv.org/html/2505.03738"
+  },
+  {
+    "sheet": "main",
+    "no": 248,
+    "level": "sections",
+    "note": "TWIST 从重定向动作训练全身跟踪器，再接实时动捕；G1 实机与 Booster T1 跨模拟器结果分开。TWIST2 强调便携采集与可转动的双自由度颈部，将主动视角也记录下来。 A teleoperated demonstration is training data, not evidence of an autonomous policy. TWIST2 adds an egocentric active-vision data interface; the two releases should not share one benchmark number.",
+    "locator": "TWIST §§3–4, Figs. 3–4; TWIST2 §§III–IV, Figs. 2–3",
+    "source": "https://arxiv.org/html/2505.02833"
+  },
+  {
+    "sheet": "main",
+    "no": 249,
+    "level": "sections",
+    "note": "用动作专家混合模型应对多样运动，并改变动作采样比例以免稀有难例在训练中被淹没。去掉自适应采样和专家的消融与 AMASS/LAFAN 留出测试相配。 GMT separates the effect of allocating capacity across motions from sampling them. Table 2 measures simulated tracking; it is not the success rate of every clip on hardware.",
+    "locator": "§§3–4.3; Fig. 2; Table 2",
+    "source": "https://arxiv.org/html/2506.14770"
+  },
+  {
+    "sheet": "main",
+    "no": 250,
+    "level": "sections",
+    "note": "将参考动作重新锚定到机器人当前位姿以允许偏移恢复；再从跟踪策略生成的数据学习可受任务代价引导的扩散先验。会跟踪指定片段和能规划新指令是两项测试。 The tracking stage creates feasible state/action experience for a generative controller. The public whole_body_tracking repository documents the tracker; it is not evidence that every diffusion experiment is released there.",
+    "locator": "Materials and Methods; Results; Figs. 7–8",
+    "source": "https://arxiv.org/html/2508.08241"
+  },
+  {
+    "sheet": "main",
+    "no": 251,
+    "level": "repo",
+    "note": "这是平台行而非独立算法论文：Decoupled WBC 用上身 IK、下身 RL；SONIC 是另一个控制器。README 区分模型、遥操作与部署，N1.6 VLA 卡不是全身控制器评测。 Release documentation, not a paper-level score. The repo dates the first decoupled release to Nov 2025 and the SONIC checkpoint/deployment release to Feb 2026; #252 is the SONIC paper.",
+    "locator": "Project README: supported controllers, News, Model Card, VR Whole-Body Teleoperation, Kinematic Planner",
+    "source": "https://github.com/NVlabs/GR00T-WholeBodyControl"
+  },
+  {
+    "sheet": "main",
+    "no": 252,
+    "level": "sections",
+    "note": "多种运动指令经共享运动表示送入同一 G1 全身策略。Fig. 2 区分未见动作类别与已见类别的新录制；前者比重复测试更能检验内容泛化。 SONIC benchmarks data, compute and model scaling with separate test-content and test-repetition splits. A kinematic planner can supply references; the control policy still has to realize them on the robot.",
+    "locator": "§§2.1, 3; Fig. 2, Table 2; Fig. S1",
+    "source": "https://arxiv.org/html/2511.07820"
+  },
+  {
+    "sheet": "main",
+    "no": 253,
+    "level": "sections",
+    "note": "将离散视点图上的语言路线投到可碰撞的连续环境；代理必须自己前进、转向和停止。删掉理想图边后，偏离路线才真正会影响下一帧。 VLN-CE evaluates low-level navigation rather than assuming perfect passage between panoramas. Compare unseen-scene SR/SPL with oracle and input ablations, not directly with graph-node accuracy.",
+    "locator": "§§3.1–3.2, 4–5.3; Fig. 1; Table 2",
+    "source": "https://arxiv.org/html/2004.02857"
+  },
+  {
+    "sheet": "main",
+    "no": 254,
+    "level": "sections",
+    "note": "ObjectNav 规范要求说明何时停、距物体多近、是否需真实可见，或是否允许原地转头后的 oracle visibility。SPL 把失败计零，无法区分差一步和完全走错。 This is a task/evaluation specification for Habitat and RoboTHOR, not a trained navigation model. The sensor/action space and definition of an admissible goal viewpoint change what a success means.",
+    "locator": "§§2.1–2.2, 3–4; Fig. 2; Table 1",
+    "source": "https://arxiv.org/html/2006.13171"
+  },
+  {
+    "sheet": "main",
+    "no": 255,
+    "level": "sections",
+    "note": "把预训练像素语义特征投到有位姿的 RGB-D 地图，文本检索给出物体掩模，再做“在两者之间”等空间运算。HSR 建图用了 374 帧，实机完成 10/20 个导航目标。 VLMaps uses a prebuilt map rather than discovering a fresh scene on every query. Failure can arise from semantic localization or the navigable map even when the spatial instruction is correctly parsed.",
+    "locator": "§III, Fig. 3; §§IV-B–E",
+    "source": "https://arxiv.org/html/2210.05714"
+  },
+  {
+    "sheet": "main",
+    "no": 256,
+    "level": "sections",
+    "note": "预扫语义地图供文本检索与 A* 导航，抵达后用新的 RGB-D、目标掩模和 AnyGrasp 选抓取，再导航并按几何规则放下。全流程不是由一个 VLM 直接输出。 Ten homes and 171 trials expose retrieval, approach, grasp and hardware failures. Decluttering and changing ambiguous queries alter the test conditions, not model weights.",
+    "locator": "§§II-A–D, Figs. 2–3; §§III-A–D, Figs. 4–6; §V",
+    "source": "https://arxiv.org/html/2401.12202"
+  },
+  {
+    "sheet": "main",
+    "no": 257,
+    "level": "sections",
+    "note": "用进行中的单目视频和指令预测下一条带量值的运动指令；历史和当前帧使用不同粒度，并加入从路径反推指令的训练样本。R2R/RxR 与实机测试协议不同。 NaVid needs neither a supplied graph nor depth as policy input. On an unseen split, oracle success can credit passing the goal even if the policy fails to stop; compare it with SR and SPL.",
+    "locator": "§IV, Figs. 2–3; §V-A–C",
+    "source": "https://arxiv.org/html/2402.15852"
+  },
+  {
+    "sheet": "main",
+    "no": 258,
+    "level": "sections",
+    "note": "EM-EQA 给定已走过的视觉历史，A-EQA 需主动探索再作答。LLM-Match 比对开放答案，人类一致性用来校核裁判；主动模式另计效率。 The output is an answer, not a route. Table 2 separates answer quality from exploration cost and notes that GPT-4V used a 500-question subset. Results from that subset are not full-dataset coverage.",
+    "locator": "CVPR paper, Eqs. (1)–(2), Table 2 (partial: indexed manuscript passages); project Results / repo evaluation",
+    "source": "https://openaccess.thecvf.com/content/CVPR2024/html/Majumdar_OpenEQA_Embodied_Question_Answering_in_the_Era_of_Foundation_Models_CVPR_2024_paper.html"
+  },
+  {
+    "sheet": "main",
+    "no": 259,
+    "level": "sections",
+    "note": "长上下文 VLM 从预录导览中选目标帧，SfM 预建拓扑图供定位和到达；高层不直接驱动轮子。Table 2 小物体类别找帧仅 40%，到达指定帧则 100%。 The tour is a prerequisite. Goal finding and goal reaching are measured separately, so a higher-capacity local planner need not fix failures to identify a small object.",
+    "locator": "§§4.1–4.3, 5.1–5.3; Fig. 1; Table 2",
+    "source": "https://arxiv.org/html/2407.07775"
+  },
+  {
+    "sheet": "main",
+    "no": 260,
+    "level": "sections",
+    "note": "把候选物体标记在图像上，让 VLM 选电梯、推门、搬运等技能及其参数；短期/长期记忆辅助下一次调用。最长十二技能的整项成功率不是单步参数预测准确率。 BUMBLE executes hand-specified skills rather than language model joint actions. Its deployment documentation includes a building occupancy map and API setup, dependencies absent from a per-skill VLM test.",
+    "locator": "§III, Fig. 3; §IV, Table I, Fig. 5",
+    "source": "https://arxiv.org/html/2410.06237"
+  },
+  {
+    "sheet": "main",
+    "no": 261,
+    "level": "sections",
+    "note": "视觉语言模型先输出“前进多远/转多少”一类中层语言动作，腿式控制器才结合本体反馈落地。仅用 R2R 训练再测 RxR 的划分检验语言导航转移，不单测步态。 NaVILA separates semantic decisions from terrain-aware locomotion. The authors publish distinct VLA, locomotion and simulator components; a correct text command can still be executed incorrectly.",
+    "locator": "§II, Figs. 2–3; §III-A",
+    "source": "https://arxiv.org/html/2412.04453"
+  },
+  {
+    "sheet": "main",
+    "no": 262,
+    "level": "sections",
+    "note": "共享单目视频—语言模型，但训练样本兼有跟随、找物和指令导航等任务；显式核查不同 benchmark 场景划分。跟随率、碰撞率与 VLN 的停止成功率不能平均成同一指标。 Uni-NaVid tests whether sharing training across tasks helps individual tasks. The README distinguishes offline prediction from embodied evaluation; an offline next action cannot reveal compounding mistakes.",
+    "locator": "§§IV–VI, Fig. 2; Tables II–III; §VII",
+    "source": "https://arxiv.org/html/2412.06224"
+  },
+  {
+    "sheet": "main",
+    "no": 263,
+    "level": "sections",
+    "note": "仿真利用特权地图产生轨迹监督和安全/代价信号；部署仅看机载观测，让扩散 actor 提候选、critic 判优劣。应分开目标点导航与无目标探索。 NavDP's supervision can see geometry hidden from the deployed policy. Hardware evaluation includes Go2, TurtleBot4 and G1; four embodiments in the combined study does not mean all four ran every real test.",
+    "locator": "§§III–IV, Fig. 2; §V-A–B, Tables III–IV",
+    "source": "https://arxiv.org/html/2505.08712"
+  },
+  {
+    "sheet": "main",
+    "no": 264,
+    "level": "sections",
+    "note": "先以显式像素路点监督两系统，再使快扩散策略接收慢系统的异步潜计划与当前观测。R2R Val-Unseen 的纯 RGB 结果需与 RGB-D 及单系统消融区分。 The July workbook date does not uniquely identify the release: InternNav lists the technical report in October and later distinguishes NavDP* and DualVLN configurations. Do not substitute the later DualVLN paper for the report.",
+    "locator": "Technical report Table 2 (partial: indexed method/results); moved project Approach / Results; InternNav release notes",
+    "source": "https://sage-physicalai.github.io/internvla-n1.github.io/static/pdfs/InternVLA_N1.pdf"
+  },
+  {
+    "sheet": "main",
+    "no": 265,
+    "level": "sections",
+    "note": "把一次导航当多轮生成，快上下文保留近期细节，慢记忆按空间体素裁掉重复历史 token。实机 Go2 使用远程工作站；不是仅凭机上模型速度的比较。 StreamVLN trades detail for longer context without continually re-encoding the whole episode. R2R-CE/RxR-CE and the memory ablation test navigation; pruning alone is not a navigation policy.",
+    "locator": "§§III-A–C, Fig. 2, Algorithm 1; §§IV-A, IV-D",
+    "source": "https://arxiv.org/html/2507.05240"
+  },
+  {
+    "sheet": "main",
+    "no": 266,
+    "level": "sections",
+    "note": "用时间/视角标记组织多帧、多视角 token，把问答与导航纳入同一模型。R2R/RxR 报导航结果，问答预测正确不等于轨迹可执行。 NavFoM tests a shared multimodal representation over different tasks and bodies. Keep the task-specific metrics and available views fixed when interpreting the benchmark comparison.",
+    "locator": "§3.1.1, Fig. 3; §4.2, Table 1",
+    "source": "https://arxiv.org/html/2509.12129"
+  },
+  {
+    "sheet": "main",
+    "no": 267,
+    "level": "sections",
+    "note": "图像 patch 注入尺度先验，几何骨干结合跨帧自定位与环境查询，再由扩散头给出局部轨迹。40 个未见仿真场景分为住宅与商业；不是全局语言任务成功率。 LoGoPlanner uses metric geometry to reduce local-planning ambiguity. Its source lives under baselines/logoplanner inside NavDP; linking the parent repo alone can lead to running the wrong policy.",
+    "locator": "§§IV-A–C, Fig. 2; §§V-B–C, Fig. 3",
+    "source": "https://arxiv.org/html/2512.19629"
+  }
+]

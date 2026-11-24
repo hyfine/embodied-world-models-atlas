@@ -1,0 +1,2032 @@
+[
+ {
+  "url": "https://github.com/1x-technologies/1xgpt",
+  "kind": "GitHub",
+  "revision": "006973446bda975b93a7f93ac6a41e33ddccc865",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/1x-technologies/1xgpt/tree/006973446bda975b93a7f93ac6a41e33ddccc865",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Aaditya-Prasad/consistency-policy",
+  "kind": "GitHub",
+  "revision": "eed0c465d3c1aa6dcf22f10e784df07dec06beac",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/Aaditya-Prasad/consistency-policy/tree/eed0c465d3c1aa6dcf22f10e784df07dec06beac",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/AgibotTech/GE-Sim-V2",
+  "kind": "GitHub",
+  "revision": "508c60f1a737a54ad2aaa974e63489c7f0c1b1a2",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/AgibotTech/GE-Sim-V2/tree/508c60f1a737a54ad2aaa974e63489c7f0c1b1a2",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/AgibotTech/Genie-Envisioner-V1",
+  "kind": "GitHub",
+  "revision": "d41358f7548f2cd9fc4b79fcdf7d86d15a8d7b1e",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/AgibotTech/Genie-Envisioner-V1/tree/d41358f7548f2cd9fc4b79fcdf7d86d15a8d7b1e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/BeingBeyond/Being-H0",
+  "kind": "GitHub",
+  "revision": "ae92e46f671f48d91161ef1c8cc956bcdffab606",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/BeingBeyond/Being-H0/tree/ae92e46f671f48d91161ef1c8cc956bcdffab606",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/BraveGroup/DriveVLA-W0",
+  "kind": "GitHub",
+  "revision": "a55766ce46ee55d9035b93816e57b8d933166482",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/BraveGroup/DriveVLA-W0/tree/a55766ce46ee55d9035b93816e57b8d933166482",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/EmbodiedGPT/EmbodiedGPT_Pytorch",
+  "kind": "GitHub",
+  "revision": "cda80524bf6b7d276ba3b532887bacd4b133f234",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/EmbodiedGPT/EmbodiedGPT_Pytorch/tree/cda80524bf6b7d276ba3b532887bacd4b133f234",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/FlagOpen/RoboBrain2.0",
+  "kind": "GitHub",
+  "revision": "af98c932aac9ff715d70da177088d7bb95573ff7",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/FlagOpen/RoboBrain2.5/tree/af98c932aac9ff715d70da177088d7bb95573ff7",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/FlagOpen/RoboBrain2.5",
+  "kind": "GitHub",
+  "revision": "af98c932aac9ff715d70da177088d7bb95573ff7",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/FlagOpen/RoboBrain2.5/tree/af98c932aac9ff715d70da177088d7bb95573ff7",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Genesis-Embodied-AI/genesis-world",
+  "kind": "GitHub",
+  "revision": "2eaa40c6efe8dceb9e44289d4a364075546c9edd",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Genesis-Embodied-AI/genesis-world/tree/2eaa40c6efe8dceb9e44289d4a364075546c9edd",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List",
+  "kind": "GitHub",
+  "revision": "8e93900e6786f83d79a01ed091a0081e45f2dd96",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List/tree/8e93900e6786f83d79a01ed091a0081e45f2dd96",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/InternRobotics/Aether",
+  "kind": "GitHub",
+  "revision": "871c6f7ebcd66f3571ed27db5d65264a51d624a3",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/Sage-PhysicalAI/Aether/tree/871c6f7ebcd66f3571ed27db5d65264a51d624a3",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/InternRobotics/InternVLA-A-series",
+  "kind": "GitHub",
+  "revision": "e6fc904f9edbfb14532e97095fc2372202517f76",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/Sage-PhysicalAI/InternVLA-A-series/tree/e6fc904f9edbfb14532e97095fc2372202517f76",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/InternRobotics/InternVLA-M1",
+  "kind": "GitHub",
+  "revision": "7f42cf279a3b15d79507b632d37921f5f2f073ba",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/Sage-PhysicalAI/InternVLA-M1/tree/7f42cf279a3b15d79507b632d37921f5f2f073ba",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/InternRobotics/NavDP",
+  "kind": "GitHub",
+  "revision": "bff5eb8857f50e082243fb455d312409daabc3aa",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/Sage-PhysicalAI/NavDP/tree/bff5eb8857f50e082243fb455d312409daabc3aa",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/JeffWang987/DriveDreamer",
+  "kind": "GitHub",
+  "revision": "da1ca92f831bc23d91b59ad418eb47b41cbb1fa9",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/JeffWang987/DriveDreamer/tree/da1ca92f831bc23d91b59ad418eb47b41cbb1fa9",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Kevin-thu/Epona",
+  "kind": "GitHub",
+  "revision": "69b24c55f5ab8b3ffde8fa55e9f833bfe64d2c68",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/Kevin-thu/Epona/tree/69b24c55f5ab8b3ffde8fa55e9f833bfe64d2c68",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/LeCAR-Lab/human2humanoid",
+  "kind": "GitHub",
+  "revision": "750f1fa052641f0fde43669d50cb4e407dabe6c8",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/LeCAR-Lab/human2humanoid/tree/750f1fa052641f0fde43669d50cb4e407dabe6c8",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Li-Zn-H/AwesomeWorldModels",
+  "kind": "GitHub",
+  "revision": "19c44f619a1b4d823ae1c7578049b519124434da",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/Li-Zn-H/AwesomeWorldModels/tree/19c44f619a1b4d823ae1c7578049b519124434da",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+  "kind": "GitHub",
+  "revision": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/Lifelong-Robot-Learning/LIBERO/tree/8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/MarionLepert/phantom",
+  "kind": "GitHub",
+  "revision": "a8bb81c1bbe6ade129a1f6f0906482f510354a5e",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/MarionLepert/phantom/tree/a8bb81c1bbe6ade129a1f6f0906482f510354a5e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/MarkFzp/humanplus",
+  "kind": "GitHub",
+  "revision": "ff7148903303ac2951857cf0b7df686d77323917",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/MarkFzp/humanplus/tree/ff7148903303ac2951857cf0b7df686d77323917",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/MarkFzp/mobile-aloha",
+  "kind": "GitHub",
+  "revision": "0e403249c76054a68e757e590d4da4dba401c9e3",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/MarkFzp/mobile-aloha/tree/0e403249c76054a68e757e590d4da4dba401c9e3",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/MichalZawalski/embodied-CoT",
+  "kind": "GitHub",
+  "revision": "1813ad76001f1e08095088f94a86c43fc0e457a3",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/MichalZawalski/embodied-CoT/tree/1813ad76001f1e08095088f94a86c43fc0e457a3",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/NVIDIA/GR00T-Dreams",
+  "kind": "GitHub",
+  "revision": "ec3881d44545016871997f8e17dd15f1d792e91d",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/NVIDIA/GR00T-Dreams/tree/ec3881d44545016871997f8e17dd15f1d792e91d",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/NVIDIA/Isaac-GR00T",
+  "kind": "GitHub",
+  "revision": "708617f5716c63fc0a327391492ea2b91977ae90",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/NVIDIA/Isaac-GR00T/tree/708617f5716c63fc0a327391492ea2b91977ae90",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+  "kind": "GitHub",
+  "revision": "1e1ec4f5f27e6c3e03048f693bd7c60cce04afda",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/tree/1e1ec4f5f27e6c3e03048f693bd7c60cce04afda",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/NVlabs/RVT",
+  "kind": "GitHub",
+  "revision": "367995a1a2169b6352bf4e8b0ed405890462a3a0",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/NVlabs/RVT/tree/367995a1a2169b6352bf4e8b0ed405890462a3a0",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/NVlabs/RoboLab",
+  "kind": "GitHub",
+  "revision": "dc3383888b7279b4256312268a35a5f9046c44d3",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/NVlabs/RoboLab/tree/dc3383888b7279b4256312268a35a5f9046c44d3",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/NVlabs/cosmos-policy",
+  "kind": "GitHub",
+  "revision": "18a2accadf4e7a3531e56754102af5a24d2316da",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/NVlabs/cosmos-policy/tree/18a2accadf4e7a3531e56754102af5a24d2316da",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/NVlabs/progprompt-vh",
+  "kind": "GitHub",
+  "revision": "56e65510747dff809c1b0bac9318508da9d9a2d4",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/NVlabs/progprompt-vh/tree/56e65510747dff809c1b0bac9318508da9d9a2d4",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Open-X-Humanoid/pelican-vl",
+  "kind": "GitHub",
+  "revision": "717a1fcd90d63df00141674d085f2fd6ac284a4f",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Open-X-Humanoid/pelican-vl/tree/717a1fcd90d63df00141674d085f2fd6ac284a4f",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenDriveLab/AgiBot-World",
+  "kind": "GitHub",
+  "revision": "98f136ea6b345db1a08451a2f543d67c1789a809",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/OpenDriveLab/AgiBot-World/tree/98f136ea6b345db1a08451a2f543d67c1789a809",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenDriveLab/DriveAGI",
+  "kind": "GitHub",
+  "revision": "02a3ff071b6e9c1db41ac0831dfae71ad9c338f8",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/OpenDriveLab/DriveAGI/tree/02a3ff071b6e9c1db41ac0831dfae71ad9c338f8",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenDriveLab/UniVLA",
+  "kind": "GitHub",
+  "revision": "0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/OpenDriveLab/UniVLA/tree/0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenDriveLab/Vista",
+  "kind": "GitHub",
+  "revision": "cc9821b4253ca7987c32757613d2fc2448fa9f5d",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/OpenDriveLab/Vista/tree/cc9821b4253ca7987c32757613d2fc2448fa9f5d",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenEnvision/WorldFoundry",
+  "kind": "GitHub",
+  "revision": "0157ba8bb972ce743c9fa9f96d5f76b5352e7d34",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/OpenEnvision/WorldFoundry/tree/0157ba8bb972ce743c9fa9f96d5f76b5352e7d34",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenGalaxea/G0",
+  "kind": "GitHub",
+  "revision": "a35a07739b935e6fe85d987faa56ee3532e1b0a0",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/OpenGalaxea/G0/tree/a35a07739b935e6fe85d987faa56ee3532e1b0a0",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenGalaxea/GalaxeaVLA",
+  "kind": "GitHub",
+  "revision": "89f2322b4ad016e192437adc1a2c253b05bab246",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/OpenGalaxea/GalaxeaVLA/tree/89f2322b4ad016e192437adc1a2c253b05bab246",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenHelix-Team/VLA-Adapter",
+  "kind": "GitHub",
+  "revision": "23fa0c9c159e2aa04341cdd3e924f44061311060",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/OpenHelix-Team/VLA-Adapter/tree/23fa0c9c159e2aa04341cdd3e924f44061311060",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenRobotLab/Seer",
+  "kind": "GitHub",
+  "revision": "ee228e110e098beefa23f94d558dfa8492259e6e",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Sage-PhysicalAI/Seer/tree/ee228e110e098beefa23f94d558dfa8492259e6e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/OpenRobotLab/StreamVLN",
+  "kind": "GitHub",
+  "revision": "e48f6ff7e9201d93aae003e8f64b04c00cec13bc",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/Sage-PhysicalAI/StreamVLN/tree/e48f6ff7e9201d93aae003e8f64b04c00cec13bc",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/PRIME-RL/SimpleVLA-RL",
+  "kind": "GitHub",
+  "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/PRIME-RL/SimpleVLA-RL/tree/7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Physical-Intelligence/openpi",
+  "kind": "GitHub",
+  "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Physical-Intelligence/openpi/tree/215abfb217dbac7d5f1273282331b9b1866c0479",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Psi-Robot/Awesome-VLA-Papers",
+  "kind": "GitHub",
+  "revision": "bc4d6a4c72b969076e92351fb12934f5d2a0b5bd",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/Psi-Robot/Awesome-VLA-Papers/tree/bc4d6a4c72b969076e92351fb12934f5d2a0b5bd",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/RLinf/RLinf",
+  "kind": "GitHub",
+  "revision": "d7c4b65602bea8a32d56789e7d46a1e428ec89f5",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/RLinf/RLinf/tree/d7c4b65602bea8a32d56789e7d46a1e428ec89f5",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Robbyant/lingbot-vla",
+  "kind": "GitHub",
+  "revision": "4eb34b7693a0565c67433f8fac9c59a2e67eb60b",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Robbyant/lingbot-vla/tree/4eb34b7693a0565c67433f8fac9c59a2e67eb60b",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Robert-gyj/Ctrl-World",
+  "kind": "GitHub",
+  "revision": "99fb20683fd79dfa6d0c6feb9d49c6c55eecd50d",
+  "entry": "readme.md",
+  "license": "MIT",
+  "source": "https://github.com/Robert-gyj/Ctrl-World/tree/99fb20683fd79dfa6d0c6feb9d49c6c55eecd50d",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/RoboVerseOrg/MetaSim",
+  "kind": "GitHub",
+  "revision": "560d7ba07c1a036332b12b58f7f0e7f0f64dce32",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/RoboVerseOrg/MetaSim/tree/560d7ba07c1a036332b12b58f7f0e7f0f64dce32",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/ShuangLI59/unified_video_action",
+  "kind": "GitHub",
+  "revision": "fe3dec81af565fbb2d686072722f12340be31293",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/ShuangLI59/unified_video_action/tree/fe3dec81af565fbb2d686072722f12340be31293",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/SpatialVLA/SpatialVLA",
+  "kind": "GitHub",
+  "revision": "18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/SpatialVLA/SpatialVLA/tree/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/StanfordVL/BEHAVIOR-1K",
+  "kind": "GitHub",
+  "revision": "30880c2c6b6160aee5bc43478f6fd00652749251",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/StanfordVL/BEHAVIOR-1K/tree/30880c2c6b6160aee5bc43478f6fd00652749251",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Tencent-Hunyuan/HY-World-2.0",
+  "kind": "GitHub",
+  "revision": "df9988efb87bfc0f4947eb3889411cf957478b06",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/Tencent-Hunyuan/HY-World-2.0/tree/df9988efb87bfc0f4947eb3889411cf957478b06",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Tencent-Hunyuan/HY-WorldPlay",
+  "kind": "GitHub",
+  "revision": "1588e1336e842b03b0a7860c654ebd7c46bb065e",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/Tencent-Hunyuan/HY-WorldPlay/tree/1588e1336e842b03b0a7860c654ebd7c46bb065e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0",
+  "kind": "GitHub",
+  "revision": "57fa9f3a79eae1079c279968cdb9d82c75fa7c86",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0/tree/57fa9f3a79eae1079c279968cdb9d82c75fa7c86",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror",
+  "kind": "GitHub",
+  "revision": "c61300e47ce06db2f02c8e2551aae68be7ae3a0b",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror/tree/c61300e47ce06db2f02c8e2551aae68be7ae3a0b",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager",
+  "kind": "GitHub",
+  "revision": "6218ccd36df77d0254dcf24ad1fb77312f75b04a",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager/tree/6218ccd36df77d0254dcf24ad1fb77312f75b04a",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/TianxingChen/Embodied-AI-Guide",
+  "kind": "GitHub",
+  "revision": "236f5fb35ca7058a0ff842046a6b11cfd521b7b5",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/TianxingChen/Embodied-AI-Guide/tree/236f5fb35ca7058a0ff842046a6b11cfd521b7b5",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/WANGSHUAIzzzz/ScanDreamer",
+  "kind": "GitHub",
+  "revision": "09c3a7818b49f27c964c332a251f44539fcbf2c2",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/WANGSHUAIzzzz/ScanDreamer/tree/09c3a7818b49f27c964c332a251f44539fcbf2c2",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/WEIRDLabUW/unified-world-model",
+  "kind": "GitHub",
+  "revision": "b7d4067c8859775e5b08f681e76d538015cdd445",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/WEIRDLabUW/unified-world-model/tree/b7d4067c8859775e5b08f681e76d538015cdd445",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/X-Square-Robot/wall-wm",
+  "kind": "GitHub",
+  "revision": "737e5d28b03ab78ae5ed119cb8b4606bcc624896",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/X-Square-Robot/wall-wm/tree/737e5d28b03ab78ae5ed119cb8b4606bcc624896",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+  "kind": "GitHub",
+  "revision": "0dd7aef8dc87296246aae812a1f59ccb708e5546",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1/tree/0dd7aef8dc87296246aae812a1f59ccb708e5546",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/YanjieZe/3D-Diffusion-Policy",
+  "kind": "GitHub",
+  "revision": "47385d9d6f5bde3f2ebdf2400ecb8261cc9e6b97",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/YanjieZe/3D-Diffusion-Policy/tree/47385d9d6f5bde3f2ebdf2400ecb8261cc9e6b97",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/YeWR/EfficientZero",
+  "kind": "GitHub",
+  "revision": "468bb0309f6d5a632a53da9c7d329f88fc9ebf8e",
+  "entry": "README.md",
+  "license": "GPL-3.0",
+  "source": "https://github.com/YeWR/EfficientZero/tree/468bb0309f6d5a632a53da9c7d329f88fc9ebf8e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/YvanYin/DrivingWorld",
+  "kind": "GitHub",
+  "revision": "faceb9861582c2ecad0d82c1f97699a1a314cb62",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/YvanYin/DrivingWorld/tree/faceb9861582c2ecad0d82c1f97699a1a314cb62",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Zhangwenyao1/DreamVLA",
+  "kind": "GitHub",
+  "revision": "2318020723b774f928bd328d807bae8f14b3b9f4",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/Zhangwenyao1/DreamVLA/tree/2318020723b774f928bd328d807bae8f14b3b9f4",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/Zhoues/RoboRefer",
+  "kind": "GitHub",
+  "revision": "d97a995ad28376720a4c8beb64915c58ed16c844",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Zhoues/RoboRefer/tree/d97a995ad28376720a4c8beb64915c58ed16c844",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/ZiwenZhuang/parkour",
+  "kind": "GitHub",
+  "revision": "5e1f4136f7fec9dac2741add63ca58d32090666f",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/ZiwenZhuang/parkour/tree/5e1f4136f7fec9dac2741add63ca58d32090666f",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/alibaba-damo-academy/WorldVLA",
+  "kind": "GitHub",
+  "revision": "e548ccc2977ba4fc06013de18192fa6245e454a4",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/alibaba-damo-academy/RynnVLA-002/tree/e548ccc2977ba4fc06013de18192fa6245e454a4",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/allenai/ai2thor",
+  "kind": "GitHub",
+  "revision": "24f79883b4889e3f0e6f4ae301808b9025872dfc",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/allenai/ai2thor/tree/24f79883b4889e3f0e6f4ae301808b9025872dfc",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/apple/ml-egodex",
+  "kind": "GitHub",
+  "revision": "718d9ebd8ec17187f72a74a08c66deea80178cb6",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/apple-aiml-research/ml-egodex/tree/718d9ebd8ec17187f72a74a08c66deea80178cb6",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/bytedance/GR-1",
+  "kind": "GitHub",
+  "revision": "4a2e956bb497586d82489eb4c98b27fb82b5ff47",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/bytedance/GR-1/tree/4a2e956bb497586d82489eb4c98b27fb82b5ff47",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/bytedance/IRASim",
+  "kind": "GitHub",
+  "revision": "c72b6dade6fcd65971e0aa8ab49ea39b15108c90",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/bytedance/IRASim/tree/c72b6dade6fcd65971e0aa8ab49ea39b15108c90",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/cccedric/conrft",
+  "kind": "GitHub",
+  "revision": "a779fde7fa5db5a469960a8490c100f35b41b49e",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/cccedric/conrft/tree/a779fde7fa5db5a469960a8490c100f35b41b49e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/chengxuxin/expressive-humanoid",
+  "kind": "GitHub",
+  "revision": "511f49582f432f2081a4eaa070f7e9d5f822fa4c",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/chengxuxin/expressive-humanoid/tree/511f49582f432f2081a4eaa070f7e9d5f822fa4c",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/cure-lab/MagicDrive",
+  "kind": "GitHub",
+  "revision": "f6dd2e56da8a3a158c47e74a006c28d8aea13433",
+  "entry": "README.MD",
+  "license": "Apache-2.0",
+  "source": "https://github.com/cure-lab/MagicDrive/tree/f6dd2e56da8a3a158c47e74a006c28d8aea13433",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/danijar/daydreamer",
+  "kind": "GitHub",
+  "revision": "709016ce11c32dad1f24c4cc77afdf980d2a92a8",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/danijar/daydreamer/tree/709016ce11c32dad1f24c4cc77afdf980d2a92a8",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/danijar/dreamer",
+  "kind": "GitHub",
+  "revision": "56d4d444dfd0582b0e79dab80aebbea74c0ce40d",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/danijar/dreamer/tree/56d4d444dfd0582b0e79dab80aebbea74c0ce40d",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/danijar/dreamerv2",
+  "kind": "GitHub",
+  "revision": "07d906e9c4322c6fc2cd6ed23e247ccd6b7c8c41",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/danijar/dreamerv2/tree/07d906e9c4322c6fc2cd6ed23e247ccd6b7c8c41",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/danijar/dreamerv3",
+  "kind": "GitHub",
+  "revision": "e01491fad6434b2245a3b8ca201dd7faedcc458c",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/danijar/dreamerv3/tree/e01491fad6434b2245a3b8ca201dd7faedcc458c",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/declare-lab/nora-1.5",
+  "kind": "GitHub",
+  "revision": "d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/declare-lab/nora-1.5/tree/d1cdce29e9a9ce9f0e05d3f4b3d1c6eed592a9a9",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/dreamzero0/dreamzero",
+  "kind": "GitHub",
+  "revision": "ab790c198fbce33503358efbbd4187ce9a89adf3",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/dreamzero0/dreamzero/tree/ab790c198fbce33503358efbbd4187ce9a89adf3",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/eloialonso/diamond",
+  "kind": "GitHub",
+  "revision": "5bcd1599755b4f2fae8e5e079e02f0728e174965",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/eloialonso/diamond/tree/5bcd1599755b4f2fae8e5e079e02f0728e174965",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/eloialonso/iris",
+  "kind": "GitHub",
+  "revision": "24326aaaa283c527f42b89b44cfdecf2665a7a16",
+  "entry": "README.md",
+  "license": "GPL-3.0",
+  "source": "https://github.com/eloialonso/iris/tree/24326aaaa283c527f42b89b44cfdecf2665a7a16",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/facebookresearch/habitat-sim",
+  "kind": "GitHub",
+  "revision": "57ee4941dc4765240f0f91f70b2c97a919bf9038",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/facebookresearch/habitat-sim/tree/57ee4941dc4765240f0f91f70b2c97a919bf9038",
+  "archived": true
+ },
+ {
+  "url": "https://github.com/facebookresearch/ijepa",
+  "kind": "GitHub",
+  "revision": "52c1ae95d05f743e000e8f10a1f3a79b10cff048",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/facebookresearch/ijepa/tree/52c1ae95d05f743e000e8f10a1f3a79b10cff048",
+  "archived": true
+ },
+ {
+  "url": "https://github.com/facebookresearch/jepa",
+  "kind": "GitHub",
+  "revision": "51c59d518fc63c08464af6de585f78ac0c7ed4d5",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/facebookresearch/jepa/tree/51c59d518fc63c08464af6de585f78ac0c7ed4d5",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/facebookresearch/jepa-intuitive-physics",
+  "kind": "GitHub",
+  "revision": "302a2e821d908b4a8667e0c0e48fe733e43c9156",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/facebookresearch/jepa-intuitive-physics/tree/302a2e821d908b4a8667e0c0e48fe733e43c9156",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/facebookresearch/jepa-wms",
+  "kind": "GitHub",
+  "revision": "13cf1d9c7e476f53c17714d2e0f1dc239a883ce0",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/facebookresearch/jepa-wms/tree/13cf1d9c7e476f53c17714d2e0f1dc239a883ce0",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/facebookresearch/nwm",
+  "kind": "GitHub",
+  "revision": "3f6cd8e70d6f2d1e2b9684acff510710135f0f41",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/facebookresearch/nwm/tree/3f6cd8e70d6f2d1e2b9684acff510710135f0f41",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/facebookresearch/open-eqa",
+  "kind": "GitHub",
+  "revision": "cfa3fce4595c1622bb2f8a38ae2ca9aae9eb685b",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/facebookresearch/open-eqa/tree/cfa3fce4595c1622bb2f8a38ae2ca9aae9eb685b",
+  "archived": true
+ },
+ {
+  "url": "https://github.com/facebookresearch/vjepa2",
+  "kind": "GitHub",
+  "revision": "204698b45b3712590f06245fbfba32d3be539812",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/facebookresearch/vjepa2/tree/204698b45b3712590f06245fbfba32d3be539812",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/gaoyuezhou/dino_wm",
+  "kind": "GitHub",
+  "revision": "0a9492fa12044b852ae9e001cc74604b79c8bb0c",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/gaoyuezhou/dino_wm/tree/0a9492fa12044b852ae9e001cc74604b79c8bb0c",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/google-deepmind/mujoco_playground",
+  "kind": "GitHub",
+  "revision": "d7bfcbb1dcfd9665278768c55740271146c69f3e",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/google-deepmind/mujoco_playground/tree/d7bfcbb1dcfd9665278768c55740271146c69f3e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/google-deepmind/physics-IQ-benchmark",
+  "kind": "GitHub",
+  "revision": "3aa11416b94e32723a7eda6719a58193d90138f9",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/google-deepmind/physics-IQ-benchmark/tree/3aa11416b94e32723a7eda6719a58193d90138f9",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/google-research/google-research/tree/master/code_as_policies",
+  "kind": "GitHub",
+  "revision": "ee4298226f21649f45c0d0427f7c0f3f682d2a20",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/google-research/google-research/tree/ee4298226f21649f45c0d0427f7c0f3f682d2a20",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/google-research/ibc",
+  "kind": "GitHub",
+  "revision": "db89ddbb852603fe9b64cf0f502b1fd3d6037d33",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/google-research/ibc/tree/db89ddbb852603fe9b64cf0f502b1fd3d6037d33",
+  "archived": true
+ },
+ {
+  "url": "https://github.com/google-research/planet",
+  "kind": "GitHub",
+  "revision": "c04226b6db136f5269625378cd6a0aa875a92842",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/google-research/planet/tree/c04226b6db136f5269625378cd6a0aa875a92842",
+  "archived": true
+ },
+ {
+  "url": "https://github.com/hideinsewer/WARP-JEPA",
+  "kind": "GitHub",
+  "revision": "8c1b6a8c3f396d5af9a6d626de714beea2f39c82",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/hideinsewer/WARP-JEPA/tree/8c1b6a8c3f396d5af9a6d626de714beea2f39c82",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/huangwl18/ReKep",
+  "kind": "GitHub",
+  "revision": "63c43fdba60354980258beaeb8a7d48e088e1e3e",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/huangwl18/ReKep/tree/63c43fdba60354980258beaeb8a7d48e088e1e3e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/huggingface/lerobot",
+  "kind": "GitHub",
+  "revision": "c2a086e24fa20911bf060ee5cffbc0e1dbfd96ad",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/huggingface/lerobot/tree/c2a086e24fa20911bf060ee5cffbc0e1dbfd96ad",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/ifm-ai/PAN2",
+  "kind": "GitHub",
+  "revision": "0fb907b6e16a82ead6d691d1de2eef6299c71e9a",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/ifm-ai/PAN2/tree/0fb907b6e16a82ead6d691d1de2eef6299c71e9a",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/imlixinyang/FlashWorld",
+  "kind": "GitHub",
+  "revision": "424db4487de308a39e5137afbe85e7568a96193f",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/imlixinyang/FlashWorld/tree/424db4487de308a39e5137afbe85e7568a96193f",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/isaac-sim/IsaacLab",
+  "kind": "GitHub",
+  "revision": "99a3acd776f47fbcece4413f3c1d63f02b6979e2",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/isaac-sim/IsaacLab/tree/99a3acd776f47fbcece4413f3c1d63f02b6979e2",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/isaac-sim/IsaacLab-Arena",
+  "kind": "GitHub",
+  "revision": "49aacb0dd13603bc90fd1c3dace26c7ae5790904",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/isaac-sim/IsaacLab-Arena/tree/49aacb0dd13603bc90fd1c3dace26c7ae5790904",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/j96w/DexCap",
+  "kind": "GitHub",
+  "revision": "4b0bed0966c87368f3cde4476aadb7585c3b94b5",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/j96w/DexCap/tree/4b0bed0966c87368f3cde4476aadb7585c3b94b5",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/jacobkrantz/VLN-CE",
+  "kind": "GitHub",
+  "revision": "729d141b2ee10628061ada74dd3a5b9f70faeba5",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/jacobkrantz/VLN-CE/tree/729d141b2ee10628061ada74dd3a5b9f70faeba5",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/jayLEE0301/vq_bet_official",
+  "kind": "GitHub",
+  "revision": "09d4851288ca5deaaa1ab367a208e520f8ee9a84",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/jayLEE0301/vq_bet_official/tree/09d4851288ca5deaaa1ab367a208e520f8ee9a84",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/jonstephens85/awesome-embodied-ai",
+  "kind": "GitHub",
+  "revision": "37427e0233f2a3c3ec1b8adfa22f49f69dce8000",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/jonstephens85/awesome-embodied-ai/tree/37427e0233f2a3c3ec1b8adfa22f49f69dce8000",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln",
+  "kind": "GitHub",
+  "revision": "b5786e73fd0ffeb57783cdc1e4776b636bc24f86",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln/tree/b5786e73fd0ffeb57783cdc1e4776b636bc24f86",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/jzhzhang/NaVid-VLN-CE",
+  "kind": "GitHub",
+  "revision": "ce2f804a43fb23f1d52431ec24be1acf74c3f4f4",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/jzhzhang/NaVid-VLN-CE/tree/ce2f804a43fb23f1d52431ec24be1acf74c3f4f4",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/jzhzhang/Uni-NaVid",
+  "kind": "GitHub",
+  "revision": "79ef5ea3fea14c205342d1ab070563d84c7a966a",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/jzhzhang/Uni-NaVid/tree/79ef5ea3fea14c205342d1ab070563d84c7a966a",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/kevinghst/H-JEPA",
+  "kind": "GitHub",
+  "revision": "97054ecaff83e13839195ec4b92d74c08a0127c5",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/kevinghst/H-JEPA/tree/97054ecaff83e13839195ec4b92d74c08a0127c5",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/kvablack/susie",
+  "kind": "GitHub",
+  "revision": "8177f63332a3905202c122310a92c51b8ff14280",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/kvablack/susie/tree/8177f63332a3905202c122310a92c51b8ff14280",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/leofan90/Awesome-World-Models",
+  "kind": "GitHub",
+  "revision": "85302a4d286fb7e98b3f7db2e116a95aa5c9fe3d",
+  "entry": "README.md",
+  "license": "BSD-3-Clause",
+  "source": "https://github.com/leofan90/Awesome-World-Models/tree/85302a4d286fb7e98b3f7db2e116a95aa5c9fe3d",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/liruiw/HPT",
+  "kind": "GitHub",
+  "revision": "549433f70569917eab84dfe0eae9d84a7c4ad9a3",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/liruiw/HPT/tree/549433f70569917eab84dfe0eae9d84a7c4ad9a3",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/lucas-maes/le-wm",
+  "kind": "GitHub",
+  "revision": "8edfeb336732b5f3ce7b8b210d0ba370a09e2cac",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/lucas-maes/le-wm/tree/8edfeb336732b5f3ce7b8b210d0ba370a09e2cac",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/manycore-research/SpatialLM",
+  "kind": "GitHub",
+  "revision": "8913c44d84a450c53e9340b13317f8cf7144a738",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/manycore-research/SpatialLM/tree/8913c44d84a450c53e9340b13317f8cf7144a738",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/mees/calvin",
+  "kind": "GitHub",
+  "revision": "fa03f01f19c65920e18cf37398a9ce859274af76",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/mees/calvin/tree/fa03f01f19c65920e18cf37398a9ce859274af76",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/microsoft/CogACT",
+  "kind": "GitHub",
+  "revision": "b174a1b86deedfab4d198d935207e7bb0527994e",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/microsoft/CogACT/tree/b174a1b86deedfab4d198d935207e7bb0527994e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/moka-manipulation/moka",
+  "kind": "GitHub",
+  "revision": "f6b642514e5eb5f11f45d9da22af7b4b97514f6d",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/moka-manipulation/moka/tree/f6b642514e5eb5f11f45d9da22af7b4b97514f6d",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/newton-physics/newton",
+  "kind": "GitHub",
+  "revision": "959a3d51612c9a670c32adb59113163e3928c4cf",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/newton-physics/newton/tree/959a3d51612c9a670c32adb59113163e3928c4cf",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/nickgkan/3d_diffuser_actor",
+  "kind": "GitHub",
+  "revision": "4faf00bdf89a3b3d07e266a59a28f9fbd02c7844",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/nickgkan/3d_diffuser_actor/tree/4faf00bdf89a3b3d07e266a59a28f9fbd02c7844",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/nicklashansen/newt",
+  "kind": "GitHub",
+  "revision": "1d3fc058b81ddf8d36a5457c29ea407dd374c1b8",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/nicklashansen/newt/tree/1d3fc058b81ddf8d36a5457c29ea407dd374c1b8",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/nicklashansen/tdmpc",
+  "kind": "GitHub",
+  "revision": "f4d85eca7419039b71bab2234ffc8aca378dd313",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/nicklashansen/tdmpc/tree/f4d85eca7419039b71bab2234ffc8aca378dd313",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/nicklashansen/tdmpc2",
+  "kind": "GitHub",
+  "revision": "332f19e4aba4bffe2dc736f45ea7f7bdc585903a",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/nicklashansen/tdmpc2/tree/332f19e4aba4bffe2dc736f45ea7f7bdc585903a",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/notmahi/bet",
+  "kind": "GitHub",
+  "revision": "3d9d42352c0a0a6fb170369e95dde4ec3cfea951",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/notmahi/bet/tree/3d9d42352c0a0a6fb170369e95dde4ec3cfea951",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/nv-tlabs/GEN3C",
+  "kind": "GitHub",
+  "revision": "db2ffe12ced12ddafcec5e0422ee46ce8520746b",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/nv-tlabs/GEN3C/tree/db2ffe12ced12ddafcec5e0422ee46ce8520746b",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/nvidia-cosmos/cosmos-predict2.5",
+  "kind": "GitHub",
+  "revision": "a2c298b0a3df3778b973fe65e9e58877b292d8a7",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/nvidia-cosmos/cosmos-predict2.5/tree/a2c298b0a3df3778b973fe65e9e58877b292d8a7",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/nvidia/cosmos",
+  "kind": "GitHub",
+  "revision": "0eab578a8935e26aa41c2b7dc9f5ab00f790a037",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/NVIDIA/cosmos/tree/0eab578a8935e26aa41c2b7dc9f5ab00f790a037",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/octo-models/octo",
+  "kind": "GitHub",
+  "revision": "241fb3514b7c40957a86d869fecb7c7fc353f540",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/octo-models/octo/tree/241fb3514b7c40957a86d869fecb7c7fc353f540",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/ok-robot/ok-robot",
+  "kind": "GitHub",
+  "revision": "174c742b6a1866a2da8f75a89e2c544bb77ab5f9",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/ok-robot/ok-robot/tree/174c742b6a1866a2da8f75a89e2c544bb77ab5f9",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/open-gigaai/giga-world-0",
+  "kind": "GitHub",
+  "revision": "f3fbdab0d6853a125cd0b898137e30a63aadbe7d",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/open-gigaai/giga-world-0/tree/f3fbdab0d6853a125cd0b898137e30a63aadbe7d",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/openvla-oft/openvla-oft",
+  "kind": "unresolved",
+  "source": "https://github.com/openvla-oft/openvla-oft",
+  "reason": "404"
+ },
+ {
+  "url": "https://github.com/openvla/openvla",
+  "kind": "GitHub",
+  "revision": "c8f03f48af692657d3060c19588038c7220e9af9",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/openvla/openvla/tree/c8f03f48af692657d3060c19588038c7220e9af9",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/peract/peract",
+  "kind": "GitHub",
+  "revision": "02fb87681c5a47be9dbf20141bedb836ee2d3ef9",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/peract/peract/tree/02fb87681c5a47be9dbf20141bedb836ee2d3ef9",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/pickxiguapi/Embodied-R1",
+  "kind": "GitHub",
+  "revision": "41c4f683db8747e2db91f5d0d28db9542ac6e249",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/pickxiguapi/Embodied-R1/tree/41c4f683db8747e2db91f5d0d28db9542ac6e249",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/rail-berkeley/crossformer",
+  "kind": "GitHub",
+  "revision": "4a56b64411e7ec039ea6cce6bbbe65a38f677db1",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/rail-berkeley/crossformer/tree/4a56b64411e7ec039ea6cce6bbbe65a38f677db1",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/rbalestr-lab/lejepa",
+  "kind": "GitHub",
+  "revision": "c293d291ca87cd4fddee9d3fffe4e914c7272052",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/galilai-group/lejepa/tree/c293d291ca87cd4fddee9d3fffe4e914c7272052",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/rbalestr-lab/llm-jepa",
+  "kind": "GitHub",
+  "revision": "ea0017c654ad917066ff32afc88276bea8ca5f7e",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/galilai-group/llm-jepa/tree/ea0017c654ad917066ff32afc88276bea8ca5f7e",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/real-stanford/DexUMI",
+  "kind": "GitHub",
+  "revision": "acddb8f8a89a8f0186868bbec44306eb7808114a",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/real-stanford/DexUMI/tree/acddb8f8a89a8f0186868bbec44306eb7808114a",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/real-stanford/diffusion_policy",
+  "kind": "GitHub",
+  "revision": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/real-stanford/diffusion_policy/tree/5ba07ac6661db573af695b419a7947ecb704690f",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/real-stanford/universal_manipulation_interface",
+  "kind": "GitHub",
+  "revision": "d095ba9590df789df5189eea5ee7e431689038a6",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/real-stanford/universal_manipulation_interface/tree/d095ba9590df789df5189eea5ee7e431689038a6",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/robbyant/lingbot-touch",
+  "kind": "GitHub",
+  "revision": "dec8025b212e7099b235cc2ef13a4921a7e59545",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Robbyant/lingbot-touch/tree/dec8025b212e7099b235cc2ef13a4921a7e59545",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/robbyant/lingbot-va",
+  "kind": "GitHub",
+  "revision": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Robbyant/lingbot-va/tree/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/roboterax/video-prediction-policy",
+  "kind": "GitHub",
+  "revision": "75cf37ad0f537627e1a3aa9a04bab70324ec27ff",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/roboterax/video-prediction-policy/tree/75cf37ad0f537627e1a3aa9a04bab70324ec27ff",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/siddancha/streaming-flow-policy",
+  "kind": "GitHub",
+  "revision": "ea08aa9bf24fe9960abc85d5ed69023ce7a91cc8",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/siddancha/streaming-flow-policy/tree/ea08aa9bf24fe9960abc85d5ed69023ce7a91cc8",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/sii-research/siiRL",
+  "kind": "GitHub",
+  "revision": "89d8764b6133ea78557a22eef32c68ad92946d45",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/sii-research/siiRL/tree/89d8764b6133ea78557a22eef32c68ad92946d45",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/thu-ml/Motus",
+  "kind": "GitHub",
+  "revision": "88f6fe30c62af033874b0a2e48ad1cbdaf12cfdf",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/thu-ml/Motus/tree/88f6fe30c62af033874b0a2e48ad1cbdaf12cfdf",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/thu-ml/RoboticsDiffusionTransformer",
+  "kind": "GitHub",
+  "revision": "cd79363a1387e8f81c7724d070ef7e45fd23150f",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/thu-ml/RoboticsDiffusionTransformer/tree/cd79363a1387e8f81c7724d070ef7e45fd23150f",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/thu-ml/vidar",
+  "kind": "GitHub",
+  "revision": "90117fe817765af53b73466b4052dd76a8a29094",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/thu-ml/vidar/tree/90117fe817765af53b73466b4052dd76a8a29094",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/tonyzhaozh/act",
+  "kind": "GitHub",
+  "revision": "742c753c0d4a5d87076c8f69e5628c79a8cc5488",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/tonyzhaozh/act/tree/742c753c0d4a5d87076c8f69e5628c79a8cc5488",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/tonyzhaozh/aloha",
+  "kind": "GitHub",
+  "revision": "06369f03cd8e0a47e16d3a90167853fd33af7557",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/tonyzhaozh/aloha/tree/06369f03cd8e0a47e16d3a90167853fd33af7557",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/tsinghua-fib-lab/MoWM",
+  "kind": "GitHub",
+  "revision": "6c35ab7fa0026ed66378fca8e8e38c157254d327",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/tsinghua-fib-lab/MoWM/tree/6c35ab7fa0026ed66378fca8e8e38c157254d327",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/tsinghua-fib-lab/World-Model",
+  "kind": "GitHub",
+  "revision": "53d7623b4394e51a24d577dccc33508f47139952",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/tsinghua-fib-lab/World-Model/tree/53d7623b4394e51a24d577dccc33508f47139952",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/vladisai/PLDM",
+  "kind": "GitHub",
+  "revision": "1bd7e564ecd961205bc18b23067b19e9ca24ac90",
+  "entry": "readme.md",
+  "license": "MIT",
+  "source": "https://github.com/vladisai/PLDM/tree/1bd7e564ecd961205bc18b23067b19e9ca24ac90",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/vlmaps/vlmaps",
+  "kind": "GitHub",
+  "revision": "58060f97239074338ab419a2090d43fa752d724d",
+  "entry": "README.md",
+  "license": "MIT",
+  "source": "https://github.com/vlmaps/vlmaps/tree/58060f97239074338ab419a2090d43fa752d724d",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/vmicheli/delta-iris",
+  "kind": "GitHub",
+  "revision": "f8d417321717a3d7012488785d7cdc66b62455dd",
+  "entry": "README.md",
+  "license": "GPL-3.0",
+  "source": "https://github.com/vmicheli/delta-iris/tree/f8d417321717a3d7012488785d7cdc66b62455dd",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/weipu-zhang/STORM",
+  "kind": "GitHub",
+  "revision": "e8be598643b4fc0d54e68d870810f05cda5551ec",
+  "entry": "readme.md",
+  "license": null,
+  "source": "https://github.com/weipu-zhang/STORM/tree/e8be598643b4fc0d54e68d870810f05cda5551ec",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/wentaoyuan/RoboPoint",
+  "kind": "GitHub",
+  "revision": "206cb1e086fc3960a8673725a8540766655cd9c5",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/wentaoyuan/RoboPoint/tree/206cb1e086fc3960a8673725a8540766655cd9c5",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/wzzheng/OccSora",
+  "kind": "GitHub",
+  "revision": "9f8d1f0da59c4163d2719f00093abc3f1dd3085a",
+  "entry": "README.md",
+  "license": "Apache-2.0",
+  "source": "https://github.com/wzzheng/OccSora/tree/9f8d1f0da59c4163d2719f00093abc3f1dd3085a",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/xiaoxiaoxh/reactive_diffusion_policy",
+  "kind": "GitHub",
+  "revision": "824c5e8de1fd1811106907a04b5f0186e0138c0b",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/xiaoxiaoxh/reactive_diffusion_policy/tree/824c5e8de1fd1811106907a04b5f0186e0138c0b",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/yueen-ma/Awesome-VLA",
+  "kind": "GitHub",
+  "revision": "5cf12ccf827b425c0750ca7d807faeb4f9c4d631",
+  "entry": "README.md",
+  "license": null,
+  "source": "https://github.com/yueen-ma/Awesome-VLA/tree/5cf12ccf827b425c0750ca7d807faeb4f9c4d631",
+  "archived": false
+ },
+ {
+  "url": "https://github.com/zixuan417/humanoid-general-motion-tracking",
+  "kind": "GitHub",
+  "revision": "2a590de25a1eb08e47491977a738549c22f16e1f",
+  "entry": "README.md",
+  "license": "NOASSERTION",
+  "source": "https://github.com/zixuan417/humanoid-general-motion-tracking/tree/2a590de25a1eb08e47491977a738549c22f16e1f",
+  "archived": false
+ },
+ {
+  "url": "https://huggingface.co/2toINF/X-VLA-Pt",
+  "kind": "Hub model",
+  "revision": "c1c4a64a7e03ac5b95c468bf1578f3d03651b53b",
+  "source": "https://huggingface.co/2toINF/X-VLA-Pt/tree/c1c4a64a7e03ac5b95c468bf1578f3d03651b53b",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/Arlolo0/UniScene",
+  "kind": "Hub model",
+  "revision": "ef2b945509a957960417591f032c306017bb6fd3",
+  "source": "https://huggingface.co/Arlolo0/UniScene/tree/ef2b945509a957960417591f032c306017bb6fd3",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/BAAI/RoboBrain2.0-7B",
+  "kind": "Hub model",
+  "revision": "f844fdfeab868f4ebdc7edc55aa66b907ab2a57d",
+  "source": "https://huggingface.co/BAAI/RoboBrain2.0-7B/tree/f844fdfeab868f4ebdc7edc55aa66b907ab2a57d",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/BAAI/RoboBrain2.5-8B-NV",
+  "kind": "Hub model",
+  "revision": "7ae187cc62e45cfa1c5904903a8f017f11b2037b",
+  "source": "https://huggingface.co/BAAI/RoboBrain2.5-8B-NV/tree/7ae187cc62e45cfa1c5904903a8f017f11b2037b",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/BeingBeyond/Being-H0-8B-2508",
+  "kind": "Hub model",
+  "revision": "e91be7e61a4fc8f5bbc4e9800ead4b1e35a856e3",
+  "source": "https://huggingface.co/BeingBeyond/Being-H0-8B-2508/tree/e91be7e61a4fc8f5bbc4e9800ead4b1e35a856e3",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/CogACT/CogACT-Base",
+  "kind": "Hub model",
+  "revision": "6550bf0992f162fc5d74f14ffee30771a9433363",
+  "source": "https://huggingface.co/CogACT/CogACT-Base/tree/6550bf0992f162fc5d74f14ffee30771a9433363",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/Embodied-CoT/ecot-openvla-7b-bridge",
+  "kind": "Hub model",
+  "revision": "492b3dbf3df380f6da333f86ce06dab028176166",
+  "source": "https://huggingface.co/Embodied-CoT/ecot-openvla-7b-bridge/tree/492b3dbf3df380f6da333f86ce06dab028176166",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/GEAR-Dreams/DreamZero-AgiBot",
+  "kind": "Hub model",
+  "revision": "a8e108456e537ab30e7e84523d41d12a7e739ca5",
+  "source": "https://huggingface.co/GEAR-Dreams/DreamZero-AgiBot/tree/a8e108456e537ab30e7e84523d41d12a7e739ca5",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/IFM/PAN2",
+  "kind": "Hub model",
+  "revision": "82f54c6cea3e20a9c451b61d7360016e5970503d",
+  "source": "https://huggingface.co/IFM/PAN2/tree/82f54c6cea3e20a9c451b61d7360016e5970503d",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt",
+  "kind": "Hub model",
+  "revision": "886c4557dfde53b44c0f74fde7d89bf83a26c3cd",
+  "source": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/tree/886c4557dfde53b44c0f74fde7d89bf83a26c3cd",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/IffYuan/Embodied-R1-3B-v1",
+  "kind": "Hub model",
+  "revision": "4dfe26d16f26989a9c4595f22a5a5e5bb502ab0d",
+  "source": "https://huggingface.co/IffYuan/Embodied-R1-3B-v1/tree/4dfe26d16f26989a9c4595f22a5a5e5bb502ab0d",
+  "license": "other"
+ },
+ {
+  "url": "https://huggingface.co/InternRobotics/InternVLA-A1-3B",
+  "kind": "Hub model",
+  "revision": "08cf716d413aa8208a34f346cd8824e6ff901205",
+  "source": "https://huggingface.co/InternRobotics/InternVLA-A1-3B/tree/08cf716d413aa8208a34f346cd8824e6ff901205",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/InternRobotics/InternVLA-M1",
+  "kind": "Hub model",
+  "revision": "ce8a34244d1da9cf5136743f28f1a619168a5185",
+  "source": "https://huggingface.co/InternRobotics/InternVLA-M1/tree/ce8a34244d1da9cf5136743f28f1a619168a5185",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/InternRobotics/InternVLA-N1",
+  "kind": "Hub model",
+  "revision": "377366bc480b6643b807b6ea8fa642715683cf7b",
+  "source": "https://huggingface.co/InternRobotics/InternVLA-N1-wo-dagger/tree/377366bc480b6643b807b6ea8fa642715683cf7b",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/InternRobotics/LoGoPlanner",
+  "kind": "Hub model",
+  "revision": "a96ba4e2cd68ccc2ce5c7169e254a6f244520637",
+  "source": "https://huggingface.co/InternRobotics/LoGoPlanner/tree/a96ba4e2cd68ccc2ce5c7169e254a6f244520637",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/InternRobotics/VLAC",
+  "kind": "Hub model",
+  "revision": "f44e552324944f80a63ab0083879f0bfafe01516",
+  "source": "https://huggingface.co/InternRobotics/VLAC/tree/f44e552324944f80a63ab0083879f0bfafe01516",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/OpenDriveLab/Vista",
+  "kind": "Hub model",
+  "revision": "a92d28c7b3da931ec959d587153dc45fffe570ef",
+  "source": "https://huggingface.co/OpenDriveLab/Vista/tree/a92d28c7b3da931ec959d587153dc45fffe570ef",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/OpenGalaxea/G0-VLA",
+  "kind": "Hub model",
+  "revision": "d24d4d154e43e3c1f87a0633438729005b2bcc31",
+  "source": "https://huggingface.co/OpenGalaxea/G0-VLA/tree/d24d4d154e43e3c1f87a0633438729005b2bcc31",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/VLA-Adapter",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/VLA-Adapter"
+ },
+ {
+  "url": "https://huggingface.co/WenyaoZhang/DreamVLA",
+  "kind": "Hub model",
+  "revision": "696fca15f2b12ebb9cdc8dfd074373a04c6f6a42",
+  "source": "https://huggingface.co/WenyaoZhang/DreamVLA/tree/696fca15f2b12ebb9cdc8dfd074373a04c6f6a42",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/X-Humanoid/Pelican1.0-VL-7B",
+  "kind": "Hub model",
+  "revision": "907400d52f415b8b5f0bcef35c655d511d9ae02b",
+  "source": "https://huggingface.co/X-Humanoid/Pelican1.0-VL-7B/tree/907400d52f415b8b5f0bcef35c655d511d9ae02b",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-1-5B",
+  "kind": "Hub model",
+  "revision": "ee21d524b5c52ac961d941e1bc7d6d92836c3d5e",
+  "source": "https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-1-5B/tree/ee21d524b5c52ac961d941e1bc7d6d92836c3d5e",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/Zhoues/RoboRefer-2B-SFT",
+  "kind": "Hub model",
+  "revision": "5838509249e43bc135ce55d05eace34edd2ffaf4",
+  "source": "https://huggingface.co/Zhoues/RoboRefer-2B-SFT/tree/5838509249e43bc135ce55d05eace34edd2ffaf4",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/a8cheng/navila-llama3-8b-8f",
+  "kind": "Hub model",
+  "revision": "b2294e96581454468d6b94f38201f4f965ef48b7",
+  "source": "https://huggingface.co/a8cheng/navila-llama3-8b-8f/tree/b2294e96581454468d6b94f38201f4f965ef48b7",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/agibot-world/GO-1",
+  "kind": "Hub model",
+  "revision": "0bc37be9caa20b5b3d4a569ec462409072d3e244",
+  "source": "https://huggingface.co/agibot-world/GO-1/tree/0bc37be9caa20b5b3d4a569ec462409072d3e244",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/agibot-world/Genie-Envisioner",
+  "kind": "Hub model",
+  "revision": "797c0676521df1c9e6ff7f78d7e96b1d0a2b44c5",
+  "source": "https://huggingface.co/agibot-world/Genie-Envisioner-v1.0/tree/797c0676521df1c9e6ff7f78d7e96b1d0a2b44c5",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/blog/nvidia/gr00t-n1-7",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/blog/nvidia/gr00t-n1-7"
+ },
+ {
+  "url": "https://huggingface.co/collections/nvidia/cosmos3",
+  "kind": "Hub collection",
+  "source": "https://huggingface.co/collections/nvidia/cosmos3",
+  "members": 6
+ },
+ {
+  "url": "https://huggingface.co/collections/nvidia/gen3c-683f3f9540a8f9c98cf46a8d",
+  "kind": "Hub collection",
+  "source": "https://huggingface.co/collections/nvidia/gen3c-683f3f9540a8f9c98cf46a8d",
+  "members": 3
+ },
+ {
+  "url": "https://huggingface.co/collections/robbyant/lingbot-touch",
+  "kind": "Hub collection",
+  "source": "https://huggingface.co/collections/robbyant/lingbot-touch",
+  "members": 2
+ },
+ {
+  "url": "https://huggingface.co/datasets/InternRobotics/GRScenes",
+  "kind": "Hub dataset",
+  "revision": "4760b9031881c985e3582075cb2d8dbde1530a68",
+  "source": "https://huggingface.co/datasets/InternRobotics/GRScenes/tree/4760b9031881c985e3582075cb2d8dbde1530a68",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/datasets/OpenDriveLab/OpenDV-YouTube-Language",
+  "kind": "Hub dataset",
+  "revision": "4c6301e062e8bafdf9bebbc59998b7676aaae3b8",
+  "source": "https://huggingface.co/datasets/OpenDriveLab/OpenDV-YouTube-Language/tree/4c6301e062e8bafdf9bebbc59998b7676aaae3b8",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/datasets/OpenGalaxea/Galaxea-Open-World-Dataset",
+  "kind": "Hub dataset",
+  "revision": "df670d8dc3f2b369f55d28a3428b8639f0dab37d",
+  "source": "https://huggingface.co/datasets/OpenGalaxea/Galaxea-Open-World-Dataset/tree/df670d8dc3f2b369f55d28a3428b8639f0dab37d",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/datasets/TianxingChen/RoboTwin2.0",
+  "kind": "Hub dataset",
+  "revision": "3dc3b798668feb99ac61cc9086d84cbcc3d79186",
+  "source": "https://huggingface.co/datasets/TianxingChen/RoboTwin2.0/tree/3dc3b798668feb99ac61cc9086d84cbcc3d79186",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta",
+  "kind": "Hub dataset",
+  "revision": "2252b3fdc88dc67fa5d5e4b771e1b86f5e71c278",
+  "source": "https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta/tree/2252b3fdc88dc67fa5d5e4b771e1b86f5e71c278",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/datasets/fangqi/IRASim",
+  "kind": "Hub dataset",
+  "revision": "dfcbf85c27b2c5d041dbf5df3df272111e758b48",
+  "source": "https://huggingface.co/datasets/fangqi/IRASim/tree/dfcbf85c27b2c5d041dbf5df3df272111e758b48",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/datasets/nvidia/Arena-GR1-Manipulation-Task",
+  "kind": "Hub dataset",
+  "revision": "8493329a04f7785e99dd4cef2ebafbaba80a58e4",
+  "source": "https://huggingface.co/datasets/nvidia/Arena-GR1-Manipulation-Task/tree/8493329a04f7785e99dd4cef2ebafbaba80a58e4",
+  "license": "cc-by-4.0"
+ },
+ {
+  "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Locomanipulation-GRAIL",
+  "kind": "Hub dataset",
+  "revision": "ba151a1adc4b2fc45c75f5cc3cfd12b7ad288bb0",
+  "source": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Locomanipulation-GRAIL/tree/ba151a1adc4b2fc45c75f5cc3cfd12b7ad288bb0",
+  "license": "cc-by-nc-4.0"
+ },
+ {
+  "url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+  "kind": "Hub dataset",
+  "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+  "source": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/tree/f13aa24a3da8c43c7225569f28c562979fa0e35a",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/docs/lerobot/lerobot-dataset-v3",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/docs/lerobot/lerobot-dataset-v3"
+ },
+ {
+  "url": "https://huggingface.co/eloialonso/diamond",
+  "kind": "Hub model",
+  "revision": "5d4abca9af6ab1b3ab1c6fc228cacb7281130f7f",
+  "source": "https://huggingface.co/eloialonso/diamond/tree/5d4abca9af6ab1b3ab1c6fc228cacb7281130f7f",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/facebook/ijepa_vith14_1k",
+  "kind": "Hub model",
+  "revision": "f157467ea509bc356ff9f61fd3c0d840eec5e04e",
+  "source": "https://huggingface.co/facebook/ijepa_vith14_1k/tree/f157467ea509bc356ff9f61fd3c0d840eec5e04e",
+  "license": "cc-by-nc-4.0"
+ },
+ {
+  "url": "https://huggingface.co/facebook/nwm",
+  "kind": "Hub model",
+  "revision": "0821a1a7b1ae938539e32f13f5ad82465e0f3fde",
+  "source": "https://huggingface.co/facebook/nwm/tree/0821a1a7b1ae938539e32f13f5ad82465e0f3fde",
+  "license": "cc-by-4.0"
+ },
+ {
+  "url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256",
+  "kind": "Hub model",
+  "revision": "875c192b7b704b87d1e1d99345769632dd5f739a",
+  "source": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/tree/875c192b7b704b87d1e1d99345769632dd5f739a",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/flymin/MagicDriveDiT-stage3-40k-ft",
+  "kind": "Hub model",
+  "revision": "1ea6ea5f14cb6926ab9d032c63af6296cf1112e0",
+  "source": "https://huggingface.co/flymin/MagicDriveDiT-stage3-40k-ft/tree/1ea6ea5f14cb6926ab9d032c63af6296cf1112e0",
+  "license": "gpl-3.0"
+ },
+ {
+  "url": "https://huggingface.co/haosulab",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/haosulab"
+ },
+ {
+  "url": "https://huggingface.co/jepa-world-models/h-jepa",
+  "kind": "Hub model",
+  "revision": "08fc8a21208671a87741f2960aeba9b5db4420e0",
+  "source": "https://huggingface.co/jepa-world-models/h-jepa/tree/08fc8a21208671a87741f2960aeba9b5db4420e0",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/lerobot/pi05_base",
+  "kind": "Hub model",
+  "revision": "22c30e5b34f9e7ab738b1b34fc2fc5ecfe2d28f0",
+  "source": "https://huggingface.co/lerobot/pi05_base/tree/22c30e5b34f9e7ab738b1b34fc2fc5ecfe2d28f0",
+  "license": "gemma"
+ },
+ {
+  "url": "https://huggingface.co/lerobot/pi0_old",
+  "kind": "Hub model",
+  "revision": "e4ed526af508e58f6008b29e9e48f1098278fdb5",
+  "source": "https://huggingface.co/lerobot/pi0_old/tree/e4ed526af508e58f6008b29e9e48f1098278fdb5",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/lerobot/smolvla_base",
+  "kind": "Hub model",
+  "revision": "5e8d12a6e2975b0e5e5fce7c8caf47c371d257b6",
+  "source": "https://huggingface.co/lerobot/smolvla_base/tree/5e8d12a6e2975b0e5e5fce7c8caf47c371d257b6",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/liyingyan/DriveVLA-W0",
+  "kind": "Hub model",
+  "revision": "0bd601d6130e504d72c092d2e83e5bf05b0afa2a",
+  "source": "https://huggingface.co/liyingyan/DriveVLA-W0/tree/0bd601d6130e504d72c092d2e83e5bf05b0afa2a",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/mengwei0427/StreamVLN_Video_qwen_1_5_r2r_rxr_envdrop_scalevln",
+  "kind": "Hub model",
+  "revision": "1a96b9d37a45b28d1acf3135d0bda3a39803b264",
+  "source": "https://huggingface.co/mengwei0427/StreamVLN_Video_qwen_1_5_r2r_rxr_envdrop_scalevln/tree/1a96b9d37a45b28d1acf3135d0bda3a39803b264",
+  "license": "cc-by-nc-sa-4.0"
+ },
+ {
+  "url": "https://huggingface.co/microsoft/Magma-8B",
+  "kind": "Hub model",
+  "revision": "4159b1dedade8f88b5bbaaae7810299dee5228f5",
+  "source": "https://huggingface.co/microsoft/Magma-8B/tree/4159b1dedade8f88b5bbaaae7810299dee5228f5",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-spatial",
+  "kind": "Hub model",
+  "revision": "6d0231af0e48c5985f1ff86908f4674b84bc049b",
+  "source": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-spatial/tree/6d0231af0e48c5985f1ff86908f4674b84bc049b",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/nicklashansen/newt",
+  "kind": "Hub model",
+  "revision": "7eef11eb63c8ed53d61d739693d7140135ea0876",
+  "source": "https://huggingface.co/nicklashansen/newt/tree/7eef11eb63c8ed53d61d739693d7140135ea0876",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/nicklashansen/tdmpc2",
+  "kind": "Hub model",
+  "revision": "8fb2a82efb3bae96941da440128fe1332e4394fd",
+  "source": "https://huggingface.co/nicklashansen/tdmpc2/tree/8fb2a82efb3bae96941da440128fe1332e4394fd",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/nvidia/Cosmos-Policy-LIBERO-Predict2-2B",
+  "kind": "Hub model",
+  "revision": "cb689ec0e3347c13667d70a78a3447388f5c3bb8",
+  "source": "https://huggingface.co/nvidia/Cosmos-Policy-LIBERO-Predict2-2B/tree/cb689ec0e3347c13667d70a78a3447388f5c3bb8",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/nvidia/Cosmos-Reason1-7B",
+  "kind": "Hub model",
+  "revision": "375e24000b24baed78f4618d3dd779e47cd96323",
+  "source": "https://huggingface.co/nvidia/Cosmos-Reason1-7B/tree/375e24000b24baed78f4618d3dd779e47cd96323",
+  "license": "other"
+ },
+ {
+  "url": "https://huggingface.co/nvidia/GEAR-SONIC",
+  "kind": "Hub model",
+  "revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+  "source": "https://huggingface.co/nvidia/GEAR-SONIC/tree/6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+  "license": "other"
+ },
+ {
+  "url": "https://huggingface.co/nvidia/GR00T-N1-2B",
+  "kind": "Hub model",
+  "revision": "fc879581ca32f4f6d6e02cf0cc80452f6b0c3873",
+  "source": "https://huggingface.co/nvidia/GR00T-N1-2B/tree/fc879581ca32f4f6d6e02cf0cc80452f6b0c3873",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/nvidia/GR00T-N1.6-3B",
+  "kind": "Hub model",
+  "revision": "d0814e7ecb19202e7c8468b46098b0b7ef3a6d61",
+  "source": "https://huggingface.co/nvidia/GR00T-N1.6-3B/tree/d0814e7ecb19202e7c8468b46098b0b7ef3a6d61",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/nvidia/GR00T-N1.7-3B",
+  "kind": "Hub model",
+  "revision": "373d34e2723d928870157d07dc216a19a624b5bb",
+  "source": "https://huggingface.co/nvidia/GR00T-N1.7-3B/tree/373d34e2723d928870157d07dc216a19a624b5bb",
+  "license": "other"
+ },
+ {
+  "url": "https://huggingface.co/open-gigaai/GigaWorld-0-Video-Pretrain-2b",
+  "kind": "Hub model",
+  "revision": "605b89ff8fdacc8941444abcffa596aca92b8224",
+  "source": "https://huggingface.co/open-gigaai/GigaWorld-0-Video-Pretrain-2b/tree/605b89ff8fdacc8941444abcffa596aca92b8224",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/openvla/openvla-7b",
+  "kind": "Hub model",
+  "revision": "47a0ec7fc4ec123775a391911046cf33cf9ed83f",
+  "source": "https://huggingface.co/openvla/openvla-7b/tree/47a0ec7fc4ec123775a391911046cf33cf9ed83f",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/papers/2401.02117",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2401.02117"
+ },
+ {
+  "url": "https://huggingface.co/papers/2401.16013",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2401.16013"
+ },
+ {
+  "url": "https://huggingface.co/papers/2402.10329",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2402.10329"
+ },
+ {
+  "url": "https://huggingface.co/papers/2410.24221",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2410.24221"
+ },
+ {
+  "url": "https://huggingface.co/papers/2505.19789",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2505.19789"
+ },
+ {
+  "url": "https://huggingface.co/papers/2505.21851",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2505.21851"
+ },
+ {
+  "url": "https://huggingface.co/papers/2507.12440",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2507.12440"
+ },
+ {
+  "url": "https://huggingface.co/papers/2510.25889",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2510.25889"
+ },
+ {
+  "url": "https://huggingface.co/papers/2611.14815",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/papers/2611.14815"
+ },
+ {
+  "url": "https://huggingface.co/qwbu/univla-7b",
+  "kind": "Hub model",
+  "revision": "968e2896809c00968e8fd936e052476ce5ac1bd0",
+  "source": "https://huggingface.co/qwbu/univla-7b/tree/968e2896809c00968e8fd936e052476ce5ac1bd0",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/rail-berkeley/crossformer",
+  "kind": "Hub model",
+  "revision": "c7dea2691aed3656537c5126a0a77df84a28abd7",
+  "source": "https://huggingface.co/rail-berkeley/crossformer/tree/c7dea2691aed3656537c5126a0a77df84a28abd7",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/rail-berkeley/octo-base",
+  "kind": "Hub model",
+  "revision": "39d6c88fdbbcf6f841481a7d732f68c612d04609",
+  "source": "https://huggingface.co/rail-berkeley/octo-base/tree/39d6c88fdbbcf6f841481a7d732f68c612d04609",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/robbyant/lingbot-va",
+  "kind": "Hub model",
+  "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+  "source": "https://huggingface.co/robbyant/lingbot-va-base/tree/68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/robbyant/lingbot-vla-4b",
+  "kind": "Hub model",
+  "revision": "87712223fb463f0f6a6565f8feba64c35418e393",
+  "source": "https://huggingface.co/robbyant/lingbot-vla-4b/tree/87712223fb463f0f6a6565f8feba64c35418e393",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/robotics-diffusion-transformer/rdt-1b",
+  "kind": "Hub model",
+  "revision": "eb09036cc64ca4945051acbd1bd581d30a1d7711",
+  "source": "https://huggingface.co/robotics-diffusion-transformer/rdt-1b/tree/eb09036cc64ca4945051acbd1bd581d30a1d7711",
+  "license": "mit"
+ },
+ {
+  "url": "https://huggingface.co/spaces/WorldArena/WorldArena",
+  "kind": "Hub directory / page",
+  "source": "https://huggingface.co/spaces/WorldArena/WorldArena"
+ },
+ {
+  "url": "https://huggingface.co/tencent/HunyuanWorld-Mirror",
+  "kind": "Hub model",
+  "revision": "5574b7b0d5ac9d80e8a92976222370a0d20a57a0",
+  "source": "https://huggingface.co/tencent/HunyuanWorld-Mirror/tree/5574b7b0d5ac9d80e8a92976222370a0d20a57a0",
+  "license": "other"
+ },
+ {
+  "url": "https://huggingface.co/vmicheli/delta-iris",
+  "kind": "Hub model",
+  "revision": "ded10a5a17b1d2433115961b2fd5813db07316ee",
+  "source": "https://huggingface.co/vmicheli/delta-iris/tree/ded10a5a17b1d2433115961b2fd5813db07316ee",
+  "license": null
+ },
+ {
+  "url": "https://huggingface.co/wentao-yuan/robopoint-v1-vicuna-v1.5-13b",
+  "kind": "Hub model",
+  "revision": "508ed28687caeeb923e1d7d5905e37dccc16c991",
+  "source": "https://huggingface.co/wentao-yuan/robopoint-v1-vicuna-v1.5-13b/tree/508ed28687caeeb923e1d7d5905e37dccc16c991",
+  "license": "apache-2.0"
+ },
+ {
+  "url": "https://huggingface.co/x-square-robot/wall-oss-flow",
+  "kind": "Hub model",
+  "revision": "44e827683819957d8c574e8b746a1a97e77f518a",
+  "source": "https://huggingface.co/x-square-robot/wall-oss-flow/tree/44e827683819957d8c574e8b746a1a97e77f518a",
+  "license": null
+ }
+]

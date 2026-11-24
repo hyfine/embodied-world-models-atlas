@@ -6,6 +6,17 @@
 
 **[打开交互图谱 ↗](https://hyfine.github.io/embodied-world-models-atlas/zh.html)** · [双语论文索引](CATALOG.md) · [趋势与反证](docs/outlook.zh-CN.md) · [检索口径](EVIDENCE.md)
 
+### 扩展研究版：按问题选标签页
+
+| 你想弄清楚什么？ | 从这里进入 |
+|---|---|
+| 从预测下一帧，到规划、再到出动作，关键差别在哪里？ | [跨家族研究综合](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html) |
+| 工作簿的 15 个方向，分别有什么代表作？部署时具体运行哪些组件？ | [运行架构、验证方式与原文位置](https://hyfine.github.io/embodied-world-models-atlas/runtime.zh.html) |
+| 某条论文或仓库，实际核读到哪一层？ | [按来源和阅读深度查询 320 条主表与 70 条补表记录](https://hyfine.github.io/embodied-world-models-atlas/evidence.zh.html) |
+| 本地存的是哪个版本？ | [分方向论文书架](https://hyfine.github.io/embodied-world-models-atlas/shelf.zh.html) · [指定 WAM 综述精读](docs/wam-survey-deep-dive.md) |
+
+下方的 38 片叶子是**入门精选**，不是扩展书目的总数。一条表格记录、一个可核的仓库、一份下载的 PDF 和一次逐页精读不能混作同一指标。
+
 [![方法生长树：六色家族从感知与行动的树根展开，38 个作品各占一片有名称的叶子](assets/growth-tree.zh-CN.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)
 
 **从根读到叶。** 按年份回放，可以看到各支路线何时长出；放大后拖动图面，点叶片读论文与实现。枝条是阅读分类，不是已证实的技术继承。
