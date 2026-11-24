@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {deepGuide,mapSections,panorama,validateMap} from './maps.mjs';
 import {treePlate} from './plates.mjs';
-import {researchOutputs,tabNav} from './research.mjs';
+import {homeSystems,researchOutputs,tabNav} from './research.mjs';
 
 process.chdir(fileURLToPath(new URL('../', import.meta.url)));
 const root = 'https://github.com/hyfine/embodied-world-models-atlas';
@@ -56,12 +56,19 @@ function page(en) {
 <html lang="${lang}"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${t('具身智能 × 世界模型研究图谱','Embodied AI × World Models Atlas')}</title>
 <meta name="description" content="${t('从推杯子读懂预测、规划和动作：双语研究图谱。','A bilingual field guide to prediction, planning and action, starting with a cup on a table.')}">
-<link rel="stylesheet" href="${asset('assets/atlas.css')}"><link rel="stylesheet" href="${asset('assets/maps.css')}"><link rel="stylesheet" href="${asset('assets/research.css')}"><script defer src="${asset('assets/atlas.js')}"></script><script defer src="${asset('assets/maps.js')}"></script>
-<body><a class="skip" href="#main">${t('跳到正文','Skip to content')}</a><header><div class="bar"><a href="#main" class="wordmark">◉ FIELD ATLAS</a><nav><a href="#maps">${t('演进','Evolution')}</a><a href="#architectures">${t('架构','Architecture')}</a><a href="#library">${t('索引','Library')}</a><a href="${root}">GitHub</a><a lang="${t('en','zh-CN')}" href="${t('index','zh')}.html">${t('English','中文')}</a></nav></div></header>
-<main id="main"><div class="masthead wrap"><div><div class="kicker">RESEARCH FIELDNOTES　/　${cutoff}</div>
-<h1>${t('具身智能 <em>× 世界模型</em>','Embodied AI <em>× World Models</em>')}</h1></div>
-<p>${t('从预测接下来会发生什么，到决定下一步怎样做。','From predicting what happens next to choosing what to do next.')}<br><small>${works.length} ${t('项研究','works')}　/　6 ${t('个家族','families')}　/　1991–2026</small></p></div>
-<div class="wrap">${tabNav(en,'index')}${mapSections({works,families,en,esc,docs})}
+<link rel="stylesheet" href="${asset('assets/atlas.css')}"><link rel="stylesheet" href="${asset('assets/maps.css')}"><link rel="stylesheet" href="${asset('assets/research.css')}"><script defer src="${asset('assets/atlas.js')}"></script><script defer src="${asset('assets/maps.js')}"></script><script defer src="${asset('assets/research.js')}"></script>
+<body><a class="skip" href="#main">${t('跳到正文','Skip to content')}</a><header><div class="bar"><a href="#main" class="wordmark">◉ FIELD ATLAS</a><nav><a href="#maps">${t('演进','Evolution')}</a><a href="#system-studio">${t('系统架构','Systems')}</a><a href="#library">${t('索引','Library')}</a><a href="${root}">GitHub</a><a lang="${t('en','zh-CN')}" href="${t('index','zh')}.html">${t('English','中文')}</a></nav></div></header>
+<main id="main"><div class="cover"><div class="cover-inner wrap"><div><div class="kicker">${t('具身智能 × 世界模型　/　交互研究图谱','EMBODIED AI × WORLD MODELS　/　INTERACTIVE FIELD GUIDE')}</div>
+<h1>${t('模型预测后果。<br><em>策略选择动作。</em>','Models predict.<br><em>Policies act.</em>')}</h1>
+<p>${t('面对同一只杯子，世界模型回答“轻推会怎样”；策略回答“现在怎么推”。执行之后，要看杯子实际到了哪里。','A world model predicts where a cup might slide. A policy chooses the push. After acting, the robot has to look again.')}</p>
+<div class="cover-cta"><a href="#maps">${t('探索方法树','Explore the method tree')} ↓</a><a href="#system-studio">${t('看系统怎么运行','See how a system runs')} →</a></div></div>
+<figure class="cover-figure"><figcaption>FIG 01　/　${t('同一推法，两种落点','ONE PUSH, TWO ENDPOINTS')}</figcaption><svg viewBox="0 0 490 157" role="img" aria-label="${t('教学示例：杯子从位置 3 出发，预测轻推后到 7，实际测量到 4。','Illustrative push: the cup starts at 3, is predicted to reach 7 and is measured at 4.')}">
+<defs><g id="cup-symbol"><path d="M-12 -19h24l-2 21h-20z M12 -16h4q9 6-5 11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></g></defs>
+<g class="bench-grid"><path d="M26 123H464 M75 117v11 M146 117v11 M359 117v11 M430 117v11"/></g><g class="cup-route"><path d="M75 102Q208 -14 359 83" fill="none" stroke="#94dce5" stroke-width="2.5" stroke-dasharray="5 5"/><path d="M75 110Q107 81 146 106" fill="none" stroke="#ffd69a" stroke-width="3"/></g>
+<use href="#cup-symbol" x="75" y="112" color="#e9f1dd"/><use href="#cup-symbol" x="146" y="112" color="#ffd69a"/><use href="#cup-symbol" x="359" y="86" color="#94dce5"/>
+<ellipse cx="430" cy="116" rx="24" ry="5" fill="none" stroke="#abc494" stroke-width="2"/>
+<g font-size="14" font-family="system-ui,sans-serif"><text x="359" y="50" text-anchor="middle" fill="#aee4ea">${t('模型预测','Predicted')} · 7</text><text x="147" y="78" text-anchor="middle" fill="#ffdaa1">${t('实际测量','Measured')} · 4</text><text x="75" y="148" text-anchor="middle" fill="#e7eddf">${t('起点','Start')} · 3</text><text x="430" y="148" text-anchor="middle" fill="#c6d6b4">${t('目标','Goal')} · 8</text></g></svg><small>${t('教学示意，非实测数据。预测不等于执行成功。','Teaching example, not trial data. A prediction is not a successful action.')}</small></figure></div></div>
+<div class="wrap">${tabNav(en,'index')}${mapSections({works,families,en,esc,docs})}${homeSystems(en)}
 <section id="cup-lab"><div class="plate"><div class="kicker">CUP LAB &nbsp; / &nbsp; MPC</div><h2>${t('选一个动作，看预测落在哪里。','Pick an action. Where does the prediction land?')}</h2>
 <div class="track" aria-hidden="true"><span class="goal"></span><span class="cup">▰</span></div>
 <div class="controls" id="actions">${[t('不动','Wait'),t('轻推','Gentle push'),t('重推','Hard push')].map((a,i) => `<button type="button" data-i="${i}" aria-pressed="${i===1}">${a}</button>`).join('')}</div>

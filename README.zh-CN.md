@@ -11,7 +11,7 @@
 | 你想弄清楚什么？ | 从这里进入 |
 |---|---|
 | 从预测下一帧，到规划、再到出动作，关键差别在哪里？ | [跨家族研究综合](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html) |
-| 工作簿的 15 个方向，分别有什么代表作？部署时具体运行哪些组件？ | [运行架构、验证方式与原文位置](https://hyfine.github.io/embodied-world-models-atlas/runtime.zh.html) |
+| 工作簿的 15 个方向，部署时究竟运行哪些组件？ | [在主页选择系统](https://hyfine.github.io/embodied-world-models-atlas/zh.html#system-studio)，或[浏览全部系统图](https://hyfine.github.io/embodied-world-models-atlas/runtime.zh.html)。沿信号线区分内部更新与实测反馈，再查对应的论文图表。 |
 | 某条论文或仓库，实际核读到哪一层？ | [按来源和阅读深度查询 320 条主表与 70 条补表记录](https://hyfine.github.io/embodied-world-models-atlas/evidence.zh.html) |
 | 本地存的是哪个版本？ | [分方向论文书架](https://hyfine.github.io/embodied-world-models-atlas/shelf.zh.html) · [指定 WAM 综述精读](docs/wam-survey-deep-dive.md) |
 

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {layouts} from '../data/method-families.mjs';
 import {cases} from '../data/deep-dives.mjs';
 import {treePlate,timePlate} from './plates.mjs';
+import {schematic} from './schematics.mjs';
 
 const headings = {
   contract: ['输入与输出', 'Interface'],
@@ -88,6 +89,7 @@ ${panel('swimlanes',timePlate(works,en,true),t('每条河是一类研究。圆�
 </section><section id="architectures"><div class="kicker">ARCHITECTURE PLATES &nbsp; / &nbsp; M F P J E S</div><h2>${t('从家族架构走到实现','From family architecture to implementation')}</h2><p>${t('展开每一类，沿组件读数据流。每张图取一条代表路径；E 与 S 分别是评测和综述流程，不是两种控制器。','Open a family and follow the data through its components. Each plate shows one representative path; E and S are evaluation and survey workflows, not controllers.')}</p>
 ${fs.map(f=>{
     const a=layouts[f],r=byId.get(a.focus);
-    return `<details class="arch" data-f="${f}" id="arch-${f}" ${f==='M'?'open':''}><summary>${f} · ${families[f][l]} <small> / ${title(r.id)}</small></summary><ol class="flow">${a.flow.map((p,i)=>`<li style="--step:${i}"><b>0${i+1}</b>${esc(p[l])}</li>`).join('')}</ol><p>${esc(a.note[l])}</p><a href="${book}#case-${r.id}">${t('精读','Deep dive')}: ${esc(r.name)} →</a> · <a href="${esc(r.paper)}">${t('论文','Paper')} ↗</a></details>`;
+    const code=({M:'WM-1',F:'WM-2',S:'SURVEY'})[f]||f;
+    return `<details class="arch" data-f="${f}" id="arch-${f}"><summary>${f} · ${families[f][l]} <small> / ${title(r.id)}</small></summary>${schematic({code,representative:r.name,feedback:a.note},en,'family')}<p>${esc(a.note[l])}</p><a href="${book}#case-${r.id}">${t('精读','Deep dive')}: ${esc(r.name)} →</a> · <a href="${esc(r.paper)}">${t('论文','Paper')} ↗</a></details>`;
   }).join('')}</section>`;
 }

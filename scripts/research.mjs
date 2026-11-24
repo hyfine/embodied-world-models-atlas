@@ -1,5 +1,6 @@
 import {readFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
+import {schematic} from './schematics.mjs';
 
 const partitions=['wm-a','wm-b','eai-a','eai-b','eai-c','supplement'];
 const titles={
@@ -56,8 +57,17 @@ function ledger(rows,en,pointers) {
 }
 function runtime(cards,en) {
   const l=+en,t=(zh,eng)=>en?eng:zh;
-  return `<nav class="chips">${cards.map(c=>`<a href="#${c.code.toLowerCase()}">${c.code}</a>`).join('')}</nav><p>${t('下图是按论文重画的逻辑数据流，不是真机时序测量。训练和部署、动作与视觉预测、数据管线与控制器分别标明；按“逐步”追踪一次。','These are original logical data paths, not measured robot timing. Separate training from deployment, actions from predictions, and dataset pipelines from controllers. Step through a path to read it in order.')}</p>`+
-  cards.map(c=>`<article class="runtime-plate" id="${c.code.toLowerCase()}"><small>${c.code} / ${titles[c.code][l]}</small><h2>${esc(c.representative)}</h2><ol class="runtime-flow">${c.stages.map((pair,i)=>`<li><b>${String(i+1).padStart(2,'0')}</b>${esc(pair[l])}</li>`).join('')}</ol><div class="step-controls" hidden><button type="button" data-step>${t('逐步追踪','Trace next step')} →</button><button type="button" data-reset>${t('重置','Reset')}</button><output aria-live="polite"></output></div><p><strong>${t('反馈与边界','Feedback & boundary')}.</strong> ${esc(c.feedback[l])}</p><p><strong>${t('怎样验证','Evidence test')}.</strong> ${esc(c.test[l])}</p><p class="locator">${link(t('原始来源','Primary source'),c.source)} · ${esc(c.locator)} · ${absBrief(c,en)}</p></article>`).join('\n');
+  return `<nav class="system-links" aria-label="${t('按方向选图','Choose a system')}">${cards.map(c=>`<a href="#${c.code.toLowerCase()}"><b>${c.code}</b>${titles[c.code][l]}</a>`).join('')}</nav>`+
+  cards.map(c=>`<article class="runtime-plate" id="${c.code.toLowerCase()}"><small>${c.code} / ${titles[c.code][l]}</small><h2>${esc(c.representative)}</h2>${schematic(c,en)}<details><summary>${t('文字版运行步骤','Read the steps as text')}</summary><ol>${c.stages.map(pair=>`<li>${esc(pair[l])}</li>`).join('')}</ol></details><p><strong>${t('反馈与边界','Feedback & boundary')}.</strong> ${esc(c.feedback[l])}</p><p><strong>${t('怎样验证','Evidence test')}.</strong> ${esc(c.test[l])}</p><p class="locator">${link(t('原始来源','Primary source'),c.source)} · ${esc(c.locator)} · ${absBrief(c,en)}</p></article>`).join('\n');
+}
+
+export function homeSystems(en){
+  const cards=partitions.filter(p=>p!=='supplement').flatMap(p=>read(`data/runtime-${p}.json`));
+  const l=+en,t=(zh,eng)=>en?eng:zh, url=local('runtime',en);
+  return `<section id="system-studio"><div class="kicker">SYSTEM STUDIO　/　15 DIRECTIONS</div><h2>${t('打开黑盒，看信号怎样流动。','Open a system. Follow a signal.')}</h2><p>${t('选一类，不用离开主页。实线传数据，虚线标出反馈或内部更新；没有控制器的系统不画动作回路。','Pick a direction without leaving this page. Solid arrows carry data; dashed paths distinguish feedback and internal updates. Not every system has a controller.')}</p>
+<label class="studio-pick" hidden>${t('选择系统','Choose system')} <select>${cards.map(c=>`<option value="${c.code}">${c.code} · ${titles[c.code][l]} — ${esc(c.representative)}</option>`).join('')}</select></label>
+${cards.map((c,i)=>`<article class="studio-card" data-system="${c.code}"${i?' hidden':''}><small>${c.code} / ${titles[c.code][l]}</small><h3>${esc(c.representative)}</h3>${schematic(c,en,'studio')}<p>${esc(c.feedback[l])}</p><a href="${url}#${c.code.toLowerCase()}">${t('查看实验证据与原论文','See the evidence and paper')} →</a></article>`).join('')}
+<p><a href="${url}">${t('并排查阅全部 15 个方向的系统图与原文定位','Browse all 15 system diagrams and their paper references')} →</a></p></section>`;
 }
 const contrasts=[
   ['让想象参与哪次决策？','When does imagination enter the decision?',

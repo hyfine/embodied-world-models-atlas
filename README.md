@@ -11,7 +11,7 @@
 | Choose a question | Where to go |
 |---|---|
 | What changes between predicting the next frame, planning and producing an action? | [Cross-family synthesis](https://hyfine.github.io/embodied-world-models-atlas/research.html) |
-| What actually runs in a representative system from each of the 15 workbook categories? | [Runtime diagrams, evidence tests and paper sections](https://hyfine.github.io/embodied-world-models-atlas/runtime.html) |
+| What actually runs in each of the 15 workbook categories? | [Choose a system on the homepage](https://hyfine.github.io/embodied-world-models-atlas/#system-studio) or [browse all schematics](https://hyfine.github.io/embodied-world-models-atlas/runtime.html). Trace signals between modules, distinguish internal updates from measured feedback, then check the cited paper. |
 | What was examined for a particular paper, model or repository? | [Search the 320 main + 70 supplementary rows by source and reading depth](https://hyfine.github.io/embodied-world-models-atlas/evidence.html) |
 | Which PDF edition was used or collected? | [Versioned local-library catalog](https://hyfine.github.io/embodied-world-models-atlas/shelf.html) · [close reading of the supplied WAM survey](docs/wam-survey-deep-dive.md) |
 

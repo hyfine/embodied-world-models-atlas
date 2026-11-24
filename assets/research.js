@@ -28,16 +28,26 @@ if (rows.length) {
   window.addEventListener('hashchange', reveal);
   reveal();
 }
-for (const plate of document.querySelectorAll('.runtime-plate')) {
-  const steps = [...plate.querySelectorAll('li')];
+for (const plate of document.querySelectorAll('.schematic')) {
+  const edges = [...plate.querySelectorAll('[data-edge]')];
+  const nodes = [...plate.querySelectorAll('[data-module]')];
   const controls = plate.querySelector('.step-controls');
   let current = -1;
   function highlight(i) {
     current = i;
-    for (const [idx, step] of steps.entries()) step.classList.toggle('current', idx === current);
-    controls.querySelector('output').textContent = current < 0 ? '' : `${i + 1}/${steps.length} · ${steps[i].lastChild.textContent}`;
+    const active = edges[i]?.dataset;
+    for (const [idx, edge] of edges.entries()) edge.classList.toggle('current', idx === i);
+    for (const node of nodes) node.classList.toggle('current', Boolean(active && [active.from,active.to].includes(node.dataset.module)));
+    controls.querySelector('output').textContent = active ? `${i + 1}/${edges.length} · ${active.caption}` : '';
   }
-  controls.querySelector('[data-step]').addEventListener('click', () => highlight((current + 1) % steps.length));
+  controls.querySelector('[data-step]').addEventListener('click', () => highlight((current + 1) % edges.length));
   controls.querySelector('[data-reset]').addEventListener('click', () => highlight(-1));
   controls.hidden = false;
+}
+const picker=document.querySelector('.studio-pick');
+if (picker) {
+  const select=picker.querySelector('select');
+  const showSystem=()=>{for(const card of document.querySelectorAll('.studio-card'))card.hidden=card.dataset.system!==select.value;};
+  select.addEventListener('change',showSystem);
+  showSystem();picker.hidden=false;
 }

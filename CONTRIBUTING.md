@@ -29,3 +29,5 @@ python3 scripts/fetch-papers.py ../Embodied_AI_World_Models_Survey_2026.xlsx ../
 ```
 
 Inspect the local manifest and download-error file before updating the public shelf manifest. A changed revision must not silently replace an existing edition. Preserve the original workbook IDs when updating readings. Each row-level note needs a scope, inspectable source location and an original finding or an explicit gap. Each runtime plate needs a representative, a primary reference, bilingual ordered stages, a feedback boundary and an evidence test.
+
+Keep the bilingual module and signal definitions in [the system schematics](data/system-schematics.mjs) aligned with those runtime records. Label setup separately and draw a feedback edge only when the source describes one. The home studio and runtime reference use the same renderer.
