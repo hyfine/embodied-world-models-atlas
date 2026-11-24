@@ -48,7 +48,7 @@
       close.type='button'; close.textContent='×'; close.className='close-note';
       close.setAttribute('aria-label',english?'Close evidence':'关闭证据卡');
       close.addEventListener('click',()=>{inspect(undefined);});
-      inspector.replaceChildren(close,...['.meta','h3','p','.links'].map(s => record.querySelector(s).cloneNode(true)));
+      inspector.replaceChildren(close,...['.meta','h3','p','.roles','.links'].map(s => record.querySelector(s).cloneNode(true)));
       current().append(inspector);
     } else {
       inspector.replaceChildren(prompt);

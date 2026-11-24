@@ -71,20 +71,21 @@ export function mapSections({works,families,en,esc,docs}) {
   const years=[...new Set(works.map(r=>+r.year))].sort((a,b)=>a-b);
   const fs=Object.keys(families), byId=new Map(works.map(r=>[r.id,r]));
   const title=id=>esc(short[id]||byId.get(id).name);
-  const tabs=[['family-tree',t('生长树','Growth tree')],['trajectory',t('方法轨迹','Method trajectories')],['swimlanes',t('家族泳道','Family swimlanes')]];
+  const tabs=[['family-tree',t('方法路线图','Decision routes')],['trajectory',t('方法轨迹','Method trajectories')],['swimlanes',t('主入口泳道','Primary-route lanes')]];
   const panel=(id,content,description)=>`<figure class="map-panel" id="${id}"><div class="viewport">${content}</div><figcaption>${description}</figcaption></figure>`;
   const book=`${docs}deep-dives.${en?'en':'zh-CN'}.md`;
   return `<section id="maps"><div class="plate-head"><div class="kicker">INTERACTIVE FIELD PLATES &nbsp; / &nbsp; 1991—2026</div>
 <div class="map-tabs">${tabs.map(([id,text],i)=>`<a href="#${id}" data-view="${id}"><small>0${i+1}</small> ${text}</a>`).join('')}</div></div>
-${panel('family-tree',treePlate(works,en),t('一叶一篇：从感知与行动的共同树根，经六个家族和方法分支读到单篇研究。点叶片看证据；枝条是阅读分类，不是引用或继承。','One leaf, one work. Follow the roots of perception and action through families and method branches. Select a leaf for evidence. Branches classify works; they do not establish ancestry.'))}
+${panel('family-tree',treePlate(works,en),t('树冠是四种读决策系统的入口；底部两层是研究基础设施和综述，不是控制算法。一项工作在图上只定位一次；点选可见交叉角色。枝条不表示技术继承。','The canopy has four entry points for decision systems. The two bands below hold infrastructure and surveys, not controllers. Each work has one address; select it for overlapping roles. Branches do not establish descent.'))}
 ${panel('trajectory',timePlate(works,en,false),t('每一行是一条方法路线，一站是一篇研究。横轴只显示有条目的年份，间距不代表真实时长；同年并列不代表先后。','One route per methodology, one stop per work. Only years with records are shown; spacing is not elapsed time and same-year stops are peers.'))}
 ${panel('swimlanes',timePlate(works,en,true),t('每条河是一类研究。圆点是论文，数字是该年收录数，河宽随收录数变化。两端之间的带状线是视觉插值，不表示未收录年份的活动量，更不是能力评分。','One river per family. Dots are works; numbers and width encode the indexed count in a release year. Ribbons interpolate between observations, not activity in missing years or capability.'))}
 <div class="map-controls" hidden><button type="button" id="play-years" data-play="${t('▶ 回放','▶ Play years')}" data-pause="${t('Ⅱ 暂停','Ⅱ Pause')}">${t('▶ 回放','▶ Play years')}</button>
 <label>${t('截至','Through')} <input id="map-year" type="range" min="0" max="${years.length-1}" value="${years.length-1}" data-years="${years.join(',')}" aria-valuetext="${years.at(-1)}"></label>
 <output id="map-count" aria-live="off">${years.at(-1)} · ${works.length}/${works.length}</output>
-<label>${t('家族','Family')} <select id="map-family"><option value="">${t('全部','All')}</option>${fs.map(f=>`<option value="${f}">${f} · ${families[f][l]}</option>`).join('')}</select></label>
+<label>${t('主入口','Primary route')} <select id="map-family"><option value="">${t('全部','All')}</option>${fs.map(f=>`<option value="${f}">${f} · ${families[f][l]}</option>`).join('')}</select></label>
 <div class="lens"><button type="button" data-zoom="out" aria-label="${t('缩小','Zoom out')}">−</button><output id="scale">100%</output><button type="button" data-zoom="in" aria-label="${t('放大','Zoom in')}">+</button><button type="button" data-zoom="reset">${t('复位','Fit')}</button></div></div>
 <div class="family-key">${fs.map(f=>`<span data-f="${f}">${f} · ${families[f][l]}</span>`).join('')}</div>
+<p><a href="${en?'perspectives':'perspectives.zh'}.html">${t('同一工作可以有多种角色：切换九篇综述的视角 →','A work can have several roles: compare nine survey perspectives →')}</a></p>
 <aside class="map-inspector" aria-live="polite"><span>${t('点选一个节点查看其方法、局限和一手来源。','Select a node to inspect its mechanism, limitation and primary sources.')}</span></aside>
 </section><section id="architectures"><div class="kicker">ARCHITECTURE PLATES &nbsp; / &nbsp; M F P J E S</div><h2>${t('从家族架构走到实现','From family architecture to implementation')}</h2><p>${t('展开每一类，沿组件读数据流。每张图取一条代表路径；E 与 S 分别是评测和综述流程，不是两种控制器。','Open a family and follow the data through its components. Each plate shows one representative path; E and S are evaluation and survey workflows, not controllers.')}</p>
 ${fs.map(f=>{

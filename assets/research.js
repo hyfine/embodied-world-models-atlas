@@ -51,3 +51,31 @@ if (picker) {
   select.addEventListener('change',showSystem);
   showSystem();picker.hidden=false;
 }
+
+const explorer=document.querySelector('#crosswalk');
+if(explorer) {
+  const choice=explorer.querySelector('#survey-choice'), pair=explorer.querySelector('#only-pair');
+  const questions=[...explorer.querySelectorAll('[data-rev]')], profiles=[...explorer.querySelectorAll('[data-work]')];
+  const filters=[...explorer.querySelectorAll('[data-filter]')];
+  const clear=()=>filters.forEach(f=>{f.value='';});
+  function refresh(){
+    const question=questions.find(q=>q.dataset.rev===choice.value);
+    for(const q of questions)q.hidden=q!==question;
+    for(const cell of explorer.querySelectorAll('[data-col]'))cell.classList.toggle('coord-focus',cell.dataset.col===question.dataset.axis);
+    const ids=question.dataset.pair.split(' ');
+    let n=0;
+    for(const row of profiles){
+      const include=(!pair.checked||ids.includes(row.dataset.work))&&filters.every(f=>!f.value||row.dataset[f.dataset.filter].split(' ').includes(f.value));
+      row.hidden=!include;
+      if(include)n++;
+    }
+    explorer.querySelector('#coord-count').textContent=`${n} / ${profiles.length}`;
+    explorer.querySelector('#empty-profiles').hidden=n>0;
+  }
+  choice.addEventListener('change',()=>{clear();pair.checked=true;refresh();});
+  pair.addEventListener('change',refresh);
+  for(const f of filters)f.addEventListener('change',refresh);
+  explorer.querySelector('#all-profiles').addEventListener('click',()=>{clear();pair.checked=false;refresh();});
+  refresh();
+  for(const group of explorer.querySelectorAll('[data-lens-controls]'))group.hidden=false;
+}

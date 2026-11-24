@@ -8,7 +8,7 @@
 
 模型预测杯子会到 **7**，实际却停在 **4**。下一步就得从 4 重新决定。这个教学例子串起了整份图谱：**预测的是什么，谁来行动，又拿什么验证？**
 
-**[探索方法家族树 ↗](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)**　·　[追踪系统运行](https://hyfine.github.io/embodied-world-models-atlas/zh.html#system-studio)　·　[查找论文证据](https://hyfine.github.io/embodied-world-models-atlas/evidence.zh.html)
+**[探索方法路线图 ↗](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)**　·　[对照九篇综述的视角](https://hyfine.github.io/embodied-world-models-atlas/perspectives.zh.html)　·　[追踪系统运行](https://hyfine.github.io/embodied-world-models-atlas/zh.html#system-studio)
 
 ### 扩展研究版：按问题选标签页
 
@@ -23,9 +23,9 @@
 
 下方的 38 片叶子是**入门精选**，不是扩展书目的总数。一条表格记录、一个可核的仓库、一份下载的 PDF 和一次逐页精读不能混作同一指标。
 
-[![方法生长树：六色家族从感知与行动的树根展开，38 个作品各占一片有名称的叶子](assets/growth-tree.zh-CN.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)
+[![方法路线图：树冠分四条决策路线，下方另列基础设施与综述](assets/growth-tree.zh-CN.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)
 
-**从根读到叶。** 按年份回放，可以看到各支路线何时长出；放大后拖动图面，点叶片读论文与实现。枝条是阅读分类，不是已证实的技术继承。
+**把树冠读作四个问题**：谁预测、谁规划、谁行动、谁把未来和动作耦合？下方两层分别提供研究基础设施和综述视角，不与控制器并列。每项工作有一个主入口，点选后可见多个角色；枝条不表示已证实的技术继承。
 
 **先看全貌，再选一篇读：** [回放方法时间轨迹](https://hyfine.github.io/embodied-world-models-atlas/zh.html#trajectory) · [对照家族泳道](https://hyfine.github.io/embodied-world-models-atlas/zh.html#swimlanes) · [展开家族树](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)。再沿一张[模块架构图](https://hyfine.github.io/embodied-world-models-atlas/zh.html#architectures)走到[论文与源码精读](docs/deep-dives.zh-CN.md)。
 

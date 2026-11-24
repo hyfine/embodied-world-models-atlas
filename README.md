@@ -8,7 +8,7 @@
 
 The cup was predicted to reach **7**, but stopped at **4**. The next decision starts at 4. This toy example is the thread through the atlas: **what is predicted, who acts, and what evidence comes back?**
 
-**[Explore the method tree ↗](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)**　·　[Trace a system](https://hyfine.github.io/embodied-world-models-atlas/#system-studio)　·　[Find a paper](https://hyfine.github.io/embodied-world-models-atlas/evidence.html)
+**[Explore the decision routes ↗](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)**　·　[Compare nine survey perspectives](https://hyfine.github.io/embodied-world-models-atlas/perspectives.html)　·　[Trace a system](https://hyfine.github.io/embodied-world-models-atlas/#system-studio)
 
 ### Research desk · expanded edition
 
@@ -23,9 +23,9 @@ The cup was predicted to reach **7**, but stopped at **4**. The next decision st
 
 The 38 leaves below form the **introductory map**, not the denominator of the larger bibliography. A row, a verified artifact, a PDF on disk and a cover-to-cover reading are four different things.
 
-[![A growing research tree: six colored families connect the perception–action loop to 38 labeled works](assets/growth-tree.en.svg)](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)
+[![Four decision routes above two support layers for infrastructure and surveys](assets/growth-tree.en.svg)](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)
 
-**Read the tree from root to leaf.** Play the years to grow the canopy, zoom in and drag to explore, or select a leaf for its paper and implementation. The branches are reading routes, not claims of technical inheritance.
+**Read the canopy as four questions**, not four disjoint model classes: what predicts, what plans, what acts, and what couples futures to actions? Infrastructure and surveys sit below, not beside controllers. Each work has one address on the map; its evidence card can show several roles. No branch asserts technical descent.
 
 **See the field before reading the papers:** [replay the timeline](https://hyfine.github.io/embodied-world-models-atlas/#trajectory) · [compare family swimlanes](https://hyfine.github.io/embodied-world-models-atlas/#swimlanes) · [open the family tree](https://hyfine.github.io/embodied-world-models-atlas/#family-tree). Then follow one [architecture plate](https://hyfine.github.io/embodied-world-models-atlas/#architectures) to a [paper-to-code deep dive](docs/deep-dives.en.md).
 

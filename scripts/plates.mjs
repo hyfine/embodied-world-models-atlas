@@ -22,9 +22,9 @@ export function treePlate(works,en) {
   const l=+en, byId=new Map(works.map(r=>[r.id,r]));
   let branches='', leaves='', headers='';
   // Allocate space by leaf count on each side, so names never compete for a row.
-  for(const [sign,fs] of [[-1,['F','P','S']],[1,['M','J','E']]]) {
+  for(const [sign,fs] of [[-1,['F','J']],[1,['M','P']]]) {
     const count=works.filter(r=>fs.includes(r.family)).length;
-    const step=(465-40-42)/(count-1);
+    const step=(452-40-21)/(count-1);
     let y=40;
     for(const [i,f] of fs.entries()) {
       const rs=works.filter(r=>r.family===f), ink=colors[f];
@@ -53,7 +53,11 @@ export function treePlate(works,en) {
   for(let i=-4;i<=4;i++) roots+=stroke(`M560 465 Q${560+i*6} 488 ${560+i*28} ${490+Math.abs(i)%3*4}`,'#bca780',1.8+2/(Math.abs(i)+1));
   const trunk='<path d="M532 488Q560 439 551 363Q544 305 555 239Q563 193 554 166Q579 204 566 267Q559 331 572 389Q578 454 592 487Q563 475 532 488Z" fill="#bcb187"/>';
   const rings=[145,245,340,438].map(r=>`<circle cx="560" cy="448" r="${r}" fill="none" stroke="#adcbb0" stroke-opacity=".08" stroke-dasharray="2 8"/>`).join('');
-  return svg('canopy',525,`${rings}${roots}${trunk}${branches}${headers}${leaves}${label(560,514,en?'PERCEPTION   /   ACTION':'感知　/　行动',12,'middle','#d5c299')}`,en?'Growing method family tree':'方法家族生长树');
+  const supports=['E','S'].map((f,i)=>{
+    const y=546+i*40,rs=works.filter(r=>r.family===f).sort(chronological);
+    return `<g data-layer="${f}"><rect x="14" y="${y-17}" width="1092" height="34" rx="5" fill="#17332e" stroke="#587369"/>${label(27,y+4,f==='E'?(en?'E · Research infrastructure':'E · 研究基础设施'):(en?'S · Survey perspectives':'S · 综述视角'),13,'start',colors[f])}${rs.map((r,j)=>anchor(r,`<rect class="hit" x="-6" y="-12" width="131" height="25" rx="3" fill="transparent"/><circle r="3" fill="${colors[f]}"/>${label(9,4,name(r),12)}`,`translate(${236+j*143} ${y})`)).join('')}</g>`;
+  }).join('');
+  return svg('canopy',613,`${rings}${roots}${trunk}${branches}${headers}${leaves}${label(560,512,en?'PERCEPTION   /   ACTION':'感知　/　行动',12,'middle','#d5c299')}${supports}`,en?'Four decision routes with separate infrastructure and survey layers':'四条决策路线与独立的资源、综述支撑层');
 }
 
 export function timePlate(works,en,lanes) {

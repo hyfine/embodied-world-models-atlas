@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {deepGuide,mapSections,panorama,validateMap} from './maps.mjs';
 import {treePlate} from './plates.mjs';
 import {homeSystems,researchOutputs,tabNav} from './research.mjs';
+import {facetsOf,axes} from '../data/survey-coordinates.mjs';
 
 process.chdir(fileURLToPath(new URL('../', import.meta.url)));
 const root = 'https://github.com/hyfine/embodied-world-models-atlas';
@@ -50,7 +51,7 @@ function page(en) {
   const lang = t('zh-CN', 'en');
   const guide = `${docs}guide.${lang}.md`, outlook = `${docs}outlook.${lang}.md`;
   const card = r => `<article class="record" data-family="${r.family}" data-extra="${esc([r.github, r.hub, r.zh, r.en].join(' '))}" id="${r.id}">
-<div class="meta"><b>${r.year}</b> · ${r.family} / ${families[r.family][+en]}</div><h3>${esc(r.name)}</h3><p>${esc(t(r.zh, r.en))}</p><small>${esc(r.source)}</small><div class="links">${links(r, t('论文 ↗', 'Paper ↗')).map(([k, u]) => `<a href="${esc(u)}">${k}</a>`).join('')}</div></article>`;
+<div class="meta"><b>${r.year}</b> · ${t('主入口','Primary route')} ${r.family} / ${families[r.family][+en]}</div><h3>${esc(r.name)}</h3><p>${esc(t(r.zh, r.en))}</p><div class="roles">${t('阅读角色','Roles')}: ${facetsOf(r.id).role.map(k=>`${k} · ${axes.role.values[k][+en]}`).join(' / ')}</div><small>${esc(r.source)}</small><div class="links">${links(r, t('论文 ↗', 'Paper ↗')).map(([k, u]) => `<a href="${esc(u)}">${k}</a>`).join('')}</div></article>`;
   const count = (col) => new Set(works.map(r => r[col]).filter(Boolean)).size;
   return `<!doctype html>
 <html lang="${lang}"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -61,7 +62,7 @@ function page(en) {
 <main id="main"><div class="cover"><div class="cover-inner wrap"><div><div class="kicker">${t('具身智能 × 世界模型　/　交互研究图谱','EMBODIED AI × WORLD MODELS　/　INTERACTIVE FIELD GUIDE')}</div>
 <h1>${t('模型预测后果。<br><em>策略选择动作。</em>','Models predict.<br><em>Policies act.</em>')}</h1>
 <p>${t('面对同一只杯子，世界模型回答“轻推会怎样”；策略回答“现在怎么推”。执行之后，要看杯子实际到了哪里。','A world model predicts where a cup might slide. A policy chooses the push. After acting, the robot has to look again.')}</p>
-<div class="cover-cta"><a href="#maps">${t('探索方法树','Explore the method tree')} ↓</a><a href="#system-studio">${t('看系统怎么运行','See how a system runs')} →</a></div></div>
+<div class="cover-cta"><a href="#maps">${t('探索方法路线','Explore decision routes')} ↓</a><a href="${en?'perspectives':'perspectives.zh'}.html">${t('对照九种综述视角','Compare nine survey lenses')} →</a></div></div>
 <figure class="cover-figure"><figcaption>FIG 01　/　${t('同一推法，两种落点','ONE PUSH, TWO ENDPOINTS')}</figcaption><svg viewBox="0 0 490 157" role="img" aria-label="${t('教学示例：杯子从位置 3 出发，预测轻推后到 7，实际测量到 4。','Illustrative push: the cup starts at 3, is predicted to reach 7 and is measured at 4.')}">
 <defs><g id="cup-symbol"><path d="M-12 -19h24l-2 21h-20z M12 -16h4q9 6-5 11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></g></defs>
 <g class="bench-grid"><path d="M26 123H464 M75 117v11 M146 117v11 M359 117v11 M430 117v11"/></g><g class="cup-route"><path d="M75 102Q208 -14 359 83" fill="none" stroke="#94dce5" stroke-width="2.5" stroke-dasharray="5 5"/><path d="M75 110Q107 81 146 106" fill="none" stroke="#ffd69a" stroke-width="3"/></g>
@@ -102,7 +103,7 @@ function page(en) {
 const check = process.argv.includes('--check');
 const english = page(true);
 for (const [path, contents] of [['CATALOG.md', catalog], ['index.html', english], ['en.html', english], ['zh.html', page(false)],
-  ...researchOutputs(asset),
+  ...researchOutputs(asset,works),
   ...[true,false].flatMap(en=>[
     [`assets/panorama.${en?'en':'zh-CN'}.svg`,panorama(works,en)],
     [`assets/growth-tree.${en?'en':'zh-CN'}.svg`,treePlate(works,en)+'\n'],

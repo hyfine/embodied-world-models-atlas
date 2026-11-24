@@ -33,8 +33,8 @@ export const layouts = {
     branches: [
       ['反应式与运动控制', 'Reactive & motor control', 'brooks legged'],
       ['选择高层技能', 'Select an available skill', 'saycan'],
-      ['离散动作符号', 'Action tokens', 'rt1 rt2 openvla'],
-      ['动作块生成', 'Action chunks', 'act diffusion-policy octo pi0 pi05 smolvla'],
+      ['量化动作输出', 'Quantized control output', 'rt1 rt2 openvla'],
+      ['连续动作输出', 'Continuous control output', 'act diffusion-policy octo pi0 pi05 smolvla'],
     ],
     flow: [
       ['观测历史 (及任务)', 'Observations (+ task)'],
