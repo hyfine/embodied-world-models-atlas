@@ -8,6 +8,8 @@
 
 The cup was predicted to reach **7**, but stopped at **4**. The next decision starts at 4. This toy example is the thread through the atlas: **what is predicted, who acts, and what evidence comes back?**
 
+**[Start with the reading guide →](https://hyfine.github.io/embodied-world-models-atlas/research.html#contract)** Identify the inputs and outputs, [compare what actually runs](https://hyfine.github.io/embodied-world-models-atlas/research.html#coupling), then [design a test that could disprove the claim](https://hyfine.github.io/embodied-world-models-atlas/research.html#claim-test). Use the map and source index when you need a specific method or edition.
+
 **[Explore the decision routes ↗](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)**　·　[Compare nine survey perspectives](https://hyfine.github.io/embodied-world-models-atlas/perspectives.html)　·　[Trace a system](https://hyfine.github.io/embodied-world-models-atlas/#system-studio)
 
 ### Research desk · expanded edition

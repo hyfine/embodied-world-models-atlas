@@ -8,6 +8,8 @@
 
 模型预测杯子会到 **7**，实际却停在 **4**。下一步就得从 4 重新决定。这个教学例子串起了整份图谱：**预测的是什么，谁来行动，又拿什么验证？**
 
+**[第一次来，从阅读导览开始 →](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html#contract)** 先辨认输入与输出，再[比较部署时真正运行的模块](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html#coupling)，最后[设计一个能推翻主张的实验](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html#claim-test)。已有具体方法名或版本问题，再查路线图和书目。
+
 **[探索方法路线图 ↗](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)**　·　[对照九篇综述的视角](https://hyfine.github.io/embodied-world-models-atlas/perspectives.zh.html)　·　[追踪系统运行](https://hyfine.github.io/embodied-world-models-atlas/zh.html#system-studio)
 
 ### 扩展研究版：按问题选标签页

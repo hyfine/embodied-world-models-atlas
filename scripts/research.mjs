@@ -5,6 +5,7 @@ import {directions,axisNames} from '../data/taxonomy-audit.mjs';
 import {layouts} from '../data/method-families.mjs';
 import {cases} from '../data/deep-dives.mjs';
 import {renderPerspectives,validatePerspectives} from './perspectives.mjs';
+import {guidedReading} from './guided-reading.mjs';
 
 const partitions=['wm-a','wm-b','eai-a','eai-b','eai-c','supplement'];
 const titles={
@@ -25,7 +26,7 @@ const titles={
   SURVEY:['综述与资源地图','Survey lenses'],
 };
 const levels={full:['指定版本全文','Full version'],sections:['正文选节','Selected sections'],abstract:['摘要','Abstract'],repo:['仓库或项目资料','Repository / project'],unresolved:['待核实','Unresolved']};
-const labels={index:['图谱','Overview'],perspectives:['综述视角','Survey perspectives'],research:['研究综合','Synthesis'],runtime:['运行架构','Runtime plates'],evidence:['逐项证据','Evidence ledger'],shelf:['论文书架','PDF shelf']};
+const labels={index:['图谱','Overview'],research:['阅读导览','Reading guide'],runtime:['运行架构','Runtime plates'],perspectives:['综述视角','Survey perspectives'],evidence:['逐项证据','Evidence ledger'],shelf:['论文书架','PDF shelf']};
 const root='https://github.com/hyfine/embodied-world-models-atlas';
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -111,8 +112,8 @@ const contrasts=[
 ];
 function synthesis(cards,en){
   const l=+en,t=(zh,eng)=>en?eng:zh;
-  return `<div class="research-callout" id="taxonomy-review"><b>${t('九篇综述复核：15 个入口不是 15 种互斥算法','Nine-survey audit: 15 reading directions, not 15 disjoint algorithms')}</b><p>${t('先看分类轴，再选代表作：驾驶是应用域，JEPA 是表示学习路线，CALVIN 是测量协议。SuSIE 与 DreamZero 分别代表级联和联合，不能互相替代。','First identify the axis: driving is a domain, JEPA a representation approach, CALVIN an evaluation protocol. SuSIE and DreamZero exemplify cascaded and joint coupling; neither substitutes for the other.')}</p>${doc(t('逐篇依据、版本与反例','Survey-by-survey evidence, revisions and counterexamples'),'taxonomy-review.md')} · <a href="${local('runtime',en)}">${t('15 类代表作与选择理由','Exemplars and rationale for all 15 directions')} →</a></div>`+
-  contrasts.map(([zh,enTitle,cz,ce,cat],i)=>`<article class="contrast"><small>0${i+1} / ${cat.toUpperCase()}</small><h2>${t(zh,enTitle)}</h2><p>${t(cz,ce)}</p><a href="${local('runtime',en)}#${cat}">${t('沿运行图核查','Trace the runtime path')} →</a></article>`).join('')+
+  return guidedReading(en)+`<h2>${t('进阶：按研究问题复查','Go deeper by research question')}</h2><div class="research-callout" id="taxonomy-review"><b>${t('九篇综述复核：15 个入口不是 15 种互斥算法','Nine-survey audit: 15 reading directions, not 15 disjoint algorithms')}</b><p>${t('先看分类轴，再选代表作：驾驶是应用域，JEPA 是表示学习路线，CALVIN 是测量协议。SuSIE 与 DreamZero 分别代表级联和联合，不能互相替代。','First identify the axis: driving is a domain, JEPA a representation approach, CALVIN an evaluation protocol. SuSIE and DreamZero exemplify cascaded and joint coupling; neither substitutes for the other.')}</p>${doc(t('逐篇依据、版本与反例','Survey-by-survey evidence, revisions and counterexamples'),'taxonomy-review.md')} · <a href="${local('runtime',en)}">${t('15 类代表作与选择理由','Exemplars and rationale for all 15 directions')} →</a></div>`+
+  contrasts.map(([zh,enTitle,cz,ce,cat],i)=>`<details class="contrast"><summary><small>0${i+1} / ${cat.toUpperCase()}</small> <strong>${t(zh,enTitle)}</strong></summary><p>${t(cz,ce)}</p><a href="${local('runtime',en)}#${cat}">${t('沿运行图核查','Trace the runtime path')} →</a></details>`).join('')+
   `<h2>${t('三张实验收据：数据、评测、部署','Three experimental receipts: data, evaluation, deployment')}</h2>
 <p><b>${link('Data Scaling Laws in IL · Fig. 5','https://arxiv.org/abs/2410.18647')}.</b> ${t('横轴换成物体数、环境数或两者组合数时，作者在所测操作任务中观察到近似幂律；固定多样性后，添加同类示范并没有同样清晰的关系。这不等于跨所有控制任务的普适规模律。','The authors report approximate power-law trends with numbers of objects, environments or environment–object pairs. Adding demonstrations while keeping diversity fixed does not show the same clear relation. The fitted curves are not universal laws for all control tasks.')}</p>
 <p><b>${link('SIMPLER · Fig. 3, physical PDF p. 8','https://arxiv.org/abs/2405.05941')}.</b> ${t('应当问「选模型会不会选错」。在文中可乐罐、移动靠近、抽屉三个测试的表内平均，视觉匹配的 MMRV 为 0.056，验证集动作 MSE 代理为 0.375（越低越好）。这是排序违背指标，不是任务成功率或跨机器人保证。','Ask whether evaluation picks the wrong policy. Across the reported can, move-near and drawer comparison, average mean maximum rank violation is 0.056 for visual matching versus 0.375 for the validation-action-MSE proxy (lower is better). This is a ranking metric, not a success rate or a guarantee on another robot.')}</p>
@@ -163,7 +164,7 @@ export function researchOutputs(asset,works) {
     const t=(zh,eng)=>en?eng:zh;
     for(const [page,lead,body] of [
       ['perspectives',t('九篇综述不是九张互斥目录：用它们的问题交叉阅读同一批 38 项研究。','Nine surveys, not nine mutually exclusive catalogs. Use their questions to cross-read the same 38 introductory works.'),renderPerspectives(works,en)],
-      ['research',t('从问题、运行机制到可证伪的结论。','Start with the question; follow the mechanism to a falsifiable claim.'),synthesis(cards,en)],
+      ['research',t('用一个杯子读懂三件事：预测了什么，预测何时参与行动，以及什么实验能证明它有用。','Follow one cup from prediction to action, then design the test that could show the prediction mattered.'),synthesis(cards,en)],
       ['runtime',t(`${cards.length} 个方向：对照不同代表作，再沿具体系统追踪一次。例子为解释机制而选，并非排名。`,`${cards.length} directions: compare representative roles, then trace a concrete system. Examples illustrate mechanisms, not rankings.`),runtime(cards,en)],
       ['evidence',t(`${rows.length} 条来源记录，包括主表与补表；保留原行号，不把重复行冒充独立成果。`,`${rows.length} main and supplementary source records. Row identities are preserved; overlapping records are not independent findings.`),ledger(rows,en,pointers)],
       ['shelf',t(`${pdfs.length} 个本地版本的书目、来源和校验信息。`,`${pdfs.length} versioned local PDFs with bibliographic and checksum records.`),shelf(pdfs,en)],

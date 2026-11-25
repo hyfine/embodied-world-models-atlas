@@ -62,7 +62,7 @@ function page(en) {
 <main id="main"><div class="cover"><div class="cover-inner wrap"><div><div class="kicker">${t('具身智能 × 世界模型　/　交互研究图谱','EMBODIED AI × WORLD MODELS　/　INTERACTIVE FIELD GUIDE')}</div>
 <h1>${t('模型预测后果。<br><em>策略选择动作。</em>','Models predict.<br><em>Policies act.</em>')}</h1>
 <p>${t('面对同一只杯子，世界模型回答“轻推会怎样”；策略回答“现在怎么推”。执行之后，要看杯子实际到了哪里。','A world model predicts where a cup might slide. A policy chooses the push. After acting, the robot has to look again.')}</p>
-<div class="cover-cta"><a href="#maps">${t('探索方法路线','Explore decision routes')} ↓</a><a href="${en?'perspectives':'perspectives.zh'}.html">${t('对照九种综述视角','Compare nine survey lenses')} →</a></div></div>
+<div class="cover-cta"><a href="#maps">${t('已有背景？探索方法路线','Know the basics? Explore the map')} ↓</a><a href="${en?'research':'research.zh'}.html#contract">${t('第一次来？从推杯开始','New here? Start with the cup')} →</a></div></div>
 <figure class="cover-figure"><figcaption>FIG 01　/　${t('同一推法，两种落点','ONE PUSH, TWO ENDPOINTS')}</figcaption><svg viewBox="0 0 490 157" role="img" aria-label="${t('教学示例：杯子从位置 3 出发，预测轻推后到 7，实际测量到 4。','Illustrative push: the cup starts at 3, is predicted to reach 7 and is measured at 4.')}">
 <defs><g id="cup-symbol"><path d="M-12 -19h24l-2 21h-20z M12 -16h4q9 6-5 11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></g></defs>
 <g class="bench-grid"><path d="M26 123H464 M75 117v11 M146 117v11 M359 117v11 M430 117v11"/></g><g class="cup-route"><path d="M75 102Q208 -14 359 83" fill="none" stroke="#94dce5" stroke-width="2.5" stroke-dasharray="5 5"/><path d="M75 110Q107 81 146 106" fill="none" stroke="#ffd69a" stroke-width="3"/></g>
