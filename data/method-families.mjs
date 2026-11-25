@@ -47,8 +47,8 @@ export const layouts = {
   },
   J: {
     branches: [
-      ['联合预测', 'Joint futures & actions', 'dreamzero spatialumi phoenix'],
-      ['视觉计划与逆动力学', 'Visual plan + inverse dynamics', 'geact'],
+      ['联合状态与动作建模', 'Joint state & action modeling', 'gr1 uwm dreamzero spatialumi phoenix swam fastwam zeta0'],
+      ['级联：未来作为接口', 'Cascade: future as interface', 'unipi susie geact'],
     ],
     flow: [
       ['观测、指令、本体状态', 'Observation, instruction, state'],

@@ -2,7 +2,7 @@
 
 [中文导读](docs/guide.zh-CN.md) · [English guide](docs/guide.en.md) · [Interactive atlas](https://hyfine.github.io/embodied-world-models-atlas/) · [Selection rules](EVIDENCE.md)
 
-38 entries · 2026-11-23. 年份指早期公开版本，source 指链接或标明的发表版本。Year denotes early public release, not necessarily proceedings year. Missing links mean not indexed, not unavailable.
+45 entries · 2026-11-25. 年份指早期公开版本，source 指链接或标明的发表版本。Year denotes early public release, not necessarily proceedings year. Missing links mean not indexed, not unavailable.
 
 ## M · 想象与规划 / Imagination & planning
 
@@ -282,6 +282,16 @@ Use a video-diffusion backbone to jointly predict visual futures and actions. Di
 
 [arXiv](<https://arxiv.org/abs/2602.15922>) · [GitHub](<https://github.com/dreamzero0/dreamzero>) · [Hugging Face](<https://huggingface.co/GEAR-Dreams/DreamZero-DROID>)
 
+<a id="fastwam"></a>
+
+### 2026 · Fast-WAM
+
+训练保留未来视频监督，动作推理跳过未来视频采样。该组消融区分了训练表征收益与执行时想象成本，并未证明所有任务都不需要在线预测。
+
+Retain future-video supervision but omit future-video sampling at execution. The ablations distinguish training benefits from runtime imagination, not a universal rule that foresight is unnecessary.
+
+[arXiv](<https://arxiv.org/abs/2603.16666v2>)
+
 <a id="geact"></a>
 
 ### 2026 · GE-Act 2.0
@@ -311,6 +321,66 @@ Learn scene-structure representations for world-action modeling. Check benchmark
 Train first on the world, then jointly predict RGB, metric depth and actions from RGB-D demonstrations. Depth can distinguish apparent proximity from reachability, but requires suitable sensor data.
 
 [arXiv](<https://arxiv.org/abs/2611.07229>)
+
+<a id="swam"></a>
+
+### 2026 · SWAM
+
+研究加入动作学习后如何保持语言与视频对齐，并在固定训练预算下比较数据混合。三项实机任务的结果不是对任意数据规模或本体的保证。
+
+Study how action learning affects language–video alignment and compare data mixtures at a fixed training budget. The three physical tasks do not establish a universal scaling law.
+
+[arXiv](<https://arxiv.org/abs/2611.12870v2>) · [GitHub](<https://github.com/shaaaaron/SWAM>)
+
+<a id="zeta0"></a>
+
+### 2026 · ζ0
+
+训练教师读取实录未来的视觉特征和关节轨迹，部署只用预测的未来表征。作者在两个策略基座上评测；这不是只凭视觉就能保证人形控制的结论。
+
+A training teacher uses recorded visual and body futures; deployment uses predicted future features instead. Results on two policy bases are not a guarantee of general humanoid control.
+
+[arXiv](<https://arxiv.org/abs/2611.29277v1>) · [GitHub](<https://github.com/chenyizhi123/Zeta0>)
+
+<a id="uwm"></a>
+
+### 2025 · Unified World Models
+
+在共享 Transformer 中给动作和视频使用独立扩散时间步。改变已知量和去噪目标，同一系统可充当策略、前向或逆动力学模型。
+
+Independent noise schedules for video and action in a shared transformer let the same system operate as a policy, forward dynamics or inverse dynamics by changing the conditioning.
+
+[arXiv](<https://arxiv.org/abs/2504.02792v3>) · [GitHub](<https://github.com/WEIRDLabUW/unified-world-model>)
+
+<a id="gr1"></a>
+
+### 2023 · GR-1
+
+用视频生成预训练时序主干，再在机器人数据上预测未来图像与动作。共同训练不等于部署时搜索多条候选轨迹。
+
+Pretrain on video generation, then predict future images and robot actions with a shared sequence model. Joint training does not imply searching competing futures at deployment.
+
+[arXiv](<https://arxiv.org/abs/2312.13139v2>) · [GitHub](<https://github.com/bytedance/GR-1>)
+
+<a id="susie"></a>
+
+### 2023 · SuSIE
+
+图像编辑器提出子目标；单独训练的目标条件策略用当前观测去实现它。可把子目标不可达与执行器失手分开诊断。
+
+An image editor supplies intermediate goals to a separately trained goal-conditioned policy. Test subgoal reachability separately from execution given a reachable goal.
+
+[arXiv](<https://arxiv.org/abs/2310.10639>) · [GitHub](<https://github.com/kvablack/susie>)
+
+<a id="unipi"></a>
+
+### 2023 · UniPi
+
+给定当前图像与任务文本，先生成一段期望的视频，再从帧间变化提取可执行动作。视觉计划是接口，不是电机命令。
+
+Generate a desired video trajectory from an image and instruction, then extract controls from the frame transitions. A visual plan is an interface, not a motor command.
+
+[NeurIPS 2023 · preprint](<https://arxiv.org/abs/2302.00111>)
 
 ## E · 环境、数据与评测 / Environments, data & evaluation
 

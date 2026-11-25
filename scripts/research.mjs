@@ -6,6 +6,7 @@ import {layouts} from '../data/method-families.mjs';
 import {cases} from '../data/deep-dives.mjs';
 import {renderPerspectives,validatePerspectives} from './perspectives.mjs';
 import {guidedReading} from './guided-reading.mjs';
+import {architecturePlacement,convergence} from './convergence.mjs';
 
 const partitions=['wm-a','wm-b','eai-a','eai-b','eai-c','supplement'];
 const titles={
@@ -26,7 +27,7 @@ const titles={
   SURVEY:['综述与资源地图','Survey lenses'],
 };
 const levels={full:['指定版本全文','Full version'],sections:['正文选节','Selected sections'],abstract:['摘要','Abstract'],repo:['仓库或项目资料','Repository / project'],unresolved:['待核实','Unresolved']};
-const labels={index:['图谱','Overview'],research:['阅读导览','Reading guide'],runtime:['运行架构','Runtime plates'],perspectives:['综述视角','Survey perspectives'],evidence:['逐项证据','Evidence ledger'],shelf:['论文书架','PDF shelf']};
+const labels={index:['图谱','Overview'],convergence:['WAM：起源与前沿','WAM: origins & frontier'],research:['阅读导览','Reading guide'],runtime:['运行架构','Runtime plates'],perspectives:['综述视角','Survey perspectives'],evidence:['逐项证据','Evidence ledger'],shelf:['论文书架','PDF shelf']};
 const root='https://github.com/hyfine/embodied-world-models-atlas';
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -50,7 +51,8 @@ function selectTrace(c) {
 }
 function comparison(code,en){
   const l=+en,[axis,examples,zh,eng]=directions[code];
-  return `<div class="taxonomy-decision"><small>${axisNames[axis][l]}</small><p>${esc(en?eng:zh)}</p><ul>${examples.map(([row,name,roleZh,roleEn])=>`<li><a href="${local('evidence',en)}#row-main-${row}">${esc(name)}</a> — ${esc(en?roleEn:roleZh)}</li>`).join('')}</ul></div>`;
+  const [role,roleZh,roleEn]=architecturePlacement[code];
+  return `<div class="taxonomy-decision"><small>${axisNames[axis][l]} · <a href="${local('convergence',en)}#research-routes">${en?'Overview role':'总图位置'}: ${role}</a></small><p>${esc(en?roleEn:roleZh)} ${esc(en?eng:zh)}</p><ul>${examples.map(([row,name,z,e])=>`<li><a href="${local('evidence',en)}#row-main-${row}">${esc(name)}</a> — ${esc(en?e:z)}</li>`).join('')}</ul></div>`;
 }
 export function tabNav(en,active) {
   return `<nav class="desk-tabs" aria-label="${en?'Atlas sections':'图谱栏目'}">${Object.entries(labels).map(([id,pair])=>`<a href="${local(id,en)}"${id===active?' aria-current="page"':''}>${pair[+en]}</a>`).join('')}</nav>`;
@@ -143,6 +145,7 @@ export function researchOutputs(asset,works) {
   }
   assert.deepEqual(cards.map(c=>c.code).sort(),Object.keys(titles).sort());
   assert.deepEqual(Object.keys(directions).sort(),Object.keys(titles).sort());
+  assert.deepEqual(Object.keys(architecturePlacement).sort(),Object.keys(titles).sort());
   for(const c of cards) {
     const [axis,examples]=directions[c.code];
     assert(Object.hasOwn(axisNames,axis)&&examples.length>1);
@@ -163,7 +166,8 @@ export function researchOutputs(asset,works) {
   for(const en of [true,false]){
     const t=(zh,eng)=>en?eng:zh;
     for(const [page,lead,body] of [
-      ['perspectives',t('九篇综述不是九张互斥目录：用它们的问题交叉阅读同一批 38 项研究。','Nine surveys, not nine mutually exclusive catalogs. Use their questions to cross-read the same 38 introductory works.'),renderPerspectives(works,en)],
+      ['convergence',t('先读两条并行历史，再沿系统接口深入，最后分清前沿结果与待检验假设。','Start with two parallel histories, follow a system interface, then separate frontier results from open hypotheses.'),`<nav class="chips">${[['origins','诞生','Origins'],['research-routes','方法迭代','Research routes'],['frontier','趋势与反证','Frontier tests'],['terms','术语','Glossary']].map(([id,z,e])=>`<a href="#${id}">${t(z,e)}</a>`).join('')}</nav>${convergence(works,en,'html')}`],
+      ['perspectives',t(`九篇综述不是九张互斥目录：用它们的问题交叉阅读同一批 ${works.length} 项研究。`,`Nine surveys, not nine mutually exclusive catalogs. Use their questions to cross-read the same ${works.length} introductory works.`),renderPerspectives(works,en)],
       ['research',t('用一个杯子读懂三件事：预测了什么，预测何时参与行动，以及什么实验能证明它有用。','Follow one cup from prediction to action, then design the test that could show the prediction mattered.'),synthesis(cards,en)],
       ['runtime',t(`${cards.length} 个方向：对照不同代表作，再沿具体系统追踪一次。例子为解释机制而选，并非排名。`,`${cards.length} directions: compare representative roles, then trace a concrete system. Examples illustrate mechanisms, not rankings.`),runtime(cards,en)],
       ['evidence',t(`${rows.length} 条来源记录，包括主表与补表；保留原行号，不把重复行冒充独立成果。`,`${rows.length} main and supplementary source records. Row identities are preserved; overlapping records are not independent findings.`),ledger(rows,en,pointers)],

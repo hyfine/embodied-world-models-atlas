@@ -19,7 +19,7 @@ export function panorama(works,en) {
     ['M',en?'Plan':'想象与规划','#a1f4c6',['dyna','planet','dreamerv3',null]],
     ['F',en?'Predict':'未来预测','#8ddde7',[null,'foresight',null,'vjepa2']],
     ['P',en?'Act':'动作策略','#ffc682',['brooks',null,'rt2','pi0']],
-    ['J',en?'Couple':'世界—动作','#faaab4',[null,null,null,'dreamzero']],
+    ['J',en?'Couple':'世界—动作','#faaab4',[null,null,'unipi','dreamzero']],
     ['E',en?'Evaluate':'数据与评测','#ccd3ff',[null,'habitat','oxe','simpler']],
     ['S',en?'Compare':'综述视角','#e3cf8b',[null,null,null,'survey-wm']],
   ];

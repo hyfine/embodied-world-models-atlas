@@ -2,6 +2,8 @@
 
 [简体中文](outlook.zh-CN.md) · [Field guide](guide.en.md) · [Catalog](../CATALOG.md)
 
+**2026-11-25 update:** [WAM frontier watch](convergence.en.md#frontier) separates recent author reports on alignment, body foresight and inference cost from the atlas's forecasts. The earlier judgments below retain their original date.
+
 **As of 2026-11-23; horizon: 12–24 months.** These are editorial judgments, not a consensus or leaderboard. High/medium denotes qualitative confidence in a direction, not a probability of success.
 
 ### 1 · Evaluation shifts from looking right to responding correctly to changed actions | High

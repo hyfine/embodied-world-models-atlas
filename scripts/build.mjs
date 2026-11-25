@@ -6,11 +6,12 @@ import {deepGuide,mapSections,panorama,validateMap} from './maps.mjs';
 import {treePlate} from './plates.mjs';
 import {homeSystems,researchOutputs,tabNav} from './research.mjs';
 import {facetsOf,axes} from '../data/survey-coordinates.mjs';
+import {overviewArt,convergence} from './convergence.mjs';
 
 process.chdir(fileURLToPath(new URL('../', import.meta.url)));
 const root = 'https://github.com/hyfine/embodied-world-models-atlas';
 const docs = `${root}/blob/main/docs/`;
-const cutoff = '2026-11-23';
+const cutoff = '2026-11-25';
 const asset=path=>`${path}?v=${createHash('sha256').update(readFileSync(path)).digest('hex').slice(0,10)}`;
 const decisionDiagram = readFileSync('assets/decision-loop.svg', 'utf8');
 const families = {
@@ -56,19 +57,14 @@ function page(en) {
   return `<!doctype html>
 <html lang="${lang}"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${t('具身智能 × 世界模型研究图谱','Embodied AI × World Models Atlas')}</title>
-<meta name="description" content="${t('从推杯子读懂预测、规划和动作：双语研究图谱。','A bilingual field guide to prediction, planning and action, starting with a cup on a table.')}">
+<meta name="description" content="${t('从反应式控制与想象规划，到让未来预测参与动作生成的世界动作模型。','How embodied control and learned dynamics meet in world action models: history, architecture and evidence.')}">
 <link rel="stylesheet" href="${asset('assets/atlas.css')}"><link rel="stylesheet" href="${asset('assets/maps.css')}"><link rel="stylesheet" href="${asset('assets/research.css')}"><script defer src="${asset('assets/atlas.js')}"></script><script defer src="${asset('assets/maps.js')}"></script><script defer src="${asset('assets/research.js')}"></script>
 <body><a class="skip" href="#main">${t('跳到正文','Skip to content')}</a><header><div class="bar"><a href="#main" class="wordmark">◉ FIELD ATLAS</a><nav><a href="#maps">${t('演进','Evolution')}</a><a href="#system-studio">${t('系统架构','Systems')}</a><a href="#library">${t('索引','Library')}</a><a href="${root}">GitHub</a><a lang="${t('en','zh-CN')}" href="${t('index','zh')}.html">${t('English','中文')}</a></nav></div></header>
 <main id="main"><div class="cover"><div class="cover-inner wrap"><div><div class="kicker">${t('具身智能 × 世界模型　/　交互研究图谱','EMBODIED AI × WORLD MODELS　/　INTERACTIVE FIELD GUIDE')}</div>
-<h1>${t('模型预测后果。<br><em>策略选择动作。</em>','Models predict.<br><em>Policies act.</em>')}</h1>
-<p>${t('面对同一只杯子，世界模型回答“轻推会怎样”；策略回答“现在怎么推”。执行之后，要看杯子实际到了哪里。','A world model predicts where a cup might slide. A policy chooses the push. After acting, the robot has to look again.')}</p>
-<div class="cover-cta"><a href="#maps">${t('已有背景？探索方法路线','Know the basics? Explore the map')} ↓</a><a href="${en?'research':'research.zh'}.html#contract">${t('第一次来？从推杯开始','New here? Start with the cup')} →</a></div></div>
-<figure class="cover-figure"><figcaption>FIG 01　/　${t('同一推法，两种落点','ONE PUSH, TWO ENDPOINTS')}</figcaption><svg viewBox="0 0 490 157" role="img" aria-label="${t('教学示例：杯子从位置 3 出发，预测轻推后到 7，实际测量到 4。','Illustrative push: the cup starts at 3, is predicted to reach 7 and is measured at 4.')}">
-<defs><g id="cup-symbol"><path d="M-12 -19h24l-2 21h-20z M12 -16h4q9 6-5 11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></g></defs>
-<g class="bench-grid"><path d="M26 123H464 M75 117v11 M146 117v11 M359 117v11 M430 117v11"/></g><g class="cup-route"><path d="M75 102Q208 -14 359 83" fill="none" stroke="#94dce5" stroke-width="2.5" stroke-dasharray="5 5"/><path d="M75 110Q107 81 146 106" fill="none" stroke="#ffd69a" stroke-width="3"/></g>
-<use href="#cup-symbol" x="75" y="112" color="#e9f1dd"/><use href="#cup-symbol" x="146" y="112" color="#ffd69a"/><use href="#cup-symbol" x="359" y="86" color="#94dce5"/>
-<ellipse cx="430" cy="116" rx="24" ry="5" fill="none" stroke="#abc494" stroke-width="2"/>
-<g font-size="14" font-family="system-ui,sans-serif"><text x="359" y="50" text-anchor="middle" fill="#aee4ea">${t('模型预测','Predicted')} · 7</text><text x="147" y="78" text-anchor="middle" fill="#ffdaa1">${t('实际测量','Measured')} · 4</text><text x="75" y="148" text-anchor="middle" fill="#e7eddf">${t('起点','Start')} · 3</text><text x="430" y="148" text-anchor="middle" fill="#c6d6b4">${t('目标','Goal')} · 8</text></g></svg><small>${t('教学示意，非实测数据。预测不等于执行成功。','Teaching example, not trial data. A prediction is not a successful action.')}</small></figure></div></div>
+<h1>${t('从预测世界<br><em>到生成行动</em>','From world models<br><em>to world action models</em>')}</h1>
+<p>${t('要把杯子推入圈内，机器人既要理解杯子会怎样滑动，也要给出能实现目标的动作。世界动作模型（WAM）把未来预测和动作生成联系起来：有的先预测再行动，有的联合学习未来与动作。','To slide a cup into a circle, a robot needs a push that can produce the desired change. A world action model (WAM) couples future prediction to action generation: some systems pass a predicted goal to a policy; others learn futures and actions jointly.')}</p>
+<div class="cover-cta"><a href="${en?'research':'research.zh'}.html#contract">${t('入门：从一个动作开始','New here? Start with one action')}</a><a href="${en?'convergence':'convergence.zh'}.html#origins">${t('追踪 WAM 的诞生','Trace the origins of WAM')} →</a></div></div>
+<figure class="cover-figure"><figcaption>FIG 01　/　${t('两条技术路线如何汇合','WHERE THE TWO PATHS MEET')}</figcaption><a href="assets/convergence.${lang}.svg"><img width="900" height="374" src="assets/convergence.${lang}.svg" alt="${t('F 预测与 P 动作在 J 耦合；M 用预测改善决策，E/S 支撑评测和解读。','F prediction and P action meet in J; M uses predictions for decisions; E/S support evidence and interpretation.')}"></a><small>${t('点图放大。本站概念图，据','Open the figure to enlarge. Atlas synthesis after')} <a href="https://arxiv.org/abs/2605.12090v1">Wang §2–4</a> · <a href="https://arxiv.org/abs/2609.16697v1">Yao §3, Table 4</a></small></figure></div></div>
 <div class="wrap">${tabNav(en,'index')}${mapSections({works,families,en,esc,docs})}${homeSystems(en)}
 <section id="cup-lab"><div class="plate"><div class="kicker">CUP LAB &nbsp; / &nbsp; MPC</div><h2>${t('选一个动作，看预测落在哪里。','Pick an action. Where does the prediction land?')}</h2>
 <div class="track" aria-hidden="true"><span class="goal"></span><span class="cup">▰</span></div>
@@ -88,7 +84,7 @@ function page(en) {
   ['2016–19',t('从画面还是潜状态预测？','Plan in pixels or latent states?'),'Visual Foresight · PlaNet','planet'],
   ['2019–23',t('训练时想，还是决策时想？','Imagine during training or acting?'),'Dreamer · TD-MPC2','dreamer'],
   ['2022–25',t('怎样把指令变成动作？','How do words become motor commands?'),'RT-2 · OpenVLA · π0','openvla'],
-  ['2025–26',t('怎样让视觉未来约束动作？','Can a visual future constrain action?'),'V-JEPA 2-AC · DreamZero','dreamzero'],
+  ['2023–26',t('未来计划与动作如何耦合？','How do futures and actions couple?'),'UniPi · GR-1 · UWM · DreamZero','unipi'],
 ].map(([yr,q,n,id])=>`<a href="${root}/blob/main/CATALOG.md#${id}"><b>${yr}</b><strong>${q}</strong><small>${n}</small></a>`).join('')}</div><p>${t('各时期重叠；新路线不意味着旧方法失效。','Periods overlap; a new route does not invalidate an older one.')}</p></section>
 <section id="library"><div class="kicker">03 &nbsp; / &nbsp; RESEARCH LIBRARY</div><h2>${t('论文标本架','Research library')}</h2><p>${works.length} ${t('个条目','records')} · ${count('github')} ${t('个代码入口¹','code links¹')} · ${count('hub')} ${t('张模型卡','model cards')}</p>
 <div class="filters"><label>${t('搜索','Search')} <input id="query" type="search" placeholder="Dreamer, VLA, MPC…"></label>
@@ -105,6 +101,8 @@ const english = page(true);
 for (const [path, contents] of [['CATALOG.md', catalog], ['index.html', english], ['en.html', english], ['zh.html', page(false)],
   ...researchOutputs(asset,works),
   ...[true,false].flatMap(en=>[
+    [`assets/convergence.${en?'en':'zh-CN'}.svg`,overviewArt(en)],
+    [`docs/convergence.${en?'en':'zh-CN'}.md`,convergence(works,en,'md')],
     [`assets/panorama.${en?'en':'zh-CN'}.svg`,panorama(works,en)],
     [`assets/growth-tree.${en?'en':'zh-CN'}.svg`,treePlate(works,en)+'\n'],
     [`docs/deep-dives.${en?'en':'zh-CN'}.md`,deepGuide(works,families,en)],

@@ -1,12 +1,18 @@
 <p align="center"><a href="https://hyfine.github.io/embodied-world-models-atlas/zh.html"><img src="assets/atlas-mark.svg" width="72" height="72" alt="研究图谱指南针标识"></a></p>
 
 <h1 align="center">具身智能 × 世界模型研究图谱</h1>
-<p align="center"><strong>世界模型预测一推会怎样，策略决定这一推怎么做。</strong></p>
+<p align="center"><strong>从世界模型到世界动作模型：机器人怎样把“会发生什么”变成“下一步怎么做”。</strong></p>
 <p align="center"><a href="README.md">English</a> · <strong>简体中文</strong></p>
 
-[![先预测三种可能的未来，再选择推法，最后比较实测落点 4 与预测落点 7。](assets/readme-push.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#cup-lab)
+[![预测与行动在级联或联合 WAM 中相遇；规划和直接策略仍是选择，决策收益需要独立验证。](assets/convergence.zh-CN.svg)](https://hyfine.github.io/embodied-world-models-atlas/convergence.zh.html#origins)
 
-模型预测杯子会到 **7**，实际却停在 **4**。下一步就得从 4 重新决定。这个教学例子串起了整份图谱：**预测的是什么，谁来行动，又拿什么验证？**
+想象机器人要打开抽屉。模型能画出抽屉打开，却未必知道该抓哪里；策略能学会拉把手，也不必先画出下一帧。**世界动作模型（World Action Model，WAM）**把可检验的未来状态（图像、运动或潜在表征）与动作生成耦合起来。统一的是问题和系统，不一定只有一个网络；它也不保证想象中的动作真能成功。[定义与架构：Wang 等，图 3、§§2–4](https://arxiv.org/abs/2605.12090v1) · [决策收益怎样验证：Yao 等，表 4](https://arxiv.org/abs/2609.16697v1)。
+
+**WAM 是不是前沿？** 是**重要前沿之一**，而不是所有策略或规划器的替代品。早在 2023 年，[UniPi](https://arxiv.org/abs/2302.00111) 已把视频计划交给动作解码器，[GR-1](https://arxiv.org/abs/2312.13139) 已同时学习未来图像与动作。到 2026 年，[DreamZero](https://arxiv.org/abs/2602.15922) 和 [Fast-WAM](https://arxiv.org/abs/2603.16666v2) 进一步追问：执行时到底要为想象付出多少计算？时间更新，不等于控制一定更好。
+
+**按深度进入：** [五个历史转折](docs/convergence.zh-CN.md#origins) · [四条研究路线与经典原作](docs/convergence.zh-CN.md#research-routes) · [2026 年 11 月观察与可推翻的预测](docs/convergence.zh-CN.md#frontier) · [术语注解](docs/convergence.zh-CN.md#terms)。
+
+**11 月的证据，不是排行榜：** [SWAM](https://arxiv.org/abs/2611.12870v2) 问的是加入动作学习后，语言与视频还能否对齐；[ζ0](https://arxiv.org/abs/2611.29277v1) 同时预测场景特征与人形机器人的关节轨迹。两者对**应该预测什么**给出了不同答案，都没有证明每种控制任务都需要 WAM。
 
 **[第一次来，从阅读导览开始 →](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html#contract)** 先辨认输入与输出，再[比较部署时真正运行的模块](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html#coupling)，最后[设计一个能推翻主张的实验](https://hyfine.github.io/embodied-world-models-atlas/research.zh.html#claim-test)。已有具体方法名或版本问题，再查路线图和书目。
 
@@ -23,7 +29,7 @@
 | 某条论文或仓库，实际核读到哪一层？ | [按来源和阅读深度查询 320 条主表与 70 条补表记录](https://hyfine.github.io/embodied-world-models-atlas/evidence.zh.html) |
 | 本地存的是哪个版本？ | [分方向论文书架](https://hyfine.github.io/embodied-world-models-atlas/shelf.zh.html) · [指定 WAM 综述精读](docs/wam-survey-deep-dive.md) |
 
-下方的 38 片叶子是**入门精选**，不是扩展书目的总数。一条表格记录、一个可核的仓库、一份下载的 PDF 和一次逐页精读不能混作同一指标。
+下方的 45 个条目是**入门精选**，不是扩展书目的总数。一条表格记录、一个可核的仓库、一份下载的 PDF 和一次逐页精读不能混作同一指标。
 
 [![方法路线图：树冠分四条决策路线，下方另列基础设施与综述](assets/growth-tree.zh-CN.svg)](https://hyfine.github.io/embodied-world-models-atlas/zh.html#family-tree)
 
@@ -58,7 +64,7 @@
 
 ### 收录与复用
 
-**2026-11-23 版**：1991–2026 年，38 个精选条目、25 个不重复的代码入口、6 张 Hugging Face 模型卡。数据卡另列，不混入权重数。跨平台精选，**不是全网穷举或独立复现实验**。
+**入门图谱 2026-11-25 版：** [45 个精选条目，覆盖 1991–2026 年](CATALOG.md)。[扩展工作簿与 PDF 书架](EVIDENCE.md)另记版本。跨平台精选，**不是全网穷举或独立复现实验**。
 
 - [可机读 TSV](data/works.tsv) → [双语索引](CATALOG.md) 与中英文静态站使用同一份数据。
 - [收录规则与版本差异](EVIDENCE.md) · [贡献](CONTRIBUTING.md) · [引用](CITATION.cff) · [许可](LICENSE)。

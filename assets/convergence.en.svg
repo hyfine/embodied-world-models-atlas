@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 374" role="img" aria-labelledby="t d">
+<title id="t">Where prediction meets action</title><desc id="d">F predicts, M uses predictions for decisions, P acts. J couples foresight to action. Outcomes still need independent evidence.</desc>
+<defs><pattern id="g" width="21" height="21" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#577871"/></pattern><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0l10 5-10 5z" fill="#8fd5c0"/></marker></defs>
+<rect width="900" height="374" rx="15" fill="#133436"/><rect width="900" height="374" rx="15" fill="url(#g)"/>
+<g font-family="system-ui,sans-serif"><text x="25" y="31" fill="#b5d7c6" font-size="14">SYSTEM INTERFACES   /   conceptual connections, not ancestry</text>
+<g fill="#204643" stroke="#749988"><rect x="26" y="55" width="243" height="62" rx="8"/><rect x="26" y="214" width="243" height="62" rx="8"/><rect x="337" y="54" width="260" height="52" rx="8"/><rect x="337" y="123" width="260" height="100" rx="11" fill="#2f4a43" stroke="#ffcc87"/><rect x="670" y="131" width="202" height="78" rx="8"/></g>
+<text x="42" y="80" fill="#97dfde" font-size="20">F　Predict futures</text><text x="42" y="103" fill="#e9f2de" font-size="14">Pixels, features, state or reward</text>
+<text x="42" y="240" fill="#ffcc87" font-size="20">P　Generate actions</text><text x="42" y="263" fill="#e9f2de" font-size="14">Skills, imitation, language policies</text>
+<text x="350" y="77" fill="#97dfde" font-size="18">M　Decide with a model</text><text x="350" y="97" fill="#e9f2de" font-size="13">Planner or imagination-trained policy</text>
+<text x="355" y="153" fill="#ffcc87" font-size="25">J　WAM</text><text x="355" y="180" fill="#e9f2de" font-size="17">Cascade: future → action</text><text x="355" y="205" fill="#e9f2de" font-size="17">Joint: future ∥ action</text>
+<text x="685" y="163" fill="#e9f2de" font-size="20">Act and observe</text><text x="685" y="188" fill="#a9d2c0" font-size="14">Feedback ≠ imagination</text>
+<g fill="none" stroke="#8fd5c0" stroke-width="2.6" marker-end="url(#arr)"><path d="M269 82H332"/><path d="M597 80H770V126"/><path d="M269 97Q309 97 332 149"/><path d="M269 235Q308 235 332 199"/><path d="M598 170h66"/><path d="M269 250H770V214"/></g>
+<text x="342" y="270" fill="#b6c9ba" font-size="14">Direct policy: no future decoding required</text>
+<path d="M25 294H875" stroke="#66847d"/>
+<text x="26" y="322" fill="#d4d6f6" font-size="16">E　Data &amp; tests: measure outcomes</text><text x="478" y="322" fill="#e4cf96" font-size="16">S　Surveys: evidence lenses, not controllers</text>
+<text x="26" y="350" fill="#b6c9ba" font-size="14">Feedback test: does an intervention change the outcome, and does foresight improve the decision?</text>
+</g></svg>

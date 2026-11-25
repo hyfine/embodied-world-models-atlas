@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 374" role="img" aria-labelledby="t d">
+<title id="t">预测与行动的汇合</title><desc id="d">F 预测，M 用模型做决策，P 出动作。J 把未来与动作耦合。执行结果还须独立验证。</desc>
+<defs><pattern id="g" width="21" height="21" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#577871"/></pattern><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0l10 5-10 5z" fill="#8fd5c0"/></marker></defs>
+<rect width="900" height="374" rx="15" fill="#133436"/><rect width="900" height="374" rx="15" fill="url(#g)"/>
+<g font-family="system-ui,sans-serif"><text x="25" y="31" fill="#b5d7c6" font-size="14">系统接口图　/　概念连接，不表示引用关系</text>
+<g fill="#204643" stroke="#749988"><rect x="26" y="55" width="243" height="62" rx="8"/><rect x="26" y="214" width="243" height="62" rx="8"/><rect x="337" y="54" width="260" height="52" rx="8"/><rect x="337" y="123" width="260" height="100" rx="11" fill="#2f4a43" stroke="#ffcc87"/><rect x="670" y="131" width="202" height="78" rx="8"/></g>
+<text x="42" y="80" fill="#97dfde" font-size="20">F　预测未来</text><text x="42" y="103" fill="#e9f2de" font-size="14">画面、特征、状态或回报</text>
+<text x="42" y="240" fill="#ffcc87" font-size="20">P　产生动作</text><text x="42" y="263" fill="#e9f2de" font-size="14">示范、技能、语言条件策略</text>
+<text x="350" y="77" fill="#97dfde" font-size="18">M　用预测改善决策</text><text x="350" y="97" fill="#e9f2de" font-size="13">规划器，或在想象中训练策略</text>
+<text x="355" y="153" fill="#ffcc87" font-size="25">J　WAM</text><text x="355" y="180" fill="#e9f2de" font-size="17">级联：未来 → 动作</text><text x="355" y="205" fill="#e9f2de" font-size="17">联合：未来 ∥ 动作</text>
+<text x="685" y="163" fill="#e9f2de" font-size="20">执行与再观测</text><text x="685" y="188" fill="#a9d2c0" font-size="14">真实反馈 ≠ 想象</text>
+<g fill="none" stroke="#8fd5c0" stroke-width="2.6" marker-end="url(#arr)"><path d="M269 82H332"/><path d="M597 80H770V126"/><path d="M269 97Q309 97 332 149"/><path d="M269 235Q308 235 332 199"/><path d="M598 170h66"/><path d="M269 250H770V214"/></g>
+<text x="342" y="270" fill="#b6c9ba" font-size="14">直接策略：不必解码未来</text>
+<path d="M25 294H875" stroke="#66847d"/>
+<text x="26" y="322" fill="#d4d6f6" font-size="16">E　数据与评测：核对实测后果</text><text x="478" y="322" fill="#e4cf96" font-size="16">S　综述：解释框架，不是控制器</text>
+<text x="26" y="350" fill="#b6c9ba" font-size="14">反馈问题：换一种动作，实测会变吗？预测是否改进决策？</text>
+</g></svg>

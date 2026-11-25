@@ -53,6 +53,13 @@ export const coordinates = {
   brooks:'P|none|varies|unspecified|concept real',
   foresight:'F M|image|continuous|step|real',
   touch:'F|value|na|na|real',
+  unipi:'J F P|image|varies|unspecified|sim real',
+  susie:'J F P|image|continuous|chunk|sim real',
+  gr1:'J F P|image|continuous|unspecified|sim real',
+  uwm:'J F P|image|continuous|chunk|sim real',
+  fastwam:'J F P|image|continuous|chunk|sim real',
+  swam:'J F P|image|continuous|unspecified|sim real',
+  zeta0:'J F P|state|continuous|unspecified|sim real',
 };
 // These comparisons apply a survey's question. They are not its own labels or an assertion of citation.
 export const surveyLenses = [

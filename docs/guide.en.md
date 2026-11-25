@@ -2,15 +2,18 @@
 
 [简体中文](guide.zh-CN.md) · [Home](../README.md) · [Paper & code index](../CATALOG.md)
 
+**Where the two histories meet:** the distinction between a predictor and a policy describes two jobs, not necessarily two networks. A world action model learns a measurable future and couples it to actions. Read the [origins, architecture and source-linked glossary](convergence.en.md), or start with the toy task below. [Wang et al., Fig. 3 and §4](https://arxiv.org/abs/2605.12090v1).
+
 A cup sits to the left of a blue circle. “Push the cup into the circle.” A robot might recognize the cup, and even generate a convincing clip of it sliding into place, yet miss the cup entirely. What is missing?
 
-## 1 · Three questions to put beside any paper
+## 1 · Four questions to put beside any paper
 
 | Object | Question at the table | Typical input → output |
 |---|---|---|
 | **Policy** | What should I do now? | Observation, instruction, history → action or action chunk |
 | **Forward world model** | What happens if I push from the left? What if I do nothing? | State, candidate action → possible next state, features or reward |
 | **Inverse dynamics** | Which action could take this cup from here to the desired position? | Present and desired future → possible action |
+| **World action model (WAM)** | What change would reach the circle, and what action corresponds to it? | Observation and goal → coupled future and action; [cascade or joint training](https://arxiv.org/abs/2605.12090v1) |
 
 **Embodied AI** studies a body acting and sensing in a loop; the body may be simulated. **World modeling** studies how an environment changes. Some models learn video regularities; others predict only quantities needed for decisions. We say **action-conditioned** only when the action is an input. A **planner** uses predictions and a goal to choose among actions. A predictor alone cannot tell you which future to want.
 
@@ -25,7 +28,7 @@ In symbols, a policy `π(a | o, g)` reads an observation and goal; dynamics `p(z
 | 2017–2021: bodies and objectives | Do navigation, chess and locomotion need the same “world”? | [R2R](../CATALOG.md#r2r) grounded instructions in indoor routes; [Habitat](../CATALOG.md#habitat) provided repeatable navigation environments. [MuZero](../CATALOG.md#muzero) learned quantities needed for search. [Legged locomotion](../CATALOG.md#legged) demonstrated simulation training without an explicit learned forward model. |
 | 2019–2023: when to pay for imagination | Search on every step, or imagine more during training? | [Dreamer](../CATALOG.md#dreamer) trained the actor on imagined trajectories; [DreamerV3](../CATALOG.md#dreamerv3) emphasized stable training across domains. [TD-MPC2](../CATALOG.md#tdmpc2) retained short decision-time planning and estimated the rest with a value function. |
 | 2022–2025: meaning meets motors | How does web knowledge about cups become commands? | [SayCan](../CATALOG.md#saycan) selected feasible skills; [RT-2](../CATALOG.md#rt2) emitted action tokens. [Diffusion Policy](../CATALOG.md#diffusion-policy) denoised continuous action chunks; [π0](../CATALOG.md#pi0) paired a continuous action expert with a vision-language backbone. Policies need not be world models. |
-| 2024–2026: reuse videos for control | Internet video rarely has robot action labels. What can transfer? | [Genie](../CATALOG.md#genie) inferred latent actions. [V-JEPA 2-AC](../CATALOG.md#vjepa2) grounded feature prediction using robot interaction. [DreamZero](../CATALOG.md#dreamzero) generated futures and actions jointly; [GE-Act 2.0](../CATALOG.md#geact) retained a separately trainable inverse-dynamics interface. |
+| 2023–2026: the paths meet | Can anticipated changes help generate actions? | [UniPi](../CATALOG.md#unipi) decodes actions from a video plan; [GR-1](../CATALOG.md#gr1) predicts future images and actions together. [UWM](../CATALOG.md#uwm) couples diffusion processes; [DreamZero](../CATALOG.md#dreamzero) generates paired outputs, whereas [Fast-WAM](../CATALOG.md#fastwam) omits future-video sampling at execution. |
 
 ## 3 · Family tree: who consumes the prediction?
 

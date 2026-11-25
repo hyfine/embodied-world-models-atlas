@@ -1,5 +1,7 @@
 # 检索与证据口径 · Search & evidence
 
+**2026-11-25 · WAM convergence update.** The expanded [introductory catalog](CATALOG.md) now includes early video-to-action and joint-prediction work as well as November preprints. The [history and frontier](docs/convergence.en.md) attaches sources to each claim and separates reported results from editorial forecasts. The 390-row workbook and version-pinned PDF shelf below remain independent snapshots. 早期机制、作者用名和综述发表各有日期；本文不据此裁定首创权。未公开本地阅读笔记或第三方全文。
+
 ## Expanded workbook edition · 2026-11-24
 
 The workbook input (SHA-256 `5bb5ae15d0236441097563ebb0ff0ff5b1f0abcc54d04febe8026074fc45e2c8`) has seven sheets. `Paper_Repo_List` contributes 320 rows and `Supplementary_List` another 70. `README` defines its fields, `Taxonomy` its 15 directions, `Family_Tree` its 30 proposed lines, `Trends_2026` its 12 hypotheses, and `Timeline_Stats` aggregates the main sheet by year. Only the first two lists are counted as source records. The accompanying technical review was used as a set of hypotheses to check, not as independent validation.

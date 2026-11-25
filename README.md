@@ -1,12 +1,18 @@
 <p align="center"><a href="https://hyfine.github.io/embodied-world-models-atlas/"><img src="assets/atlas-mark.svg" width="72" height="72" alt="Field Atlas compass"></a></p>
 
 <h1 align="center">Embodied AI × World Models Atlas</h1>
-<p align="center"><strong>World models predict what a push might do. Policies choose the push.</strong></p>
+<p align="center"><strong>From world models to world action models: how learning what happens next can shape what a robot does next.</strong></p>
 <p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
 
-[![Predict three possible futures, choose a push, then compare the measured endpoint (4) with the predicted one (7).](assets/readme-push.svg)](https://hyfine.github.io/embodied-world-models-atlas/#cup-lab)
+[![Prediction and action meet in cascaded and joint WAMs. Planning and direct policies remain alternatives; measured outcomes test the claim.](assets/convergence.en.svg)](https://hyfine.github.io/embodied-world-models-atlas/convergence.html#origins)
 
-The cup was predicted to reach **7**, but stopped at **4**. The next decision starts at 4. This toy example is the thread through the atlas: **what is predicted, who acts, and what evidence comes back?**
+Imagine a robot opening a drawer. A predictor can show the drawer opening without knowing where to grip. A policy can learn a useful pull without drawing the next frame. A **World Action Model (WAM)** couples a measurable future—an image, motion or learned state—to the production of actions. The coupling may cross two modules or live in a jointly trained model. It does **not** guarantee that the imagined pull works. [Definition and architecture: Wang et al., Fig. 3, §§2–4](https://arxiv.org/abs/2605.12090v1) · [What would establish decision utility: Yao et al., Table 4](https://arxiv.org/abs/2609.16697v1).
+
+**Is WAM the frontier?** It is **one active frontier**, not a replacement for all policies or planners. In 2023 [UniPi](https://arxiv.org/abs/2302.00111) passed a video plan to an action decoder while [GR-1](https://arxiv.org/abs/2312.13139) learned future images and actions together. By 2026 [DreamZero](https://arxiv.org/abs/2602.15922) and [Fast-WAM](https://arxiv.org/abs/2603.16666v2) illustrated different ways of paying for foresight at execution. A newer paper is not necessarily a better controller.
+
+**Choose a depth:** [Origins in five stops](docs/convergence.en.md#origins) · [Four research routes with primary papers](docs/convergence.en.md#research-routes) · [November 2026 findings and falsifiable forecasts](docs/convergence.en.md#frontier) · [Glossary](docs/convergence.en.md#terms).
+
+**November evidence, not a leaderboard:** [SWAM](https://arxiv.org/abs/2611.12870v2) asks how action learning changes language–video alignment. [ζ0](https://arxiv.org/abs/2611.29277v1) predicts both scene features and the humanoid’s joint trajectory. These are different bets about **what to predict**; neither proves that every control task needs a WAM.
 
 **[Start with the reading guide →](https://hyfine.github.io/embodied-world-models-atlas/research.html#contract)** Identify the inputs and outputs, [compare what actually runs](https://hyfine.github.io/embodied-world-models-atlas/research.html#coupling), then [design a test that could disprove the claim](https://hyfine.github.io/embodied-world-models-atlas/research.html#claim-test). Use the map and source index when you need a specific method or edition.
 
@@ -23,7 +29,7 @@ The cup was predicted to reach **7**, but stopped at **4**. The next decision st
 | What was examined for a particular paper, model or repository? | [Search the 320 main + 70 supplementary rows by source and reading depth](https://hyfine.github.io/embodied-world-models-atlas/evidence.html) |
 | Which PDF edition was used or collected? | [Versioned local-library catalog](https://hyfine.github.io/embodied-world-models-atlas/shelf.html) · [close reading of the supplied WAM survey](docs/wam-survey-deep-dive.md) |
 
-The 38 leaves below form the **introductory map**, not the denominator of the larger bibliography. A row, a verified artifact, a PDF on disk and a cover-to-cover reading are four different things.
+The 45 records below form the **introductory map**, not the denominator of the larger bibliography. A row, a verified artifact, a PDF on disk and a cover-to-cover reading are four different things.
 
 [![Four decision routes above two support layers for infrastructure and surveys](assets/growth-tree.en.svg)](https://hyfine.github.io/embodied-world-models-atlas/#family-tree)
 
@@ -58,7 +64,7 @@ E covers environments, data and evaluation; S covers other surveys. Navigation, 
 
 ### Coverage and reuse
 
-**2026-11-23 edition**: 38 curated records spanning 1991–2026, 25 distinct code links and 6 Hugging Face model cards. Dataset cards are separate. This is a cross-platform selection, **not an exhaustive index or an independent replication**.
+**2026-11-25 introductory edition:** [45 curated records spanning 1991–2026](CATALOG.md). The [larger workbook and PDF-shelf snapshot](EVIDENCE.md) is separately versioned. This is a cross-platform selection, **not an exhaustive index or an independent replication**.
 
 - One [machine-readable TSV](data/works.tsv) drives the [bilingual catalog](CATALOG.md) and both static pages.
 - [Inclusion rules and version distinctions](EVIDENCE.md) · [Contribute](CONTRIBUTING.md) · [Cite](CITATION.cff) · [License](LICENSE).
